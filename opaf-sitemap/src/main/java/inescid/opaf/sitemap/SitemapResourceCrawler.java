@@ -26,23 +26,26 @@ public class SitemapResourceCrawler implements Runnable {
 	
 	CrawlingSystem crawler;
 	String sitemapUrl;
-	CrawlHandler handler;
+	String robotsTxtUrl;
+	CrawlResourceHandler handler;
 	
 	Throwable runError=null;
 	
 	CrawlingSession session;
 	
-	public SitemapResourceCrawler(String sitemapUrl, CrawlHandler handler, CrawlingSystem crawler) {
+	public SitemapResourceCrawler(String sitemapUrl, String robotsTxtUrl, CrawlResourceHandler handler, CrawlingSystem crawler) {
 		super();
 		this.sitemapUrl = sitemapUrl;
 		this.handler = handler;
 		this.crawler = crawler;
+		this.robotsTxtUrl = robotsTxtUrl;
 	}
 	
 	public void run() {
 		try {
 			session = crawler.startSession(3);
-			session.setRobotsTxtRules("http://digi.ub.uni-heidelberg.de/robots.txt");
+			if(robotsTxtUrl!=null)
+				session.setRobotsTxtRules(robotsTxtUrl);
 //			session.setWorkers(3);
 //			handler.setSession(session);
 //			new Thread(handler).start();

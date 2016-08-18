@@ -1,0 +1,34 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+ <parent>
+    <groupId>inescid</groupId>
+    <artifactId>opaf</artifactId>
+    <version>0.1</version>
+  </parent>
+  
+  <artifactId>opaf-repository</artifactId>
+  <packaging>jar</packaging>
+  <name>Open Data Aquisition Framework (Repository)</name>
+  
+   <dependencies>
+        
+        <dependency>
+            <groupId>org.mapdb</groupId>
+            <artifactId>mapdb</artifactId>
+             <version>1.0.9</version>
+        </dependency>
+        
+        <dependency>
+			  <groupId>commons-io</groupId>
+			  <artifactId>commons-io</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        
+  </dependencies>
+</project>

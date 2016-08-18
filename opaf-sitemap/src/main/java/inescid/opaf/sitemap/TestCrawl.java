@@ -10,7 +10,7 @@ public class TestCrawl {
 			
 			
 			CrawlingSystem crawlingSys=new CrawlingSystem();
-			SitemapResourceCrawler crawler=new SitemapResourceCrawler(sitemapUrl, new CrawlHandler() {
+			SitemapResourceCrawler crawler=new SitemapResourceCrawler(sitemapUrl, "http://digi.ub.uni-heidelberg.de/robots.txt", new CrawlResourceHandler() {
 				
 				@Override
 				public void handleUrl(String url) throws Exception {

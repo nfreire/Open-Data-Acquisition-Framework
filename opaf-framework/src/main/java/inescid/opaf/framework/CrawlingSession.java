@@ -25,11 +25,49 @@ public class CrawlingSession {
 	private static final long MIN_CRAWL_DELAY=300;
 	
 	
-	class AsyncRequestsWorker implements Runnable {
+
+	class Monitor implements Runnable {
+		Thread runningIn;
 		boolean close=false;
 		@Override
 		public void run() {
 			while(!close) {
+				try {
+					Thread.sleep(30000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				System.out.println("Ready: "+ asyncReady.size());
+				System.out.println("Requesting: "+asyncRequesting.size());
+			}
+			log.debug("Exiting "+getClass().getSimpleName());
+		}
+		
+		public void close() {
+			close=true;
+		};
+		
+		public void start() {
+			runningIn=new Thread(this);
+			runningIn.start();
+		}
+
+		public Thread getRunningThread() {
+			return runningIn;
+		}
+		
+
+	}
+
+	class AsyncRequestsWorker implements Runnable {
+		Thread runningIn;
+		
+		boolean close=false;
+		@Override
+		public void run() {
+			boolean abort=false;
+			while(!abort && (!close || !asyncRequesting.isEmpty())) {
 				FetchRequest fetch=null;
 				String url=null;
 				try {
@@ -37,36 +75,51 @@ public class CrawlingSession {
 					if(url==null) continue;
 				} catch (InterruptedException e) {
 					log.warn(url, e);
-					return;
+					abort=true;
 				}
-				log.warn("Comment for TEST: fetch "+url);
-//				try {
-//					fetch = fetch(url);
-//				} catch (IOException | InterruptedException e) {
-//					return;
-//				}
-					try {
-						asyncReady.put(fetch);
-					} catch (InterruptedException e) {
-						log.warn(url, e);
-						return;
+//				log.warn("Comment for TEST: fetch "+url);
+				try {
+					fetch = fetch(url);
+				} catch (IOException e) {
+					log.warn(url, e);
+				} catch (InterruptedException e) {
+					log.warn(url, e);
+					abort=true;
+				}
+				if(fetch!=null) try {
+					asyncReady.put(fetch);
+				} catch (InterruptedException e) {
+					log.warn(url, e);
+					abort=true;
 //						fetch=new FetchRequest(url, CrawlingSession.this, e);
-					}
+				}
 			}
+			log.debug("Exiting "+getClass().getSimpleName());
 		}
 
 		public void close() {
 			close=true;
 		};
 		
+		public void start() {
+			runningIn=new Thread(this);
+			runningIn.start();
+		}
+
+		public Thread getRunningThread() {
+			return runningIn;
+		}
+		
 	}
 	
 	CrawlingSystem crawlingSystem;
 	SimpleRobotRules robotRules;
 //	List<FetchRequest> asyncReady=new ArrayList<>(10); 
-	BlockingQueue<FetchRequest> asyncReady=new ArrayBlockingQueue<>(10); 
-	BlockingQueue<String> asyncRequesting=new ArrayBlockingQueue<>(200); 
+	BlockingQueue<FetchRequest> asyncReady=new ArrayBlockingQueue<>(200); 
+	BlockingQueue<String> asyncRequesting=new ArrayBlockingQueue<>(500); 
 	ArrayList<AsyncRequestsWorker> asyncRequestingWorkers=new ArrayList<>();
+	CollectorOfAsyncResponses collectorOfAsyncResponses;
+	Monitor monitor;
 	
 	Date lastHttpRequestSent=new Date();
 	
@@ -75,8 +128,10 @@ public class CrawlingSession {
 		for(int i=0; i<numberOfParallelFetchers; i++) {
 			AsyncRequestsWorker worker=new AsyncRequestsWorker();
 			asyncRequestingWorkers.add(worker);		
+			worker.start();
 		}
-		
+		monitor=new Monitor();
+		monitor.start();
 		robotRules=new SimpleRobotRules();
 		robotRules.setCrawlDelay(MIN_CRAWL_DELAY);
 	}
@@ -113,16 +168,53 @@ public class CrawlingSession {
 	}
 	
 	public void waitAndClose() {
-		while(!asyncRequesting.isEmpty())
+		while(!asyncRequesting.isEmpty() || !asyncReady.isEmpty())
 			try {
 				Thread.sleep(750);
 			} catch (InterruptedException e) {
 				return;
 			}
+
+		log.debug("Preparing exit "+getClass().getSimpleName());
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			return;
+		}
+		
+		if (collectorOfAsyncResponses!=null) {
+			collectorOfAsyncResponses.close();
+
+			while(collectorOfAsyncResponses.getRunning().isAlive()) try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				return;
+			}
+		}
+		
 		for(AsyncRequestsWorker w : asyncRequestingWorkers) {
 			w.close();
 		}
 		
+		boolean allClosed=false;
+		while(!allClosed) {
+			allClosed=true;
+			for(AsyncRequestsWorker w : asyncRequestingWorkers) {
+				if(w.getRunningThread().isAlive()) {
+					allClosed=false;
+					break;
+				}
+			}
+			
+//			allClosed=allClosed && !collectorOfAsyncResponses.getRunning().isAlive();
+			if(!allClosed)		try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				return;
+			}
+			monitor.close();
+		}
+		log.debug("Exiting "+getClass().getSimpleName());
 	}
 	
 	public void setRobotsTxtRules(String robotsTxtUrl) throws IOException, InterruptedException {
@@ -136,6 +228,16 @@ public class CrawlingSession {
 		} else {
 			throw new FileNotFoundException(robotsTxtUrl+ " ; HTTP Status:"+fetch.getResponse().getStatusLine().getStatusCode() ); 
 		}
+	}
+	public CollectorOfAsyncResponses createCollectorOfAsyncResponses(ResponseHandler handler) {
+		if(collectorOfAsyncResponses!=null)
+			throw new IllegalStateException("a collector already exists.");
+		collectorOfAsyncResponses = new CollectorOfAsyncResponses(this, handler);
+		new Thread(collectorOfAsyncResponses).start();
+		return collectorOfAsyncResponses;
+	}
+	public CollectorOfAsyncResponses getCollectorOfAsyncResponses() {
+		return collectorOfAsyncResponses;
 	}
 
 	

@@ -77,6 +77,9 @@ public class FetchRequest {
 		this.response = response;
 	}
 
+	public int getResponseStatusCode() {
+		return response.getStatusLine().getStatusCode();
+	}
 	public Content getContent() throws IOException {
 		byte[] byteArray = IOUtils.toByteArray(response.getEntity().getContent());
 		ContentType contentType = ContentType.get(response.getEntity());

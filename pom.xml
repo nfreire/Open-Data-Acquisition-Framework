@@ -99,7 +99,10 @@
   
   <modules>
     <module>opaf-framework</module>
+    <module>opaf-repository</module>
+    <module>opaf-repository-europeanadirect</module>
     <module>opaf-sitemap</module>
+    <module>opaf-iiif</module>
   </modules>
     
   <dependencyManagement>
@@ -134,6 +137,11 @@
 		<artifactId>crawler-commons</artifactId>
 		<version>0.6</version>
       </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+			<version>4.12</version>
+        </dependency>
     </dependencies>
   </dependencyManagement>
   
