@@ -52,5 +52,10 @@ public class HttpFetcher {
 			fetchSemaphore.release();
 		}
 	}
+	public void fetchWithPriority(FetchRequest url) throws InterruptedException, IOException {
+			HttpGet request = new HttpGet(url.getUrl());
+			HttpResponse response = httpClient.execute(request);
+			url.setResponse(response);
+	}
 	
 }

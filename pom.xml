@@ -73,19 +73,6 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>${version.maven-javadoc-plugin}</version>
-        <executions>
-          <execution>
-            <id>attach-javadocs</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${version.maven-surefire-plugin}</version>
       </plugin>
@@ -103,6 +90,8 @@
     <module>opaf-repository-europeanadirect</module>
     <module>opaf-sitemap</module>
     <module>opaf-iiif</module>
+    <module>opaf-manager</module>
+    <module>opaf-timestamp</module>
   </modules>
     
   <dependencyManagement>

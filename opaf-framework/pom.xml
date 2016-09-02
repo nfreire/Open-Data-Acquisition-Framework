@@ -25,6 +25,12 @@
 	  <version>4.5.2</version>
 	</dependency>
 	
+        <dependency>
+            <groupId>org.mapdb</groupId>
+            <artifactId>mapdb</artifactId>
+             <version>1.0.9</version>
+        </dependency>
+	
 <!-- https://mvnrepository.com/artifact/com.github.crawler-commons/crawler-commons -->
 <dependency>
     <groupId>com.github.crawler-commons</groupId>

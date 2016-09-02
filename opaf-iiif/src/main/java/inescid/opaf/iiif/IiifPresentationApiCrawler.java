@@ -63,6 +63,7 @@ public class IiifPresentationApiCrawler implements Runnable {
 			Thread.sleep(60000);
 			session.waitAndClose();
 			handler.close();
+			log.debug("Run ending: "+this.getClass().getName());
 		} catch (Exception e) {
 			log.error(e.getMessage(), e);
 			runError=e;

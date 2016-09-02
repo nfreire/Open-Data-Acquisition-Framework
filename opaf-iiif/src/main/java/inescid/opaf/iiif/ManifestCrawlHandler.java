@@ -26,6 +26,7 @@ import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFDataMgr;
+import org.apache.jena.riot.RiotException;
 import org.apache.jena.util.iterator.ExtendedIterator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,6 +38,7 @@ import inescid.opaf.framework.ResponseHandler;
 public abstract class ManifestCrawlHandler implements ResponseHandler {
 
 	private static Logger log = LoggerFactory.getLogger(ManifestCrawlHandler.class);
+	private static Logger logManifestProblems = LoggerFactory.getLogger("APPLICATIONAL_LOG_IIIF_MANIFEST_PROBLEMS");
 
 	CrawlingSession session;
 	
@@ -65,27 +67,31 @@ public abstract class ManifestCrawlHandler implements ResponseHandler {
 	public void handleJsonld(FetchRequest respondedFetchRequest, byte[] bytesOfManifest) {
 		Model modelRdf = ModelFactory.createDefaultModel();
 		ByteArrayInputStream bytesIs = new ByteArrayInputStream(bytesOfManifest);
-		RDFDataMgr.read(modelRdf, bytesIs, Lang.JSONLD);
 		try {
+			RDFDataMgr.read(modelRdf, bytesIs, Lang.JSONLD);
 			bytesIs.close();
+		} catch (RiotException e) {
+			handleJsonldError(e, respondedFetchRequest);
+			return;
 		} catch (IOException e) {
 			handleJsonldError(e, null);
+			return;
 		}
 		Resource resource = modelRdf.getResource(respondedFetchRequest.getUrl());
 		if(resource==null) {
 			log.warn("url not found as subject in RDF: "+respondedFetchRequest.getUrl());
 		} else {
 			Resource type = resource.getPropertyResourceValue(RdfReg.RDF_TYPE);
-			if(type!=null && type.getURI().endsWith("#Collection")) {
-				log.debug("Harvesting IIIF Collection: "+ respondedFetchRequest.getUrl());
-				handleCollection(respondedFetchRequest, modelRdf);
-			} else {
-				log.debug("Processing IIIF Manifest: "+ respondedFetchRequest.getUrl());
-				try {
-					handleManifest(respondedFetchRequest, modelRdf, resource);
-				} catch (Exception e) {
-					log.error("Error in "+respondedFetchRequest.getUrl(), e);
+			try {
+				if(type!=null && type.getURI().endsWith("#Collection")) {
+					log.debug("Harvesting IIIF Collection: "+ respondedFetchRequest.getUrl());
+					handleCollection(respondedFetchRequest, modelRdf);
+				} else {
+					log.debug("Processing IIIF Manifest: "+ respondedFetchRequest.getUrl());
+						handleManifest(respondedFetchRequest, modelRdf, resource);
 				}
+			} catch (Exception e) {
+				log.error("Error in "+respondedFetchRequest.getUrl(), e);
 			}
 		}
 	}
@@ -93,11 +99,13 @@ public abstract class ManifestCrawlHandler implements ResponseHandler {
 	protected void handleJsonldError(Throwable e, FetchRequest respondedFetchRequest) {
 		if(respondedFetchRequest==null)
 			log.error(e.getMessage(), e);
-		else
+		else {
 			log.error(respondedFetchRequest.getUrl(), e);
+			logManifestProblems.error(respondedFetchRequest.getUrl() + " ; " + e.getMessage());
+		}
 	}
 
-	protected void handleCollection(FetchRequest respondedFetchRequest, Model model) {
+	protected void handleCollection(FetchRequest respondedFetchRequest, Model model) throws IOException {
 		ResIterator manifests = model.listResourcesWithProperty(
 				RdfReg.RDF_TYPE,
 				RdfReg.IIIF_MANIFEST);
@@ -105,6 +113,7 @@ public abstract class ManifestCrawlHandler implements ResponseHandler {
 		while (manifests.hasNext()) {
 			Resource manif = manifests.next();
 			try {
+//				session.fetchWithPriority(manif.getURI());
 				session.fetchAsync(manif.getURI());
 			} catch (InterruptedException e) {
 				log.info(e.getMessage(), e);
@@ -121,31 +130,38 @@ public abstract class ManifestCrawlHandler implements ResponseHandler {
 			String seeAlsoUrl = s.getObject().toString();
 			// System.out.println("seeAlso:
 			// "+s.getObject().toString());
-			try {
-				FetchRequest seeAlsoFetched = session.fetch(seeAlsoUrl);
-				if (seeAlsoFetched.getResponseStatusCode()==200) {
-					Content seeAlsoContent = seeAlsoFetched.getContent();
-					ContentType type = seeAlsoContent.getType();
-					if (type.equals(ContentType.APPLICATION_XML) 
-							|| type.equals(ContentType.APPLICATION_JSON)) {
-						
-						IiifSeeAlsoProperty sa = new IiifSeeAlsoProperty();
-						sa.setSeeAlsoContent(seeAlsoContent.asBytes());
-						sa.setSeeAlsoUrl(seeAlsoUrl);
-						sa.setSeeAlsoContentType(seeAlsoContent.getType().getMimeType());
-						md.addSeeAlso(sa);
+			
+			if( fetchSeeAlso( modelManifest.getResource(seeAlsoUrl) )) {
+				try {
+//					System.out.println("Fetching prio: "+seeAlsoUrl);
+					FetchRequest seeAlsoFetched = session.fetchWithPriority(seeAlsoUrl);
+	//				System.out.println("Fetching prio: "+seeAlsoUrl+"DONE");
+					if (seeAlsoFetched.getResponseStatusCode()==200) {
+						Content seeAlsoContent = seeAlsoFetched.getContent();
+						ContentType type = seeAlsoContent.getType();
+						if (type.equals(ContentType.APPLICATION_XML) 
+								|| type.equals(ContentType.APPLICATION_JSON)) {
+							
+							IiifSeeAlsoProperty sa = new IiifSeeAlsoProperty();
+							sa.setSeeAlsoContent(seeAlsoContent.asBytes());
+							sa.setSeeAlsoUrl(seeAlsoUrl);
+							sa.setSeeAlsoContentType(seeAlsoContent.getType().getMimeType());
+							md.addSeeAlso(sa);
+						}
 					}
+				} catch (IOException e) {
+					log.error("error fetching seeAlso "+seeAlsoUrl, e);
+				} catch (InterruptedException e) {
+					log.info(e.getMessage(), e);
+					break;
 				}
-			} catch (IOException e) {
-				log.error("error fetching seeAlso "+seeAlsoUrl, e);
-			} catch (InterruptedException e) {
-				log.info(e.getMessage(), e);
-				break;
 			}
 		}
 		handleMetadata(md);
 	}
 	
+	protected abstract boolean fetchSeeAlso(Resource resource);
+
 	protected IiifPresentationMetadata parseMetadata(FetchRequest manifestRequest, Model modelManifest, Resource manifResource) {
 		IiifPresentationMetadata md=new IiifPresentationMetadata(manifestRequest.getUrl());
 		Statement metadataPropVal = manifResource.getProperty(RdfReg.IIIF_METADATA_LABELS);

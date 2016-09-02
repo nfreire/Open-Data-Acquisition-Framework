@@ -47,7 +47,7 @@ public class IiifSource {
 	}
 
 
-	public List<String> getHarvestingIiifUrls() {
+	public Iterable<String> getHarvestingIiifUrls() {
 		return harvestingIiifUrls;
 	}
 

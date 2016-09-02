@@ -8,41 +8,15 @@
     <version>0.1</version>
   </parent>
   
-  <artifactId>opaf-manager</artifactId>
+  <artifactId>opaf-timestamp</artifactId>
   <packaging>jar</packaging>
-  <name>Open Data Aquisition Framework (Harvesting Manager)</name>
-  
-  <build>
-  <plugins>
-  
-			<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.2</version>
-				<configuration>
-					<descriptors>
-						<descriptor>src/assemble/opaf_manager.xml</descriptor>
-					</descriptors>
-				</configuration>
-			</plugin>
-  </plugins>
-  </build>
-  
+  <name>Open Data Aquisition Framework (modification timestamps)</name>
   
   <dependencies>
 
     <dependency>
 		<groupId>inescid</groupId>
 		<artifactId>opaf-framework</artifactId>
-		<version>0.1</version>
-    </dependency>
-    <dependency>
-		<groupId>inescid</groupId>
-		<artifactId>opaf-sitemap</artifactId>
-		<version>0.1</version>
-    </dependency>
-    <dependency>
-		<groupId>inescid</groupId>
-		<artifactId>opaf-iiif</artifactId>
 		<version>0.1</version>
     </dependency>
     <dependency>

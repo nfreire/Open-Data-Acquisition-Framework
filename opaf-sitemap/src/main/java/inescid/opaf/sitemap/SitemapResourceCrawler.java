@@ -51,6 +51,7 @@ public class SitemapResourceCrawler implements Runnable {
 //			new Thread(handler).start();
 			fetchSitemap(sitemapUrl);
 			session.waitAndClose();
+			log.debug("Run ending: "+this.getClass().getName());
 		} catch (Exception e) {
 			log.error(e.getMessage(), e);
 			runError=e;
@@ -72,7 +73,7 @@ public class SitemapResourceCrawler implements Runnable {
 				int subSmCnt=0;//TODO: remove this variable. used for testing only
 				for(AbstractSiteMap subSm : smIdx.getSitemaps()) {
 					subSmCnt++;
-					if(subSmCnt>5)break;
+//					if(subSmCnt>5)break;
 					fetchSitemap(subSm.getUrl().toString());
 				}
 			} else {
@@ -80,7 +81,7 @@ public class SitemapResourceCrawler implements Runnable {
 				int subSmCnt=0;//TODO: remove this variable. used for testing only
 				for(SiteMapURL subSm : smIdx.getSiteMapUrls()) {
 					subSmCnt++;
-					if(subSmCnt>2)break;
+//					if(subSmCnt>2)break;
 //					session.fetchAsync(subSm.getUrl().toString());	
 					
 					try {

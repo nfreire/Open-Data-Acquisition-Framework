@@ -18,24 +18,13 @@ public class DataSourceManager {
 	Map<String, DataSource> sources;
 	CrawlingSystem crawlingSystem;
 	
-	public void init() throws Exception {
-		crawlingSystem=new CrawlingSystem();
+	public void init(File workingFolder) throws Exception {
+		crawlingSystem=new CrawlingSystem(workingFolder);
 		sources=new HashMap<>();
-		
-		ManifestCrawlHandler manifHandler=null;
-		manifHandler=new CrawlingHandlerForRepositoryStorage(new File("target/iiif-crawl-repository"));
-//		manifHandler=new ManifestCrawlHandler() {
-//			@Override
-//			protected void handleMetadata(IiifPresentationMetadata metadata) {
-//				System.out.println(metadata);
-//			}
-//		};
-		
-		
-		DataSourceIiif dsIiifNlwPotterNewspaper=new DataSourceIiif(new IiifSource("Nat. Lib. of Wales - Newspapers",
-				"http://dams.llgc.org.uk/iiif/newspapers/3100020.json"), manifHandler);
-				
-		sources.put(dsIiifNlwPotterNewspaper.getName(), dsIiifNlwPotterNewspaper);
+	}
+	
+	public void addSource(DataSource src) {
+		sources.put(src.getName(), src);
 	}
 	
 	public Collection<DataSource> getDataSources(){

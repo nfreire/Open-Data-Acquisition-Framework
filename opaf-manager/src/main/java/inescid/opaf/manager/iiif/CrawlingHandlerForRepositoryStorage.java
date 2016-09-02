@@ -4,6 +4,9 @@ import java.io.File;
 
 import org.apache.http.client.fluent.Content;
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.Statement;
+import org.apache.jena.rdf.model.StmtIterator;
 
 import inescid.opaf.data.repository.api.AccessMode;
 import inescid.opaf.data.repository.api.Database;
@@ -11,6 +14,7 @@ import inescid.opaf.data.repository.api.Record;
 import inescid.opaf.iiif.IiifPresentationMetadata;
 import inescid.opaf.iiif.IiifSeeAlsoProperty;
 import inescid.opaf.iiif.ManifestCrawlHandler;
+import inescid.opaf.iiif.RdfReg;
 
 public class CrawlingHandlerForRepositoryStorage extends ManifestCrawlHandler {
 	private static org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(CrawlingHandlerForRepositoryStorage.class);
@@ -25,6 +29,16 @@ public class CrawlingHandlerForRepositoryStorage extends ManifestCrawlHandler {
 	}
 	
 
+	@Override
+	protected boolean fetchSeeAlso(Resource resource) {
+		StmtIterator seeAlso = resource.listProperties(RdfReg.IIIF_PROFiLE_DOAP_IMPLEMENTS);
+		while (seeAlso.hasNext()) {
+			Statement s = seeAlso.next();
+			if(s.getObject().toString().startsWith("http://www.loc.gov/mods/"))
+				return true;
+		}
+		return false;
+	}
 
 	@Override
 	protected void handleMetadata(IiifPresentationMetadata metadata) throws Exception {

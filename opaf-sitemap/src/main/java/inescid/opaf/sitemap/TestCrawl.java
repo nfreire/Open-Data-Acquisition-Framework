@@ -1,5 +1,7 @@
 package inescid.opaf.sitemap;
 
+import java.io.File;
+
 import inescid.opaf.framework.CrawlingSystem;
 
 public class TestCrawl {
@@ -9,7 +11,7 @@ public class TestCrawl {
 			String sitemapUrl="http://diglit.ub.uni-heidelberg.de/sitemap.xml";
 			
 			
-			CrawlingSystem crawlingSys=new CrawlingSystem();
+			CrawlingSystem crawlingSys=new CrawlingSystem(new File("target/crawler_workdir"));
 			SitemapResourceCrawler crawler=new SitemapResourceCrawler(sitemapUrl, "http://digi.ub.uni-heidelberg.de/robots.txt", new CrawlResourceHandler() {
 				
 				@Override

@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
@@ -22,6 +23,7 @@ import crawlercommons.sitemaps.SiteMapParser;
 
 public class CrawlingSession {
 	private static org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(CrawlingSession.class);
+	private static org.slf4j.Logger logMonitor = org.slf4j.LoggerFactory.getLogger(Monitor.class);
 	private static final long MIN_CRAWL_DELAY=300;
 	
 	
@@ -35,11 +37,11 @@ public class CrawlingSession {
 				try {
 					Thread.sleep(30000);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					close=true;
 				}
-				System.out.println("Ready: "+ asyncReady.size());
-				System.out.println("Requesting: "+asyncRequesting.size());
+				logMonitor.info("Ready: "+ asyncReady.size());
+				logMonitor.info("Requesting: "+!asyncRequesting.isEmpty());
+				logMonitor.info("Processing: "+asyncProcessing);
 			}
 			log.debug("Exiting "+getClass().getSimpleName());
 		}
@@ -79,19 +81,24 @@ public class CrawlingSession {
 				}
 //				log.warn("Comment for TEST: fetch "+url);
 				try {
-					fetch = fetch(url);
-				} catch (IOException e) {
-					log.warn(url, e);
-				} catch (InterruptedException e) {
-					log.warn(url, e);
-					abort=true;
-				}
-				if(fetch!=null) try {
-					asyncReady.put(fetch);
-				} catch (InterruptedException e) {
-					log.warn(url, e);
-					abort=true;
-//						fetch=new FetchRequest(url, CrawlingSession.this, e);
+					try {
+						asyncProcessing.add(url);
+						fetch = fetch(url);
+					} catch (IOException e) {
+						log.warn(url, e);
+					} catch (InterruptedException e) {
+						log.warn(url, e);
+						abort=true;
+					}
+					if(fetch!=null) try {
+						asyncReady.put(fetch);
+					} catch (InterruptedException e) {
+						log.warn(url, e);
+						abort=true;
+	//						fetch=new FetchRequest(url, CrawlingSession.this, e);
+					}
+				}finally {
+					asyncProcessing.remove(url);
 				}
 			}
 			log.debug("Exiting "+getClass().getSimpleName());
@@ -116,7 +123,9 @@ public class CrawlingSession {
 	SimpleRobotRules robotRules;
 //	List<FetchRequest> asyncReady=new ArrayList<>(10); 
 	BlockingQueue<FetchRequest> asyncReady=new ArrayBlockingQueue<>(200); 
-	BlockingQueue<String> asyncRequesting=new ArrayBlockingQueue<>(500); 
+	BigQueue<String> asyncRequesting; 
+//	BlockingQueue<String> asyncRequesting=new ArrayBlockingQueue<>(500); 
+	HashSet<String> asyncProcessing=new HashSet<>(500); 
 	ArrayList<AsyncRequestsWorker> asyncRequestingWorkers=new ArrayList<>();
 	CollectorOfAsyncResponses collectorOfAsyncResponses;
 	Monitor monitor;
@@ -124,6 +133,7 @@ public class CrawlingSession {
 	Date lastHttpRequestSent=new Date();
 	
 	public CrawlingSession(CrawlingSystem crawlingSystem, int numberOfParallelFetchers) {
+		asyncRequesting=new BigQueue<>("asyncRequestingQueue",crawlingSystem.getWorkingFolder());
 		this.crawlingSystem=crawlingSystem;
 		for(int i=0; i<numberOfParallelFetchers; i++) {
 			AsyncRequestsWorker worker=new AsyncRequestsWorker();
@@ -150,7 +160,15 @@ public class CrawlingSession {
 				lastHttpRequestSent=new Date();
 			}
 			return crawlingSystem.fetch(url);
-			
+		}
+		return new FetchRequest(url, this, new IOException("Disallowed by robots.txt"));
+	}
+	
+
+	public FetchRequest fetchWithPriority(String url)  throws IOException, InterruptedException {
+		if(robotRules.isAllowAll() || robotRules.isAllowed(url)) {
+			lastHttpRequestSent=new Date();
+			return crawlingSystem.fetchWithPriority(url);
 		}
 		return new FetchRequest(url, this, new IOException("Disallowed by robots.txt"));
 	}
@@ -168,7 +186,7 @@ public class CrawlingSession {
 	}
 	
 	public void waitAndClose() {
-		while(!asyncRequesting.isEmpty() || !asyncReady.isEmpty())
+		while(!asyncRequesting.isEmpty() || !asyncReady.isEmpty() || !asyncProcessing.isEmpty())
 			try {
 				Thread.sleep(750);
 			} catch (InterruptedException e) {
