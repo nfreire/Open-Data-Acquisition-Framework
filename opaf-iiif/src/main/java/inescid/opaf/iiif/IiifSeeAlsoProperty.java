@@ -1,8 +1,9 @@
 package inescid.opaf.iiif;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
-public class IiifSeeAlsoProperty {
+public class IiifSeeAlsoProperty implements Serializable{
 
 	String seeAlsoUrl;
 	String seeAlsoContentType;

@@ -20,20 +20,23 @@ public class ScriptTransferRepositoryToEuropeanaDirect {
 	public static void main(String[] args) throws Exception {
 		ObjectApi apiInstance = new ObjectApi();
 		apiInstance.getApiClient().setDebugging(true);
-		apiInstance.getApiClient().setBasePath("http://europeana-direct.semantika.eu/ED/api");
+		apiInstance.getApiClient().setBasePath("http://europeana-direct.semantika.eu/EuropeanaDirect/api");
 
 		Database db;
-		db=new Database(new File("../opaf-manager/target/iiif-crawl-repository"), AccessMode.READ_ONLY);
+		db=new Database(new File("../opaf-manager/target/iiif-crawl-repository-nlw"), AccessMode.READ_ONLY);
 		for(byte[] mdBytes : db.getAllRecordsData()) {
 			IiifPresentationMetadata md = (IiifPresentationMetadata)IoUtil.fromByteArray(mdBytes);
 			System.out.println(md);
 			
-			Object directMd = IiifPresentationMetadataConverterToDirectObject.convert(md);
+			Object directMd = IiifPresentationMetadataConverterToDirectObject.convert(md, "en");
 			try {
 			    BigDecimal result = apiInstance.objectPost(directMd);
 			    System.out.println(result);
 			} catch (ApiException e) {
 			    System.err.println("Exception when calling ObjectApi#objectPost");
+			    System.err.println( e.getResponseBody() );
+			    System.err.println( e.getCode() );
+			    System.err.println( e.getResponseHeaders() );
 			    e.printStackTrace();
 			}
 		}

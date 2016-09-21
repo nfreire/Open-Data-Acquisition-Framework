@@ -2,6 +2,7 @@ package inescid.opaf.sitemap;
 
 import java.io.File;
 
+import crawlercommons.sitemaps.SiteMapURL;
 import inescid.opaf.framework.CrawlingSystem;
 
 public class TestCrawl {
@@ -15,7 +16,7 @@ public class TestCrawl {
 			SitemapResourceCrawler crawler=new SitemapResourceCrawler(sitemapUrl, "http://digi.ub.uni-heidelberg.de/robots.txt", new CrawlResourceHandler() {
 				
 				@Override
-				public void handleUrl(String url) throws Exception {
+				public void handleUrl(SiteMapURL url) throws Exception {
 					System.out.println(url);
 					
 				}

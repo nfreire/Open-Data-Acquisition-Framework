@@ -150,4 +150,8 @@ public class MetadataUtilDirect {
 		}
 		return obj.getLanguageNonAwareFields();
 	}
+
+	public static void addValueToCustomFields(Object ret, String value, String label) {
+		addValueToCustom(getLanguageNonAwareField(ret).getCustomFields(), null, value, label);
+	}
 }

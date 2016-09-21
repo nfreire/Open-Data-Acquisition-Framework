@@ -1,8 +1,13 @@
 package inescid.opaf.framework;
 
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class CollectorOfAsyncResponses implements Runnable {
+	private static final int MAX_HANDLINGS = 10;
+
 	private static org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(CollectorOfAsyncResponses.class);
 	
 	private Thread running;
@@ -10,6 +15,7 @@ public class CollectorOfAsyncResponses implements Runnable {
 	private CrawlingSession session;
 	private ResponseHandler handler;
 	Throwable runError=null;
+	private final Set<FetchRequest> handling=Collections.synchronizedSet(new HashSet<>()); 
 	
 	protected CollectorOfAsyncResponses(CrawlingSession session, ResponseHandler handler) {
 		super();
@@ -33,7 +39,11 @@ public class CollectorOfAsyncResponses implements Runnable {
 					close=true;
 				}
 				if(fetch!=null) {
-					final FetchRequest fetchFinal=fetch;					
+					final FetchRequest fetchFinal=fetch;
+					while(handling.size()>MAX_HANDLINGS) {
+						Thread.sleep(100);
+					}
+					handling.add(fetchFinal);
 					new Thread(new Runnable() {
 						@Override
 						public void run() {
@@ -41,11 +51,22 @@ public class CollectorOfAsyncResponses implements Runnable {
 								handler.handle(fetchFinal);
 							} catch (Exception e) {
 								log.error(fetchFinal.getUrl(), e);
+							}finally{
+								handling.remove(fetchFinal);
+								try {
+									fetchFinal.getResponse().close();
+								} catch (Exception e) {
+									log.error(fetchFinal.getUrl(), e);
+								}									
 							}
-							
 						}
 					}).start();
 				}
+			}
+			//wait for handlers to finish
+			while(!handling.isEmpty()) {
+				Thread.sleep(500);
+				log.debug("Waiting to exit. Responses pending: "+handling.size());
 			}
 		} catch (Throwable e) {
 			runError=e;

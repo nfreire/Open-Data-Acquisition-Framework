@@ -1,6 +1,7 @@
 package inescid.opaf.framework;
 
 import java.io.File;
+import java.util.Set;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
 
@@ -8,35 +9,35 @@ import org.mapdb.DB;
 import org.mapdb.DBMaker;
 import org.mapdb.Serializer;
 
-public class BigQueue<T> {
+public class BigSet<T> {
 	String name;
-	BlockingQueue<T> queue;
+	Set<T> set;
 	
 
     protected DB db;
     protected File homeFolder;
     
-    public BigQueue(String name, File home) {
+    public BigSet(String name, File home) {
         this.homeFolder=home;
         this.name = name;
         if(!home.exists()) 
             home.mkdirs();
         db=createDb(true);  
 		if(db.exists(name))
-			queue=db.get(name);
+			set=db.get(name);
 		else {
-			queue = (BlockingQueue<T>) db.createQueue(name, Serializer.JAVA, true);
+			set = (Set<T>) db.createTreeSet(name);
 		}
     }
 	
-	public BigQueue(String name, DB mapDb) {
+	public BigSet(String name, DB mapDb) {
 		super();
 		this.name = name; 
 		this.db = mapDb;
 		if(mapDb.exists(name))
-			queue=mapDb.get(name);
+			set=mapDb.get(name);
 		else {
-			queue = (BlockingQueue<T>) mapDb.createQueue(name, Serializer.JAVA, true);
+			set = (Set<T>) mapDb.createHashSet(name).make();
 		}
 	}
     protected DB createDb(boolean retry) {
@@ -52,34 +53,28 @@ public class BigQueue<T> {
                 throw new RuntimeException(e.getMessage(), e);
         }
     }
-	public BlockingQueue<T> getQueue() {
-		return queue;
-	}
-
-	public synchronized T poll(int i, TimeUnit seconds) throws InterruptedException {
-		return queue.poll(i, seconds);
+	public Set<T> getSet() {
+		return set;
 	}
 
 	public boolean isEmpty() {
-		return queue.isEmpty();
+		return set.isEmpty();
 	}
 
 	public int size() {
-		return queue.size();
+		return set.size();
 	}
 
-	public void put(T url) throws InterruptedException {
-		queue.put(url);
+	public synchronized boolean addSynchronized(T url) throws InterruptedException {
+		if(set.contains(url))
+			return false;
+		set.add(url);
+		return true;
 	}
-
-	public DB getDb() {
-		return db;
-	}
+	
 
 	public void clear() {
-		queue.clear();
+		set.clear();
 	}
-	
-	
 }
 

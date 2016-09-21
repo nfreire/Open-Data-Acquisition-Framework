@@ -15,6 +15,7 @@ import crawlercommons.sitemaps.AbstractSiteMap;
 import crawlercommons.sitemaps.SiteMap;
 import crawlercommons.sitemaps.SiteMapIndex;
 import crawlercommons.sitemaps.SiteMapParser;
+import crawlercommons.sitemaps.SiteMapParserWithExtentions;
 import crawlercommons.sitemaps.SiteMapURL;
 import crawlercommons.sitemaps.UnknownFormatException;
 import inescid.opaf.framework.CrawlingSession;
@@ -59,46 +60,57 @@ public class SitemapResourceCrawler implements Runnable {
 	}
 	
 	private void fetchSitemap(String sitemapUrl) throws IOException, InterruptedException {
+		log.debug(sitemapUrl);
 		FetchRequest req = session.fetch(sitemapUrl);
-		if(req.getResponse().getStatusLine().getStatusCode()==HttpStatus.SC_OK) {
-			AbstractSiteMap siteMap;
-			try {
-				siteMap = parseSiteMap(req);
-			} catch (UnknownFormatException e) {
-				log.warn(sitemapUrl, e);
-				return;
-			}
-			if (siteMap.isIndex()) {
-				SiteMapIndex smIdx=(SiteMapIndex) siteMap;
-				int subSmCnt=0;//TODO: remove this variable. used for testing only
-				for(AbstractSiteMap subSm : smIdx.getSitemaps()) {
-					subSmCnt++;
-//					if(subSmCnt>5)break;
-					fetchSitemap(subSm.getUrl().toString());
+		try {
+			if(log.isDebugEnabled())
+				log.debug(sitemapUrl+" - Response code: "+req.getResponse().getStatusLine().getStatusCode());
+			log.debug(sitemapUrl);
+			if(req.getResponse().getStatusLine().getStatusCode()==HttpStatus.SC_OK) {
+				AbstractSiteMap siteMap;
+				try {
+					siteMap = parseSiteMap(req);
+				} catch (UnknownFormatException e) {
+					log.warn(sitemapUrl, e);
+					return;
 				}
-			} else {
-				SiteMap smIdx=(SiteMap) siteMap;
-				int subSmCnt=0;//TODO: remove this variable. used for testing only
-				for(SiteMapURL subSm : smIdx.getSiteMapUrls()) {
-					subSmCnt++;
-//					if(subSmCnt>2)break;
-//					session.fetchAsync(subSm.getUrl().toString());	
-					
-					try {
-						handler.handleUrl(subSm.getUrl().toString());
-					} catch (Exception e) {
-						log.error(e.getMessage(), e);
+				if (siteMap.isIndex()) {
+					SiteMapIndex smIdx=(SiteMapIndex) siteMap;
+					int subSmCnt=0;//TODO: remove this variable. used for testing only
+					for(AbstractSiteMap subSm : smIdx.getSitemaps()) {
+						subSmCnt++;
+	//					if(subSmCnt>5)break;
+						fetchSitemap(subSm.getUrl().toString());
+					}
+				} else {
+					SiteMap smIdx=(SiteMap) siteMap;
+					int subSmCnt=0;//TODO: remove this variable. used for testing only
+					for(SiteMapURL subSm : smIdx.getSiteMapUrls()) {
+						subSmCnt++;
+	//					if(subSmCnt>2)break;
+	//					session.fetchAsync(subSm.getUrl().toString());	
+						
+						try {
+							handler.handleUrl(subSm);
+						} catch (Exception e) {
+							log.error(e.getMessage(), e);
+						}
 					}
 				}
 			}
-		}
-		
+		} finally {
+			try {
+				req.getResponse().close();
+			} catch (Exception e) {
+				log.error(req.getUrl(), e);
+			}
+		}	
 		
 	}
 
 	private static AbstractSiteMap parseSiteMap(FetchRequest req) throws IOException, UnknownFormatException {
 		Content content=req.getContent();
-		SiteMapParser parser=new SiteMapParser();
+		SiteMapParserWithExtentions parser=new SiteMapParserWithExtentions(false);
 		AbstractSiteMap siteMap = parser.parseSiteMap(content.getType().toString(), content.asBytes(), new URL(req.getUrl()));
 		return siteMap;
 	}

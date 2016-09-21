@@ -22,23 +22,10 @@ public class CrawlingHandlerForRepositoryStorage extends ManifestCrawlHandler {
 	
 	int recCount=0;
 	
-	
-	
 	public CrawlingHandlerForRepositoryStorage(File repositoryHome) throws Exception {
 		db=new Database(repositoryHome, AccessMode.WRITE);
 	}
 	
-
-	@Override
-	protected boolean fetchSeeAlso(Resource resource) {
-		StmtIterator seeAlso = resource.listProperties(RdfReg.IIIF_PROFiLE_DOAP_IMPLEMENTS);
-		while (seeAlso.hasNext()) {
-			Statement s = seeAlso.next();
-			if(s.getObject().toString().startsWith("http://www.loc.gov/mods/"))
-				return true;
-		}
-		return false;
-	}
 
 	@Override
 	protected void handleMetadata(IiifPresentationMetadata metadata) throws Exception {

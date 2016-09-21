@@ -8,6 +8,8 @@ import java.util.List;
 public class IiifPresentationMetadata implements Serializable{
 	private static final long serialVersionUID = 1L;
 	String manifestUrl;
+	String title;
+	String navDate;
 	final List<IiifMetadataElement> metadata=new ArrayList<>();
 	
 	List<IiifSeeAlsoProperty> seeAlso=new ArrayList<>();
@@ -54,6 +56,22 @@ public class IiifPresentationMetadata implements Serializable{
 
 	public List<IiifSeeAlsoProperty> getSeeAlso() {
 		return seeAlso;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getNavDate() {
+		return navDate;
+	}
+
+	public void setNavDate(String navDate) {
+		this.navDate = navDate;
 	}
 
 }

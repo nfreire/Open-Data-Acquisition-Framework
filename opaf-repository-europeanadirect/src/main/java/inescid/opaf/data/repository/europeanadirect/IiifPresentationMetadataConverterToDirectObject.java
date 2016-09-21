@@ -22,11 +22,16 @@ public class IiifPresentationMetadataConverterToDirectObject {
 	};
 	
 
-	public static Object convert(IiifPresentationMetadata iifMeta) {
+	public static Object convert(IiifPresentationMetadata iifMeta, String defaultLanguage) {
 		Object ret=new Object();
 		ret.getWebLinks().add(new WebLink().link(iifMeta.getManifestUrl())
-//				.type(eu.europeana.europeanadirect.model.WebLink.TypeEnum.DIRECT)
+				.type(eu.europeana.europeanadirect.model.WebLink.TypeEnum.OTHER)
 				);
+		if(!StringUtils.isEmpty(iifMeta.getTitle()))
+			MetadataUtilDirect.getLanguageField(ret, defaultLanguage).title(iifMeta.getTitle());
+		if(!StringUtils.isEmpty(iifMeta.getNavDate())) {
+			MetadataUtilDirect.addValueToCustomFields(ret, iifMeta.getNavDate(), "Date");
+		}
 		for(IiifMetadataElement el: iifMeta.getMetadata()) {
 			ObjectField objField = suggestMatchingField(el.getLabels());
 			setValues(ret, objField, el);

@@ -128,25 +128,46 @@ public abstract class ManifestCrawlHandler implements ResponseHandler {
 		while (seeAlso.hasNext()) {
 			Statement s = seeAlso.next();
 			String seeAlsoUrl = s.getObject().toString();
-			// System.out.println("seeAlso:
-			// "+s.getObject().toString());
-			
-			if( fetchSeeAlso( modelManifest.getResource(seeAlsoUrl) )) {
+			Resource seeAlsoResource = modelManifest.getResource(seeAlsoUrl);
+			Statement formatProperty = seeAlsoResource.getProperty(RdfReg.DC_FORMAT);
+//			while (formatProperty.hasNext()) {
+//				System.out.println(formatProperty.next());
+//			}
+			if( fetchSeeAlso( seeAlsoResource )) {
+//					System.out.println("fetching seeAlso:"+s.getObject().toString()+" "+formatProperty);
 				try {
 //					System.out.println("Fetching prio: "+seeAlsoUrl);
-					FetchRequest seeAlsoFetched = session.fetchWithPriority(seeAlsoUrl);
-	//				System.out.println("Fetching prio: "+seeAlsoUrl+"DONE");
-					if (seeAlsoFetched.getResponseStatusCode()==200) {
-						Content seeAlsoContent = seeAlsoFetched.getContent();
-						ContentType type = seeAlsoContent.getType();
-						if (type.equals(ContentType.APPLICATION_XML) 
-								|| type.equals(ContentType.APPLICATION_JSON)) {
-							
-							IiifSeeAlsoProperty sa = new IiifSeeAlsoProperty();
-							sa.setSeeAlsoContent(seeAlsoContent.asBytes());
-							sa.setSeeAlsoUrl(seeAlsoUrl);
-							sa.setSeeAlsoContentType(seeAlsoContent.getType().getMimeType());
-							md.addSeeAlso(sa);
+					FetchRequest seeAlsoFetched;
+					if(formatProperty != null)
+						seeAlsoFetched = session.fetchWithPriority(seeAlsoUrl, formatProperty.getObject().toString());
+					else
+						seeAlsoFetched = session.fetchWithPriority(seeAlsoUrl);
+					try {
+		//				System.out.println("Fetching prio: "+seeAlsoUrl+"DONE");
+						if (seeAlsoFetched.getResponseStatusCode()==200) {
+							Content seeAlsoContent = seeAlsoFetched.getContent();
+							ContentType type = seeAlsoContent.getType();
+							if (type.getMimeType().equals(ContentType.APPLICATION_XML.getMimeType()) 
+								|| type.getMimeType().equals("application/rdf+xml")
+								|| type.getMimeType().equals(ContentType.TEXT_XML.getMimeType())
+								|| type.getMimeType().equals(ContentType.APPLICATION_JSON.getMimeType())) {
+								
+								IiifSeeAlsoProperty sa = new IiifSeeAlsoProperty();
+								sa.setSeeAlsoContent(seeAlsoContent.asBytes());
+								sa.setSeeAlsoUrl(seeAlsoUrl);
+								sa.setSeeAlsoContentType(seeAlsoContent.getType().getMimeType());
+								md.addSeeAlso(sa);
+							} else {
+								log.debug("Discarding see also: type not supported:"+type);
+							}
+						} else {
+							log.info("Error fetching seeAlso: "+seeAlsoUrl+" http status"+ seeAlsoFetched.getResponseStatusCode());						
+						}
+					}finally {
+						try {
+							seeAlsoFetched.getResponse().close();
+						} catch (Exception e) {
+							log.error(seeAlsoFetched.getUrl(), e);
 						}
 					}
 				} catch (IOException e) {
@@ -160,10 +181,29 @@ public abstract class ManifestCrawlHandler implements ResponseHandler {
 		handleMetadata(md);
 	}
 	
-	protected abstract boolean fetchSeeAlso(Resource resource);
+//	protected abstract boolean fetchSeeAlso(Resource resource);
+	protected boolean fetchSeeAlso(Resource resource) {
+		StmtIterator seeAlso = resource.listProperties(RdfReg.IIIF_PROFiLE_DOAP_IMPLEMENTS);
+		while (seeAlso.hasNext()) {
+			Statement s = seeAlso.next();
+			if(s.getObject().toString().startsWith("http://www.loc.gov/mods/") ||
+				s.getObject().toString().equals("http://www.europeana.eu/schemas/edm/"))
+				return true;
+//			else 
+//				log.debug("Profile not supported: "+s.getObject().toString());
+		}
+//		log.debug("No supported seeAlso profile available for: "+resource.getURI());
+		return false;
+	}
 
 	protected IiifPresentationMetadata parseMetadata(FetchRequest manifestRequest, Model modelManifest, Resource manifResource) {
 		IiifPresentationMetadata md=new IiifPresentationMetadata(manifestRequest.getUrl());
+		Statement labelPropVal = manifResource.getProperty(RdfReg.RDFS_LABEL);
+		if(labelPropVal!=null )
+			md.setTitle(labelPropVal.getObject().toString());
+		Statement navDatePropVal = manifResource.getProperty(RdfReg.IIIF_NAV_DATE);
+		if(navDatePropVal!=null )
+			md.setNavDate(navDatePropVal.getObject().toString());
 		Statement metadataPropVal = manifResource.getProperty(RdfReg.IIIF_METADATA_LABELS);
 		if(metadataPropVal!=null) {
 			Resource mtds = (Resource)metadataPropVal.getObject();

@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
+import java.util.TreeSet;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
@@ -41,7 +42,9 @@ public class CrawlingSession {
 				}
 				logMonitor.info("Ready: "+ asyncReady.size());
 				logMonitor.info("Requesting: "+!asyncRequesting.isEmpty());
-				logMonitor.info("Processing: "+asyncProcessing);
+				logMonitor.info("Processing: "+processing);
+//				logMonitor.info(threadManager.printState());
+				logMonitor.info(crawlingSystem.printStatus());
 			}
 			log.debug("Exiting "+getClass().getSimpleName());
 		}
@@ -82,7 +85,7 @@ public class CrawlingSession {
 //				log.warn("Comment for TEST: fetch "+url);
 				try {
 					try {
-						asyncProcessing.add(url);
+						processing.add(url);
 						fetch = fetch(url);
 					} catch (IOException e) {
 						log.warn(url, e);
@@ -98,7 +101,7 @@ public class CrawlingSession {
 	//						fetch=new FetchRequest(url, CrawlingSession.this, e);
 					}
 				}finally {
-					asyncProcessing.remove(url);
+					processing.remove(url);
 				}
 			}
 			log.debug("Exiting "+getClass().getSimpleName());
@@ -124,26 +127,39 @@ public class CrawlingSession {
 //	List<FetchRequest> asyncReady=new ArrayList<>(10); 
 	BlockingQueue<FetchRequest> asyncReady=new ArrayBlockingQueue<>(200); 
 	BigQueue<String> asyncRequesting; 
-//	BlockingQueue<String> asyncRequesting=new ArrayBlockingQueue<>(500); 
-	HashSet<String> asyncProcessing=new HashSet<>(500); 
+//	BlockingQueue<String> asyncRequesting=new ArrayBlockingQueue<>(500);
+	BigSet<String> harvested;
+	TreeSet<String> processing=new TreeSet<String>(); 
+//	HashSet<String> processing=new HashSet<>(500); 
 	ArrayList<AsyncRequestsWorker> asyncRequestingWorkers=new ArrayList<>();
 	CollectorOfAsyncResponses collectorOfAsyncResponses;
 	Monitor monitor;
+	
+	
+//	ThreadManager threadManager=new ThreadManager();
 	
 	Date lastHttpRequestSent=new Date();
 	
 	public CrawlingSession(CrawlingSystem crawlingSystem, int numberOfParallelFetchers) {
 		asyncRequesting=new BigQueue<>("asyncRequestingQueue",crawlingSystem.getWorkingFolder());
+		harvested=new BigSet<>("harvestedSet", asyncRequesting.getDb());
 		this.crawlingSystem=crawlingSystem;
 		for(int i=0; i<numberOfParallelFetchers; i++) {
 			AsyncRequestsWorker worker=new AsyncRequestsWorker();
 			asyncRequestingWorkers.add(worker);		
 			worker.start();
+//			threadManager.addConsumers(worker.getRunningThread());
+//			threadManager.addProducers(worker.getRunningThread());
 		}
 		monitor=new Monitor();
 		monitor.start();
+//		threadManager.addIndependents(monitor.getRunningThread());
 		robotRules=new SimpleRobotRules();
 		robotRules.setCrawlDelay(MIN_CRAWL_DELAY);
+		
+		
+		asyncRequesting.clear();
+		harvested.clear();
 	}
 //
 //	public void setWorkers(int numberOfParallelFetchers) {
@@ -151,44 +167,98 @@ public class CrawlingSession {
 //		
 //	}
 //
-	public FetchRequest fetch(String url) throws IOException, InterruptedException {
-		if(robotRules.isAllowAll() || robotRules.isAllowed(url)) {
-			synchronized (lastHttpRequestSent) {
-				long wait=new Date().getTime() - lastHttpRequestSent.getTime();
-				if(wait>0)
-					Thread.sleep(wait);
-				lastHttpRequestSent=new Date();
+	public FetchRequest fetch(final String url) throws IOException, InterruptedException {
+		if(!harvested.addSynchronized(url))
+			return null;
+		processing.add(url);
+//		threadManager.addProducers(Thread.currentThread());
+		try {
+			if(robotRules.isAllowAll() || robotRules.isAllowed(url)) {
+				synchronized (lastHttpRequestSent) {
+					long wait=new Date().getTime() - lastHttpRequestSent.getTime();
+					if(wait>0)
+						Thread.sleep(wait);
+					lastHttpRequestSent=new Date();
+				}
+				return crawlingSystem.fetch(url);
 			}
-			return crawlingSystem.fetch(url);
+			return new FetchRequest(url, this, new IOException("Disallowed by robots.txt"));
+		} finally {
+			processing.remove(url);
+//			threadManager.removeProducers(Thread.currentThread());
 		}
-		return new FetchRequest(url, this, new IOException("Disallowed by robots.txt"));
 	}
 	
 
-	public FetchRequest fetchWithPriority(String url)  throws IOException, InterruptedException {
-		if(robotRules.isAllowAll() || robotRules.isAllowed(url)) {
-			lastHttpRequestSent=new Date();
-			return crawlingSystem.fetchWithPriority(url);
+	public FetchRequest fetchWithPriority(final String url, String contentTypeToRequest)  throws IOException, InterruptedException {
+		if(!harvested.addSynchronized(url))
+			return null;
+		processing.add(url);
+		try {
+			if(robotRules.isAllowAll() || robotRules.isAllowed(url)) {
+				lastHttpRequestSent=new Date();
+				return crawlingSystem.fetchWithPriority(url, contentTypeToRequest);
+			}
+			return new FetchRequest(url, this, new IOException("Disallowed by robots.txt"));
+		} finally {
+			processing.remove(url);
 		}
-		return new FetchRequest(url, this, new IOException("Disallowed by robots.txt"));
+		
+	}
+	
+	public FetchRequest fetchWithPriority(String url)  throws IOException, InterruptedException {
+		if(!harvested.addSynchronized(url))
+			return null;
+		processing.add(url);
+		try {
+			if(robotRules.isAllowAll() || robotRules.isAllowed(url)) {
+				lastHttpRequestSent=new Date();
+				return crawlingSystem.fetchWithPriority(url);
+			}
+			return new FetchRequest(url, this, new IOException("Disallowed by robots.txt"));
+		} finally {
+			processing.remove(url);
+		}
+		
 	}
 
 	public FetchRequest takeAsyncResult() throws InterruptedException {
-		return asyncReady.take();
+//		threadManager.addConsumers(Thread.currentThread());
+//		try {
+			return asyncReady.take();
+//		}finally {
+//			threadManager.removeConsumers(Thread.currentThread());			
+//		}
 	}
 	
 	public FetchRequest takeAsyncResult(long timeout, TimeUnit timeUnit) throws InterruptedException {
-		return asyncReady.poll(timeout, timeUnit);
+//		threadManager.addConsumers(Thread.currentThread());
+//		try {
+			return asyncReady.poll(timeout, timeUnit);
+//		}finally {
+//			threadManager.removeConsumers(Thread.currentThread());			
+//		}
 	}
 	
 	public void fetchAsync(final String url) throws InterruptedException {
+//		if(!harvested.addSynchronized(url))
+//			return;
 			asyncRequesting.put(url);
 	}
 	
 	public void waitAndClose() {
-		while(!asyncRequesting.isEmpty() || !asyncReady.isEmpty() || !asyncProcessing.isEmpty())
+		
+//		threadManager.waitForFinish(false);
+
+//		for(AsyncRequestsWorker w : asyncRequestingWorkers) {
+//		w.close();
+//	}
+
+		while(!asyncRequesting.isEmpty() || !asyncReady.isEmpty() || !processing.isEmpty())
 			try {
 				Thread.sleep(750);
+//				if(asyncRequesting.isEmpty() && asyncReady.isEmpty() && processing.size()<=1)
+//					processing.remove(null);
 			} catch (InterruptedException e) {
 				return;
 			}
@@ -237,21 +307,31 @@ public class CrawlingSession {
 	
 	public void setRobotsTxtRules(String robotsTxtUrl) throws IOException, InterruptedException {
 		FetchRequest fetch = fetch(robotsTxtUrl);
-		if (fetch.getResponse().getStatusLine().getStatusCode()==200) {
-			Content content=fetch.getContent();
-			SimpleRobotRulesParser parser=new SimpleRobotRulesParser();
+		try {
+			if (fetch.getResponse().getStatusLine().getStatusCode()==200) {
+				Content content=fetch.getContent();
+				SimpleRobotRulesParser parser=new SimpleRobotRulesParser();
 //			robotRules = (SimpleRobotRules) parser.parseContent(content.getType().toString(), content.asBytes(), fetch.getUrl(), "Europeana Crawler v0.1");
-			robotRules = (SimpleRobotRules) parser.parseContent(content.getType().toString(), content.asBytes(), fetch.getUrl(), "Europeana Crawler v0.1");
-			robotRules.setCrawlDelay(Math.max(MIN_CRAWL_DELAY, robotRules.getCrawlDelay()));
-		} else {
-			throw new FileNotFoundException(robotsTxtUrl+ " ; HTTP Status:"+fetch.getResponse().getStatusLine().getStatusCode() ); 
+				robotRules = (SimpleRobotRules) parser.parseContent(content.getType().toString(), content.asBytes(), fetch.getUrl(), "Europeana Crawler v0.1");
+				robotRules.setCrawlDelay(Math.max(MIN_CRAWL_DELAY, robotRules.getCrawlDelay()));
+			} else {
+				throw new FileNotFoundException(robotsTxtUrl+ " ; HTTP Status:"+fetch.getResponse().getStatusLine().getStatusCode() ); 
+			}
+		} finally {
+			try {
+				fetch.getResponse().close();
+			} catch (Exception e) {
+				log.error(fetch.getUrl(), e);
+			}	
 		}
 	}
 	public CollectorOfAsyncResponses createCollectorOfAsyncResponses(ResponseHandler handler) {
 		if(collectorOfAsyncResponses!=null)
 			throw new IllegalStateException("a collector already exists.");
 		collectorOfAsyncResponses = new CollectorOfAsyncResponses(this, handler);
-		new Thread(collectorOfAsyncResponses).start();
+		Thread thread = new Thread(collectorOfAsyncResponses);
+		thread.start();
+//		threadManager.addIndependents(thread);
 		return collectorOfAsyncResponses;
 	}
 	public CollectorOfAsyncResponses getCollectorOfAsyncResponses() {

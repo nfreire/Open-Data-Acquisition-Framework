@@ -6,6 +6,9 @@ import java.io.Writer;
 
 import org.apache.commons.io.output.FileWriterWithEncoding;
 
+import crawlercommons.sitemaps.SiteMapURL;
+import crawlercommons.sitemaps.SiteMapURLExtended;
+
 public class WriterCrawlResourceHandler extends CrawlResourceHandler{
 	private static org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(WriterCrawlResourceHandler.class);
 	
@@ -20,8 +23,11 @@ public class WriterCrawlResourceHandler extends CrawlResourceHandler{
 	}
 	
 	@Override
-	public void handleUrl(String url) throws Exception {
-		writer.write(url);
+	public void handleUrl(SiteMapURL url) throws Exception {
+		if(url instanceof SiteMapURLExtended) {
+			writer.write(((SiteMapURLExtended)url).getIiifManifest().toString());
+		}else 
+			writer.write(url.getUrl().toString());
 		writer.write('\n');
 		writer.flush();
 	}

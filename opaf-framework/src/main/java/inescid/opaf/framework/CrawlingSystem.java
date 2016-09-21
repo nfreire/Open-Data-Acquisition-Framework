@@ -31,11 +31,19 @@ public class CrawlingSystem {
 		fetcher.fetchWithPriority(req);
 		return req;
 	}
+	public FetchRequest fetchWithPriority(String url, String contentTypeToRequest) throws IOException, InterruptedException {
+		FetchRequest req=new FetchRequest(url, contentTypeToRequest);
+		fetcher.fetchWithPriority(req);
+		return req;
+	}
 	public void close() throws Exception {
 		fetcher.close();
 	}
 	public File getWorkingFolder() {
 		return workingFolder;
+	}
+	public String printStatus() {
+		return fetcher.printStatus();
 	}
 	
 	
