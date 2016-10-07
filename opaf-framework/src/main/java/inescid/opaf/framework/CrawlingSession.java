@@ -85,7 +85,13 @@ public class CrawlingSession {
 //				log.warn("Comment for TEST: fetch "+url);
 				try {
 					try {
-						processing.add(url);
+
+						try {
+							processing.add(url);
+						}catch (Exception e) {
+							//try again, may be just a bug in mapdb
+							processing.add(url);
+						}
 						fetch = fetch(url);
 					} catch (IOException e) {
 						log.warn(url, e);
@@ -101,7 +107,12 @@ public class CrawlingSession {
 	//						fetch=new FetchRequest(url, CrawlingSession.this, e);
 					}
 				}finally {
-					processing.remove(url);
+					try{
+						processing.remove(url);
+					}catch (Exception e) {
+						// retry. may just be a bug in mapdb
+						processing.remove(url);
+					}
 				}
 			}
 			log.debug("Exiting "+getClass().getSimpleName());
@@ -126,8 +137,8 @@ public class CrawlingSession {
 	SimpleRobotRules robotRules;
 //	List<FetchRequest> asyncReady=new ArrayList<>(10); 
 	BlockingQueue<FetchRequest> asyncReady=new ArrayBlockingQueue<>(200); 
-	BigQueue<String> asyncRequesting; 
-//	BlockingQueue<String> asyncRequesting=new ArrayBlockingQueue<>(500);
+//	BigQueue<String> asyncRequesting; 
+	BlockingQueue<String> asyncRequesting=new ArrayBlockingQueue<>(500);
 	BigSet<String> harvested;
 	TreeSet<String> processing=new TreeSet<String>(); 
 //	HashSet<String> processing=new HashSet<>(500); 
@@ -141,8 +152,9 @@ public class CrawlingSession {
 	Date lastHttpRequestSent=new Date();
 	
 	public CrawlingSession(CrawlingSystem crawlingSystem, int numberOfParallelFetchers) {
-		asyncRequesting=new BigQueue<>("asyncRequestingQueue",crawlingSystem.getWorkingFolder());
-		harvested=new BigSet<>("harvestedSet", asyncRequesting.getDb());
+//		asyncRequesting=new BigQueue<>("asyncRequestingQueue",crawlingSystem.getWorkingFolder());
+//		harvested=new BigSet<>("harvestedSet", asyncRequesting.getDb());
+		harvested=new BigSet<>("harvestedSet",crawlingSystem.getWorkingFolder());
 		this.crawlingSystem=crawlingSystem;
 		for(int i=0; i<numberOfParallelFetchers; i++) {
 			AsyncRequestsWorker worker=new AsyncRequestsWorker();
@@ -184,7 +196,11 @@ public class CrawlingSession {
 			}
 			return new FetchRequest(url, this, new IOException("Disallowed by robots.txt"));
 		} finally {
-			processing.remove(url);
+			try {
+				processing.remove(url);
+			}catch(Exception e) { //retry. may be ocasional bug of mapdb
+				processing.remove(url);				
+			}
 //			threadManager.removeProducers(Thread.currentThread());
 		}
 	}
@@ -337,6 +353,15 @@ public class CrawlingSession {
 	public CollectorOfAsyncResponses getCollectorOfAsyncResponses() {
 		return collectorOfAsyncResponses;
 	}
+	
 
+	public void fetchAsyncLowPriority(final String url) throws InterruptedException {
+//		if(!harvested.addSynchronized(url))
+//			return;
+//		while(!asyncRequesting.isEmpty())
+		while(asyncRequesting.size()>10)
+			Thread.sleep(500);
+		asyncRequesting.put(url);
+	}
 	
 }

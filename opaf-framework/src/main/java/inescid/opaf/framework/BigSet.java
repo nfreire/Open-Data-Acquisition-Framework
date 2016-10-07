@@ -26,7 +26,7 @@ public class BigSet<T> {
 		if(db.exists(name))
 			set=db.get(name);
 		else {
-			set = (Set<T>) db.createTreeSet(name);
+			set = (Set<T>) db.createHashSet(name).make();
 		}
     }
 	
