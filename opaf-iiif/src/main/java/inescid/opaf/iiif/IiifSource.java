@@ -43,11 +43,11 @@ public class IiifSource {
 	public IiifSource(String name, String... harvestingIiifUrls) {
 		super();
 		this.name = name;
-		this.harvestingIiifUrls = Arrays.asList(harvestingIiifUrls);
+		this.harvestingIiifUrls = new ArrayList<>( Arrays.asList(harvestingIiifUrls) );
 	}
 
 
-	public Iterable<String> getHarvestingIiifUrls() {
+	public List<String> getHarvestingIiifUrls() {
 		return harvestingIiifUrls;
 	}
 

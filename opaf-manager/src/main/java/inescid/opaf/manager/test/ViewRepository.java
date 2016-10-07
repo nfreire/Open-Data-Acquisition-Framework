@@ -5,18 +5,20 @@ import java.io.FileOutputStream;
 import java.net.URLEncoder;
 
 import org.apache.commons.io.IOUtils;
+import org.apache.jena.rdf.model.Statement;
 import org.mapdb.BTreeMap;
 
 import inescid.opaf.data.repository.api.AccessMode;
 import inescid.opaf.data.repository.api.Database;
 import inescid.opaf.data.repository.impl.IoUtil;
 import inescid.opaf.iiif.IiifPresentationMetadata;
+import inescid.opaf.iiif.IiifSeeAlsoProperty;
 
 public class ViewRepository {
 
 	
 	public static void main(String[] args) throws Exception {
-		File exportFolder=new File("C:\\Users\\Nuno\\Desktop\\UCDublin-mods");
+		File exportFolder=new File("C:\\Users\\nfrei\\Desktop\\UCDublin-mods");
 		final int max_export_records=100;
 		if(!exportFolder.exists())
 			exportFolder.mkdirs();
@@ -33,13 +35,20 @@ public class ViewRepository {
 			if(md.getSeeAlso().isEmpty())
 				System.out.println("no seeAlso");
 			else {
-				File exportFile=new File(exportFolder, URLEncoder.encode(md.getManifestUrl(), "UTF8")+".mods.xml");
-				FileOutputStream fileOutputStream = new FileOutputStream(exportFile);
-				IOUtils.write(md.getSeeAlso().get(0).getSeeAlsoContent(), fileOutputStream);
-				fileOutputStream.flush();
-				fileOutputStream.close();
+				for(IiifSeeAlsoProperty seeAlso: md.getSeeAlso()) {
+					String filename = URLEncoder.encode(md.getManifestUrl(), "UTF8")+".mods.xml";
+					if(seeAlso.getProfile().equals("http://www.europeana.eu/schemas/edm/"))
+						filename = URLEncoder.encode(md.getManifestUrl(), "UTF8")+".edm.xml";
+					else if (seeAlso.getProfile().startsWith("http://www.loc.gov/mods/")) 
+						filename = URLEncoder.encode(md.getManifestUrl(), "UTF8")+".mods.xml";
+						
+					File exportFile=new File(exportFolder, filename);
+					FileOutputStream fileOutputStream = new FileOutputStream(exportFile);
+					IOUtils.write(seeAlso.getSeeAlsoContent(), fileOutputStream);
+					fileOutputStream.flush();
+					fileOutputStream.close();					
+				}
 				export_records_cnt++;
-//				System.out.println(new String(md.getSeeAlso().get(0).getSeeAlsoContent(), "UTF8"));
 			}
 			if(export_records_cnt>=max_export_records)
 				break;

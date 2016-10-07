@@ -152,8 +152,16 @@ public abstract class ManifestCrawlHandler implements ResponseHandler {
 								|| type.getMimeType().equals(ContentType.TEXT_XML.getMimeType())
 								|| type.getMimeType().equals(ContentType.APPLICATION_JSON.getMimeType())) {
 								
+								String profile=null;
+								StmtIterator seeAlsoStms = seeAlsoResource.listProperties(RdfReg.IIIF_PROFiLE_DOAP_IMPLEMENTS);
+								while (seeAlsoStms.hasNext()) {
+									Statement st = seeAlsoStms.next();
+									profile=st.getObject().toString();
+								}
+								
 								IiifSeeAlsoProperty sa = new IiifSeeAlsoProperty();
 								sa.setSeeAlsoContent(seeAlsoContent.asBytes());
+								sa.setProfile(profile);
 								sa.setSeeAlsoUrl(seeAlsoUrl);
 								sa.setSeeAlsoContentType(seeAlsoContent.getType().getMimeType());
 								md.addSeeAlso(sa);

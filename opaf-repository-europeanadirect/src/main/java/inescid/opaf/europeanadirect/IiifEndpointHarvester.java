@@ -14,21 +14,20 @@ import inescid.opaf.manager.iiif.DataSourceIiif;
  *
  */
 public class IiifEndpointHarvester {
-	URL crawlingStartUrl;
+	URL crawlingSitemapUrl;
+	URL collectionStartUrl;
+	
 	Properties iiifHarvesterProperties;
 	
 	/**
-	 * @param crawlingStartUrl a link to a sitemap or to a IIIF Collection, from where the crawler will discover the 
-	 * IIIF Manifests to be harvested 
 	 */
-	public IiifEndpointHarvester(URL crawlingStartUrl, File workingDirectory) {
-		this.crawlingStartUrl=crawlingStartUrl;
+	public IiifEndpointHarvester(String dataSourceName, File workingDirectory) {
 		iiifHarvesterProperties=new Properties();
 		iiifHarvesterProperties.setProperty("opaf.workingdir", workingDirectory.getAbsolutePath());
 		iiifHarvesterProperties.setProperty("opaf.datasource.iiif.class", "inescid.opaf.manager.iiif.DataSourceIiif ");
 		iiifHarvesterProperties.setProperty("opaf.datasource.iiif.properties.ManifestCrawlHandler.class",
-				"inescid.opaf.europeanadirect.CrawlingHandlerForEuropeanaDirect");
-		iiifHarvesterProperties.setProperty("opaf.datasource.iiif.properties.sitemap", crawlingStartUrl.toString());		 
+				"inescid.opaf.europeanadirect.CrawlingHandlerForEuropeanaDirect");	 
+		iiifHarvesterProperties.setProperty("opaf.datasource.iiif.properties.name", dataSourceName);		 
 	}
 	
 	/**
@@ -42,7 +41,8 @@ public class IiifEndpointHarvester {
 				DataSourceManager manager=new DataSourceManager();
 				manager.init(iiifHarvesterProperties);
 				
-				((CrawlingHandlerForEuropeanaDirect)((DataSourceIiif)manager.getDataSources().iterator().next()).getHandler()).setRecordHandler(handler);
+				DataSourceIiif dataSourceIiif = (DataSourceIiif)manager.getDataSources().iterator().next();
+				((CrawlingHandlerForEuropeanaDirect)dataSourceIiif.getHandler()).setRecordHandler(handler);
 				
 				manager.syncAll();
 				manager.close();
@@ -55,5 +55,23 @@ public class IiifEndpointHarvester {
 	
 	private void close() {		
 		//TODO: for Nuno
+	}
+
+	public URL getCrawlingSitemapUrl() {
+		return crawlingSitemapUrl;
+	}
+
+	public void setCrawlingSitemapUrl(URL crawlingSitemapUrl) {
+		this.crawlingSitemapUrl = crawlingSitemapUrl;
+		iiifHarvesterProperties.setProperty("opaf.datasource.iiif.properties.sitemap", crawlingSitemapUrl.toString());		 
+	}
+
+	public URL getCollectionStartUrl() {
+		return collectionStartUrl;
+	}
+
+	public void setCollectionStartUrl(URL collectionStartUrl) {
+		this.collectionStartUrl = collectionStartUrl;
+		iiifHarvesterProperties.setProperty("opaf.datasource.iiif.properties.collection", collectionStartUrl.toString());	
 	}
 }

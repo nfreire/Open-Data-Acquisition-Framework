@@ -33,7 +33,11 @@ public class DataSourceIiif implements DataSource {
 					props.getProperty("ManifestCrawlHandler.class").trim()).newInstance();
 		}else
 			this.handler=new CrawlingHandlerForRepositoryStorage(new File(props.getProperty("repository.folder")));
-		src.getSitemapsUrls().add(props.getProperty("sitemap"));
+		if(props.containsKey("sitemap"))
+			src.getSitemapsUrls().add(props.getProperty("sitemap"));
+
+		if(props.containsKey("collection"))
+			src.getHarvestingIiifUrls().add(props.getProperty("collection"));
 	}
 
 	@Override

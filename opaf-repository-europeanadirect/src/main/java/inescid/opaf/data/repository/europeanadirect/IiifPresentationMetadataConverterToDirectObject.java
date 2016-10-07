@@ -36,7 +36,7 @@ public class IiifPresentationMetadataConverterToDirectObject {
 			ObjectField objField = suggestMatchingField(el.getLabels());
 			setValues(ret, objField, el);
 		}
-		if(ret.getLanguageNonAwareFields().getType()==null)
+		if(MetadataUtilDirect.getLanguageNonAwareField(ret).getType()==null)
 			ret.getLanguageNonAwareFields().setType(TypeEnum.IMAGE);
 		return ret;
 	}

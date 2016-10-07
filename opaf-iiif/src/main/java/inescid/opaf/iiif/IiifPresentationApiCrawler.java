@@ -72,15 +72,19 @@ public class IiifPresentationApiCrawler implements Runnable {
 	
 	private void crawlPresentationApi() throws InterruptedException, IOException {
 		for(String srcUrl: iiifSource.getHarvestingIiifUrls()) {
-			session.fetchAsync(srcUrl);
+			session.fetchAsyncLowPriority(srcUrl);
 		}
 		if(!iiifSource.getSitemapsUrls().isEmpty()) {
-			File sitemapResourceUrlsFile = getSitemapResourcesUrlsFile();
-			BufferedReader reader=new BufferedReader(new FileReader(sitemapResourceUrlsFile));
-			for (String line=reader.readLine(); line!=null ; line=reader.readLine()) {
-				session.fetchAsync(line);
-			}
-			reader.close();
+//			new Thread(new Runnable() {
+//				public void run() {
+					File sitemapResourceUrlsFile = getSitemapResourcesUrlsFile();
+					BufferedReader reader=new BufferedReader(new FileReader(sitemapResourceUrlsFile));
+					for (String line=reader.readLine(); line!=null ; line=reader.readLine()) {
+						session.fetchAsyncLowPriority(line);
+					}
+					reader.close();
+//				}
+//			}).start();
 		}
 	}
 
