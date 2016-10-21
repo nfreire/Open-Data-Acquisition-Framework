@@ -71,49 +71,53 @@ public class CrawlingSession {
 		boolean close=false;
 		@Override
 		public void run() {
-			boolean abort=false;
-			while(!abort && (!close || !asyncRequesting.isEmpty())) {
-				FetchRequest fetch=null;
-				String url=null;
-				try {
-					url=asyncRequesting.poll(30, TimeUnit.SECONDS);
-					if(url==null) continue;
-				} catch (InterruptedException e) {
-					log.warn(url, e);
-					abort=true;
-				}
-//				log.warn("Comment for TEST: fetch "+url);
-				try {
+			try {
+				boolean abort=false;
+				while(!abort && (!close || !asyncRequesting.isEmpty())) {
+					FetchRequest fetch=null;
+					String url=null;
 					try {
-
+						url=asyncRequesting.poll(30, TimeUnit.SECONDS);
+						if(url==null) continue;
+					} catch (InterruptedException e) {
+						log.warn(url, e);
+						abort=true;
+					}
+//				log.warn("Comment for TEST: fetch "+url);
+					try {
 						try {
-							processing.add(url);
-						}catch (Exception e) {
-							//try again, may be just a bug in mapdb
-							processing.add(url);
+
+							try {
+								processing.add(url);
+							}catch (Exception e) {
+								//try again, may be just a bug in mapdb
+								processing.add(url);
+							}
+							fetch = fetch(url);
+						} catch (IOException e) {
+							log.warn(url, e);
+						} catch (InterruptedException e) {
+							log.warn(url, e);
+							abort=true;
 						}
-						fetch = fetch(url);
-					} catch (IOException e) {
-						log.warn(url, e);
-					} catch (InterruptedException e) {
-						log.warn(url, e);
-						abort=true;
-					}
-					if(fetch!=null) try {
-						asyncReady.put(fetch);
-					} catch (InterruptedException e) {
-						log.warn(url, e);
-						abort=true;
-	//						fetch=new FetchRequest(url, CrawlingSession.this, e);
-					}
-				}finally {
-					try{
-						processing.remove(url);
-					}catch (Exception e) {
-						// retry. may just be a bug in mapdb
-						processing.remove(url);
+						if(fetch!=null) try {
+							asyncReady.put(fetch);
+						} catch (InterruptedException e) {
+							log.warn(url, e);
+							abort=true;
+//						fetch=new FetchRequest(url, CrawlingSession.this, e);
+						}
+					}finally {
+						try{
+							processing.remove(url);
+						}catch (Exception e) {
+							// retry. may just be a bug in mapdb
+							processing.remove(url);
+						}
 					}
 				}
+			} catch (Throwable e) {
+				log.error("Fatal error",e);
 			}
 			log.debug("Exiting "+getClass().getSimpleName());
 		}

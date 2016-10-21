@@ -34,6 +34,7 @@ import org.slf4j.LoggerFactory;
 import inescid.opaf.framework.CrawlingSession;
 import inescid.opaf.framework.FetchRequest;
 import inescid.opaf.framework.ResponseHandler;
+import inescid.util.RdfUtil;
 
 public abstract class ManifestCrawlHandler implements ResponseHandler {
 
@@ -123,6 +124,30 @@ public abstract class ManifestCrawlHandler implements ResponseHandler {
 	}
 	protected void handleManifest(FetchRequest respondedFetchRequest, Model modelManifest, Resource manif) throws Exception {
 		IiifPresentationMetadata md = parseMetadata(respondedFetchRequest, modelManifest, manif);
+
+//		StmtIterator allStms = modelManifest.listStatements();
+//		while (allStms.hasNext()) {
+//			Statement stm = allStms.next();
+//				System.out.println(stm);
+//		}
+//		System.out.println("\n\n");
+
+		Resource r = RdfUtil.findResource(manif, RdfReg.IIIF_HAS_SEQUENCES, RdfReg.RDF_FIRST,
+				RdfReg.IIIF_HAS_CANVASES, RdfReg.RDF_FIRST,
+				RdfReg.IIIF_HAS_IMAGE_ANNOTATIONS, RdfReg.RDF_FIRST,
+				RdfReg.OA_HAS_BODY, RdfReg.SIOC_HAS_SERVICE);
+		if(r!=null) {
+			md.setShownByUrl(r.getURI()+"/full/512,/0/default.jpg");
+			md.setShownByService(r.getURI());
+		}
+		
+		//		allStms = r.listProperties();
+//		while (allStms.hasNext()) {
+//			Statement stm = allStms.next();
+//			System.out.println(stm);
+//		}
+//		System.exit(0);
+		
 		
 		StmtIterator seeAlso = manif.listProperties(RdfReg.RDFS_SEE_ALSO);
 		while (seeAlso.hasNext()) {
@@ -237,7 +262,6 @@ public abstract class ManifestCrawlHandler implements ResponseHandler {
 //                System.out.println( item+" has:\n\tvalue1: "+value1+"\n\tvalue2: "+value2 );
             }
 			
-//
 //			StmtIterator allStms = mtds.listProperties();
 //			while (allStms.hasNext()) {
 //				Statement stm = allStms.next();

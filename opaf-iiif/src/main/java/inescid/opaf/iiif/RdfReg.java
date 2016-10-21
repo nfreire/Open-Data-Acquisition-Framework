@@ -16,4 +16,10 @@ public final class RdfReg {
 	public static final Property DCTERMS_HAS_FORMAT = ResourceFactory.createProperty("http://purl.org/dc/terms/hasFormat");
 	public static final Property DC_FORMAT = ResourceFactory.createProperty("http://purl.org/dc/elements/1.1/format");
 	public static final Property IIIF_NAV_DATE = ResourceFactory.createProperty("http://iiif.io/api/presentation/2#presentationDate");
+	public static final Property IIIF_HAS_SEQUENCES = ResourceFactory.createProperty("http://iiif.io/api/presentation/2#hasSequences");
+	public static final Property RDF_FIRST = ResourceFactory.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#first");
+	public static final Property IIIF_HAS_CANVASES = ResourceFactory.createProperty("http://iiif.io/api/presentation/2#hasCanvases");
+	public static final Property IIIF_HAS_IMAGE_ANNOTATIONS = ResourceFactory.createProperty("http://iiif.io/api/presentation/2#hasImageAnnotations");
+	public static final Property OA_HAS_BODY = ResourceFactory.createProperty("http://www.w3.org/ns/oa#hasBody");
+	public static final Property SIOC_HAS_SERVICE = ResourceFactory.createProperty("http://rdfs.org/sioc/services#has_service");
 }

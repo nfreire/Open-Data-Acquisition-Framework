@@ -49,13 +49,13 @@ public class CollectorOfAsyncResponses implements Runnable {
 						public void run() {
 							try {
 								handler.handle(fetchFinal);
-							} catch (Exception e) {
+							} catch (Throwable e) {
 								log.error(fetchFinal.getUrl(), e);
 							}finally{
 								handling.remove(fetchFinal);
 								try {
 									fetchFinal.getResponse().close();
-								} catch (Exception e) {
+								} catch (Throwable e) {
 									log.error(fetchFinal.getUrl(), e);
 								}									
 							}

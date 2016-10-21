@@ -8,6 +8,8 @@ import java.util.List;
 public class IiifPresentationMetadata implements Serializable{
 	private static final long serialVersionUID = 1L;
 	String manifestUrl;
+	String shownByUrl;
+	String shownByService;
 	String title;
 	String navDate;
 	final List<IiifMetadataElement> metadata=new ArrayList<>();
@@ -22,7 +24,7 @@ public class IiifPresentationMetadata implements Serializable{
 	public String getManifestUrl() {
 		return manifestUrl;
 	}
-
+ 
 	public void setManifestUrl(String manifestUrl) {
 		this.manifestUrl = manifestUrl;
 	}
@@ -73,5 +75,22 @@ public class IiifPresentationMetadata implements Serializable{
 	public void setNavDate(String navDate) {
 		this.navDate = navDate;
 	}
+
+	public String getShownByUrl() {
+		return shownByUrl;
+	}
+
+	public void setShownByUrl(String shownByUrl) {
+		this.shownByUrl = shownByUrl;
+	}
+
+	public String getShownByService() {
+		return shownByService;
+	}
+
+	public void setShownByService(String shownByService) {
+		this.shownByService = shownByService;
+	}
+
 
 }

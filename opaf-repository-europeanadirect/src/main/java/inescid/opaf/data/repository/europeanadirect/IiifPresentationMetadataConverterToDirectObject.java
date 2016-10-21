@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 
+import eu.europeana.europeanadirect.model.KeyValuePair;
 import eu.europeana.europeanadirect.model.Object;
 import eu.europeana.europeanadirect.model.ObjectLanguageAware;
 import eu.europeana.europeanadirect.model.ObjectLanguageNonAware.TypeEnum;
@@ -24,9 +25,16 @@ public class IiifPresentationMetadataConverterToDirectObject {
 
 	public static Object convert(IiifPresentationMetadata iifMeta, String defaultLanguage) {
 		Object ret=new Object();
-		ret.getWebLinks().add(new WebLink().link(iifMeta.getManifestUrl())
-				.type(eu.europeana.europeanadirect.model.WebLink.TypeEnum.OTHER)
-				);
+		
+		ret.getWebLinks().add(convertIsShownBy(iifMeta));
+		
+//		ret.getWebLinks().add(new WebLink().link(iifMeta.getIiifIsShownBy())
+//				.type(eu.europeana.europeanadirect.model.WebLink.TypeEnum.OTHER)
+//				);
+		
+//		ret.getWebLinks().add(new WebLink().link(iifMeta.getManifestUrl())
+//				.type(eu.europeana.europeanadirect.model.WebLink.TypeEnum.OTHER)
+//				);
 		if(!StringUtils.isEmpty(iifMeta.getTitle()))
 			MetadataUtilDirect.getLanguageField(ret, defaultLanguage).title(iifMeta.getTitle());
 		if(!StringUtils.isEmpty(iifMeta.getNavDate())) {
@@ -39,6 +47,18 @@ public class IiifPresentationMetadataConverterToDirectObject {
 		if(MetadataUtilDirect.getLanguageNonAwareField(ret).getType()==null)
 			ret.getLanguageNonAwareFields().setType(TypeEnum.IMAGE);
 		return ret;
+	}
+
+	private static WebLink convertIsShownBy(IiifPresentationMetadata iifMeta) {
+		WebLink webLink = new WebLink().link(iifMeta.getShownByUrl())
+				.type(eu.europeana.europeanadirect.model.WebLink.TypeEnum.DIRECT);
+		if(iifMeta.getManifestUrl()!=null) {
+			webLink.getCustomFields().add(new KeyValuePair().key("isReferencedBy").value(iifMeta.getManifestUrl()));
+		}
+		if(iifMeta.getShownByService()!=null) {
+			webLink.getCustomFields().add(new KeyValuePair().key("Service").value(iifMeta.getShownByService()));			
+		}
+		return webLink;
 	}
 
 	private static void setValues(Object ret, ObjectField objField, IiifMetadataElement el) {
