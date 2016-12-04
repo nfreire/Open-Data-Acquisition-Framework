@@ -11,6 +11,6 @@ public interface DataSource {
 	
 	public String getName();
 	
-	void synchronizeData(Date lastUpdate, CrawlingSystem crawlingSys);
+	void synchronizeData(CrawlingSystem crawlingSys);
 
 }

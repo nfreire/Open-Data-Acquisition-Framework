@@ -12,6 +12,7 @@ import org.w3c.dom.NodeList;
 import crawlercommons.sitemaps.SiteMap;
 import crawlercommons.sitemaps.SiteMapParser;
 import crawlercommons.sitemaps.SiteMapURL;
+import inescid.util.XmlUtil;
 import crawlercommons.sitemaps.AbstractSiteMap.SitemapType;
 
 public class SiteMapParserWithExtentions extends SiteMapParserProtected {
@@ -50,7 +51,6 @@ public class SiteMapParserWithExtentions extends SiteMapParserProtected {
             Node n = list.item(i);
             if (n.getNodeType() == Node.ELEMENT_NODE) {
                 Element elem = (Element) n;
-
                 String loc = getElementValue(elem, "loc");
                 try {
                     URL url = new URL(loc);
@@ -58,19 +58,28 @@ public class SiteMapParserWithExtentions extends SiteMapParserProtected {
                     String changeFreq = getElementValue(elem, "changefreq");
                     String priority = getElementValue(elem, "priority");
                     String manifest = getElementValue(elem, "http://iiif.io/api/presentation/2/", "manifest");
+                    String colection = getElementValue(elem, "http://iiif.io/api/presentation/2/", "within");
+                    String edm = getResourceSyncLn(elem, "describedby", "http://www.europeana.eu/schemas/edm/");;
+                   
+                    if(manifest==null) 
+                        manifest = getResourceSyncLn(elem, "alternate", "http://iiif.io/api/presentation/2.1/");
+                    if(colection==null) 
+                    	colection = getResourceSyncLn(elem, "colection", "http://iiif.io/api/presentation/2.1/");
+                   
                     boolean valid = urlIsLegal(sitemap.getBaseUrl(), url.toString());
 
                     if (valid || !isStrict()) {
-                    	if(manifest==null) {
-                    		SiteMapURL sUrl = new SiteMapURL(url.toString(), lastMod, changeFreq, priority, valid);
+                    	SiteMapURLExtended sUrl = new SiteMapURLExtended(url.toString(), lastMod, changeFreq, priority, valid);
+                    		if(manifest!=null) 
+                    			sUrl.setIiifManifest(manifest);
+                    		if(colection!=null) 
+                    			sUrl.setIiifCollection(colection);
+                    		if(edm!=null)
+                    			sUrl.setEdmMetadata(edm);
+                    		
+                    		
                     		sitemap.addSiteMapUrl(sUrl);
                     		LOG.debug("  {}. {}", (i + 1), sUrl);
-                    	}else{
-                    		SiteMapURLExtended sUrl = new SiteMapURLExtended(url.toString(), lastMod, changeFreq, priority, valid, manifest);
-                    		
-                    		sitemap.addSiteMapUrl((SiteMapURL)sUrl);
-                    		LOG.debug("  {}. {}", (i + 1), sUrl);
-                    	}
                     }
                 } catch (MalformedURLException e) {
                     LOG.debug("Bad url: [{}]", loc);
@@ -82,13 +91,32 @@ public class SiteMapParserWithExtentions extends SiteMapParserProtected {
         return sitemap;
     }
 	
-    protected String getElementValue(Element elem, String namespace, String elementName) {
+    private String getResourceSyncLn(Element elem, String rel, String conformsTo) {
+       	//a hack since commonscrawler is not using namespaces
+        NodeList list = elem.getChildNodes();
+        for(int i=0; i<list.getLength(); i++) {
+        	if(list.item(i) instanceof Element) {
+        		Element el=(Element)list.item(i);
+        		if(el.getNodeName().endsWith(":ln"))
+//        			System.out.println(el.getAttribute("rel")+" "+el.getAttribute("dcterms:conformsTo"));
+//        		System.out.println(rel+" "+conformsTo);
+        			if(el.getAttribute("rel").equals(rel)
+        				&& (conformsTo==null || el.getAttribute("dcterms:conformsTo").equals(conformsTo))
+        				) {
+        			return el.getAttribute("href");
+        		}
+        	}
+        }
+        return null;
+	}
+
+	protected String getElementValue(Element elem, String namespace, String elementName) {
     	//a hack since commonscrawler is not using namespaces
         NodeList list = elem.getChildNodes();
         for(int i=0; i<list.getLength(); i++) {
         	if(list.item(i) instanceof Element) {
         		if(list.item(i).getNodeName().endsWith(":"+elementName))
-        			return list.item(i).getTextContent();
+        			return  XmlUtil.getElementText((Element)list.item(i));
         	}
         }
         return null;

@@ -1,6 +1,7 @@
 package inescid.opaf.iiif;
 
 import inescid.opaf.framework.FetchRequest;
+import inescid.opaf.framework.UrlRequest;
 import inescid.opaf.sitemap.CrawlResourceHandler;
 import inescid.opaf.sitemap.SitemapResourceCrawler;
 import inescid.opaf.sitemap.WriterCrawlResourceHandler;
@@ -11,6 +12,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Date;
 
 import org.apache.http.HttpStatus;
 import org.apache.http.client.fluent.Content;
@@ -59,7 +61,8 @@ public class IiifPresentationApiCrawler implements Runnable {
 //			handler.setSession(session);
 //			new Thread(handler).start();
 			crawlSitemap();
-			crawlPresentationApi();
+			
+			crawlPresentationApi(iiifSource.getLastUpdate());
 			Thread.sleep(60000);
 			session.waitAndClose();
 			handler.close();
@@ -70,9 +73,9 @@ public class IiifPresentationApiCrawler implements Runnable {
 		}
 	}
 	
-	private void crawlPresentationApi() throws InterruptedException, IOException {
+	private void crawlPresentationApi(Date incrementalCrawlStartDate) throws InterruptedException, IOException {
 		for(String srcUrl: iiifSource.getHarvestingIiifUrls()) {
-			session.fetchAsyncLowPriority(srcUrl);
+			session.fetchAsyncLowPriority(new UrlRequest(srcUrl, incrementalCrawlStartDate));
 		}
 		if(!iiifSource.getSitemapsUrls().isEmpty()) {
 //			new Thread(new Runnable() {
@@ -80,7 +83,7 @@ public class IiifPresentationApiCrawler implements Runnable {
 					File sitemapResourceUrlsFile = getSitemapResourcesUrlsFile();
 					BufferedReader reader=new BufferedReader(new FileReader(sitemapResourceUrlsFile));
 					for (String line=reader.readLine(); line!=null ; line=reader.readLine()) {
-						session.fetchAsyncLowPriority(line);
+						session.fetchAsyncLowPriority(new UrlRequest(line, incrementalCrawlStartDate));
 					}
 					reader.close();
 //				}
@@ -94,7 +97,7 @@ public class IiifPresentationApiCrawler implements Runnable {
 			sitemapResourceUrlsFile.delete();
 		for(String sitemapUrl : iiifSource.getSitemapsUrls() ) {
 			SitemapResourceCrawler smCrawler=new SitemapResourceCrawler(sitemapUrl, null, new WriterCrawlResourceHandler(sitemapResourceUrlsFile,true), crawler );
-			smCrawler.run();
+			smCrawler.run(session);
 		}
 	}
 

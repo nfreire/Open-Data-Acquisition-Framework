@@ -6,7 +6,6 @@ import java.util.Collection;
 import java.util.NavigableSet;
 
 import org.mapdb.BTreeMap;
-import org.mapdb.Fun.Tuple2;
 
 import inescid.opaf.data.repository.api.storage.UidRecord;
 import inescid.opaf.data.repository.api.storage.UidRepository;
@@ -89,7 +88,7 @@ public class Database extends BaseMapdbImplementation {
 
 
 
-    public Iterable<Object> search(Enum field, Object value) {
+    public Iterable<Object[]> search(Enum field, Object value) {
         return search(field.ordinal(), value);
     }
     /**
@@ -97,14 +96,14 @@ public class Database extends BaseMapdbImplementation {
      * @param labelForLcsh
      * @return
      */
-    public Iterable<Object> search(Integer field, Object value) {
+    public Iterable<Object[]> search(Integer field, Object value) {
         return index.search(field, value);
     }
 
-    public <T> Iterable<T> search(Enum field, Object value, Class<T> classOfId) {
-//        System.out.println(field.ordinal()+" "+value);
-        return search(field.ordinal(), value, classOfId);
-    }
+//    public <T> Iterable<T> search(Enum field, Object value, Class<T> classOfId) {
+////        System.out.println(field.ordinal()+" "+value);
+//        return search(field.ordinal(), value, classOfId);
+//    }
         
         /**
      * @param field
@@ -112,20 +111,20 @@ public class Database extends BaseMapdbImplementation {
      * @param classOfId
      * @return ids of matching records
      */
-    public <T> Iterable<T> search(Integer field, Object value, Class<T> classOfId) {
-        return index.search(field, value, classOfId);
-    }
-    
-    public NavigableSet<Tuple2<String, String>> set(Enum field) {
-        return set(field.ordinal());
-    }
-    /**
-     * @param field
-     * @return ids of matching records
-     */
-    public NavigableSet<Tuple2<String, String>> set(Integer field) {
-        return index.set(field);
-    }
+//    public <T> Iterable<T> search(Integer field, Object value, Class<T> classOfId) {
+//        return index.search(field, value, classOfId);
+//    }
+//    
+//    public NavigableSet<?> set(Enum field) {
+//        return set(field.ordinal());
+//    }
+//    /**
+//     * @param field
+//     * @return ids of matching records
+//     */ 
+//    public NavigableSet<?> set(Integer field) {
+//        return index.set(field);
+//    }
 
 
     /**

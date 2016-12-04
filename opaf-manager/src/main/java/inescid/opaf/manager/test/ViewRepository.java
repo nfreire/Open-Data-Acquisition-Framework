@@ -18,14 +18,15 @@ public class ViewRepository {
 
 	
 	public static void main(String[] args) throws Exception {
-		File exportFolder=new File("C:\\Users\\nfrei\\Desktop\\UCDublin-mods");
+//		File exportFolder=new File("C:\\Users\\nfrei\\Desktop\\UCDublin-mods");
+		File exportFolder=new File("C:\\Users\\nfrei\\Desktop\\NLWales-mods");
 		final int max_export_records=100;
 		if(!exportFolder.exists())
 			exportFolder.mkdirs();
 		
 		Database db;
-		db=new Database(new File("target/iiif-crawl-repository-ucd"), AccessMode.READ_ONLY);
-//		db=new Database(new File("target/iiif-crawl-repository-nlw"), AccessMode.READ_ONLY);
+//		db=new Database(new File("target/iiif-crawl-repository-ucd"), AccessMode.READ_ONLY);
+		db=new Database(new File("target/iiif-crawl-repository-nlw"), AccessMode.READ_ONLY);
 //		db=new Database(new File("target/iiif-crawl-repository"), AccessMode.READ_ONLY);
 		int export_records_cnt=0;
 		for(byte[] mdBytes : db.getAllRecordsData()) {

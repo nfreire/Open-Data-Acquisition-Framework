@@ -1,6 +1,7 @@
 package inescid.opaf.manager.iiif;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
 
@@ -38,6 +39,9 @@ public class DataSourceIiif implements DataSource {
 
 		if(props.containsKey("collection"))
 			src.getHarvestingIiifUrls().add(props.getProperty("collection"));
+
+		if(props.containsKey("lastSynchronization"))
+			src.setLastUpdate(new SimpleDateFormat("yyyy-MM-dd").parse(props.getProperty("lastSynchronization")));
 	}
 
 	@Override
@@ -46,8 +50,7 @@ public class DataSourceIiif implements DataSource {
 	}
 
 	@Override
-	public void synchronizeData(Date lastUpdate, CrawlingSystem crawlingSys) {
-
+	public void synchronizeData(CrawlingSystem crawlingSys) {
 		IiifPresentationApiCrawler crawler=new IiifPresentationApiCrawler(src, handler, crawlingSys);
 		crawler.run();
 	}
@@ -60,5 +63,4 @@ public class DataSourceIiif implements DataSource {
 		this.handler = handler;
 	}
 	
-
 }

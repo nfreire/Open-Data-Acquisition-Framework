@@ -61,7 +61,7 @@ public class DataSourceManager {
 	
 	public void syncAll() {
 		for(DataSource ds: sources.values() ) {
-			ds.synchronizeData(null, crawlingSystem);
+			ds.synchronizeData(crawlingSystem);
 		}
 	}
 	

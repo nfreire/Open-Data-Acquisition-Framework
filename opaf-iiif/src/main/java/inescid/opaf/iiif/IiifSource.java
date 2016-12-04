@@ -2,6 +2,7 @@ package inescid.opaf.iiif;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 public class IiifSource {
@@ -13,6 +14,8 @@ public class IiifSource {
 	List<String> harvestingIiifUrls=new ArrayList<String>();
 	
 	String name;
+	
+	Date lastUpdate;
 	
 	public List<String> getSitemapsUrls() {
 		return sitemapsUrls;
@@ -64,6 +67,14 @@ public class IiifSource {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Date getLastUpdate() {
+		return lastUpdate;
+	}
+
+	public void setLastUpdate(Date lastUpdate) {
+		this.lastUpdate = lastUpdate;
 	}
 	
 	

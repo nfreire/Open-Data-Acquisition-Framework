@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -34,6 +35,7 @@ import org.slf4j.LoggerFactory;
 import inescid.opaf.framework.CrawlingSession;
 import inescid.opaf.framework.FetchRequest;
 import inescid.opaf.framework.ResponseHandler;
+import inescid.opaf.framework.UrlRequest;
 import inescid.util.RdfUtil;
 
 public abstract class ManifestCrawlHandler implements ResponseHandler {
@@ -57,6 +59,8 @@ public abstract class ManifestCrawlHandler implements ResponseHandler {
 			if(statusCode==200) {
 				Content content = respondedFetchRequest.getContent();
 				handleJsonld(respondedFetchRequest, content.asBytes());
+			} else if(statusCode==304) {
+				log.info("not modified, skipped: "+respondedFetchRequest.getUrl());
 			} else {
 				log.info("Invalid response for manifest request: "+statusCode);
 			}
@@ -115,7 +119,7 @@ public abstract class ManifestCrawlHandler implements ResponseHandler {
 			Resource manif = manifests.next();
 			try {
 //				session.fetchWithPriority(manif.getURI());
-				session.fetchAsync(manif.getURI());
+				session.fetchAsync(new UrlRequest(manif.getURI()));
 			} catch (InterruptedException e) {
 				log.info(e.getMessage(), e);
 				break;
@@ -164,9 +168,9 @@ public abstract class ManifestCrawlHandler implements ResponseHandler {
 //					System.out.println("Fetching prio: "+seeAlsoUrl);
 					FetchRequest seeAlsoFetched;
 					if(formatProperty != null)
-						seeAlsoFetched = session.fetchWithPriority(seeAlsoUrl, formatProperty.getObject().toString());
+						seeAlsoFetched = session.fetchWithPriority(new UrlRequest(seeAlsoUrl, (Date) null, formatProperty.getObject().toString()));
 					else
-						seeAlsoFetched = session.fetchWithPriority(seeAlsoUrl);
+						seeAlsoFetched = session.fetchWithPriority(new UrlRequest(seeAlsoUrl));
 					try {
 		//				System.out.println("Fetching prio: "+seeAlsoUrl+"DONE");
 						if (seeAlsoFetched.getResponseStatusCode()==200) {

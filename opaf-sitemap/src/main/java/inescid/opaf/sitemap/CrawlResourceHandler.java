@@ -13,7 +13,7 @@ public abstract class CrawlResourceHandler {
 
 	private static Logger log = LoggerFactory.getLogger(CrawlResourceHandler.class);
 		
-		private CrawlingSession session;
+		protected CrawlingSession session;
 		
 		public void close() {
 		}

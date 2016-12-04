@@ -1,6 +1,7 @@
 package inescid.opaf.sitemap;
 
 import inescid.opaf.framework.FetchRequest;
+import inescid.opaf.framework.UrlRequest;
 
 import java.io.IOException;
 import java.net.URL;
@@ -21,7 +22,7 @@ import crawlercommons.sitemaps.UnknownFormatException;
 import inescid.opaf.framework.CrawlingSession;
 import inescid.opaf.framework.CrawlingSystem;
 
-public class SitemapResourceCrawler implements Runnable {
+public class SitemapResourceCrawler {
 
 	private static Logger log = LoggerFactory.getLogger(SitemapResourceCrawler.class);
 	
@@ -42,16 +43,22 @@ public class SitemapResourceCrawler implements Runnable {
 		this.robotsTxtUrl = robotsTxtUrl;
 	}
 	
-	public void run() {
+	public void run(CrawlingSession reuseSession) {
 		try {
-			session = crawler.startSession(3);
+			if(reuseSession!=null)
+				session=reuseSession;
+			else
+				session = crawler.startSession(3);
 			if(robotsTxtUrl!=null)
 				session.setRobotsTxtRules(robotsTxtUrl);
+			handler.setSession(session);
 //			session.setWorkers(3);
 //			handler.setSession(session);
 //			new Thread(handler).start();
 			fetchSitemap(sitemapUrl);
-			session.waitAndClose();
+			
+			if(reuseSession==null)
+				session.waitAndClose();
 			log.debug("Run ending: "+this.getClass().getName());
 		} catch (Exception e) {
 			log.error(e.getMessage(), e);
@@ -61,7 +68,7 @@ public class SitemapResourceCrawler implements Runnable {
 	
 	private void fetchSitemap(String sitemapUrl) throws IOException, InterruptedException {
 		log.debug(sitemapUrl);
-		FetchRequest req = session.fetch(sitemapUrl);
+		FetchRequest req = session.fetch(new UrlRequest(sitemapUrl));
 		try {
 			if(log.isDebugEnabled())
 				log.debug(sitemapUrl+" - Response code: "+req.getResponse().getStatusLine().getStatusCode());
@@ -101,7 +108,7 @@ public class SitemapResourceCrawler implements Runnable {
 		} finally {
 			try {
 				req.getResponse().close();
-			} catch (Exception e) {
+			} catch (Exception e) { 
 				log.error(req.getUrl(), e);
 			}
 		}	

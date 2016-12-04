@@ -12,10 +12,10 @@ import inescid.opaf.manager.iiif.DataSourceIiif;
 import inescid.opaf.sitemap.CrawlResourceHandler;
 import inescid.opaf.sitemap.SitemapResourceCrawler;
 
-public class RunHarvestingUcd {
+public class RunHarvestingUcdPoetryVideos {
 
 	public static void main(String[] args) {
-		RunHarvestingManager.main(new String[] {"src/config/opaf_data_sources_ucd.properties"});
-				
+		RunHarvestingManager.main(new String[] {"src/config/opaf_data_sources_ucd_poetry.properties"});
+		
 	}
 }

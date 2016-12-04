@@ -13,7 +13,8 @@ import inescid.opaf.data.repository.impl.BaseMapdbImplementation;
 public class UidRepository extends BaseMapdbImplementation{
 
     private static final String INDEX_NAME="_";
-    
+
+    BTreeMap<Object, byte[]> treeMap;
     /**
      * Creates a new instance of this class.
      * @param makeOrGet
@@ -21,11 +22,13 @@ public class UidRepository extends BaseMapdbImplementation{
     public UidRepository(DB db) {
         super();
         this.db=db;
+        treeMap = (BTreeMap<Object, byte[]>) db.treeMap(INDEX_NAME).createOrOpen();
     }
 
     
     public UidRepository(File home, AccessMode mode) {
         super(home, mode);
+        treeMap = (BTreeMap<Object, byte[]>) db.treeMap(INDEX_NAME).createOrOpen();
     }
 
     /**
@@ -75,7 +78,8 @@ public class UidRepository extends BaseMapdbImplementation{
      * @param record
      */
     private void addRecordWithoutComit(UidRecord record) {
-                BTreeMap<Object, byte[]> treeMap = db.getTreeMap("_");
+                BTreeMap<Object, byte[]> treeMap = (BTreeMap<Object, byte[]>) db.treeMap(INDEX_NAME).createOrOpen();
+//                BTreeMap<Object, byte[]> treeMap = db.treeMap(INDEX_NAME).createOrOpen();
                 treeMap.put(record.getUid(), record.getValue());
     }
 
@@ -97,7 +101,6 @@ public class UidRepository extends BaseMapdbImplementation{
 
     
     public byte[] getRecord(Object uid) {
-        BTreeMap<Object, byte[]> treeMap = db.getTreeMap(INDEX_NAME);
         return  treeMap.get(uid);
     }
 
@@ -108,7 +111,7 @@ public class UidRepository extends BaseMapdbImplementation{
      * @throws IOException
      */
     public void truncate() throws Exception {
-        db.delete(INDEX_NAME);
+//        db.delete(INDEX_NAME);
     }
 
     /**
@@ -116,12 +119,10 @@ public class UidRepository extends BaseMapdbImplementation{
      * @return
      */
     public boolean containsRecord(String uid) {
-        BTreeMap<String, byte[]> treeMap = db.getTreeMap(INDEX_NAME);
         return treeMap.containsKey(uid);
     }
 
     public BTreeMap<Object, byte[]> setOfRecords() {
-        BTreeMap<Object, byte[]> treeMap = db.getTreeMap(INDEX_NAME);
         return treeMap;
     }
 

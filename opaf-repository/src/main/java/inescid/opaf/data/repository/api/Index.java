@@ -9,10 +9,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.NavigableSet;
+import java.util.Set;
+import java.util.concurrent.ConcurrentNavigableMap;
 
-import org.mapdb.BTreeKeySerializer;
 import org.mapdb.DB;
-import org.mapdb.Fun;
+import org.mapdb.Serializer;
+import org.mapdb.serializer.SerializerArrayTuple;
 
 import inescid.opaf.data.repository.impl.BaseMapdbImplementation;
 
@@ -85,14 +87,12 @@ public class Index  extends BaseMapdbImplementation {
     private void addRecordWithoutComit(Record record) {
 //        System.out.println(record.getUid());
             for(Entry<Integer, List<Object>> field: record.getFields().entrySet()) {
-                NavigableSet<Fun.Tuple2<?, ?>> multiMap = getMap(field.getKey());
-                List<Fun.Tuple2<String, String>> vals=new ArrayList<Fun.Tuple2<String,String>>(field.getValue().size());
+            	 NavigableSet<Object[]> multimap = getMap(field.getKey());
+//                List<Fun.Tuple2<String, String>> vals=new ArrayList<Fun.Tuple2<String,String>>(field.getValue().size());
                 for(Object val: field.getValue()) {
-                    if(val!=null) 
-                        vals.add(new Fun.Tuple2(val.toString(), record.getUid()));
+                    	multimap.add(new Object[] {val.toString(), record.getUid().toString()});
     //                System.out.println(val);
                 }
-                multiMap.addAll(vals);
             }
     }
 
@@ -100,13 +100,16 @@ public class Index  extends BaseMapdbImplementation {
      * @param field
      * @return
      */
-    private NavigableSet<Fun.Tuple2<?, ?>> getMap(Integer field) {
-        NavigableSet<Fun.Tuple2<?,?>> multiMap = null;
+    private NavigableSet<Object[]> getMap(Integer field) {
+    	NavigableSet<Object[]> multiMap = null;
         String fieldId = toStringFieldId(field);
-        if(db.exists(fieldId))
-            multiMap = db.getTreeSet(fieldId);
-        else
-            multiMap = db.createTreeSet(fieldId).serializer(BTreeKeySerializer.TUPLE2).make();
+//        if(db.exists(fieldId))
+            multiMap =  db.treeSet(fieldId)
+            		.serializer(new SerializerArrayTuple(Serializer.STRING, Serializer.STRING))
+                    .counterEnable()
+            		.createOrOpen();
+//        else
+//            multiMap = db.createTreeSet(fieldId).serializer(BTreeKeySerializer.TUPLE2).make();
         return multiMap;
     }
 
@@ -145,11 +148,13 @@ public class Index  extends BaseMapdbImplementation {
      * @return the number of results for the query
      * @throws SolrServerException
      */
-    public Iterable<Object> search(Integer field, Object value) {
-        NavigableSet<Fun.Tuple2<Object, Object>> index = db. get(toStringFieldId(field));
+    public Iterable<Object[]> search(Integer field, Object value) {
+        NavigableSet<Object[]> index = db.get(toStringFieldId(field));
         if(index==null)
             return Collections.emptyList();
-        Iterable<Object> findVals2 = Fun.filter(index, value);
+        Set<Object[]> findVals2 = index.subSet(
+                new Object[]{value},         // lower interval bound
+                new Object[]{value, null});
         return findVals2;
     }
     
@@ -159,14 +164,14 @@ public class Index  extends BaseMapdbImplementation {
      * @param classOfValue
      * @return
      */
-    @SuppressWarnings("unchecked")
-    public <T> Iterable<T> search(Integer field, Object value, Class<T> classOfValue) {
-        NavigableSet<Fun.Tuple2<Object, Object>> index = db. get(toStringFieldId(field));
-        if(index==null)
-            return Collections.emptyList();
-        Iterable<Object> findVals2 = Fun.filter(index, value);
-        return (Iterable<T>)findVals2;
-    }
+//    @SuppressWarnings("unchecked")
+//    public <T> Iterable<T> search(Integer field, Object value, Class<T> classOfValue) {
+//        NavigableSet<Fun.Tuple2<Object, Object>> index = db. get(toStringFieldId(field));
+//        if(index==null)
+//            return Collections.emptyList();
+//        Iterable<Object> findVals2 = Fun.filter(index, value);
+//        return (Iterable<T>)findVals2;
+//    }
     
 
 //    /**
@@ -184,10 +189,10 @@ public class Index  extends BaseMapdbImplementation {
      * @param field
      * @return set of all vales of a field
      */
-    public NavigableSet<Fun.Tuple2<String,String>> set(Integer field) {
-        NavigableSet<Fun.Tuple2<String,String>> treeMap = db.getTreeSet(toStringFieldId(field));
-        return treeMap;        
-    }
+//    public NavigableSet<Fun.Tuple2<String,String>> set(Integer field) {
+//        NavigableSet<Fun.Tuple2<String,String>> treeMap = db.getTreeSet(toStringFieldId(field));
+//        return treeMap;        
+//    }
 
 
 }

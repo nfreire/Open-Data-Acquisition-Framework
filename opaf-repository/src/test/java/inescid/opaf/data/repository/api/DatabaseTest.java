@@ -32,11 +32,11 @@ public class DatabaseTest {
         Record rec = new Record(1L);
         rec.setDataToFields();
         rec.addField(1, "string");
-        rec.addField(2, 123);
+        rec.addField(2, "123");
         db.add(rec);
         
-        Iterable<Object> search = db.search(1, "string");
-        Iterator<Object> iterator = search.iterator();
+        Iterable<Object[]> search = db.search(1, "string");
+        Iterator<Object[]> iterator = search.iterator();
         Assert.assertTrue(iterator.hasNext());
         System.out.println(iterator.next());
         

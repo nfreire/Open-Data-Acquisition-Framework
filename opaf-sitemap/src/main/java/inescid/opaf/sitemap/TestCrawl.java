@@ -21,7 +21,7 @@ public class TestCrawl {
 					
 				}
 			}, crawlingSys );
-			crawler.run();
+			crawler.run(null);
 			crawlingSys.close();
 			System.out.println("All done. exiting.");
 		} catch (Exception e) {

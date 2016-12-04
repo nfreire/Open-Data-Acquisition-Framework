@@ -1,26 +1,24 @@
 package inescid.opaf.framework;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.concurrent.Semaphore;
+import java.util.AbstractMap.SimpleImmutableEntry;
 
 import org.apache.commons.io.IOUtils;
-import org.apache.http.HttpResponse;
+import org.apache.http.HttpMessage;
 import org.apache.http.client.fluent.Content;
-import org.apache.http.client.fluent.Request;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.entity.ContentType;
 
 public class FetchRequest {
-	String url;
-	String contentTypeToRequest;
+	UrlRequest url;
+//	String contentTypeToRequest;
 	CrawlingSession session;
 //	Semaphore fetchingSemaphore=new Semaphore(1);
 	CloseableHttpResponse response;
 	Content content;
 	Throwable error;
 
-	public FetchRequest(String url) {
+	public FetchRequest(UrlRequest url) {
 		super();
 		this.url = url;
 //		try {
@@ -30,7 +28,7 @@ public class FetchRequest {
 //		}
 	}
 
-	public FetchRequest(String url, CrawlingSession session) {
+	public FetchRequest(UrlRequest url, CrawlingSession session) {
 		super();
 		this.url = url;
 		this.session = session;
@@ -43,23 +41,18 @@ public class FetchRequest {
 
 
 
-	public FetchRequest(String url, CrawlingSession crawlingSession, Throwable error) {
+	public FetchRequest(UrlRequest url, CrawlingSession crawlingSession, Throwable error) {
 		this(url, crawlingSession);
 		this.error=error;
 	}
 
-	public FetchRequest(String url, String contentTypeToRequest) {
-		this(url);
-		this.contentTypeToRequest = contentTypeToRequest;
-	}
-
 	public String getUrl() {
-		return url;
+		return url.getUrl();
 	}
 
-	public void setUrl(String url) {
-		this.url = url;
-	}
+//	public void setUrl(UrlRequest url) {
+//		this.url = url;
+//	}
 
 	public CrawlingSession getSession() {
 		return session;
@@ -92,10 +85,12 @@ public class FetchRequest {
 
 	public void setResponse(CloseableHttpResponse response) throws UnsupportedOperationException, IOException {
 		this.response = response;
-		byte[] byteArray = IOUtils.toByteArray(response.getEntity().getContent());
-		ContentType contentType = ContentType.get(response.getEntity());
-		response.close();
-		this.content=new Content(byteArray, contentType);
+		if(response.getEntity()!=null) {
+			byte[] byteArray = IOUtils.toByteArray(response.getEntity().getContent());
+			ContentType contentType = ContentType.get(response.getEntity());
+			response.close();
+			this.content=new Content(byteArray, contentType);
+		}
 	}
 		
 //		fetchingSemaphore.release();
@@ -111,12 +106,20 @@ public class FetchRequest {
 		return content;
 	}
 
-	public String getContentTypeToRequest() {
-		return contentTypeToRequest;
+//	public String getContentTypeToRequest() {
+//		return contentTypeToRequest;
+//	}
+//
+//	public void setContentTypeToRequest(String contentTypeToRequest) {
+//		this.contentTypeToRequest = contentTypeToRequest;
+//	}
+
+	public void addHeaders(HttpMessage request) {
+		for(SimpleImmutableEntry<String, String> header : url.getHeaders()) {
+			request.addHeader(header.getKey(), header.getValue());
+		}
 	}
 
-	public void setContentTypeToRequest(String contentTypeToRequest) {
-		this.contentTypeToRequest = contentTypeToRequest;
-	}
+
 	
 }

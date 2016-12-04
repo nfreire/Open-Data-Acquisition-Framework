@@ -13,6 +13,9 @@ public class CrawlingSystem {
 //	public CrawlingSystem() {
 		public CrawlingSystem(File workingFolder) {
 //		mapDb=new 
+			if(workingFolder.exists())
+				for(File tmpF: workingFolder.listFiles())
+					tmpF.delete();
 		this.workingFolder=workingFolder;
 		
 		fetcher.init();
@@ -21,18 +24,13 @@ public class CrawlingSystem {
 		return new CrawlingSession(this, numberOfParallelFetchers);
 	}
 
-	public FetchRequest fetch(String url) throws IOException, InterruptedException {
+	public FetchRequest fetch(UrlRequest url) throws IOException, InterruptedException {
 		FetchRequest req=new FetchRequest(url);
 		fetcher.fetch(req);
 		return req;
 	}
-	public FetchRequest fetchWithPriority(String url) throws IOException, InterruptedException {
+	public FetchRequest fetchWithPriority(UrlRequest url) throws IOException, InterruptedException {
 		FetchRequest req=new FetchRequest(url);
-		fetcher.fetchWithPriority(req);
-		return req;
-	}
-	public FetchRequest fetchWithPriority(String url, String contentTypeToRequest) throws IOException, InterruptedException {
-		FetchRequest req=new FetchRequest(url, contentTypeToRequest);
 		fetcher.fetchWithPriority(req);
 		return req;
 	}

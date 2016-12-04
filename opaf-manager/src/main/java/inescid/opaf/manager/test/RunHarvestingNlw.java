@@ -16,29 +16,5 @@ public class RunHarvestingNlw {
 
 	public static void main(String[] args) {
 		RunHarvestingManager.main(new String[] {"src/config/opaf_data_sources_nlw.properties"});
-//		try {
-//			File workingFolder=new File("target/crawler_workdir");
-//			DataSourceManager manager=new DataSourceManager();
-//			manager.init(workingFolder);
-//			
-//			ManifestCrawlHandler manifHandler=null;
-////			manifHandler=new CrawlingHandlerForRepositoryStorage(new File("target/iiif-crawl-repository-nlw"));
-////			IiifSource nlwSrc = new IiifSource("Nat. Lib. of Wales - Newspapers",
-////					"http://dams.llgc.org.uk/iiif/newspapers/3100020.json");
-////			DataSourceIiif dsIiifNlwPotterNewspaper=new DataSourceIiif(nlwSrc, manifHandler);
-////			manager.addSource(dsIiifNlwPotterNewspaper);
-//			
-//			manifHandler=new CrawlingHandlerForRepositoryStorage(new File("target/iiif-crawl-repository-nlw"));
-//			IiifSource ucdSrc = new IiifSource("National Library of Wales");
-//			ucdSrc.getSitemapsUrls().add("http://dams.llgc.org.uk/iiif/newspapers/sitemap.xml");
-//			DataSourceIiif dsIiifUcd=new DataSourceIiif(ucdSrc, manifHandler);
-//			manager.addSource(dsIiifUcd);
-//			
-//			manager.syncAll();
-//			manager.close();
-//			System.out.println("All done. exiting.");
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
 	}
 }

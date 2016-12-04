@@ -24,8 +24,8 @@
     <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
     
     <!-- FIXED VARIABLES -->
-    <xsl:variable name="country" select="'Europe'"/>
-    <xsl:variable name="language" select="'mul'"/>
+    <xsl:variable name="country" select="'Ireland'"/>
+    <xsl:variable name="language" select="'en'"/>
 
     
     <!-- DYNAMIC VARIABLES -->

@@ -152,9 +152,8 @@ public class XmlUtil {
     }
 
     public static String getElementTextByTagName(Element n, String elementName) {
-        NodeList subNodes = n.getElementsByTagName(elementName);
-        int sz = subNodes.getLength();
-        if (sz > 0) return ((Element)subNodes.item(0)).getTextContent();
+        Element subEl = getElementByTagName(n, elementName);
+        if (subEl!=null) return getElementText(subEl);
         return null;
     }
 
@@ -438,4 +437,17 @@ public class XmlUtil {
 		
 	}
 
+	
+
+    public static String getElementText(Element n) {
+        NodeList childNodes = n.getChildNodes();
+        String result = new String();
+        for (int i = 0; i < childNodes.getLength(); i++) {
+          Node node = childNodes.item(i);
+          if (node.getNodeType() == Node.TEXT_NODE) {
+            result += node.getNodeValue();
+          }
+        }
+        return result;
+    }
 }

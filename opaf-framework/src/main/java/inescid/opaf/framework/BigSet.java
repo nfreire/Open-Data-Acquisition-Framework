@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.mapdb.DB;
 import org.mapdb.DBMaker;
+import org.mapdb.DBMaker.Maker;
 import org.mapdb.Serializer;
 
 public class BigSet<T> {
@@ -23,26 +24,27 @@ public class BigSet<T> {
         if(!home.exists()) 
             home.mkdirs();
         db=createDb(true);  
-		if(db.exists(name))
-			set=db.get(name);
-		else {
-			set = (Set<T>) db.createHashSet(name).make();
-		}
+//		if(db.exists(name))
+//			set=db.get(name);
+//		else {
+			set = (Set<T>) db.hashSet(name).createOrOpen();
+//		}
     }
 	
 	public BigSet(String name, DB mapDb) {
 		super();
 		this.name = name; 
 		this.db = mapDb;
-		if(mapDb.exists(name))
-			set=mapDb.get(name);
-		else {
-			set = (Set<T>) mapDb.createHashSet(name).make();
-		}
+//		if(mapDb.exists(name))
+//			set=mapDb.get(name);
+//		else {
+			set = (Set<T>) mapDb.hashSet(name).createOrOpen();
+//		}
 	}
     protected DB createDb(boolean retry) {
     	try {
-            DBMaker<?> dbmaker = DBMaker.newFileDB(new File(homeFolder, "db.bin")).mmapFileEnable();
+            Maker dbmaker = DBMaker.fileDB(new File(homeFolder, "db.bin"));
+//            		().fileMmapEnable();
             return dbmaker.make();
         } catch (Throwable e) {
             if(retry) {

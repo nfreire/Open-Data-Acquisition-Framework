@@ -14,9 +14,12 @@ public class SiteMapURLExtended extends SiteMapURL{
 
     private static Logger LOG = LoggerFactory.getLogger(SiteMapURLExtended.class);
 	 
-    /** URL found in Sitemap (required) */
 	protected URL iiifManifest;
+	protected URL iiifCollection;
+	protected URL edmMetadata;
 
+	
+	
 	public URL getIiifManifest() {
 		return iiifManifest;
 	}
@@ -65,4 +68,39 @@ public class SiteMapURLExtended extends SiteMapURL{
 	        sb.append(", iiifManifest = ").append(iiifManifest);
 	        return sb.toString();
 	    }
+
+	public URL getIiifCollection() {
+		return iiifCollection;
+	}
+
+	public void setIiifCollection(URL iiifCollection) {
+		this.iiifCollection = iiifCollection;
+	}
+
+	public URL getEdmMetadata() {
+		return edmMetadata;
+	}
+
+	public void setEdmMetadata(URL edmMetadata) {
+		this.edmMetadata = edmMetadata;
+	}
+
+	public void setIiifCollection(String colectionUrl) {
+        try {
+            this.iiifCollection = new URL(colectionUrl);
+        } catch (MalformedURLException e) {
+            LOG.error("Bad url: [{}], Exception: {}", iiifCollection, e.toString());
+            this.iiifCollection = null;
+        }
+		
+	}
+	public void setEdmMetadata(String edmUrl) {
+		try {
+			this.edmMetadata = new URL(edmUrl);
+		} catch (MalformedURLException e) {
+			LOG.error("Bad url: [{}], Exception: {}", edmMetadata, e.toString());
+			this.iiifCollection = null;
+		}
+		
+	}
 }

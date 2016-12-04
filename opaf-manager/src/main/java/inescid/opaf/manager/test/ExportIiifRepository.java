@@ -22,7 +22,7 @@ import inescid.opaf.iiif.IiifPresentationMetadata;
 import inescid.opaf.iiif.IiifSeeAlsoProperty;
 import inescid.util.XmlUtil;
 
-public class ExportRepository {
+public class ExportIiifRepository {
 
 	private static final Charset UTF8=Charset.forName("UTF8");
 	private static final Pattern STRIP_XML_TOP_ELEMENT=Pattern.compile("^.*<rdf:RDF[^>]+>", Pattern.DOTALL);

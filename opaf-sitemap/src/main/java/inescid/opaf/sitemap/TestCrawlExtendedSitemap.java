@@ -10,7 +10,8 @@ public class TestCrawlExtendedSitemap {
 	
 	public static void main(String[] args) {
 		try {
-			String sitemapUrl="http://dams.llgc.org.uk/iiif/newspapers/sitemap.xml";
+//			String sitemapUrl="http://dams.llgc.org.uk/iiif/newspapers/sitemap.xml";
+			String sitemapUrl="https://data.ucd.ie/sitemap_test1.xml";
 			
 			
 			CrawlingSystem crawlingSys=new CrawlingSystem(new File("target/crawler_workdir"));
@@ -18,11 +19,13 @@ public class TestCrawlExtendedSitemap {
 				@Override
 				public void handleUrl(SiteMapURL subSm) throws Exception {
 					System.out.print(subSm.getUrl());	
-					if(subSm instanceof SiteMapURLExtended)
+					if(subSm instanceof SiteMapURLExtended) {
 						System.out.println(((SiteMapURLExtended) subSm).getIiifManifest());	
+						System.out.println(((SiteMapURLExtended) subSm).getEdmMetadata());
+					}
 				}
 			}, crawlingSys );
-			crawler.run();
+			crawler.run(null);
 			crawlingSys.close();
 			System.out.println("All done. exiting.");
 		} catch (Exception e) {

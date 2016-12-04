@@ -6,6 +6,7 @@ import java.io.IOException;
 
 import org.mapdb.DB;
 import org.mapdb.DBMaker;
+import org.mapdb.DBMaker.Maker;
 
 import inescid.opaf.data.repository.api.AccessMode;
 import inescid.opaf.data.repository.api.storage.UidRepository;
@@ -50,7 +51,7 @@ public class BaseMapdbImplementation {
      * @throws Exception
      */
     public void optimize() throws Exception {
-        db.compact();
+        db.getStore().compact();
     }
     
     /**
@@ -87,15 +88,16 @@ public class BaseMapdbImplementation {
 //        return DBMaker.newFileDB(new File(homeFolder, "db.bin")).transactionDisable().make();
 //        return DBMaker.newFileDB(new File(homeFolder, "db.bin")).make();
         try {
-            DBMaker<?> dbmaker = DBMaker.newFileDB(new File(homeFolder, "db.bin")).mmapFileEnable();
+            Maker dbmaker = DBMaker.fileDB(new File(homeFolder, "db.bin"));
+//            		.fileMmapEnable();
             switch (mode) {
             case READ_ONLY:
                 dbmaker=dbmaker.readOnly();
                 break;
             case WRITE:
+            	dbmaker=dbmaker.transactionEnable();
                 break;
             case WRITE_TRANSACTION_DISABLE:
-                dbmaker=dbmaker.transactionDisable();
                 break;
             default:
                 break;

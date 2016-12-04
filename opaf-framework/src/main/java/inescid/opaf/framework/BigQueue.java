@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.mapdb.DB;
 import org.mapdb.DBMaker;
 import org.mapdb.Serializer;
+import org.mapdb.DBMaker.Maker;
 
 public class BigQueue<T> {
 	String name;
@@ -22,26 +23,27 @@ public class BigQueue<T> {
         if(!home.exists()) 
             home.mkdirs();
         db=createDb(true);  
-		if(db.exists(name))
-			queue=db.get(name);
-		else {
-			queue = (BlockingQueue<T>) db.createQueue(name, Serializer.JAVA, true);
-		}
+//		if(db.exists(name))
+//			queue=db.get(name);
+//		else {
+//			queue = (BlockingQueue<T>) db.qcreateQueue(name, Serializer.JAVA, true);
+//		}
     }
 	
 	public BigQueue(String name, DB mapDb) {
 		super();
 		this.name = name; 
 		this.db = mapDb;
-		if(mapDb.exists(name))
-			queue=mapDb.get(name);
-		else {
-			queue = (BlockingQueue<T>) mapDb.createQueue(name, Serializer.JAVA, true);
-		}
+//		if(mapDb.exists(name))
+//			queue=mapDb.get(name);
+//		else {
+//			queue = (BlockingQueue<T>) mapDb.createQueue(name, Serializer.JAVA, true);
+//		}
 	}
     protected DB createDb(boolean retry) {
     	try {
-            DBMaker<?> dbmaker = DBMaker.newFileDB(new File(homeFolder, "db.bin")).mmapFileEnable();
+            Maker dbmaker = DBMaker.fileDB(new File(homeFolder, "db.bin"));
+//            		.fileMmapEnable();
             return dbmaker.make();
         } catch (Throwable e) {
             if(retry) {
