@@ -50,6 +50,11 @@
 		<artifactId>opaf-repository</artifactId>
 		<version>0.1</version>
     </dependency>
+    <dependency>
+		<groupId>inescid</groupId>
+		<artifactId>opaf-www</artifactId>
+		<version>0.1</version>
+    </dependency>
 <dependency>
     <groupId>net.sf.saxon</groupId>
     <artifactId>Saxon-HE</artifactId>

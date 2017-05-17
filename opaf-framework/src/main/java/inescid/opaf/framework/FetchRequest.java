@@ -88,9 +88,9 @@ public class FetchRequest {
 		if(response.getEntity()!=null) {
 			byte[] byteArray = IOUtils.toByteArray(response.getEntity().getContent());
 			ContentType contentType = ContentType.get(response.getEntity());
-			response.close();
 			this.content=new Content(byteArray, contentType);
 		}
+		response.close();
 	}
 		
 //		fetchingSemaphore.release();

@@ -1,17 +1,10 @@
 package inescid.opaf.manager.sitemaps;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.Writer;
 
-import org.apache.commons.io.output.FileWriterWithEncoding;
-import org.apache.http.HttpStatus;
 import org.apache.http.client.fluent.Content;
 import org.apache.http.entity.ContentType;
-import org.apache.jena.rdf.model.Statement;
-import org.apache.jena.rdf.model.StmtIterator;
 
-import crawlercommons.sitemaps.AbstractSiteMap;
 import crawlercommons.sitemaps.SiteMapURL;
 import crawlercommons.sitemaps.SiteMapURLExtended;
 import inescid.opaf.data.repository.api.AccessMode;
@@ -19,9 +12,8 @@ import inescid.opaf.data.repository.api.Database;
 import inescid.opaf.data.repository.api.Record;
 import inescid.opaf.framework.FetchRequest;
 import inescid.opaf.framework.UrlRequest;
-import inescid.opaf.iiif.IiifSeeAlsoProperty;
-import inescid.opaf.iiif.RdfReg;
 import inescid.opaf.sitemap.CrawlResourceHandler;
+import inescid.util.DevelopementSingleton;
 
 public class CrawlResourceHandlerForRepositoryStorage extends CrawlResourceHandler{
 	private static org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(CrawlResourceHandlerForRepositoryStorage.class);
@@ -43,6 +35,11 @@ public class CrawlResourceHandlerForRepositoryStorage extends CrawlResourceHandl
 		if(urlEx.getEdmMetadata()!=null) {
 			String uriStr = urlEx.getEdmMetadata().toString();
 
+			if(DevelopementSingleton.DEVEL_TEST) {
+				DevelopementSingleton.RESOURCE_HARVEST_CNT++;
+				if(DevelopementSingleton.stopHarvest()) return;
+			}
+			
 			FetchRequest seeAlsoFetched;
 				seeAlsoFetched = session.fetchWithPriority(new UrlRequest(uriStr));
 			try {
@@ -55,9 +52,14 @@ public class CrawlResourceHandlerForRepositoryStorage extends CrawlResourceHandl
 						|| type.getMimeType().equals(ContentType.TEXT_XML.getMimeType())
 						|| type.getMimeType().equals(ContentType.APPLICATION_JSON.getMimeType())) {
 						
+						
+						
 						Record rec=new Record(uriStr); 
 						rec.setData(new String(seeAlsoContent.asBytes(), "UTF8"));
 						db.add(rec);
+						
+						
+						
 						synchronized (db) {
 							
 						recCount++;

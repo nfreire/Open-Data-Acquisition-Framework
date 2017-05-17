@@ -23,18 +23,21 @@
 		<artifactId>opaf-sitemap</artifactId>
 		<version>0.1</version>
     </dependency>
+    <dependency>
+		<groupId>inescid</groupId>
+		<artifactId>opaf-data</artifactId>
+		<version>0.1</version>
+    </dependency>
     
     
     <dependency>
 	    <groupId>org.apache.jena</groupId>
 	    <artifactId>jena-core</artifactId>
-	    <version>3.1.0</version>
 	</dependency>
 	
     <dependency>
 	    <groupId>org.apache.jena</groupId>
 	    <artifactId>jena-arq</artifactId>
-	    <version>3.1.0</version>
 	</dependency>
 	
   </dependencies>

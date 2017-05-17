@@ -3,6 +3,8 @@ package inescid.opaf.data.repository.api;
 
 import java.io.File;
 import java.util.Collection;
+import java.util.Iterator;
+import java.util.Map.Entry;
 import java.util.NavigableSet;
 
 import org.mapdb.BTreeMap;
@@ -145,8 +147,11 @@ public class Database extends BaseMapdbImplementation {
     protected BTreeMap<Object, byte[]> setOfRecords() {
     	return repository.setOfRecords();
     }
-    
+
     public Collection<byte[]> getAllRecordsData() {
     	return setOfRecords().values();
+    }
+    public Iterator<Entry<Object, byte[]>> getAllRecords() {
+    	return setOfRecords().entryIterator();
     }
 }

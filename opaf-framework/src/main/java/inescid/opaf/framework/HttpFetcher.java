@@ -8,35 +8,47 @@ import java.util.concurrent.Semaphore;
 import javax.sound.midi.Soundbank;
 
 import org.apache.http.HttpHeaders;
+import org.apache.http.client.CookieStore;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpHead;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
+import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 
+import inescid.util.DevelopementSingleton;
+
 
 public class HttpFetcher {
 	CloseableHttpClient httpClient;
+	CookieStore httpCookieStore;
+	
 	DomainsManager domainsManager;
 //	ArrayList<FetchRequest> requestsQueue=new ArrayList<>(50);
 	Semaphore fetchSemaphore=new Semaphore(5);
 	Semaphore fetchWithPrioritySemaphore=new Semaphore(10);
 	
-//	Vector<Long> requestTimeStats=null;
-	Vector<Long> requestTimeStats=new Vector<>();
+	Vector<Long> requestTimeStats=null;
+//	Vector<Long> requestTimeStats=new Vector<>();
 	
 	
 	public void init() {
+		if(DevelopementSingleton.DEVEL_TEST && DevelopementSingleton.HTTP_REQUEST_TIME_STATS)
+			requestTimeStats=new Vector<>();
+		
 		PoolingHttpClientConnectionManager cm = new PoolingHttpClientConnectionManager();
 		cm.setMaxTotal(200);
 		cm.setDefaultMaxPerRoute(41);
+
+		httpCookieStore = new BasicCookieStore();
 
 		httpClient = 
 				HttpClients.custom()
 				.setSSLHostnameVerifier(new NoopHostnameVerifier())
 				.setConnectionManager(cm) 
+				.setDefaultCookieStore(httpCookieStore)
 				.build();
 	}	
 	
@@ -58,6 +70,17 @@ public class HttpFetcher {
 			HttpGet request = new HttpGet(url.getUrl());
 			url.addHeaders(request);
 			CloseableHttpResponse response = httpClient.execute(request);
+			
+			
+//			if(httpCookieStore.getCookies().size()>50) {
+//				httpCookieStore.clearExpired(new Date());
+//			}
+			if(httpCookieStore.getCookies().size()>100) 
+				httpCookieStore.clear();
+//			System.out.println("cookies: "+httpCookieStore.getCookies().size());
+//			System.out.println("cookies: "+httpCookieStore.getCookies());
+			
+			
 			if(startTime!=null) {
 				long duration=System.nanoTime() - startTime;
 				synchronized (requestTimeStats) {

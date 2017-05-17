@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.zip.GZIPInputStream;
+import java.util.zip.ZipException;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 
@@ -139,7 +140,11 @@ public class SiteMapParserProtected {
             } else if (TEXT_MEDIA_TYPES.contains(mediaType)) {
                 return (AbstractSiteMap) processText(url.toString(), content);
             } else if (GZ_MEDIA_TYPES.contains(mediaType)) {
-                return processGzip(url, content);
+                try {
+					return processGzip(url, content);
+				} catch (ZipException zipEx) {
+	                return processXml(url, content);
+				}
             } else {
                 mediaType = MEDIA_TYPE_REGISTRY.getSupertype(mediaType); // Check
                                                                          // parent

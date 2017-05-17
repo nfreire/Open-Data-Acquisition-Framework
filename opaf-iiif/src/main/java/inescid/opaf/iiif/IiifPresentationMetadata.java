@@ -5,16 +5,20 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import inescid.opaf.data.RawDataRecord;
+
 public class IiifPresentationMetadata implements Serializable{
 	private static final long serialVersionUID = 1L;
 	String manifestUrl;
 	String shownByUrl;
+	String shownAtUrl;
 	String shownByService;
+	String license;
 	String title;
 	String navDate;
 	final List<IiifMetadataElement> metadata=new ArrayList<>();
 	
-	List<IiifSeeAlsoProperty> seeAlso=new ArrayList<>();
+	List<RawDataRecord> seeAlso=new ArrayList<>();
 	
 	public IiifPresentationMetadata(String manifestUrl) {
 		super();
@@ -41,11 +45,11 @@ public class IiifPresentationMetadata implements Serializable{
 		metadata.addAll(element);
 	}
 	
-	public void addSeeAlso(IiifSeeAlsoProperty element) {
+	public void addSeeAlso(RawDataRecord element) {
 		seeAlso.add(element);
 	}
 
-	public void addSeeAlso(Collection<IiifSeeAlsoProperty> element) {
+	public void addSeeAlso(Collection<RawDataRecord> element) {
 		seeAlso.addAll(element);
 	}
 	
@@ -56,7 +60,7 @@ public class IiifPresentationMetadata implements Serializable{
 				+ seeAlso + "]";
 	}
 
-	public List<IiifSeeAlsoProperty> getSeeAlso() {
+	public List<RawDataRecord> getSeeAlso() {
 		return seeAlso;
 	}
 
@@ -90,6 +94,22 @@ public class IiifPresentationMetadata implements Serializable{
 
 	public void setShownByService(String shownByService) {
 		this.shownByService = shownByService;
+	}
+
+	public String getShownAtUrl() {
+		return shownAtUrl;
+	}
+
+	public void setShownAtUrl(String shownAtUrl) {
+		this.shownAtUrl = shownAtUrl;
+	}
+
+	public String getLicense() {
+		return license;
+	}
+
+	public void setLicense(String license) {
+		this.license = license;
 	}
 
 

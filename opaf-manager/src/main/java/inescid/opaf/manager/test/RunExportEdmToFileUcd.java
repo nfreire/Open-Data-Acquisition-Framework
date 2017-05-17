@@ -2,27 +2,24 @@ package inescid.opaf.manager.test;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URLEncoder;
 import java.nio.charset.Charset;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.io.IOUtils;
-import org.apache.log4j.xml.XMLLayout;
 import org.w3c.dom.Document;
 
+import inescid.opaf.data.RawDataRecord;
 import inescid.opaf.data.repository.api.AccessMode;
 import inescid.opaf.data.repository.api.Database;
 import inescid.opaf.data.repository.impl.IoUtil;
 import inescid.opaf.iiif.IiifPresentationMetadata;
-import inescid.opaf.iiif.IiifSeeAlsoProperty;
 import inescid.util.XmlUtil;
 
-public class ExportIiifRepository {
+public class RunExportEdmToFileUcd {
 
 	private static final Charset UTF8=Charset.forName("UTF8");
 	private static final Pattern STRIP_XML_TOP_ELEMENT=Pattern.compile("^.*<rdf:RDF[^>]+>", Pattern.DOTALL);
@@ -109,7 +106,7 @@ public class ExportIiifRepository {
 	
 	public static void main(String[] args) throws Exception {
 		File exportFolder=new File("C:\\Users\\nfrei\\Desktop\\UCDublin");
-		File repositoryFolder=new File("C:\\Users\\nfrei\\Desktop\\UCDublin\\iiif-crawl-repository-ucd");
+		File repositoryFolder=new File("target\\iiif-crawl-repository-ucd-poetry");
 		String exportMetadataProfile="http://www.europeana.eu/schemas/edm/";
 		boolean transformToEdmInternal=true;
 		final int maxExportRecords=-100;
@@ -118,7 +115,7 @@ public class ExportIiifRepository {
 			exportFolder.mkdirs();
 		
 		Database db;
-		db=new Database(repositoryFolder, AccessMode.READ_ONLY);
+		db=new Database(repositoryFolder, AccessMode.READ_ONLY );
 		ToFileEdmExporter metadataExporter=new ToFileEdmExporter(maxExportRecordsPerFile, exportFolder);
 		metadataExporter.setTransformToEdmInternal(transformToEdmInternal); 
 		metadataExporter.init();
@@ -129,18 +126,18 @@ public class ExportIiifRepository {
 			if(md.getSeeAlso().isEmpty())
 				System.out.println("no seeAlso");
 			else {
-				for(IiifSeeAlsoProperty seeAlso: md.getSeeAlso()) {
+				for(RawDataRecord seeAlso: md.getSeeAlso()) {
 //					filename = URLEncoder.encode(md.getManifestUrl(), "UTF8")+".edm.xml";
 					if(seeAlso.getProfile()==null) {
-						System.out.println("no profile for "+seeAlso.getSeeAlsoUrl());
+						System.out.println("no profile for "+seeAlso.getUrl());
 						//TODO: Remove
-						if(seeAlso.getSeeAlsoUrl().contains("/edm/")) {
-							metadataExporter.export(seeAlso.getSeeAlsoContent());
+						if(seeAlso.getUrl().contains("/edm/")) {
+							metadataExporter.export(seeAlso.getContent());
 						}
 						
 					}else {
 						if(seeAlso.getProfile().equals(exportMetadataProfile)) {
-							metadataExporter.export(seeAlso.getSeeAlsoContent());
+							metadataExporter.export(seeAlso.getContent());
 						}
 					}
 				}

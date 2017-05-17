@@ -27,7 +27,7 @@ import crawlercommons.sitemaps.SiteMapParser;
 public class CrawlingSession {
 	private static org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(CrawlingSession.class);
 	private static org.slf4j.Logger logMonitor = org.slf4j.LoggerFactory.getLogger(Monitor.class);
-	private static final long MIN_CRAWL_DELAY=300;
+	private static final long MIN_CRAWL_DELAY=1000;
 	
 	
 
@@ -212,9 +212,9 @@ public class CrawlingSession {
 		try {
 			if(robotRules.isAllowAll() || robotRules.isAllowed(url.getUrl())) {
 				synchronized (lastHttpRequestSent) {
-					long wait=new Date().getTime() - lastHttpRequestSent.getTime();
-					if(wait>0)
-						Thread.sleep(wait);
+					long wait=new Date().getTime() - lastHttpRequestSent.getTime() - robotRules.getCrawlDelay();
+					if(wait<0)
+						Thread.sleep(-wait);
 					lastHttpRequestSent=new Date();
 				}
 				return crawlingSystem.fetch(url);
@@ -233,13 +233,22 @@ public class CrawlingSession {
 	
 
 	public FetchRequest fetchWithPriority(final UrlRequest url)  throws IOException, InterruptedException {
-		if(!harvested.addSynchronized(url.getUrl()))
+		if(!url.isRefresh() && !harvested.addSynchronized(url.getUrl()))
 			return null;
 		processing.add(url.getUrl());
 		try {
 			if(robotRules.isAllowAll() || robotRules.isAllowed(url.getUrl())) {
-				lastHttpRequestSent=new Date();
-				return crawlingSystem.fetchWithPriority(url);
+				synchronized (lastHttpRequestSent) {
+					long wait=new Date().getTime() - lastHttpRequestSent.getTime() - robotRules.getCrawlDelay();
+					if(wait<0)
+						Thread.sleep(-wait);
+					lastHttpRequestSent=new Date();
+				}
+//				lastHttpRequestSent=new Date();
+				FetchRequest fetched = crawlingSystem.fetchWithPriority(url);
+				if(fetched.getResponseStatusCode()==502 || fetched.getResponseStatusCode()==503)
+					harvested.removeSynchronized(url.getUrl());
+				return fetched;
 			}
 			return new FetchRequest(url, this, new IOException("Disallowed by robots.txt"));
 		} finally {

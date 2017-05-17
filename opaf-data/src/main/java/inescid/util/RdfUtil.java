@@ -8,9 +8,6 @@ import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.util.iterator.ExtendedIterator;
 
-import inescid.opaf.iiif.IiifMetadataElement;
-import inescid.opaf.iiif.LocalizedLiteral;
-import inescid.opaf.iiif.RdfReg;
 
 public class RdfUtil {
 	public static Resource findResource(Resource startResource, Property... propertiesToFollow) {

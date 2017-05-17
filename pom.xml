@@ -31,6 +31,7 @@
     <version.commons-io>2.5</version.commons-io>
     <version.fluent-hc>4.3.4</version.fluent-hc>
     <version.guava>18.0</version.guava>
+    <version.jackson-core>2.8.2</version.jackson-core>
     <version.jackson-annotations>2.5.4</version.jackson-annotations>
     <version.jackson-databind>2.5.4</version.jackson-databind>
     <version.jacoco-maven-plugin>0.7.4.201502262128</version.jacoco-maven-plugin>
@@ -45,6 +46,7 @@
     <version.slf4j>1.7.13</version.slf4j>
     <version.spring-framework>4.2.5.RELEASE</version.spring-framework>
     <version.versions-maven-plugin>2.2</version.versions-maven-plugin>
+    <version.jena>3.1.0</version.jena>
   </properties>
     
   <build>
@@ -86,12 +88,14 @@
   
   <modules>
     <module>opaf-framework</module>
+    <module>opaf-data</module>
     <module>opaf-repository</module>
     <module>opaf-repository-europeanadirect</module>
     <module>opaf-sitemap</module>
     <module>opaf-iiif</module>
     <module>opaf-manager</module>
     <module>opaf-timestamp</module>
+    <module>opaf-www</module>
   </modules>
     
   <dependencyManagement>
@@ -101,6 +105,11 @@
     <artifactId>Saxon-HE</artifactId>
     <version>9.7.0-8</version>
 </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+        <version>${version.jackson-core}</version>
+      </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-annotations</artifactId>
@@ -136,6 +145,17 @@
             <artifactId>junit</artifactId>
 			<version>4.12</version>
         </dependency>
+    <dependency>
+	    <groupId>org.apache.jena</groupId>
+	    <artifactId>jena-core</artifactId>
+        <version>${version.jena}</version>
+	</dependency>
+	
+    <dependency>
+	    <groupId>org.apache.jena</groupId>
+	    <artifactId>jena-arq</artifactId>
+        <version>${version.jena}</version>
+	</dependency>
     </dependencies>
   </dependencyManagement>
   

@@ -1,6 +1,5 @@
 package inescid.opaf.framework;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 
 public class ThreadManager {

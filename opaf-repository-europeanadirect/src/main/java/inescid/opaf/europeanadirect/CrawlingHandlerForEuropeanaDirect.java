@@ -14,6 +14,7 @@ import com.google.gson.GsonBuilder;
 import eu.europeana.europeanadirect.model.Object;
 import inescid.opaf.data.repository.europeanadirect.IiifPresentationMetadataConverterToDirectObject;
 import inescid.opaf.data.repository.impl.IoUtil;
+import inescid.opaf.iiif.IiifManifest;
 import inescid.opaf.iiif.IiifPresentationMetadata;
 import inescid.opaf.iiif.ManifestCrawlHandler;
 
@@ -31,14 +32,14 @@ public class CrawlingHandlerForEuropeanaDirect extends ManifestCrawlHandler {
 	}
 
 	@Override
-	protected void handleMetadata(IiifPresentationMetadata metadata) throws Exception {
-		Object directMd = IiifPresentationMetadataConverterToDirectObject.convert(metadata, "en");
-		String jsonString=mapper.writeValueAsString(directMd);
-		synchronized (recordHandler) {
-			if(exit)
-				return;
-			exit=exit || !recordHandler.handleRecord(jsonString);
-		}
+	protected void handleMetadata(IiifManifest metadata) throws Exception {
+//		Object directMd = IiifPresentationMetadataConverterToDirectObject.convert(metadata, "en");
+//		String jsonString=mapper.writeValueAsString(directMd);
+//		synchronized (recordHandler) {
+//			if(exit)
+//				return;
+//			exit=exit || !recordHandler.handleRecord(jsonString);
+//		}
 	}
 
 	public RecordHandler getRecordHandler() {

@@ -1,19 +1,9 @@
 package inescid.opaf.manager.sitemaps;
 
 import java.io.File;
-import java.util.Date;
 import java.util.Properties;
 
-import org.apache.http.client.fluent.Content;
-import org.apache.http.impl.io.SessionOutputBufferImpl;
-import org.apache.jena.rdf.model.Model;
-
-import inescid.opaf.framework.CrawlingSession;
 import inescid.opaf.framework.CrawlingSystem;
-import inescid.opaf.iiif.IiifPresentationApiCrawler;
-import inescid.opaf.iiif.IiifPresentationMetadata;
-import inescid.opaf.iiif.IiifSource;
-import inescid.opaf.iiif.ManifestCrawlHandler;
 import inescid.opaf.manager.DataSource;
 import inescid.opaf.sitemap.CrawlResourceHandler;
 import inescid.opaf.sitemap.SitemapResourceCrawler;

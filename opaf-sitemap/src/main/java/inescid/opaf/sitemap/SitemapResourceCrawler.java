@@ -2,6 +2,7 @@ package inescid.opaf.sitemap;
 
 import inescid.opaf.framework.FetchRequest;
 import inescid.opaf.framework.UrlRequest;
+import inescid.util.DevelopementSingleton;
 
 import java.io.IOException;
 import java.net.URL;
@@ -59,6 +60,7 @@ public class SitemapResourceCrawler {
 			
 			if(reuseSession==null)
 				session.waitAndClose();
+			handler.close();
 			log.debug("Run ending: "+this.getClass().getName());
 		} catch (Exception e) {
 			log.error(e.getMessage(), e);
@@ -83,20 +85,20 @@ public class SitemapResourceCrawler {
 				}
 				if (siteMap.isIndex()) {
 					SiteMapIndex smIdx=(SiteMapIndex) siteMap;
-					int subSmCnt=0;//TODO: remove this variable. used for testing only
 					for(AbstractSiteMap subSm : smIdx.getSitemaps()) {
-						subSmCnt++;
-	//					if(subSmCnt>5)break;
+						if(DevelopementSingleton.DEVEL_TEST) {	
+							if(DevelopementSingleton.RESOURCE_HARVEST_CNT > 5) break;
+						}
+
 						fetchSitemap(subSm.getUrl().toString());
 					}
 				} else {
 					SiteMap smIdx=(SiteMap) siteMap;
-					int subSmCnt=0;//TODO: remove this variable. used for testing only
 					for(SiteMapURL subSm : smIdx.getSiteMapUrls()) {
-						subSmCnt++;
-	//					if(subSmCnt>2)break;
-	//					session.fetchAsync(subSm.getUrl().toString());	
-						
+						if(DevelopementSingleton.DEVEL_TEST) {	
+							DevelopementSingleton.RESOURCE_HARVEST_CNT++;
+							if(DevelopementSingleton.stopHarvest()) break;
+						}
 						try {
 							handler.handleUrl(subSm);
 						} catch (Exception e) {

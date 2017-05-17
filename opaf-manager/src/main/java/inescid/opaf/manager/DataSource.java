@@ -1,6 +1,5 @@
 package inescid.opaf.manager;
 
-import java.util.Date;
 import java.util.Properties;
 
 import inescid.opaf.framework.CrawlingSystem;

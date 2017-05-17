@@ -78,5 +78,9 @@ public class BigSet<T> {
 	public void clear() {
 		set.clear();
 	}
+
+	public void removeSynchronized(String url) {
+		set.remove(url);
+	}
 }
 

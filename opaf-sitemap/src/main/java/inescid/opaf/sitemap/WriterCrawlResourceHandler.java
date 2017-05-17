@@ -25,7 +25,10 @@ public class WriterCrawlResourceHandler extends CrawlResourceHandler{
 	@Override
 	public void handleUrl(SiteMapURL url) throws Exception {
 		if(url instanceof SiteMapURLExtended) {
-			writer.write(((SiteMapURLExtended)url).getIiifManifest().toString());
+			if(((SiteMapURLExtended)url).getIiifManifest()!=null)
+				writer.write(((SiteMapURLExtended)url).getIiifManifest().toString());
+			else
+				writer.write(url.getUrl().toString());				
 		}else 
 			writer.write(url.getUrl().toString());
 		writer.write('\n');

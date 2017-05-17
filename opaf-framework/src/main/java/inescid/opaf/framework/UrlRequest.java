@@ -17,7 +17,8 @@ public class UrlRequest {
 	String url;
 //	HttpMethod method=HttpMethod.GET;
 	List<AbstractMap.SimpleImmutableEntry<String, String>> headers;
-
+	boolean refresh=false;
+	
 	public UrlRequest(String url) {
 		super();
 		this.url = url;
@@ -65,6 +66,19 @@ public class UrlRequest {
 	        "EEE, dd MMM yyyy HH:mm:ss z", Locale.US);
 	    dateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
 	    return dateFormat.format(ifModifiedSince);
+	}
+
+	public boolean isRefresh() {
+		return refresh;
+	}
+
+	public void setRefresh(boolean refresh) {
+		this.refresh = refresh;
+	}
+
+	@Override
+	public String toString() {
+		return url ;
 	}
 
 	

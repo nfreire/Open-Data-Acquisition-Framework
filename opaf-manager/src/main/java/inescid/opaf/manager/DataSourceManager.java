@@ -1,21 +1,14 @@
 package inescid.opaf.manager;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import inescid.opaf.framework.CrawlingSystem;
-import inescid.opaf.iiif.IiifPresentationMetadata;
-import inescid.opaf.iiif.IiifSource;
-import inescid.opaf.iiif.ManifestCrawlHandler;
-import inescid.opaf.manager.iiif.CrawlingHandlerForRepositoryStorage;
-import inescid.opaf.manager.iiif.DataSourceIiif;
 
 public class DataSourceManager {
 	private static Pattern SOURCE_CLASS_PATTERN=Pattern.compile("opaf\\.datasource\\.([^\\.]+)\\.class"); 

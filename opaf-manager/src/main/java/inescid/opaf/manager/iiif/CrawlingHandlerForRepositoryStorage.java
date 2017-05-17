@@ -2,19 +2,11 @@ package inescid.opaf.manager.iiif;
 
 import java.io.File;
 
-import org.apache.http.client.fluent.Content;
-import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.Resource;
-import org.apache.jena.rdf.model.Statement;
-import org.apache.jena.rdf.model.StmtIterator;
-
 import inescid.opaf.data.repository.api.AccessMode;
 import inescid.opaf.data.repository.api.Database;
 import inescid.opaf.data.repository.api.Record;
-import inescid.opaf.iiif.IiifPresentationMetadata;
-import inescid.opaf.iiif.IiifSeeAlsoProperty;
+import inescid.opaf.iiif.IiifManifest;
 import inescid.opaf.iiif.ManifestCrawlHandler;
-import inescid.opaf.iiif.RdfReg;
 
 public class CrawlingHandlerForRepositoryStorage extends ManifestCrawlHandler {
 	private static org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(CrawlingHandlerForRepositoryStorage.class);
@@ -28,12 +20,12 @@ public class CrawlingHandlerForRepositoryStorage extends ManifestCrawlHandler {
 	
 
 	@Override
-	protected void handleMetadata(IiifPresentationMetadata metadata) throws Exception {
-		Record rec=new Record(metadata.getManifestUrl()); 
-		rec.setData(metadata);
-		for(IiifSeeAlsoProperty sa: metadata.getSeeAlso()) {
-			rec.addField(0, sa.getSeeAlsoUrl());
-		}
+	protected void handleMetadata(IiifManifest manifestWithMetada) throws Exception {
+		Record rec=new Record(manifestWithMetada.getUri()); 
+		rec.setData(manifestWithMetada);
+//		for(IiifSeeAlsoProperty sa: metadata.getSeeAlso()) {
+//			rec.addField(0, sa.getSeeAlsoUrl());
+//		}
 		db.add(rec);
 		synchronized (db) {
 			
