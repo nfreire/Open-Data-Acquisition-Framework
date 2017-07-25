@@ -29,6 +29,9 @@ public class ViewRepository {
 //		db=new Database(new File("target/iiif-crawl-repository-nlw"), AccessMode.READ_ONLY);
 		db=new Database(new File("target/iiif-crawl-repository-ncsu"), AccessMode.READ_ONLY);
 //		db=new Database(new File("target/iiif-crawl-repository"), AccessMode.READ_ONLY);
+		
+		System.out.println("Repository contains "+ db.size() +" records");
+		
 		int cnt=0;
 		for(byte[] mdBytes : db.getAllRecordsData()) {
 			cnt++;

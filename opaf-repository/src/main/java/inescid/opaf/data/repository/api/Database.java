@@ -154,4 +154,9 @@ public class Database extends BaseMapdbImplementation {
     public Iterator<Entry<Object, byte[]>> getAllRecords() {
     	return setOfRecords().entryIterator();
     }
+    
+
+    public int size() {
+    	return repository.size();
+    }
 }

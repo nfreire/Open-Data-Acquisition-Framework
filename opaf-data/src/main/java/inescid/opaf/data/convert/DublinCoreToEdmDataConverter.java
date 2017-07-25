@@ -100,7 +100,7 @@ public class DublinCoreToEdmDataConverter extends DataConverter {
 			System.out.println(additionalStatements);
 			if(additionalStatements!=null)
 			 	dcModelRdf.add( additionalStatements.listStatements());
-			EdmRdfToXmlSerializer xmlSerializer = new EdmRdfToXmlSerializer(choResource, dcModelRdf);
+			EdmRdfToXmlSerializer xmlSerializer = new EdmRdfToXmlSerializer(choResource);
 			Document edmDom = xmlSerializer.getXmlDom();
 			RawDataRecord edmRawRecord=new RawDataRecord();
 			String domString = XmlUtil.writeDomToString(edmDom);

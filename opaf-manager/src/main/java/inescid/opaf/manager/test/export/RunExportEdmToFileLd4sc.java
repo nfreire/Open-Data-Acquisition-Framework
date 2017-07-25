@@ -1,4 +1,4 @@
-package inescid.opaf.manager.test;
+package inescid.opaf.manager.test.export;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -20,21 +20,21 @@ import inescid.opaf.data.repository.impl.IoUtil;
 import inescid.opaf.iiif.IiifPresentationMetadata;
 import inescid.util.XmlUtil;
 
-public class RunExportEdmToFileNcsu {
+public class RunExportEdmToFileLd4sc {
 
 	private static final Charset UTF8=Charset.forName("UTF8");
 	private static final Pattern STRIP_XML_TOP_ELEMENT=Pattern.compile("^.*<rdf:RDF[^>]+>", Pattern.DOTALL);
 	
 	public static void main(String[] args) throws Exception {
-		File repositoryFolder=new File("target/iiif-crawl-repository-ncsu_bck");
+		File repositoryFolder=new File("target/www-crawl-repository-ld4sc");
 //		File repositoryFolder=new File("C:\\Users\\nfrei\\Desktop\\iiif-crawl-repository-nlw-ingestion_1st");
-		File exportFolder=new File("target/iiif-crawl-repository-ncsu/export");
+		File exportFolder=new File("target/www-crawl-repository-ld4sc/export");
 		boolean transformToEdmInternal=false;
 //		File exportFolder=new File("C:\\Users\\nfrei\\Desktop\\UCDublin\\Poetry-2");
 //		File repositoryFolder=new File("target/sitemaps-crawl-repository-ucd-poetry");
 //		boolean transformToEdmInternal=true;
 		final int maxExportRecords=-100;
 		
-		new SchemaOrgFromRepositoryToEdmFileExport().run(repositoryFolder, exportFolder, transformToEdmInternal, maxExportRecords, "NC State University Libraries", "NC State University Libraries");
+		new SchemaOrgFromRepositoryToEdmFileExport().run(repositoryFolder, exportFolder, transformToEdmInternal, maxExportRecords, "University of Illinois at Urbana–Champaign", "University of Illinois at Urbana–Champaign");
 	}
 }

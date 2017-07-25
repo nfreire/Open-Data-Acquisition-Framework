@@ -1,4 +1,4 @@
-package inescid.opaf.manager.test;
+ package inescid.opaf.manager.test;
 
 import java.io.File;
 import java.io.FileOutputStream;

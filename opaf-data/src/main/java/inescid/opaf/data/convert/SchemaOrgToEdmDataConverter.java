@@ -1,116 +1,104 @@
 package inescid.opaf.data.convert;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
 import java.io.StringReader;
 import java.nio.charset.Charset;
-import java.util.Iterator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
-import org.apache.http.entity.ContentType;
-import org.apache.jena.graph.Graph;
-import org.apache.jena.graph.GraphListener;
-import org.apache.jena.graph.Node;
-import org.apache.jena.graph.Node_Blank;
-import org.apache.jena.graph.Triple;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.Property;
+import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
-import org.apache.jena.riot.Lang;
-import org.apache.jena.riot.RDFDataMgr;
-import org.apache.jena.sparql.util.graph.GraphListenerBase;
 import org.w3c.dom.Document;
-
-import com.github.andrewoma.dexx.collection.ArrayList;
 
 import inescid.opaf.data.RawDataRecord;
 import inescid.opaf.data.RdfReg;
+import inescid.opaf.data.convert.rdf.RdfConversionSpecification;
+import inescid.opaf.data.convert.rdf.RdfConverter;
+import inescid.opaf.data.convert.rdf.ResourceTypeConversionSpecification;
+import inescid.opaf.data.convert.rdf.SchemaOrgToEdmConversionSpecification;
 import inescid.util.XmlUtil;
 
+/**
+ * @author nfrei
+ *
+ *	This class is not thread-safe
+ *
+ */
 public class SchemaOrgToEdmDataConverter extends DataConverter {
-
 	
 	private static final Charset UTF8=Charset.forName("UTF8");
 	
+	Map<Resource, Resource> blankNodesMapped=new HashMap<Resource, Resource>();
+	
+	RdfConverter conv=new RdfConverter(SchemaOrgToEdmConversionSpecification.spec);
+	
+	String dataProvider;
+	
 	public SchemaOrgToEdmDataConverter() {
 	}
+	public SchemaOrgToEdmDataConverter(String dataProvider) {
+		this.dataProvider=dataProvider;
+	}
+	
 	
 	
 	@Override
 	public RawDataRecord convert(RawDataRecord source, Model additionalStatements) {
-		Model edmModelRdf = ModelFactory.createDefaultModel();
+		
 		if(source.getContentType().equals("application/json") && source.getFormat().equals("application/ld+json")) {
 			Model ldModelRdf = ModelFactory.createDefaultModel();
-			ByteArrayInputStream bytesIs = new ByteArrayInputStream(source.getContent());
+			String md = new String(source.getContent());
+//			ByteArrayInputStream bytesIs = new ByteArrayInputStream(md.getBytes("UTF8"));
+			StringReader mdReader = new StringReader(md);
+			ldModelRdf.read(mdReader, null, "JSON-LD");
+			mdReader.close();
 			
-			RDFDataMgr.read(ldModelRdf, bytesIs, source.getUrl(), Lang.JSONLD);
-			try {
-				bytesIs.close(); 
-			} catch (IOException e) {
-				throw new RuntimeException(e.getMessage(), e); 
+			Resource mainTargetResource=conv.convert(ldModelRdf, source.getUrl());
+			if(mainTargetResource==null)
+				return null;
+			ResIterator aggregations = mainTargetResource.getModel().listResourcesWithProperty(RdfReg.RDF_TYPE, RdfReg.ORE_AGGREGATION);
+			Resource ag = aggregations.next();
+			mainTargetResource.getModel().add(ag, RdfReg.EDM_AGGREGATED_CHO, mainTargetResource);
+			
+			if(dataProvider!=null) {
+				StmtIterator provs = mainTargetResource.getModel().listStatements(ag, RdfReg.EDM_DATA_PROVIDER, (String) null);
+				if(!provs.hasNext())
+					mainTargetResource.getModel().add(ag, RdfReg.EDM_DATA_PROVIDER, dataProvider);
+				provs = mainTargetResource.getModel().listStatements(ag, RdfReg.EDM_PROVIDER, (String) null);
+				if(!provs.hasNext())
+					mainTargetResource.getModel().add(ag, RdfReg.EDM_PROVIDER, dataProvider);
 			}
-			
-			ResIterator cWorks = ldModelRdf.listSubjectsWithProperty(RdfReg.RDF_TYPE, RdfReg.SCHEMAORG_CREATIVE_WORK);
-			while(cWorks.hasNext()) {
-				Resource cw = cWorks.next();
-				
-				Resource choResource=edmModelRdf.createResource(cw.getURI(), RdfReg.EDM_PROVIDED_CHO);
-				StmtIterator cwStms = cw.listProperties();
-				while (cwStms.hasNext()) {
-					Statement st = cwStms.next();
-					choResource.addProperty(st.getPredicate(), st.getObject());
-					System.out.println(st);
-				}
-			}
-//			StmtIterator choStms = ldModelRdf.listStatements();
-//			
-//			
-//			
-//			if(listener.getMainSubject().isBlank()) {
-////				Node_Blank choBlNode= (Node_Blank) listener.getMainSubject();
-////				System.out.println(choBlNode.getBlankNodeLabel());
-//
-//				Resource newChoResource = ldModelRdf.createResource(source.getUrl(), RdfReg.EDM_PROVIDED_CHO);
-//
-//				ArrayList<Statement> toRemove=new ArrayList<>();
-//				StmtIterator choStms = ldModelRdf.listStatements();
-//				while (choStms.hasNext()) {
-//					Statement st = choStms.next();
-//					if(st.getSubject().toString().equals(listener.getMainSubject().toString())) {
-////						System.out.println(st.getSubject());
-////						System.out.println(st.getSubject().getId().getBlankNodeId());
-//						newChoResource.addProperty(st.getPredicate(), st.getObject());
-//					}
-//					
-//				}
-//				for(Statement st:  toRemove)
-//					ldModelRdf.remove(st);
-//				choResource=newChoResource;
-//			} else {
-//				choResource=ldModelRdf.getResource(listener.getMainSubject().getURI());
-//				choResource.addProperty(RdfReg.RDF_TYPE, RdfReg.EDM_PROVIDED_CHO);
-//			}
-			
 			
 //			System.out.println(additionalStatements);
 //			if(additionalStatements!=null)
 //			 	ldModelRdf.add( additionalStatements.listStatements());
-//			EdmRdfToXmlSerializer xmlSerializer = new EdmRdfToXmlSerializer(choResource, ldModelRdf);
-//			Document edmDom = xmlSerializer.getXmlDom();
-//			RawDataRecord edmRawRecord=new RawDataRecord();
-//			String domString = XmlUtil.writeDomToString(edmDom);
-////			System.out.println(domString);
-//			edmRawRecord.setContent(domString.getBytes(UTF8));
-//			edmRawRecord.setContentType("application/xml");
-//			edmRawRecord.setProfile("http://www.europeana.eu/schemas/edm/");
-//			return edmRawRecord;
+			EdmRdfToXmlSerializer xmlSerializer = new EdmRdfToXmlSerializer(mainTargetResource);
+			Document edmDom = xmlSerializer.getXmlDom();
+			RawDataRecord edmRawRecord=new RawDataRecord();
+			String domString = XmlUtil.writeDomToString(edmDom);
+			System.out.println(domString);
+			edmRawRecord.setContent(domString.getBytes(UTF8));
+			edmRawRecord.setContentType("application/xml");
+			edmRawRecord.setProfile("http://www.europeana.eu/schemas/edm/");
+			return edmRawRecord;
 		}
 		return null;
 
 		
 	}
+	public String getDataProvider() {
+		return dataProvider;
+	}
+	public void setDataProvider(String dataProvider) {
+		this.dataProvider = dataProvider;
+	}
+
 
 }

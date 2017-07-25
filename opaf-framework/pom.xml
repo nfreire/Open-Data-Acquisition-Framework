@@ -44,7 +44,12 @@
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-log4j12</artifactId>
       </dependency>
-
+      
+      <dependency>
+		  <groupId>org.apache.commons</groupId>
+		  <artifactId>commons-lang3</artifactId>
+		  <version>3.3.2</version>
+      </dependency>
 
   </dependencies>
 </project>

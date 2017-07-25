@@ -2,10 +2,13 @@ package inescid.util;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Reader;
 import java.io.StringReader;
@@ -29,6 +32,7 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.jena.atlas.logging.Log;
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -39,6 +43,8 @@ import org.w3c.dom.ls.LSOutput;
 import org.w3c.dom.ls.LSSerializer;
 import org.xml.sax.SAXException;
 
+import inescid.opaf.data.RdfReg;
+
 /**
  * Utility methods for working with XML DOMs (org.w3c.dom)
  * 
@@ -47,6 +53,7 @@ import org.xml.sax.SAXException;
  */
 public class XmlUtil {
 	private static org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(XmlUtil.class);
+	
     /**
      * Schema factory
      */
@@ -55,18 +62,15 @@ public class XmlUtil {
     /**
      * Document builder factory
      */
-    private static DocumentBuilderFactory factory                = null;
+    private static DocumentBuilderFactory factory                = DocumentBuilderFactory.newInstance();
     private static TransformerFactory transFactory                = null;
     static {
     	System.setProperty("javax.xml.transform.TransformerFactory","net.sf.saxon.TransformerFactoryImpl");
+    	transFactory = TransformerFactory.newInstance();    
     	
-    	factory                = DocumentBuilderFactory.newInstance();
-		factory.setNamespaceAware(true);
-    			 
-    	transFactory                = TransformerFactory.newInstance();    
+        factory.setNamespaceAware(true);
     }
-    
-	
+
     /**
      * Creates a new Document using the default XML implementation
      * 
@@ -160,6 +164,18 @@ public class XmlUtil {
         return null;
     }
 
+    public static String getElementText(Element n) {
+        NodeList childNodes = n.getChildNodes();
+        String result = new String();
+        for (int i = 0; i < childNodes.getLength(); i++) {
+          Node node = childNodes.item(i);
+          if (node.getNodeType() == Node.TEXT_NODE) {
+            result += node.getNodeValue();
+          }
+        }
+        return result;
+    }
+
     /**
      * Gets the first child Element with a given name
      * 
@@ -186,9 +202,10 @@ public class XmlUtil {
      * @return the DOM document
      */
     public static Document parseDomFromFile(File doc) {
-        FileReader reader;
+    	FileInputStream reader;
         try {
-            reader = new FileReader(doc);
+            reader = new FileInputStream(doc);
+//            reader = new FileReader(doc);
         } catch (FileNotFoundException e) {
             throw new RuntimeException("Could not open file '" + doc.getName() + "'!", e);
         }
@@ -210,18 +227,27 @@ public class XmlUtil {
             throw new RuntimeException("Could not parse DOM for '" + reader.toString() + "'!", e);
         }
     }
+    public static Document parseDom(InputStream reader) {
+    	try {
+    		DocumentBuilder builder = factory.newDocumentBuilder();
+    		return builder.parse(new org.xml.sax.InputSource(reader));
+    	} catch (Exception e) {
+    		throw new RuntimeException("Could not parse DOM for '" + reader.toString() + "'!", e);
+    	}
+    }
 
     /**
      * @param xml
      * @return pretty xml
      */
     public static String prettyXml(String xml) {
+        TransformerFactory tfactory = TransformerFactory.newInstance();
         Transformer serializer;
         try {
             Source source = new StreamSource(new StringReader(xml));
             StringWriter writer = new StringWriter();
 
-            serializer = transFactory.newTransformer();
+            serializer = tfactory.newTransformer();
             // Setup indenting to "pretty print"
             serializer.setOutputProperty(OutputKeys.INDENT, "yes");
             serializer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
@@ -239,7 +265,8 @@ public class XmlUtil {
      */
     public static void writeDomToFile(Document dom, File outFile) {
         try {
-            Transformer transformer = transFactory.newTransformer();
+            TransformerFactory transFact = TransformerFactory.newInstance();
+            Transformer transformer = transFact.newTransformer();
             DOMSource source = new DOMSource(dom);
             StreamResult result;
 
@@ -250,20 +277,6 @@ public class XmlUtil {
             throw new RuntimeException("Could not write dom tree '" + dom.getBaseURI() +
                                        "' to file '" + outFile.getName() + "'!", e);
         }
-    }
-
-    public static Document transform(Document dom, Document xslt) {
-    	try {
-    		DOMSource xsltSource = new DOMSource(xslt);
-    		Transformer transformer = transFactory.newTransformer(xsltSource);
-    		DOMSource source = new DOMSource(dom);
-    		Document out=newDocument();
-    		DOMResult result = new DOMResult(out);
-    		transformer.transform(source, result);
-    		return out;
-    	} catch (Exception e) {
-    		throw new RuntimeException("Could not write dom tree '" + dom.getBaseURI() + "'!", e);
-    	}
     }
 
     /**
@@ -289,8 +302,9 @@ public class XmlUtil {
     public static String writeDomToString(Element dom, Properties outputProperties) {
         try {
             StringWriter ret = new StringWriter();
+            TransformerFactory transFact = TransformerFactory.newInstance();
 // transFact.setAttribute("indent-number", 2);
-            Transformer transformer = transFactory.newTransformer();
+            Transformer transformer = transFact.newTransformer();
             if (outputProperties != null) transformer.setOutputProperties(outputProperties);
             DOMSource source = new DOMSource(dom);
             StreamResult result = new StreamResult(ret);
@@ -313,8 +327,9 @@ public class XmlUtil {
     public static String writeDomToString(Document dom, Properties outputProperties) {
         try {
             StringWriter ret = new StringWriter();
+            TransformerFactory transFact = TransformerFactory.newInstance();
 // transFact.setAttribute("indent-number", 2);
-            Transformer transformer = transFactory.newTransformer();
+            Transformer transformer = transFact.newTransformer();
             if (outputProperties != null) transformer.setOutputProperties(outputProperties);
             DOMSource source = new DOMSource(dom);
             StreamResult result = new StreamResult(ret);
@@ -429,35 +444,40 @@ public class XmlUtil {
         return encoding;
     }
 
-	public static Document parseDom(InputStream byteArrayInputStream) {
+	public static void writeDomToStream(Document dom, OutputStreamWriter outputStream) {
 
         try {
-            DocumentBuilder builder = factory.newDocumentBuilder();
-            return builder.parse(new org.xml.sax.InputSource(byteArrayInputStream));
+            TransformerFactory transFact = TransformerFactory.newInstance();
+            Transformer transformer = transFact.newTransformer();
+            DOMSource source = new DOMSource(dom);
+            StreamResult result;
+
+            result = new StreamResult(outputStream);
+            transformer.transform(source, result);
         } catch (Exception e) {
-            throw new RuntimeException("Could not parse DOM for '" + byteArrayInputStream.toString() + "'!", e);
+            throw new RuntimeException("Could not write dom tree '" + dom.getBaseURI() +
+                                       "' to stream!", e);
         }
 		
 	}
 
-	
 
-    public static String getElementText(Element n) {
-        NodeList childNodes = n.getChildNodes();
-        String result = new String();
-        for (int i = 0; i < childNodes.getLength(); i++) {
-          Node node = childNodes.item(i);
-          if (node.getNodeType() == Node.TEXT_NODE) {
-            result += node.getNodeValue();
-          }
-        }
-        return result;
+    public static Document transform(Document dom, Document xslt) {
+    	try {
+    		DOMSource xsltSource = new DOMSource(xslt);
+    		Transformer transformer = transFactory.newTransformer(xsltSource);
+    		DOMSource source = new DOMSource(dom);
+    		Document out=newDocument();
+    		DOMResult result = new DOMResult(out);
+    		transformer.transform(source, result);
+    		return out;
+    	} catch (Exception e) {
+    		throw new RuntimeException("Could not write dom tree '" + dom.getBaseURI() + "'!", e);
+    	}
     }
-    
-    
 
 	public static URI getElementUriFromRdfResourceOrText(Element element) {
-		String url = (element.getAttributeNS("http://www.w3.org/1999/02/22-rdf-syntax-ns#", "resource"));
+		String url = (element.getAttributeNS(RdfReg.NsRdf, "resource"));
 		if(StringUtils.isEmpty(url))
 			url = XmlUtil.getElementText(element).trim();
 		if(StringUtils.isEmpty(url))

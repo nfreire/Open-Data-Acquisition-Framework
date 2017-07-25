@@ -126,5 +126,7 @@ public class UidRepository extends BaseMapdbImplementation{
         return treeMap;
     }
 
-
+    public int size() {
+    	return treeMap.size();
+    }
 }

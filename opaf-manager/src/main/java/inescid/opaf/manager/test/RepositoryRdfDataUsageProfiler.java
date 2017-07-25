@@ -74,7 +74,7 @@ public class RepositoryRdfDataUsageProfiler {
 					IiifManifest manifest=(IiifManifest) metadata;
 					for(RawDataRecord seeAlso: manifest.getMetadata().getSeeAlso()) {
 						String md = new String(seeAlso.getContent());
-//						ByteArrayInputStream bytesIs = new ByteArrayInputStream(md.getBytes("UTF8"));
+//						ByteArrayInputStream bytesIs = new ByteArrayInputSt ream(md.getBytes("UTF8"));
 						StringReader mdReader = new StringReader(md);
 						try { 
 //							jsonldJenaReader.read(bytesIs, null, null , StreamRDFLib.graph(ldModelRdf.getGraph()), jsonldContext);

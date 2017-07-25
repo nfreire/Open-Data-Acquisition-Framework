@@ -18,6 +18,7 @@ public class EdmReg {
 		add(RdfReg.EDM_PROVIDED_CHO); 	
 		add(RdfReg.EDM_WEB_RESOURCE); 	
 		add(RdfReg.EDM_AGENT); 	
+		add(RdfReg.FOAF_ORGANIZATION); 	
 		add(RdfReg.EDM_TIMESPAN); 	
 		add(RdfReg.EDM_PLACE); 	
 		add(RdfReg.EDM_EVENT); 	

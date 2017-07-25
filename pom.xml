@@ -96,6 +96,7 @@
     <module>opaf-manager</module>
     <module>opaf-timestamp</module>
     <module>opaf-www</module>
+    <module>opaf-casestudies</module>
   </modules>
     
   <dependencyManagement>
