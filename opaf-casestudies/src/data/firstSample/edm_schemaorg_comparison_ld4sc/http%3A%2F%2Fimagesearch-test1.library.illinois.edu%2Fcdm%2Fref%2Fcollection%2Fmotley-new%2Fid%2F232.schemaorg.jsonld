@@ -1,0 +1,172 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/Person",
+    "birthdate" : "1888",
+    "deathdate" : "1978",
+    "jobTitle" : "Director",
+    "name" : "Dean, Basil"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/Distance",
+    "name" : "10 inches"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/Distance",
+    "name" : "15 3/4 inches"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/510509_005.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "1943",
+    "width" : "3000"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://schema.org/Book",
+    "author" : "http://viaf.org/viaf/69298175"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/232",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "http://id.loc.gov/vocabulary/graphicMaterials/tgm009418", "http://vocab.getty.edu/aat/300054190", "http://id.loc.gov/authorities/subjects/sh85134531", "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747", "http://vocab.getty.edu/aat/300078925", "http://vocab.getty.edu/aat/300005734" ],
+    "artMedium" : "Watercolor",
+    "artform" : "Image",
+    "associatedMedia" : "_:b3",
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Set design",
+    "height" : {
+      "@id" : "_:b1"
+    },
+    "isPartOf" : [ "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/", "https://en.wikipedia.org/wiki/Hassan" ],
+    "name" : "Palace: Interior",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/510509-005", "http://hdl.handle.net/10111/Motley:510509-005" ],
+    "width" : {
+      "@id" : "_:b2"
+    }
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/69298175",
+    "@type" : "http://schema.org/Person",
+    "sameAs" : [ "https://en.wikipedia.org/wiki/James_Elroy_Flecker", "http://theatricalia.com/person/kcw/james-elroy-flecker" ]
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Cambridge_Theatre",
+    "name" : "Cambridge Theatre (London, England)",
+    "sameAs" : [ "http://www.playbill.com/venue/cambridge-theatre-coms-0000034547", "http://www.cambridge.theater/", "http://www.vam.ac.uk/archives/unit/ARC16429", "https://www.worldcat.org/identities/lccn-nb2012028238", "http://viaf.org/viaf/280289524/#Cambridge_Theatre_(London,_England)", "http://id.loc.gov/authorities/names/nb2012028238.html" ]
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Hassan",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : "_:b0",
+    "dateCreated" : "1951",
+    "exampleOfWork" : "_:b4",
+    "locationCreated" : "https://en.wikipedia.org/wiki/Cambridge_Theatre",
+    "name" : "Hassan",
+    "sameAs" : "http://theatricalia.com/play/2vz/hassan/production/6er"
+  } ],
+  "@context" : {
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "deathdate" : {
+      "@id" : "http://schema.org/deathdate"
+    },
+    "birthdate" : {
+      "@id" : "http://schema.org/birthdate"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "width" : {
+      "@id" : "http://schema.org/width"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    }
+  }
+}

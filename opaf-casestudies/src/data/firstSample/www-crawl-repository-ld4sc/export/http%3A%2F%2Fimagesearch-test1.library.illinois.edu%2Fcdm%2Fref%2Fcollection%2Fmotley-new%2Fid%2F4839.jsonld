@@ -1,0 +1,151 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/750410_024_b.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "7219",
+    "name" : "Costume notes 2",
+    "width" : "10134"
+  }, {
+    "@id" : "_:b1",
+    "name" : "Mitchell, Julian"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : "_:b4",
+    "dateCreated" : "1975",
+    "exampleOfWork" : "_:b3",
+    "locationCreated" : "https://en.wikipedia.org/wiki/Lyric_Theatre_(Hammersmith)",
+    "name" : "Family and a Fortune",
+    "sameAs" : [ "https://www.goodreads.com/book/show/6142472-a-family-and-a-fortune", "http://theatricalia.com/play/4x6/a-family-and-a-fortune/production/aqv" ]
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/Book",
+    "author" : [ "https://en.wikipedia.org/wiki/Ivy_Compton-Burnett", "_:b1" ]
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Director",
+    "name" : "Strachan, Alan"
+  }, {
+    "@id" : "_:b5",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/750410_024_a.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "7283",
+    "name" : "Costume notes 1",
+    "width" : "10138"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/4839",
+    "@type" : "http://schema.org/CreativeWork",
+    "about" : [ "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747", "http://id.loc.gov/authorities/subjects/sh85134531" ],
+    "associatedMedia" : [ "_:b0", "_:b5" ],
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Miscellaneous",
+    "isPartOf" : [ "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/", "_:b2" ],
+    "name" : "Costume Notes",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://hdl.handle.net/10111/Motley:750410-024", "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/750410-024" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Ivy_Compton-Burnett",
+    "@type" : "http://schema.org/Person"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Lyric_Theatre_(Hammersmith)",
+    "name" : "Lyric Theatre (Hammersmith, London, England)",
+    "sameAs" : [ "http://www.lyric.co.uk/", "https://www.worldcat.org/identities/lccn-n88649235/", "http://viaf.org/viaf/157370753/", "http://id.loc.gov/authorities/names/n88649235.html" ]
+  } ],
+  "@context" : {
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "width" : {
+      "@id" : "http://schema.org/width"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    }
+  }
+}

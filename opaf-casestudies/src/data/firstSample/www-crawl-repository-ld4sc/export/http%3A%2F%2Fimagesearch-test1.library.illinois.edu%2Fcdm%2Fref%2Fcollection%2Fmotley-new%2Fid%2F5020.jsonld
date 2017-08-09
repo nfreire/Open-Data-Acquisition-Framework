@@ -1,0 +1,223 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/511017_153_a_a.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3864",
+    "name" : "Sketch 1",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/511017_153_a_b.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3821",
+    "name" : "Sketch 2",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/Book",
+    "author" : "http://viaf.org/viaf/96994048"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/511017_153_b.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3828",
+    "name" : "Sketch 3",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/511017_153_g.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3842",
+    "name" : "Sketch 8",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b5",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/511017_153_e.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3860",
+    "name" : "Sketch 6",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b6",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/511017_153_c.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3837",
+    "name" : "Sketch 4",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b7",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/511017_153_f.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3837",
+    "name" : "Sketch 7",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b8",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/511017_153_d.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3810",
+    "name" : "Sketch 5",
+    "width" : "6000"
+  }, {
+    "@id" : "http://images.library.uiuc.edu/projects/motley/prodnote/prodoth.htm",
+    "@type" : "http://schema.org/WebPage"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/5020",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "c. 1500-1550", {
+      "@id" : "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747"
+    }, "Late Italian Renaissance", {
+      "@id" : "http://id.loc.gov/authorities/subjects/sh85134531"
+    }, {
+      "@id" : "http://id.loc.gov/vocabulary/graphicMaterials/tgm009418"
+    } ],
+    "artMedium" : "Pencil",
+    "artform" : "Image",
+    "artworkSurface" : "Paper",
+    "associatedMedia" : [ "_:b6", "_:b0", "_:b4", "_:b7", "_:b8", "_:b3", "_:b1", "_:b5" ],
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Set rendering",
+    "isPartOf" : [ "https://en.wikipedia.org/wiki/Othello", "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/" ],
+    "name" : "Sketch",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://hdl.handle.net/10111/Motley:511017-153", "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/511017-153" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/110467783",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Director",
+    "sameAs" : [ "http://www.imdb.com/name/nm0000080/", "https://en.wikipedia.org/wiki/Orson_Welles", "http://theatricalia.com/person/1s4t/orson-welles" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/96994048",
+    "@type" : "http://schema.org/Person"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Othello",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : "http://viaf.org/viaf/110467783",
+    "dateCreated" : "1951",
+    "exampleOfWork" : "_:b2",
+    "locationCreated" : "https://en.wikipedia.org/wiki/St._James%27s_Theatre",
+    "mainEntityOfPage" : "http://images.library.uiuc.edu/projects/motley/prodnote/prodoth.htm",
+    "name" : "Othello",
+    "sameAs" : [ "http://theatricalia.com/play/8/othello/production/y1", "http://theatricalia.com/play/8/othello/production/p71" ]
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/St._James%27s_Theatre",
+    "sameAs" : [ "http://www.arthurlloyd.co.uk/StJamesTheatre.htm", "https://www.worldcat.org/identities/lccn-nb2016021088/", "http://viaf.org/viaf/147272968/", "https://en.wikipedia.org/wiki/St_James%27s_Theatre", "http://id.loc.gov/authorities/names/nb2016021088" ]
+  } ],
+  "@context" : {
+    "width" : {
+      "@id" : "http://schema.org/width"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "artworkSurface" : {
+      "@id" : "http://schema.org/artworkSurface",
+      "@type" : "http://schema.org/Text"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "mainEntityOfPage" : {
+      "@id" : "http://schema.org/mainEntityOfPage",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    }
+  }
+}

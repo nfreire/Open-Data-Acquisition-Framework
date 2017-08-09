@@ -1,0 +1,163 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/Distance",
+    "name" : "12 1/2 inches"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/Book",
+    "author" : "http://viaf.org/viaf/96994048"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/Distance",
+    "name" : "17 inches"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/531027_057_a.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "4702",
+    "name" : "Swatches",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/531027_057_b.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "4354",
+    "name" : "Swatches",
+    "width" : "6000"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/5024",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "http://id.loc.gov/authorities/subjects/sh85134531", "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747" ],
+    "artMedium" : "Swatches",
+    "artform" : "Image",
+    "associatedMedia" : [ "_:b4", "_:b3" ],
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Costume rendering",
+    "height" : {
+      "@id" : "_:b2"
+    },
+    "isPartOf" : [ "https://en.wikipedia.org/wiki/King_John_%28play%29", "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/" ],
+    "name" : "Swatches",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/531027-057", "http://hdl.handle.net/10111/Motley:531027-057" ],
+    "width" : {
+      "@id" : "_:b0"
+    }
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/90418453",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Director",
+    "sameAs" : [ "http://theatricalia.com/person/2fz/george-devine", "http://www.imdb.com/name/nm0222627/", "http://www.worldcat.org/identities/lccn-n2009-33849/", "https://en.wikipedia.org/wiki/George_Devine", "http://id.loc.gov/authorities/names/n2009033849.html" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/96994048",
+    "@type" : "http://schema.org/Person"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/King_John_%28play%29",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : "http://viaf.org/viaf/90418453",
+    "dateCreated" : "1953",
+    "exampleOfWork" : "_:b1",
+    "name" : "King John",
+    "sameAs" : "http://theatricalia.com/play/1m/king-john/production/8m1"
+  } ],
+  "@context" : {
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    },
+    "width" : {
+      "@id" : "http://schema.org/width"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    }
+  }
+}

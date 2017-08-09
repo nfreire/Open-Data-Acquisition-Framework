@@ -1,0 +1,169 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/Distance",
+    "name" : "10 inches"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/Distance",
+    "name" : "8 inches"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/471223-049b.jpg",
+    "fileFormat" : "image/jpg",
+    "http://schema.org/height" : "6000",
+    "name" : "Notes on scene changes: Page 2",
+    "http://schema.org/width" : "4883"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/471223-049a.jpg",
+    "fileFormat" : "image/jpg",
+    "http://schema.org/height" : "6000",
+    "name" : "Notes on scene changes: Page 1",
+    "http://schema.org/width" : "4883"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Editor",
+    "name" : "Suria, Mugito",
+    "sameAs" : [ "https://archive.org/stream/snowqueen00sain/snowqueen00sain_djvu.txt", "http://www.goodreads.com/book/show/6262764-the-snow-queen", "http://www.goodreads.com/book/show/15511187-the-snow-queen" ]
+  }, {
+    "@id" : "_:b5",
+    "name" : "Alexandra Theatre (Stoke Newington, England)",
+    "sameAs" : [ "http://www.vam.ac.uk/archives/unit/ARC16325", "http://viaf.org/viaf/sourceID/LC%7Cno+95032546#skos:Concept", "http://id.loc.gov/authorities/names/no95032546.html" ]
+  }, {
+    "@id" : "_:b6",
+    "@type" : "http://schema.org/Book",
+    "author" : "https://en.wikipedia.org/wiki/Eugene_Schwartz"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/4917",
+    "@type" : "http://schema.org/CreativeWork",
+    "about" : [ "http://id.loc.gov/authorities/subjects/sh85134531", "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747" ],
+    "associatedMedia" : [ "_:b2", "_:b3" ],
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Miscellaneous",
+    "height" : "_:b0",
+    "isPartOf" : [ "https://en.wikipedia.org/wiki/The_Snow_Queen", "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/" ],
+    "name" : "Notes on Scene Changes",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://hdl.handle.net/10111/Motley:471223-049", "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/471223-049" ],
+    "width" : "_:b1"
+  }, {
+    "@id" : "http://viaf.org/viaf/114256597",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Director"
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/59856694",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Editor"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Eugene_Schwartz",
+    "@type" : "http://schema.org/Person"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/The_Snow_Queen",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : [ "_:b4", "http://viaf.org/viaf/114256597", "http://viaf.org/viaf/59856694" ],
+    "dateCreated" : "1947",
+    "exampleOfWork" : "_:b6",
+    "locationCreated" : "_:b5",
+    "name" : "Snow Queen",
+    "sameAs" : "http://theatricalia.com/play/3r3/the-snow-queen/production/86s"
+  } ],
+  "@context" : {
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height",
+      "@type" : "@id"
+    },
+    "width" : {
+      "@id" : "http://schema.org/width",
+      "@type" : "@id"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    }
+  }
+}

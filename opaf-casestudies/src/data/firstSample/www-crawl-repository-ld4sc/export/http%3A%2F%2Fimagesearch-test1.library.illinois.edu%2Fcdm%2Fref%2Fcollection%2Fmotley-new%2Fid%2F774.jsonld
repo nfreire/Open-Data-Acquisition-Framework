@@ -1,0 +1,145 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "name" : "London Theatre Studio",
+    "sameAs" : "http://www.michelsaintdenis.net/etudes-a-articles-mainmenu-52/47-the-london-theatre-studio-by-sophie-jump.html"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : "http://viaf.org/viaf/66475425",
+    "locationCreated" : "_:b0",
+    "name" : "Illustrations for Lectures",
+    "sameAs" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/n/a"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/380000_061.jpg",
+    "fileFormat" : "image/jpg",
+    "http://schema.org/height" : "6000",
+    "http://schema.org/width" : "4200"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/Distance",
+    "name" : "6 3/4 inches"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://schema.org/Distance",
+    "name" : "10 inches"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/774",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "http://id.loc.gov/vocabulary/graphicMaterials/tgm009418", "http://vocab.getty.edu/aat/300002944", "http://vocab.getty.edu/aat/300054190", "http://id.loc.gov/authorities/subjects/sh85134531" ],
+    "artMedium" : "Pencil",
+    "artform" : "Image",
+    "artworkSurface" : "Matted",
+    "associatedMedia" : "_:b2",
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Set rendering",
+    "height" : "_:b4",
+    "isPartOf" : [ "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/", "_:b1" ],
+    "name" : "Window",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/380000-061", "http://hdl.handle.net/10111/Motley:380000-061" ],
+    "width" : "_:b3"
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/66475425",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Architect",
+    "sameAs" : [ "https://en.wikipedia.org/wiki/Inigo_Jones", "http://id.loc.gov/authorities/names/n79045469.html" ]
+  } ],
+  "@context" : {
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "width" : {
+      "@id" : "http://schema.org/width",
+      "@type" : "@id"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "artworkSurface" : {
+      "@id" : "http://schema.org/artworkSurface",
+      "@type" : "http://schema.org/Text"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height",
+      "@type" : "@id"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    }
+  }
+}

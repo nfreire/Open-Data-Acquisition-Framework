@@ -1,0 +1,161 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/Person",
+    "birthdate" : "1938",
+    "jobTitle" : "Actor",
+    "name" : "Jacobi, Derek",
+    "sameAs" : [ "http://theatricalia.com/person/49d/derek-jacobi", "https://en.wikipedia.org/wiki/Derek_Jacobi", "http://id.loc.gov/authorities/names/no89015792.html" ]
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/Distance",
+    "name" : "10 inches"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/641027A_013.jpg",
+    "fileFormat" : "image/jpg"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/Distance",
+    "name" : "14 3/4 inches"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://schema.org/Book",
+    "author" : "_:b6"
+  }, {
+    "@id" : "_:b5",
+    "@type" : "http://schema.org/Person",
+    "birthdate" : "1899",
+    "deathdate" : "1973",
+    "jobTitle" : "Director",
+    "name" : "Coward, Noel",
+    "sameAs" : [ "http://theatricalia.com/person/2a82/noel-coward", "https://en.wikipedia.org/wiki/No%C3%ABl_Coward" ]
+  }, {
+    "@id" : "_:b6",
+    "name" : "Coward, Noel",
+    "sameAs" : [ "http://theatricalia.com/person/2a82/noel-coward", "https://en.wikipedia.org/wiki/No%C3%ABl_Coward" ]
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/250",
+    "@type" : "http://schema.org/CreativeWork",
+    "about" : [ "http://vocab.getty.edu/aat/300163423", "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747", "http://vocab.getty.edu/aat/300266810", "http://id.loc.gov/authorities/subjects/sh85134531", "http://id.loc.gov/vocabulary/graphicMaterials/tgm002607" ],
+    "associatedMedia" : "_:b2",
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "height" : "_:b3",
+    "isPartOf" : [ "https://en.wikipedia.org/wiki/Hay_Fever_%28play%29", "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/" ],
+    "name" : "Simon: Act I",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://hdl.handle.net/10111/Motley:641027A-013", "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/641027A-013" ],
+    "width" : "_:b1"
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Hay_Fever_%28play%29",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : [ "_:b0", "_:b5" ],
+    "dateCreated" : "1964",
+    "exampleOfWork" : "_:b4",
+    "locationCreated" : "https://en.wikipedia.org/wiki/Royal_National_Theatre",
+    "name" : "Hay Fever",
+    "sameAs" : "http://theatricalia.com/play/2w8/hay-fever/production/9yk"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Royal_National_Theatre",
+    "name" : "National Theatre at the Old Vic Theatre (London, England)",
+    "sameAs" : [ "http://www.nationaltheatre.org.uk/", "https://www.worldcat.org/identities/lccn-n88241639/", "https://viaf.org/viaf/137020540" ]
+  } ],
+  "@context" : {
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "birthdate" : {
+      "@id" : "http://schema.org/birthdate"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "width" : {
+      "@id" : "http://schema.org/width",
+      "@type" : "@id"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height",
+      "@type" : "@id"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "deathdate" : {
+      "@id" : "http://schema.org/deathdate"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    }
+  }
+}

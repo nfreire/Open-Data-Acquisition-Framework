@@ -1,0 +1,204 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/461220_051_f.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "6000",
+    "name" : "Performance Notes 6",
+    "width" : "4775"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/461220_051_b.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "6000",
+    "name" : "Performance  Notes 2",
+    "width" : "4863"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/Book",
+    "author" : "http://viaf.org/viaf/96994048"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/461220_051_h.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "4139",
+    "name" : "Performance Notes 8",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/461220_051_e.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "6000",
+    "name" : "Performance Notes 5",
+    "width" : "4809"
+  }, {
+    "@id" : "_:b5",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/461220_051_d.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "6000",
+    "name" : "Performance Notes 4",
+    "width" : "4768"
+  }, {
+    "@id" : "_:b6",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/461220_051_g.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "6000",
+    "name" : "Performance Notes 7",
+    "width" : "4814"
+  }, {
+    "@id" : "_:b7",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/461220_051_c.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "6000",
+    "name" : "Performance Notes 3",
+    "width" : "4824"
+  }, {
+    "@id" : "_:b8",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/461220_051_i.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "4692",
+    "name" : "Performance Notes 9",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b9",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/461220_051_a.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "6000",
+    "name" : "Performance Notes 1",
+    "width" : "4867"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/4928",
+    "@type" : "http://schema.org/CreativeWork",
+    "about" : [ "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747", "http://id.loc.gov/authorities/subjects/sh85134531" ],
+    "associatedMedia" : [ "_:b6", "_:b1", "_:b7", "_:b4", "_:b3", "_:b8", "_:b0", "_:b9", "_:b5" ],
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Miscellaneous",
+    "isPartOf" : [ "https://en.wikipedia.org/wiki/Antony_and_Cleopatra", "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/" ],
+    "name" : "Performance Notes",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/461220_051", "http://hdl.handle.net/10111/Motley:461220_051" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/67675249",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Director",
+    "sameAs" : [ "http://theatricalia.com/person/jfx/glen-byam-shaw", "https://en.wikipedia.org/wiki/Glen_Byam_Shaw" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/96994048",
+    "@type" : "http://schema.org/Person"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Antony_and_Cleopatra",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : "http://viaf.org/viaf/67675249",
+    "dateCreated" : "1946",
+    "exampleOfWork" : "_:b2",
+    "locationCreated" : "https://en.wikipedia.org/wiki/Piccadilly_Theatre",
+    "name" : "Antony and Cleopatra",
+    "sameAs" : "http://theatricalia.com/play/1z/antony-and-cleopatra/production/xh"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Piccadilly_Theatre",
+    "name" : "Piccadilly Theatre (London, England)",
+    "sameAs" : [ "https://www.worldcat.org/identities/nc-piccadilly%20theatre%20london%20england/", "http://viaf.org/viaf/292857769/" ]
+  } ],
+  "@context" : {
+    "width" : {
+      "@id" : "http://schema.org/width"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    }
+  }
+}

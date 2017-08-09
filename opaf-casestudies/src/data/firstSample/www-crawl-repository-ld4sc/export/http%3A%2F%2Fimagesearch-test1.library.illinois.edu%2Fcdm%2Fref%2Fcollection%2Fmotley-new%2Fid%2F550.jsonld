@@ -1,0 +1,166 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/Distance",
+    "name" : "17 1/2 inches"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/Book",
+    "author" : "http://viaf.org/viaf/14959938"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/630912_039.jpg",
+    "fileFormat" : "image/jpg",
+    "http://schema.org/height" : "2156",
+    "http://schema.org/width" : "3000"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/Distance",
+    "name" : "12 1/2 inches"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/550",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "http://id.loc.gov/authorities/subjects/sh85134531", "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747", "http://id.loc.gov/vocabulary/graphicMaterials/tgm002607", "http://vocab.getty.edu/aat/300163423", "http://vocab.getty.edu/aat/300266810" ],
+    "artMedium" : "Watercolor",
+    "artform" : "Image",
+    "artworkSurface" : "Mounted",
+    "associatedMedia" : "_:b2",
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Costume rendering",
+    "height" : "_:b3",
+    "isPartOf" : [ "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/", "https://en.wikipedia.org/wiki/Der_Freisch%C3%BCtz" ],
+    "name" : "Bird Apparitions and Dancers",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/630912-039", "http://hdl.handle.net/10111/Motley:630912-039" ],
+    "width" : "_:b0"
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/14959938",
+    "@type" : "http://schema.org/Person",
+    "sameAs" : "https://en.wikipedia.org/wiki/Carl_Maria_von_Weber"
+  }, {
+    "@id" : "http://viaf.org/viaf/73855532",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Composer",
+    "sameAs" : "https://en.wikipedia.org/wiki/Johann_Friedrich_Kind"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Der_Freisch%C3%BCtz",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : "http://viaf.org/viaf/73855532",
+    "dateCreated" : "1963",
+    "exampleOfWork" : "_:b1",
+    "locationCreated" : "https://en.wikipedia.org/wiki/Sadler%27s_Wells_Theatre",
+    "name" : "Der Freischutz"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Sadler%27s_Wells_Theatre",
+    "name" : "Sadler's Wells Theatre (London, England)",
+    "sameAs" : [ "http://www.sadlerswells.com/", "https://www.worldcat.org/identities/lccn-n50057403", "http://viaf.org/viaf/167808437/#Sadler's_Wells_Theatre_(London,_England)", "http://id.loc.gov/authorities/names/n50057403" ]
+  } ],
+  "@context" : {
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "artworkSurface" : {
+      "@id" : "http://schema.org/artworkSurface",
+      "@type" : "http://schema.org/Text"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height",
+      "@type" : "@id"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "width" : {
+      "@id" : "http://schema.org/width",
+      "@type" : "@id"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    }
+  }
+}

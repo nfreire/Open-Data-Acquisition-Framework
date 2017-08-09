@@ -1,0 +1,154 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/700716_010.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3000",
+    "width" : "2222"
+  }, {
+    "@id" : "_:b1",
+    "name" : "West, Morris",
+    "sameAs" : "https://en.wikipedia.org/wiki/Morris_West"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/Distance",
+    "name" : "13 1/2 inches"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/Book",
+    "author" : "_:b1"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://schema.org/Distance",
+    "name" : "9 7/8 inches"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/406",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "http://id.loc.gov/authorities/subjects/sh85134531", "http://id.loc.gov/vocabulary/graphicMaterials/tgm002607", "http://vocab.getty.edu/aat/300163423", "http://vocab.getty.edu/aat/300078928", "http://vocab.getty.edu/aat/300266810", "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747" ],
+    "artMedium" : "Gouache",
+    "artform" : "Image",
+    "artworkSurface" : "Mounted; Swatched",
+    "associatedMedia" : "_:b0",
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Costume rendering",
+    "height" : {
+      "@id" : "_:b4"
+    },
+    "isPartOf" : [ "https://en.wikipedia.org/wiki/The_Heretic_(play)", "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/" ],
+    "name" : "Bortolo",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/700716-010", "http://hdl.handle.net/10111/Motley:700716-010" ],
+    "width" : {
+      "@id" : "_:b2"
+    }
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Duke_of_York%27s_Theatre",
+    "sameAs" : [ "http://www.dukeofyorkstheatre.co.uk/", "https://www.worldcat.org/identities/lccn-n2012022916/", "https://viaf.org/viaf/122681813/", "https://en.wikipedia.org/wiki/Duke_of_York%27s_Theatre", "http://id.loc.gov/authorities/names/n2012022916" ]
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/The_Heretic_(play)",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "dateCreated" : "1970",
+    "exampleOfWork" : "_:b3",
+    "locationCreated" : "https://en.wikipedia.org/wiki/Duke_of_York%27s_Theatre",
+    "name" : "Heretic"
+  } ],
+  "@context" : {
+    "width" : {
+      "@id" : "http://schema.org/width"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "artworkSurface" : {
+      "@id" : "http://schema.org/artworkSurface",
+      "@type" : "http://schema.org/Text"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    }
+  }
+}

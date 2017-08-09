@@ -1,0 +1,148 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/Book",
+    "author" : "http://viaf.org/viaf/276055853"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : "http://viaf.org/viaf/27186592",
+    "dateCreated" : "1957",
+    "exampleOfWork" : "_:b0",
+    "locationCreated" : "https://en.wikipedia.org/wiki/Broadhurst_Theatre",
+    "name" : "First Gentleman"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/570425_001.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3000",
+    "width" : "2309"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/116",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747", "http://id.loc.gov/authorities/subjects/sh85134531", "http://vocab.getty.edu/aat/300078928", "http://vocab.getty.edu/aat/300266810", "http://vocab.getty.edu/aat/300163423", "http://id.loc.gov/vocabulary/graphicMaterials/tgm002607" ],
+    "artMedium" : [ "Watercolor", "Gouache" ],
+    "artform" : "Image",
+    "associatedMedia" : "_:b2",
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Costume rendering",
+    "isPartOf" : [ "_:b1", "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/" ],
+    "name" : "Caroline of Brunswick",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/570425-001", "http://hdl.handle.net/10111/Motley:570425-001" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/27186592",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Director",
+    "sameAs" : [ "http://theatricalia.com/person/1vx/tyrone-guthrie", "https://en.wikipedia.org/wiki/Tyrone_Guthrie", "http://www.imdb.com/name/nm0349310/", "http://id.loc.gov/authorities/names/n80139336.html" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/276055853",
+    "@type" : "http://schema.org/Person",
+    "sameAs" : [ "http://theatricalia.com/person/q6s/norman-ginsbury", "http://viaf.org/viaf/269374824/#skos:Concept", "http://www.imdb.com/name/nm0320156/", "http://id.loc.gov/authorities/names/nb2006005604.html" ]
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Broadhurst_Theatre",
+    "sameAs" : [ "https://www.ibdb.com/theatre/broadhurst-theatre-1076", "https://www.worldcat.org/identities/lccn-n2009004968", "http://viaf.org/viaf/132757422/#Broadhurst_Theatre_(Organization_:_New_York,_N.Y.)", "https://en.wikipedia.org/wiki/Broadhurst_Theatre", "http://id.loc.gov/authorities/names/n2009004968.html" ]
+  } ],
+  "@context" : {
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "width" : {
+      "@id" : "http://schema.org/width"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    }
+  }
+}

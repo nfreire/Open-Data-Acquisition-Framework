@@ -1,0 +1,171 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/721012_033_b.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "6000",
+    "name" : "Barclay De Tolly: Scene 8 - Back",
+    "width" : "4729"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/Book",
+    "author" : "_:b2"
+  }, {
+    "@id" : "_:b2",
+    "name" : "Tolstoy, Leo, graf",
+    "sameAs" : [ "http://theatricalia.com/person/rnb/leo-tolstoy", "https://en.wikipedia.org/wiki/Leo_Tolstoy" ]
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/721012_033_a.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "6000",
+    "name" : "Barclay De Tolly: Scene 8 - Front",
+    "width" : "4715"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Actor",
+    "name" : "Delaney, John",
+    "sameAs" : "http://www.imdb.com/name/nm0216304/"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/4812",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "http://id.loc.gov/authorities/subjects/sh85134531", "http://id.loc.gov/vocabulary/graphicMaterials/tgm002607", "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747" ],
+    "artMedium" : [ "Gouache", "Pencil" ],
+    "artform" : "Image",
+    "associatedMedia" : [ "_:b0", "_:b3" ],
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "description" : "The costumes and sets were designed for a production of Serge Prokofiev's opera based on Leo Tolstoy's novel.",
+    "genre" : "Costume rendering",
+    "isPartOf" : [ "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/", "https://en.wikipedia.org/wiki/War_and_Peace_%28Prokofiev%29" ],
+    "name" : "Barclay De Tolly: Scene 8",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://hdl.handle.net/10111/Motley:721012-033", "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/721012-033" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/71579098",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Composer",
+    "sameAs" : [ "http://theatricalia.com/person/11cw/sergei-sergeivich-prokofiev", "https://en.wikipedia.org/wiki/Sergei_Prokofiev" ]
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/London_Coliseum",
+    "sameAs" : [ "http://www.eno.org/", "https://www.worldcat.org/identities/lccn-n2010032302/", "http://viaf.org/viaf/125937720/", "https://en.wikipedia.org/wiki/London_Coliseum", "http://id.loc.gov/authorities/names/n2010032302.html" ]
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Sadler%27s_Wells_Theatre",
+    "name" : "Sadler's Wells Theatre (London, England)",
+    "sameAs" : [ "http://www.sadlerswells.com/", "https://www.worldcat.org/identities/lccn-n50057403", "http://viaf.org/viaf/167808437/#Sadler's_Wells_Theatre_(London,_England)", "http://id.loc.gov/authorities/names/n50057403" ]
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/War_and_Peace_%28Prokofiev%29",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : [ "_:b4", "http://viaf.org/viaf/71579098" ],
+    "dateCreated" : "1972",
+    "exampleOfWork" : "_:b1",
+    "locationCreated" : [ "https://en.wikipedia.org/wiki/London_Coliseum", "https://en.wikipedia.org/wiki/Sadler%27s_Wells_Theatre" ],
+    "name" : "War and Peace"
+  } ],
+  "@context" : {
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "width" : {
+      "@id" : "http://schema.org/width"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "description" : {
+      "@id" : "http://schema.org/description"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    }
+  }
+}

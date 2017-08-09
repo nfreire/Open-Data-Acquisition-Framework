@@ -1,0 +1,192 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/Distance",
+    "name" : "13 1/2 inches"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/Person",
+    "birthdate" : "1916",
+    "deathdate" : "2001",
+    "jobTitle" : "Director",
+    "name" : "O'Conor, Joseph",
+    "sameAs" : [ "http://theatricalia.com/person/5at/joseph-oconor", "https://en.wikipedia.org/wiki/Joseph_O'Conor" ]
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/Book",
+    "author" : "_:b3"
+  }, {
+    "@id" : "_:b3",
+    "name" : "West, Morris",
+    "sameAs" : "https://en.wikipedia.org/wiki/Morris_West"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://schema.org/Person",
+    "birthdate" : "1908",
+    "deathdate" : "1991",
+    "jobTitle" : "Actor",
+    "name" : "Eddison, Robert",
+    "sameAs" : [ "http://theatricalia.com/person/2da/robert-eddison", "http://www.imdb.com/name/nm0248848/", "https://en.wikipedia.org/wiki/Robert_Eddison" ]
+  }, {
+    "@id" : "_:b5",
+    "@type" : "http://schema.org/Person",
+    "birthdate" : "1916",
+    "deathdate" : "1999",
+    "jobTitle" : "Director",
+    "name" : "West, Morris",
+    "sameAs" : "https://en.wikipedia.org/wiki/Morris_West"
+  }, {
+    "@id" : "_:b6",
+    "@type" : "http://schema.org/Distance",
+    "name" : "9 7/8 inches"
+  }, {
+    "@id" : "_:b7",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/700716_003.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3000",
+    "width" : "2119"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/402",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "http://vocab.getty.edu/aat/300163423", "http://id.loc.gov/vocabulary/graphicMaterials/tgm002607", "http://id.loc.gov/authorities/subjects/sh85134531", "http://vocab.getty.edu/aat/300078928", "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747", "http://vocab.getty.edu/aat/300266810" ],
+    "artMedium" : "Gouache",
+    "artform" : "Image",
+    "artworkSurface" : "Mounted; Swatched",
+    "associatedMedia" : "_:b7",
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Costume rendering",
+    "height" : {
+      "@id" : "_:b6"
+    },
+    "isPartOf" : [ "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/", "https://en.wikipedia.org/wiki/The_Heretic_(play)" ],
+    "name" : "Taverna, Papal Nuncio",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://hdl.handle.net/10111/Motley:700716-003", "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/700716-003" ],
+    "width" : {
+      "@id" : "_:b0"
+    }
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Duke_of_York%27s_Theatre",
+    "sameAs" : [ "http://www.dukeofyorkstheatre.co.uk/", "https://www.worldcat.org/identities/lccn-n2012022916/", "https://viaf.org/viaf/122681813/", "https://en.wikipedia.org/wiki/Duke_of_York%27s_Theatre", "http://id.loc.gov/authorities/names/n2012022916" ]
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/The_Heretic_(play)",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : [ "_:b4", "_:b1", "_:b5" ],
+    "dateCreated" : "1970",
+    "exampleOfWork" : "_:b2",
+    "locationCreated" : "https://en.wikipedia.org/wiki/Duke_of_York%27s_Theatre",
+    "name" : "Heretic"
+  } ],
+  "@context" : {
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "deathdate" : {
+      "@id" : "http://schema.org/deathdate"
+    },
+    "birthdate" : {
+      "@id" : "http://schema.org/birthdate"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "width" : {
+      "@id" : "http://schema.org/width"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "artworkSurface" : {
+      "@id" : "http://schema.org/artworkSurface",
+      "@type" : "http://schema.org/Text"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    }
+  }
+}

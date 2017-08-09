@@ -1,0 +1,152 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/Distance",
+    "name" : "15 3/4 inches"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/490201_003.jpg",
+    "fileFormat" : "image/jpg",
+    "http://schema.org/height" : "2485",
+    "http://schema.org/width" : "3000"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/Distance",
+    "name" : "13 inches"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/Book",
+    "author" : "http://viaf.org/viaf/80665987"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/262",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747", "http://vocab.getty.edu/aat/300054190", "http://id.loc.gov/authorities/subjects/sh85134531", "http://id.loc.gov/vocabulary/graphicMaterials/tgm009418" ],
+    "artMedium" : "Pencil",
+    "artform" : "Image",
+    "associatedMedia" : "_:b1",
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "description" : "This play is an adaptation of Henry James' Washington Square.",
+    "genre" : "Set design",
+    "height" : "_:b2",
+    "isPartOf" : [ "https://en.wikipedia.org/wiki/The_Heiress_%281947_play%29", "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/" ],
+    "name" : "Mechanical Perspective: Backing",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/490201-003", "http://hdl.handle.net/10111/Motley:490201-003" ],
+    "width" : "_:b0"
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/80665987",
+    "@type" : "http://schema.org/Person",
+    "sameAs" : [ "http://theatricalia.com/person/1eb4/augustus-goetz", "https://en.wikipedia.org/wiki/The_Heiress_%281947_play%29", "http://www.imdb.com/name/nm0324499/", "http://id.loc.gov/authorities/names/n86808405.html" ]
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/The_Heiress_%281947_play%29",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "dateCreated" : "1949",
+    "exampleOfWork" : "_:b3",
+    "locationCreated" : "https://en.wikipedia.org/wiki/Theatre_Royal_Haymarket",
+    "name" : "Heiress"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Theatre_Royal_Haymarket",
+    "name" : "Haymarket Theatre (London, England)",
+    "sameAs" : [ "http://viaf.org/viaf/sourceID/LC%7Cno+91006248#skos:Concept", "http://id.loc.gov/authorities/names/no91006248.html" ]
+  } ],
+  "@context" : {
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "width" : {
+      "@id" : "http://schema.org/width",
+      "@type" : "@id"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "description" : {
+      "@id" : "http://schema.org/description"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height",
+      "@type" : "@id"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    }
+  }
+}

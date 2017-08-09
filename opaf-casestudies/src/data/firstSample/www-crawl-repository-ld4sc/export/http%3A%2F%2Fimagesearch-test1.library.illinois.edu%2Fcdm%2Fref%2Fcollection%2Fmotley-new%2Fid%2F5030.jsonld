@@ -1,0 +1,188 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/581028_012_b.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "6000",
+    "name" : "Undershaft: Act III, Scene I: Back",
+    "width" : "4413"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/Person",
+    "birthdate" : "1906",
+    "deathdate" : "1982",
+    "jobTitle" : "Actor",
+    "name" : "Webb, Alan"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/581028_012_a.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "6000",
+    "name" : "Undershaft: Act III, Scene I: Front",
+    "width" : "4430"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/Distance",
+    "name" : "14 5/8 inches"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://schema.org/Distance",
+    "name" : "10 5/8 inches"
+  }, {
+    "@id" : "_:b5",
+    "@type" : "http://schema.org/Book",
+    "author" : "http://viaf.org/viaf/89019752"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/5030",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "http://id.loc.gov/authorities/subjects/sh85134531", "http://id.loc.gov/vocabulary/graphicMaterials/tgm002607", "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747" ],
+    "artMedium" : [ "Pencil", "Watercolor" ],
+    "artform" : "Image",
+    "associatedMedia" : [ "_:b2", "_:b0" ],
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "description" : "Undeveloped sketch on verso",
+    "genre" : "Costume rendering",
+    "height" : {
+      "@id" : "_:b3"
+    },
+    "isPartOf" : [ "https://en.wikipedia.org/wiki/Major_Barbara", "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/" ],
+    "name" : "Undershaft: Act III, Scene I",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://hdl.handle.net/10111/Motley:581028-012", "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/581028-012" ],
+    "width" : {
+      "@id" : "_:b4"
+    }
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/67675249",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Director",
+    "sameAs" : [ "http://theatricalia.com/person/jfx/glen-byam-shaw", "https://en.wikipedia.org/wiki/Glen_Byam_Shaw" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/89019752",
+    "@type" : "http://schema.org/Person"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Major_Barbara",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : [ "_:b1", "http://viaf.org/viaf/67675249" ],
+    "dateCreated" : "1958",
+    "exampleOfWork" : "_:b5",
+    "locationCreated" : "https://en.wikipedia.org/wiki/Royal_Court_Theatre",
+    "name" : "Major Barbara"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Royal_Court_Theatre",
+    "name" : "Royal Court Theatre (London, England)",
+    "sameAs" : [ "http://www.royalcourttheatre.com/", "https://www.worldcat.org/identities/lccn-n81070840/", "http://viaf.org/viaf/149883392/", "http://id.loc.gov/authorities/names/n81070840.html" ]
+  } ],
+  "@context" : {
+    "width" : {
+      "@id" : "http://schema.org/width"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "deathdate" : {
+      "@id" : "http://schema.org/deathdate"
+    },
+    "birthdate" : {
+      "@id" : "http://schema.org/birthdate"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://schema.org/description"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    }
+  }
+}

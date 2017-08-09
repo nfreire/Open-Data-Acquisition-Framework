@@ -1,0 +1,170 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/Person",
+    "birthdate" : "1905",
+    "deathdate" : "1987",
+    "jobTitle" : "Actor",
+    "name" : "Williams, Emlyn"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/560529_018_b.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "6000",
+    "name" : "Iago - Act III, Scene ii - Back",
+    "width" : "4535"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/Book",
+    "author" : "http://viaf.org/viaf/96994048"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/560529_018_a.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "6000",
+    "name" : "Iago - Act III, Scene ii - Front",
+    "width" : "4515"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/4885",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "http://id.loc.gov/authorities/subjects/sh85134531", "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747", "http://id.loc.gov/vocabulary/graphicMaterials/tgm002607" ],
+    "artMedium" : [ "Pencil", "Gouache" ],
+    "artform" : "Image",
+    "associatedMedia" : [ "_:b1", "_:b3" ],
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Costume rendering",
+    "isPartOf" : [ "https://en.wikipedia.org/wiki/Othello", "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/" ],
+    "name" : "Iago - Act III, Scene II",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/560529-018", "http://hdl.handle.net/10111/Motley:560529-018" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/67675249",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Director",
+    "sameAs" : [ "http://theatricalia.com/person/jfx/glen-byam-shaw", "https://en.wikipedia.org/wiki/Glen_Byam_Shaw" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/96994048",
+    "@type" : "http://schema.org/Person"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Othello",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : [ "_:b0", "http://viaf.org/viaf/67675249" ],
+    "dateCreated" : "1956",
+    "exampleOfWork" : "_:b2",
+    "locationCreated" : "https://en.wikipedia.org/wiki/Royal_Shakespeare_Theatre",
+    "name" : "Othello",
+    "sameAs" : [ "http://theatricalia.com/play/8/othello/production/y1", "http://theatricalia.com/play/8/othello/production/p71" ]
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Royal_Shakespeare_Theatre",
+    "sameAs" : [ "http://www.rsc.org.uk/", "https://www.worldcat.org/identities/lccn-no2005122531", "http://viaf.org/viaf/168396251/#Shakespeare_Memorial_Company", "https://en.wikipedia.org/wiki/Royal_Shakespeare_Theatre", "http://id.loc.gov/authorities/names/no2005122531" ]
+  } ],
+  "@context" : {
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "deathdate" : {
+      "@id" : "http://schema.org/deathdate"
+    },
+    "birthdate" : {
+      "@id" : "http://schema.org/birthdate"
+    },
+    "width" : {
+      "@id" : "http://schema.org/width"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    }
+  }
+}

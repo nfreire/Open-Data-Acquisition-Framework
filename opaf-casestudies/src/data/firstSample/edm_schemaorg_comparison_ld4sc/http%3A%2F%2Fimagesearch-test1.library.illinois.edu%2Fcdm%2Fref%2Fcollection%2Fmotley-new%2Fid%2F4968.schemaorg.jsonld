@@ -1,0 +1,354 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_u.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3861",
+    "name" : "Basic set 23",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_q_b.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "4040",
+    "name" : "Basic set 18",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b10",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_g.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3838",
+    "name" : "Basic set 7",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b11",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_l.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3864",
+    "name" : "Basic set 12",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b12",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_q_a.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "4082",
+    "name" : "Basic set 17",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b13",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_p.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3871",
+    "name" : "Basic set 16",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b14",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_n.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3881",
+    "name" : "Basic set 14",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b15",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_i.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3909",
+    "name" : "Basic set 9",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b16",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_v.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3902",
+    "name" : "Basic set 24",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b17",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_e.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3916",
+    "name" : "Basic set 5",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b18",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_f.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3958",
+    "name" : "Basic set 6",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b19",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_w.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3852",
+    "name" : "Basic set 25",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_r.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3863",
+    "name" : "Basic set 20",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b20",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_b.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3867",
+    "name" : "Basic set 2",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b21",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_y.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3872",
+    "name" : "Basic set 27",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b22",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_k.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3837",
+    "name" : "Basic set 11",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b23",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_x.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3893",
+    "name" : "Basic set 26",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b24",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_s.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3866",
+    "name" : "Basic set 21",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b25",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_m.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3870",
+    "name" : "Basic set 13",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b26",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_j.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "4099",
+    "name" : "Basic set 10",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b27",
+    "@type" : "http://schema.org/Book",
+    "author" : "http://viaf.org/viaf/96994048"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_h.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3923",
+    "name" : "Basic set 8",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_a.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "4153",
+    "name" : "Basic set 1",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b5",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_c.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3902",
+    "name" : "Basic set 3",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b6",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_t.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3909",
+    "name" : "Basic set 22",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b7",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_o.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3864",
+    "name" : "Basic set 15",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b8",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_q_c.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "4073",
+    "name" : "Basic set 19",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b9",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530324_094_d.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3907",
+    "name" : "Basic set 4",
+    "width" : "6000"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/4968",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "http://id.loc.gov/authorities/subjects/sh85134531", "http://id.loc.gov/vocabulary/graphicMaterials/tgm009418", "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747" ],
+    "artMedium" : "Pencil sketches",
+    "artform" : "Image",
+    "associatedMedia" : [ "_:b4", "_:b5", "_:b1", "_:b6", "_:b2", "_:b7", "_:b8", "_:b9", "_:b10", "_:b11", "_:b3", "_:b12", "_:b13", "_:b14", "_:b15", "_:b16", "_:b17", "_:b18", "_:b19", "_:b20", "_:b21", "_:b22", "_:b23", "_:b24", "_:b25", "_:b0", "_:b26" ],
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Set design",
+    "isPartOf" : [ "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/", "https://en.wikipedia.org/wiki/Richard_III_(play)" ],
+    "name" : "Basic set",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/530324-094", "http://hdl.handle.net/10111/Motley:530324-094" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/67675249",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Director",
+    "sameAs" : [ "http://theatricalia.com/person/jfx/glen-byam-shaw", "https://en.wikipedia.org/wiki/Glen_Byam_Shaw" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/96994048",
+    "@type" : "http://schema.org/Person"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Richard_III_(play)",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : "http://viaf.org/viaf/67675249",
+    "dateCreated" : "1953",
+    "exampleOfWork" : "_:b27",
+    "locationCreated" : "https://en.wikipedia.org/wiki/Shakespeare_Memorial_Theatre",
+    "name" : "Richard III",
+    "sameAs" : "http://theatricalia.com/play/18/richard-iii/production/xd"
+  } ],
+  "@context" : {
+    "width" : {
+      "@id" : "http://schema.org/width"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    }
+  }
+}

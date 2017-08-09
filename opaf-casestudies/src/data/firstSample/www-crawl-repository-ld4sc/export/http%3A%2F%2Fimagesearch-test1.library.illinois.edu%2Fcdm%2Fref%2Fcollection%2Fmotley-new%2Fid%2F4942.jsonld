@@ -1,0 +1,164 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/680131_093_b.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "4245",
+    "name" : "Set sketch - Back",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/Person",
+    "birthdate" : "1922",
+    "deathdate" : "1994",
+    "jobTitle" : "Director",
+    "name" : "Blatchley, John",
+    "sameAs" : [ "http://theatricalia.com/person/25q/john-blatchley", "http://www.imdb.com/name/nm3257641/bio" ]
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/680131_093_a.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "4239",
+    "name" : "Set sketch - Front",
+    "width" : "6000"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/4942",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "http://id.loc.gov/authorities/subjects/sh85134531", "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747" ],
+    "artMedium" : "Pencil",
+    "artform" : "Image",
+    "associatedMedia" : [ "_:b2", "_:b0" ],
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Set rendering",
+    "isPartOf" : [ "https://en.wikipedia.org/wiki/Die_Meistersinger_von_N%C3%BCrnberg", "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/" ],
+    "name" : "Set sketch",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://hdl.handle.net/10111/Motley:680131-093", "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/680131-093" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/17407470",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Conductor",
+    "sameAs" : "https://en.wikipedia.org/wiki/Reginald_Goodall"
+  }, {
+    "@id" : "http://viaf.org/viaf/29732107",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Composer"
+  }, {
+    "@id" : "http://viaf.org/viaf/67675249",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Director",
+    "sameAs" : [ "http://theatricalia.com/person/jfx/glen-byam-shaw", "https://en.wikipedia.org/wiki/Glen_Byam_Shaw" ]
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Die_Meistersinger_von_N%C3%BCrnberg",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : [ "_:b1", "http://viaf.org/viaf/67675249", "http://viaf.org/viaf/17407470", "http://viaf.org/viaf/29732107" ],
+    "dateCreated" : "1968",
+    "locationCreated" : "https://en.wikipedia.org/wiki/Sadler%27s_Wells_Theatre",
+    "name" : "Mastersingers of Nuremberg"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Sadler%27s_Wells_Theatre",
+    "name" : "Sadler's Wells Theatre (London, England)",
+    "sameAs" : [ "http://www.sadlerswells.com/", "https://www.worldcat.org/identities/lccn-n50057403", "http://viaf.org/viaf/167808437/#Sadler's_Wells_Theatre_(London,_England)", "http://id.loc.gov/authorities/names/n50057403" ]
+  } ],
+  "@context" : {
+    "width" : {
+      "@id" : "http://schema.org/width"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "deathdate" : {
+      "@id" : "http://schema.org/deathdate"
+    },
+    "birthdate" : {
+      "@id" : "http://schema.org/birthdate"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    }
+  }
+}

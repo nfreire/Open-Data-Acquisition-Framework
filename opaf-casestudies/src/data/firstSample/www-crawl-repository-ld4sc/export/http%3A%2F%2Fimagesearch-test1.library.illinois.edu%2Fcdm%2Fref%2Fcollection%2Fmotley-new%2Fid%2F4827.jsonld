@@ -1,0 +1,167 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/510313_034c.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "6000",
+    "name" : "Character descriptions: Page 3",
+    "width" : "4854"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/510313_034d.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "6000",
+    "name" : "Character descriptions: Page 4",
+    "width" : "4968"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/510313_034b.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "6000",
+    "name" : "Character descriptions: Page 2",
+    "width" : "4917"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/510313_034a.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "6000",
+    "name" : "Character descriptions: Page 1",
+    "width" : "4929"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://schema.org/Book",
+    "author" : "https://en.wikipedia.org/wiki/Anton_Pavlovich_Chekhov"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/4827",
+    "@type" : "http://schema.org/CreativeWork",
+    "about" : [ "http://id.loc.gov/authorities/subjects/sh85134531", "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747" ],
+    "associatedMedia" : [ "_:b0", "_:b1", "_:b2", "_:b3" ],
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "description" : "Constance Garnett's translation of Chekhov's play. Some drawings may be for 1948 production at Old Vic School, which was directed by the same director and had many of the same cast members.",
+    "genre" : "Miscellaneous",
+    "isPartOf" : [ "https://en.wikipedia.org/wiki/The_Wedding_(1901_play)", "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/" ],
+    "name" : "Character Descriptions",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://hdl.handle.net/10111/Motley:510313-034", "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/510313-034" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/90418453",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Director",
+    "sameAs" : [ "http://theatricalia.com/person/2fz/george-devine", "http://www.imdb.com/name/nm0222627/", "http://www.worldcat.org/identities/lccn-n2009-33849/", "https://en.wikipedia.org/wiki/George_Devine", "http://id.loc.gov/authorities/names/n2009033849.html" ]
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Anton_Pavlovich_Chekhov",
+    "@type" : "http://schema.org/Person"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Old_Vic_Theatre",
+    "sameAs" : [ "http://www.oldvictheatre.com/", "https://www.worldcat.org/identities/lccn-n86120079/", "http://viaf.org/viaf/140548301/#Old_Vic_Theatre_(London,_England)", "https://en.wikipedia.org/wiki/The_Old_Vic", "http://id.loc.gov/authorities/names/n86120079.html" ]
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/The_Wedding_(1901_play)",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : "http://viaf.org/viaf/90418453",
+    "dateCreated" : "1951",
+    "exampleOfWork" : "_:b4",
+    "locationCreated" : "https://en.wikipedia.org/wiki/Old_Vic_Theatre",
+    "name" : "Wedding",
+    "sameAs" : "http://theatricalia.com/play/3tb/the-wedding/production/8bs"
+  } ],
+  "@context" : {
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://schema.org/description"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "width" : {
+      "@id" : "http://schema.org/width"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    }
+  }
+}

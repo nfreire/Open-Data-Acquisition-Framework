@@ -1,0 +1,186 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/630912_008.jpg",
+    "fileFormat" : "image/jpg",
+    "http://schema.org/height" : "2185",
+    "http://schema.org/width" : "3000"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/Distance",
+    "name" : "12 1/2 inches"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/Distance",
+    "name" : "17 3/8 inches"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Actor",
+    "name" : "Wood"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Actor",
+    "name" : "Caswell"
+  }, {
+    "@id" : "_:b5",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Actor",
+    "name" : "McClelland, Betty"
+  }, {
+    "@id" : "_:b6",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Actor",
+    "name" : "Duckworth"
+  }, {
+    "@id" : "_:b7",
+    "@type" : "http://schema.org/Book",
+    "author" : "http://viaf.org/viaf/14959938"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/405",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747", "http://vocab.getty.edu/aat/300163423", "http://vocab.getty.edu/aat/300266810", "http://vocab.getty.edu/aat/300230852", "http://id.loc.gov/authorities/subjects/sh85134531", "http://id.loc.gov/vocabulary/graphicMaterials/tgm002607" ],
+    "artMedium" : "Watercolor",
+    "artform" : "Image",
+    "artworkSurface" : "Mounted",
+    "associatedMedia" : "_:b0",
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Costume rendering",
+    "height" : "_:b1",
+    "isPartOf" : [ "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/", "https://en.wikipedia.org/wiki/Der_Freisch%C3%BCtz" ],
+    "name" : "Peasant Women",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/630912-008", "http://hdl.handle.net/10111/Motley:630912-008" ],
+    "width" : "_:b2"
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/14959938",
+    "@type" : "http://schema.org/Person",
+    "sameAs" : "https://en.wikipedia.org/wiki/Carl_Maria_von_Weber"
+  }, {
+    "@id" : "http://viaf.org/viaf/73855532",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Composer",
+    "sameAs" : "https://en.wikipedia.org/wiki/Johann_Friedrich_Kind"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Der_Freisch%C3%BCtz",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : [ "_:b3", "http://viaf.org/viaf/73855532", "_:b4", "_:b5", "_:b6" ],
+    "dateCreated" : "1963",
+    "exampleOfWork" : "_:b7",
+    "locationCreated" : "https://en.wikipedia.org/wiki/Sadler%27s_Wells_Theatre",
+    "name" : "Der Freischutz"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Sadler%27s_Wells_Theatre",
+    "name" : "Sadler's Wells Theatre (London, England)",
+    "sameAs" : [ "http://www.sadlerswells.com/", "https://www.worldcat.org/identities/lccn-n50057403", "http://viaf.org/viaf/167808437/#Sadler's_Wells_Theatre_(London,_England)", "http://id.loc.gov/authorities/names/n50057403" ]
+  } ],
+  "@context" : {
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "artworkSurface" : {
+      "@id" : "http://schema.org/artworkSurface",
+      "@type" : "http://schema.org/Text"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height",
+      "@type" : "@id"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "width" : {
+      "@id" : "http://schema.org/width",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    }
+  }
+}

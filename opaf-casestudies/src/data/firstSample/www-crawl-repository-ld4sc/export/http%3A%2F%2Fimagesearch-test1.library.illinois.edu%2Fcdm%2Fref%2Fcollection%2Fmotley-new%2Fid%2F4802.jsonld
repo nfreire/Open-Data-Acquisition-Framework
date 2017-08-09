@@ -1,0 +1,185 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/Distance",
+    "name" : "6 1/2 inches"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/Book",
+    "author" : "http://viaf.org/viaf/96994048"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Actor",
+    "name" : "Vickers, John"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/351017_016b.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3980",
+    "name" : "Act I, Scene xiv - Back",
+    "width" : "4000"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://schema.org/Distance",
+    "name" : "6 1/2 inches"
+  }, {
+    "@id" : "_:b5",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/351017_016a.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3990",
+    "name" : "Act I, Scene XIV - Front",
+    "width" : "4000"
+  }, {
+    "@id" : "http://images.library.uiuc.edu/projects/motley/prodnote/prodrom.htm",
+    "@type" : "http://schema.org/WebPage"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/4802",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "http://id.loc.gov/authorities/subjects/sh85134531", "http://id.loc.gov/vocabulary/graphicMaterials/tgm009418", "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747" ],
+    "http://schema.org/about" : [ "c. 1450-1500", "Late Italian Renaissance" ],
+    "artMedium" : "Photocopy",
+    "artform" : "Image",
+    "associatedMedia" : [ "_:b3", "_:b5" ],
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Set rendering",
+    "height" : {
+      "@id" : "_:b0"
+    },
+    "isPartOf" : [ "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/", "https://en.wikipedia.org/wiki/Romeo_and_Juliet" ],
+    "name" : "Act I, Scene XIV",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://hdl.handle.net/10111/Motley:351017-016", "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/351017-016" ],
+    "width" : {
+      "@id" : "_:b4"
+    }
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/12491400",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Director"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/96994048",
+    "@type" : "http://schema.org/Person"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/No%C3%ABl_Coward_Theatre",
+    "name" : "New Theatre (London, England)",
+    "sameAs" : [ "http://www.noelcowardtheatre.co.uk/", "https://www.worldcat.org/identities/lccn-nb2015022064/", "http://viaf.org/viaf/129751999/", "http://id.loc.gov/authorities/names/nb2015022064" ]
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Romeo_and_Juliet",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : [ "http://viaf.org/viaf/12491400", "_:b2" ],
+    "dateCreated" : "1935",
+    "exampleOfWork" : "_:b1",
+    "locationCreated" : "https://en.wikipedia.org/wiki/No%C3%ABl_Coward_Theatre",
+    "mainEntityOfPage" : "http://images.library.uiuc.edu/projects/motley/prodnote/prodrom.htm",
+    "name" : "Romeo and Juliet",
+    "sameAs" : "http://theatricalia.com/play/n/romeo-and-juliet/production/xm"
+  } ],
+  "@context" : {
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "mainEntityOfPage" : {
+      "@id" : "http://schema.org/mainEntityOfPage",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "width" : {
+      "@id" : "http://schema.org/width"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    }
+  }
+}

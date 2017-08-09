@@ -1,0 +1,134 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/Distance",
+    "name" : "6 3/4 inches"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "locationCreated" : "_:b2",
+    "name" : "Illustrations for Lectures",
+    "sameAs" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/n/a"
+  }, {
+    "@id" : "_:b2",
+    "name" : "London Theatre Studio",
+    "sameAs" : "http://www.michelsaintdenis.net/etudes-a-articles-mainmenu-52/47-the-london-theatre-studio-by-sophie-jump.html"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/380000_058.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "6000",
+    "width" : "4193"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://schema.org/Distance",
+    "name" : "10 inches"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/749",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "http://vocab.getty.edu/aat/300054190", "http://vocab.getty.edu/aat/300002469", "http://id.loc.gov/vocabulary/graphicMaterials/tgm009418", "http://id.loc.gov/authorities/subjects/sh85134531", "http://vocab.getty.edu/aat/300014658" ],
+    "artMedium" : "Pencil",
+    "artform" : "Image",
+    "artworkSurface" : "Matted",
+    "associatedMedia" : "_:b3",
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Set rendering",
+    "height" : {
+      "@id" : "_:b4"
+    },
+    "isPartOf" : [ "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/", "_:b1" ],
+    "name" : "Panelling Detail: 17th Century",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://hdl.handle.net/10111/Motley:380000-058", "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/380000-058" ],
+    "width" : {
+      "@id" : "_:b0"
+    }
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  } ],
+  "@context" : {
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "width" : {
+      "@id" : "http://schema.org/width"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "artworkSurface" : {
+      "@id" : "http://schema.org/artworkSurface",
+      "@type" : "http://schema.org/Text"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    }
+  }
+}

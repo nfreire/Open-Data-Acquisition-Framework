@@ -1,0 +1,158 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/601005_003_b.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "4819",
+    "name" : "Becket: Hunting: Back",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/601005_003_a.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "4800",
+    "name" : "Becket: Hunting: Front",
+    "width" : "6000"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/Book",
+    "author" : "http://viaf.org/viaf/54143634"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/4816",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747", "http://id.loc.gov/authorities/subjects/sh85134531", "http://id.loc.gov/vocabulary/graphicMaterials/tgm002607" ],
+    "artMedium" : [ "Pencil", "Gouache" ],
+    "artform" : "Image",
+    "associatedMedia" : [ "_:b0", "_:b1" ],
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Costume rendering",
+    "isPartOf" : [ "https://en.wikipedia.org/wiki/Becket", "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/" ],
+    "name" : "Becket: Hunting",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/601005-003", "http://hdl.handle.net/10111/Motley:601005-003" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/10050544",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Director",
+    "sameAs" : [ "http://theatricalia.com/person/1xa/peter-glenville", "https://viaf.org/viaf/10050544", "https://www.worldcat.org/identities/containsVIAFID/10050544", "http://www.imdb.com/name/nm0322706/", "https://en.wikipedia.org/wiki/Peter_Glenville", "http://id.loc.gov/authorities/names/no98128231" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/54143634",
+    "@type" : "http://schema.org/Person",
+    "sameAs" : [ "http://theatricalia.com/person/32f/jean-anouilh", "http://www.worldcat.org/identities/lccn-n80-69026/", "http://www.ibdb.com/Person/View/6667", "https://en.wikipedia.org/wiki/Jean_Anouilh", "http://id.loc.gov/authorities/names/n80069026.html" ]
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Becket",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : "http://viaf.org/viaf/10050544",
+    "dateCreated" : "1960",
+    "exampleOfWork" : "_:b2",
+    "locationCreated" : "https://en.wikipedia.org/wiki/St._James%27s_Theatre",
+    "name" : "Becket",
+    "sameAs" : "http://theatricalia.com/play/4g/becket/production/msm"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/St._James%27s_Theatre",
+    "sameAs" : [ "http://www.arthurlloyd.co.uk/StJamesTheatre.htm", "https://www.worldcat.org/identities/lccn-nb2016021088/", "http://viaf.org/viaf/147272968/", "https://en.wikipedia.org/wiki/St_James%27s_Theatre", "http://id.loc.gov/authorities/names/nb2016021088" ]
+  } ],
+  "@context" : {
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    },
+    "width" : {
+      "@id" : "http://schema.org/width"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    }
+  }
+}

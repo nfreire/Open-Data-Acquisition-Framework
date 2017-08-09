@@ -1,0 +1,179 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530428_142_a.jpg",
+    "fileFormat" : "image/jpg",
+    "http://schema.org/height" : "4259",
+    "name" : "Act I, Scene VII: Photo 1",
+    "http://schema.org/width" : "6000"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/Distance",
+    "name" : "5 1/2 inches"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/530428_142_b.jpg",
+    "fileFormat" : "image/jpg",
+    "http://schema.org/height" : "3930",
+    "name" : "Act I, Scene VII: Photo 2",
+    "http://schema.org/width" : "6000"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/Distance",
+    "name" : "3 1/2 inches"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://schema.org/Book",
+    "author" : "http://viaf.org/viaf/96994048"
+  }, {
+    "@id" : "http://images.library.uiuc.edu/projects/Motley/prodnote/prodanto.asp",
+    "@type" : "http://schema.org/WebPage"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/5045",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "Egyptian and Imperial Roman Influence", {
+      "@id" : "http://id.loc.gov/authorities/subjects/sh85134531"
+    }, "c. 35-30 BCE.", {
+      "@id" : "http://id.loc.gov/vocabulary/graphicMaterials/tgm009418"
+    }, {
+      "@id" : "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747"
+    } ],
+    "artMedium" : "Black and white photograph",
+    "artform" : "Image",
+    "associatedMedia" : [ "_:b0", "_:b2" ],
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Set design",
+    "height" : "_:b3",
+    "isPartOf" : [ "https://en.wikipedia.org/wiki/Antony_and_Cleopatra", "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/" ],
+    "name" : "Act I, Scene VII",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://hdl.handle.net/10111/Motley:530428-142", "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/530428-142" ],
+    "width" : "_:b1"
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/67675249",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Director",
+    "sameAs" : [ "http://theatricalia.com/person/jfx/glen-byam-shaw", "https://en.wikipedia.org/wiki/Glen_Byam_Shaw" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/96994048",
+    "@type" : "http://schema.org/Person"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Antony_and_Cleopatra",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : "http://viaf.org/viaf/67675249",
+    "dateCreated" : "1953",
+    "exampleOfWork" : "_:b4",
+    "locationCreated" : "https://en.wikipedia.org/wiki/Shakespeare_Memorial_Theatre",
+    "mainEntityOfPage" : "http://images.library.uiuc.edu/projects/Motley/prodnote/prodanto.asp",
+    "name" : "Antony and Cleopatra",
+    "sameAs" : "http://theatricalia.com/play/1z/antony-and-cleopatra/production/xh"
+  } ],
+  "@context" : {
+    "about" : {
+      "@id" : "http://schema.org/about"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "width" : {
+      "@id" : "http://schema.org/width",
+      "@type" : "@id"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height",
+      "@type" : "@id"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "mainEntityOfPage" : {
+      "@id" : "http://schema.org/mainEntityOfPage",
+      "@type" : "@id"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    }
+  }
+}

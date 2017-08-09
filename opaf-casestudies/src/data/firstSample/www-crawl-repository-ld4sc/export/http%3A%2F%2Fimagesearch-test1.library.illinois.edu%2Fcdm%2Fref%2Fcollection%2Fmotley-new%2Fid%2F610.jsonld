@@ -1,0 +1,171 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/Distance",
+    "name" : "11 3/8 inches"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/Distance",
+    "name" : "15 3/8 inches"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/570528_027.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "3000",
+    "width" : "2250"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://schema.org/Book",
+    "author" : "http://viaf.org/viaf/96994048"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/610",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747", "http://id.loc.gov/vocabulary/graphicMaterials/tgm002607", "http://vocab.getty.edu/aat/300078928", "http://vocab.getty.edu/aat/300266810", "http://vocab.getty.edu/aat/300163423", "http://id.loc.gov/authorities/subjects/sh85134531" ],
+    "artMedium" : [ "Metallic", "Watercolor", "Gouache" ],
+    "artform" : "Image",
+    "associatedMedia" : "_:b2",
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Costume rendering",
+    "height" : {
+      "@id" : "_:b1"
+    },
+    "isPartOf" : [ "https://en.wikipedia.org/wiki/Julius_Caesar_(play)", "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/" ],
+    "name" : "Cassius",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://hdl.handle.net/10111/Motley:570528-027", "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/570528-027" ],
+    "width" : {
+      "@id" : "_:b0"
+    }
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/67675249",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Director",
+    "sameAs" : [ "http://theatricalia.com/person/jfx/glen-byam-shaw", "https://en.wikipedia.org/wiki/Glen_Byam_Shaw" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/96994048",
+    "@type" : "http://schema.org/Person"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Julius_Caesar_(play)",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : [ "https://viaf.org/viaf/54332860", "http://viaf.org/viaf/67675249" ],
+    "exampleOfWork" : "_:b3",
+    "locationCreated" : "https://en.wikipedia.org/wiki/Royal_Shakespeare_Theatre",
+    "name" : "Julius Caesar",
+    "sameAs" : [ "http://theatricalia.com/play/1g/julius-caesar/production/wq", "http://theatricalia.com/play/1g/julius-caesar/production/y8" ]
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Royal_Shakespeare_Theatre",
+    "sameAs" : [ "http://www.rsc.org.uk/", "https://www.worldcat.org/identities/lccn-no2005122531", "http://viaf.org/viaf/168396251/#Shakespeare_Memorial_Company", "https://en.wikipedia.org/wiki/Royal_Shakespeare_Theatre", "http://id.loc.gov/authorities/names/no2005122531" ]
+  }, {
+    "@id" : "https://viaf.org/viaf/54332860",
+    "@type" : "http://schema.org/Person",
+    "birthdate" : "1916",
+    "deathdate" : "2005",
+    "jobTitle" : "Actor",
+    "name" : "Keen, Geoffrey",
+    "sameAs" : [ "https://www.worldcat.org/identities/containsVIAFID/54332860", "http://www.imdb.com/name/nm0444584/", "http://id.loc.gov/authorities/names/no93004921", "https://en.wikipedia.org/wiki/Geoffrey_Keen", "http://theatricalia.com/person/1z7/geoffrey-keen" ]
+  } ],
+  "@context" : {
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "birthdate" : {
+      "@id" : "http://schema.org/birthdate"
+    },
+    "deathdate" : {
+      "@id" : "http://schema.org/deathdate"
+    },
+    "width" : {
+      "@id" : "http://schema.org/width"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    }
+  }
+}

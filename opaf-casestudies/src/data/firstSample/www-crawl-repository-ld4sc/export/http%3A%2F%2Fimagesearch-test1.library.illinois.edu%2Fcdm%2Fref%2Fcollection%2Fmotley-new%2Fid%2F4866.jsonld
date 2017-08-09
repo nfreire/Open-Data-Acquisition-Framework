@@ -1,0 +1,191 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Actor",
+    "name" : "Vincent, Anna",
+    "sameAs" : "http://theatricalia.com/person/1517/anna-vincent"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/760604_019_a.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "7245",
+    "name" : "Four Young Trees: Front",
+    "width" : "10035"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://schema.org/ImageObject",
+    "contentUrl" : "http://varuna.grainger.illinois.edu/motley/jpg/760604_019_b.jpg",
+    "fileFormat" : "image/jpg",
+    "height" : "7244",
+    "name" : "Four Young Trees: Back",
+    "width" : "9998"
+  }, {
+    "@id" : "_:b3",
+    "name" : "Auden, W. H. (Wystan Hugh)"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://schema.org/Book",
+    "author" : "_:b3"
+  }, {
+    "@id" : "_:b5",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Actor",
+    "name" : "Bulman, Michael"
+  }, {
+    "@id" : "_:b6",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Actor",
+    "name" : "Bartleet, David"
+  }, {
+    "@id" : "_:b7",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Actor",
+    "name" : "Crowe, Jillian"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://schema.org/Collection"
+  }, {
+    "@id" : "http://imagesearch-test1.library.illinois.edu/cdm/ref/collection/motley-new/id/4866",
+    "@type" : "http://schema.org/VisualArtwork",
+    "about" : [ "http://id.loc.gov/vocabulary/graphicMaterials/tgm010747", "http://id.loc.gov/authorities/subjects/sh85134531", "http://id.loc.gov/vocabulary/graphicMaterials/tgm002607" ],
+    "artMedium" : [ "Gouache", "Pencil", "Watercolor" ],
+    "artform" : "Image",
+    "associatedMedia" : [ "_:b2", "_:b1" ],
+    "copyrightHolder" : "http://viaf.org/viaf/129370513",
+    "creator" : "http://viaf.org/viaf/121005107",
+    "genre" : "Costume rendering",
+    "isPartOf" : [ "https://en.wikipedia.org/wiki/Paul_Bunyan_%28operetta%29", "http://imagesearch-test1.library.illinois.edu/cdm/landingpage/collection/motley-new/" ],
+    "name" : "Four Young Trees",
+    "provider" : "http://viaf.org/viaf/129370513",
+    "sameAs" : [ "http://hdl.handle.net/10111/Motley:760604-019", "http://imagesearch-test1.library.illinois.edu/cdm/search/collection/motley-new/searchterm/760604-019" ]
+  }, {
+    "@id" : "http://viaf.org/viaf/113146580",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Director"
+  }, {
+    "@id" : "http://viaf.org/viaf/121005107",
+    "@type" : "http://schema.org/Organization",
+    "name" : "Motley (Organization)",
+    "sameAs" : "https://en.wikipedia.org/wiki/Motley_Theatre_Design_Group"
+  }, {
+    "@id" : "http://viaf.org/viaf/129370513",
+    "@type" : "http://schema.org/Organization",
+    "name" : "University of Illinois at Urbana-Champaign. Rare Book and Manuscript Library"
+  }, {
+    "@id" : "http://viaf.org/viaf/2655519",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Composer"
+  }, {
+    "@id" : "http://viaf.org/viaf/75062670",
+    "@type" : "http://schema.org/Person",
+    "jobTitle" : "Conductor"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Aldeburgh_Festival",
+    "name" : "Aldeburgh Festival of Music and the Arts"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Paul_Bunyan_%28operetta%29",
+    "@type" : "http://schema.org/CreativeWork",
+    "additionalType" : "http://ns.library.illinois.edu/scp/StageWork",
+    "contributor" : [ "http://viaf.org/viaf/113146580", "_:b6", "http://viaf.org/viaf/75062670", "_:b0", "_:b5", "_:b7", "http://viaf.org/viaf/2655519" ],
+    "dateCreated" : "1976",
+    "exampleOfWork" : "_:b4",
+    "locationCreated" : [ "https://en.wikipedia.org/wiki/Snape_Maltings", "https://en.wikipedia.org/wiki/Sadler%27s_Wells_Theatre", "https://en.wikipedia.org/wiki/Aldeburgh_Festival" ],
+    "name" : "Paul Bunyan"
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Sadler%27s_Wells_Theatre",
+    "name" : "Sadler's Wells Theatre (London, England)",
+    "sameAs" : [ "http://www.sadlerswells.com/", "https://www.worldcat.org/identities/lccn-n50057403", "http://viaf.org/viaf/167808437/#Sadler's_Wells_Theatre_(London,_England)", "http://id.loc.gov/authorities/names/n50057403" ]
+  }, {
+    "@id" : "https://en.wikipedia.org/wiki/Snape_Maltings",
+    "sameAs" : [ "http://www.snapemaltings.co.uk/", "https://www.worldcat.org/identities/viaf-140176105/", "http://viaf.org/viaf/140176105/#Snape_Maltings", "https://en.wikipedia.org/wiki/Snape_Maltings" ]
+  } ],
+  "@context" : {
+    "sameAs" : {
+      "@id" : "http://schema.org/sameAs",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "jobTitle" : {
+      "@id" : "http://schema.org/jobTitle"
+    },
+    "width" : {
+      "@id" : "http://schema.org/width"
+    },
+    "height" : {
+      "@id" : "http://schema.org/height"
+    },
+    "fileFormat" : {
+      "@id" : "http://schema.org/fileFormat",
+      "@type" : "http://schema.org/Text"
+    },
+    "contentUrl" : {
+      "@id" : "http://schema.org/contentUrl",
+      "@type" : "@id"
+    },
+    "additionalType" : {
+      "@id" : "http://schema.org/additionalType",
+      "@type" : "@id"
+    },
+    "isPartOf" : {
+      "@id" : "http://schema.org/isPartOf",
+      "@type" : "@id"
+    },
+    "copyrightHolder" : {
+      "@id" : "http://schema.org/copyrightHolder",
+      "@type" : "@id"
+    },
+    "about" : {
+      "@id" : "http://schema.org/about",
+      "@type" : "@id"
+    },
+    "artMedium" : {
+      "@id" : "http://schema.org/artMedium",
+      "@type" : "http://schema.org/Text"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider",
+      "@type" : "@id"
+    },
+    "artform" : {
+      "@id" : "http://schema.org/artform",
+      "@type" : "http://schema.org/Text"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "associatedMedia" : {
+      "@id" : "http://schema.org/associatedMedia",
+      "@type" : "@id"
+    },
+    "genre" : {
+      "@id" : "http://schema.org/genre",
+      "@type" : "http://schema.org/Text"
+    },
+    "author" : {
+      "@id" : "http://schema.org/author",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor",
+      "@type" : "@id"
+    },
+    "locationCreated" : {
+      "@id" : "http://schema.org/locationCreated",
+      "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated",
+      "@type" : "http://schema.org/Date"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://schema.org/exampleOfWork",
+      "@type" : "@id"
+    }
+  }
+}
