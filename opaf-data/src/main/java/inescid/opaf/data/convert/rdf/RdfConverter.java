@@ -24,6 +24,7 @@ import inescid.opaf.data.convert.DataConverter;
 import inescid.opaf.data.convert.rdf.RdfConversionSpecification;
 import inescid.opaf.data.convert.rdf.ResourceTypeConversionSpecification;
 import inescid.opaf.data.convert.rdf.SchemaOrgToEdmConversionSpecification;
+import inescid.util.RdfUtil;
 import inescid.util.XmlUtil;
 
 /**
@@ -36,7 +37,7 @@ public class RdfConverter {
 	
 	private static final Charset UTF8=Charset.forName("UTF8");
 	
-	Map<Resource, Resource> blankNodesMapped=new HashMap<Resource, Resource>();
+	Map<String, Map<ResourceTypeConversionSpecification, Resource>> nodesMapped=new HashMap<String, Map<ResourceTypeConversionSpecification, Resource>>();
 	
 	RdfConversionSpecification spec;
 	
@@ -71,9 +72,9 @@ public class RdfConverter {
 							mainTargetResource=trgResource;
 					} 
 				}
-				StmtIterator choStms = targetModelRdf.listStatements();
-				while (choStms.hasNext()) 
-					System.out.println(choStms.next());
+//				StmtIterator choStms = targetModelRdf.listStatements();
+//				while (choStms.hasNext()) 
+//					System.out.println(choStms.next());
 			}
 			
 			return mainTargetResource;
@@ -115,15 +116,21 @@ public class RdfConverter {
 						if (mainTargetResource==null)
 							mainTargetResource=trgResource;
 					} 
-				StmtIterator choStms = targetModelRdf.listStatements();
-				while (choStms.hasNext()) 
-					System.out.println(choStms.next());
+//				StmtIterator choStms = targetModelRdf.listStatements();
+//				while (choStms.hasNext()) 
+//					System.out.println(choStms.next());
 			
 			return mainTargetResource;
 	}
 	
 	
 	private Resource convert(Resource srcResource, Model ldModelRdf, Model targetModelRdf, String uri, ResourceTypeConversionSpecification trgResourceMap, RdfConversionSpecification spec) {
+		String srcResUriOrId = RdfUtil.getUriOrId(srcResource);
+		if(nodesMapped.containsKey(srcResUriOrId)) {
+			Map<ResourceTypeConversionSpecification, Resource> typeMapped = nodesMapped.get(srcResUriOrId);
+			if(typeMapped.containsKey(trgResourceMap)) 
+				return typeMapped.get(trgResourceMap);
+		}
 		Resource trgResource=null;
 		if(uri!=null)
 			trgResource=targetModelRdf.createResource(uri, trgResourceMap.getType());
@@ -150,6 +157,17 @@ public class RdfConverter {
 				}
 			}
 		}
+		
+		//add resource to mapped resources to avoid infinit recursion in some cases
+		Map<ResourceTypeConversionSpecification, Resource> resTypeMapped = nodesMapped.get(srcResUriOrId);
+		if(resTypeMapped==null) {
+			resTypeMapped=new HashMap<>();
+			nodesMapped.put(srcResUriOrId, resTypeMapped);
+		}
+		resTypeMapped.put(trgResourceMap, trgResource);
+		
+		
+		
 		StmtIterator cwStms = ldModelRdf.listStatements(srcResource, (Property) null, (RDFNode) null);
 		while (cwStms.hasNext()) {
 			Statement st = cwStms.next();

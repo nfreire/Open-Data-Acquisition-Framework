@@ -18,18 +18,16 @@ import inescid.opaf.data.repository.api.AccessMode;
 import inescid.opaf.data.repository.api.Database;
 import inescid.opaf.data.repository.impl.IoUtil;
 import inescid.opaf.iiif.IiifPresentationMetadata;
-import inescid.opaf.manager.test.RepositoryRdfDataUsageProfiler;
+import inescid.opaf.manager.test.RepositoryRdfDataUsageProfilerSchemaorgEdm;
 import inescid.util.XmlUtil;
 
-public class RunProfileRdfDataUsageNcsu {
+public class RunProfileRdfDataUsageLd4sc {
 
-	private static final Charset UTF8=Charset.forName("UTF8");
-	private static final Pattern STRIP_XML_TOP_ELEMENT=Pattern.compile("^.*<rdf:RDF[^>]+>", Pattern.DOTALL);
 	
 	public static void main(String[] args) throws Exception {
-		File repositoryFolder=new File("target/iiif-crawl-repository-ncsu_bck");
+		File repositoryFolder=new File("src/data/firstSample/www-crawl-repository-ld4sc");
 //		final int maxProfiledRecords=-100;		
 		final int maxProfiledRecords=1000;		
-		new RepositoryRdfDataUsageProfiler().run(repositoryFolder, maxProfiledRecords);
+		new RepositoryRdfDataUsageProfilerSchemaorgEdm().run(repositoryFolder, maxProfiledRecords, "University of Illinois at Urbana–Champaign");
 	}
 }

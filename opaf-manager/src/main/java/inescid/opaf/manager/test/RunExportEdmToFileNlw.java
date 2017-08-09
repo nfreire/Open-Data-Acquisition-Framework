@@ -30,8 +30,9 @@ public class RunExportEdmToFileNlw {
 	static final Charset UTF8=Charset.forName("UTF8");
 	static final Pattern STRIP_XML_TOP_ELEMENT=Pattern.compile("^.*<rdf:RDF[^>]+>", Pattern.DOTALL);
 	
-	public static void main() throws Exception {
-		File repositoryFolder=new File("C:\\Users\\nfrei\\Desktop\\iiif-crawl-repository-nlw-ingestion");
+	public static void main(String[] args) throws Exception {
+//		File repositoryFolder=new File("C:\\Users\\nfrei\\Desktop\\iiif-crawl-repository-nlw-ingestion");
+		File repositoryFolder=new File("target/iiif-crawl-repository-nlw-ingestion");
 //		File repositoryFolder=new File("C:\\Users\\nfrei\\Desktop\\iiif-crawl-repository-nlw-ingestion_1st");
 		File exportFolder=new File("target/sitemaps-crawl-repository-nlw-photographs");
 		boolean transformToEdmInternal=false;

@@ -19,7 +19,7 @@ import inescid.opaf.data.repository.api.Database;
 import inescid.opaf.data.repository.impl.IoUtil;
 import inescid.opaf.iiif.IiifPresentationMetadata;
 import inescid.opaf.manager.test.RepositoryExporter;
-import inescid.opaf.manager.test.RepositoryRdfDataUsageProfiler;
+import inescid.opaf.manager.test.RepositoryRdfDataUsageProfilerSchemaorgEdm;
 import inescid.util.XmlUtil;
 
 public class RunExportRepositoryLd4sc {

@@ -64,8 +64,6 @@ public class EdmFromRepositoryToFileExport {
 				if(metadata instanceof String) {
 					String fromByteArray = (String) metadata;
 					metadataExporter.export(fromByteArray);
-					if(maxExportRecords>0 && metadataExporter.getExportRecordsCount()>=maxExportRecords)
-						break;
 				} else if(metadata instanceof IiifPresentationMetadata) {
 					IiifPresentationMetadata iiifMetadata = (IiifPresentationMetadata) metadata;
 					for(Iterator<RawDataRecord> it=iiifMetadata.getSeeAlso().iterator(); it.hasNext() ; ) {
@@ -92,8 +90,6 @@ public class EdmFromRepositoryToFileExport {
 						if(seeAlso.getProfile()!=null && seeAlso.getProfile().equalsIgnoreCase("http://www.europeana.eu/schemas/edm/")) {
 							String fromByteArray = new String(seeAlso.getContent(), "UTF-8");
 							metadataExporter.export(fromByteArray);
-							if(maxExportRecords>0 && metadataExporter.getExportRecordsCount()>=maxExportRecords)
-								break;
 						} else {//TODO
 							//testing DC data from wellcome
 							seeAlso.setUrl(manifest.getUri());
@@ -109,6 +105,11 @@ public class EdmFromRepositoryToFileExport {
 			}
 			if(cnt % 1000 == 0) 
 				System.out.println("Progress: "+ cnt+" records ("+metadataExporter.getExportRecordsCount() + " exported)");
+
+			if(maxExportRecords>0 && metadataExporter.getExportRecordsCount()>=maxExportRecords) {
+				System.out.println("Max record reached. Exiting early.");
+				break;
+			}
 		}
 		System.out.println(metadataExporter.getExportRecordsCount() + " records exported");
 		metadataExporter.close();

@@ -1,4 +1,4 @@
-package inescid.opaf.manager.test.iiif;
+package inescid.opaf.manager.test.ncsu;
 
 import inescid.opaf.manager.test.RunHarvestingManager;
 

@@ -11,6 +11,7 @@ import org.apache.jena.rdf.model.StmtIterator;
 
 import inescid.opaf.data.RdfReg;
 import inescid.opaf.data.profile.UsageStats.ClassUsageStats;
+import inescid.util.RdfUtil;
 
 public class UsageProfiler {
 	
@@ -46,6 +47,13 @@ public class UsageProfiler {
 				if(st.getPredicate().equals(RdfReg.RDF_TYPE)) continue;
 				for(ClassUsageStats stat : classesOfSubject)
 					stat.getPropertiesStats().incrementTo(st.getPredicate().getURI());
+			}
+			
+			StmtIterator propertiesRangeOf = model.listStatements(null, null, r);
+			for(Statement st : propertiesRangeOf.toList()) {
+				if(st.getPredicate().equals(RdfReg.RDF_TYPE)) continue;
+				for(ClassUsageStats stat : classesOfSubject)
+					stat.getPropertiesObjectStats().incrementTo(st.getPredicate().getURI());
 			}
 			classesOfSubject.clear();
 			classesOfSubjectUris.clear();

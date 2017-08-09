@@ -20,4 +20,8 @@ public class RdfUtil {
 		}
 		return curRes;
 	}
+
+	public static String getUriOrId(Resource srcResource) {
+		return srcResource.isURIResource() ? srcResource.getURI() : srcResource.getId().getBlankNodeId().toString();
+	}
 }
