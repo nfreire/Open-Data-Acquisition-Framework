@@ -8,7 +8,9 @@ import java.io.InputStream;
 import java.io.StringReader;
 import java.net.URLDecoder;
 import java.nio.charset.Charset;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -16,6 +18,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.rdf.model.Resource;
@@ -38,7 +41,8 @@ import inescid.util.XmlUtil;
 
 public class RunProfileRdfDataUsageFinalEdmLc4scNcsuDplaCombined {
 
-	private static final int MAX_RECORDS=-1;
+//	private static final int MAX_RECORDS=-1;
+	private static final int MAX_RECORDS=1;
 	
 	UsageStats providerEdmDataProfile;
 	UsageStats dplaEdmDataProfile;
@@ -81,10 +85,43 @@ public class RunProfileRdfDataUsageFinalEdmLc4scNcsuDplaCombined {
 			edmModelDpla.read(mdReader, null, "JSON-LD");
 			mdReader.close();
 
+			Map<Property, Resource> dplaRdfTypeMapping=new HashMap<>();
+			dplaRdfTypeMapping.put(RdfReg.DCTERMS_IS_PART_OF, RdfReg.DCMITYPE_COLLECTION);
+			dplaRdfTypeMapping.put(RdfReg.DCTERMS_TEMPORAL, RdfReg.EDM_TIMESPAN);
+			dplaRdfTypeMapping.put(RdfReg.DCTERMS_SPATIAL, RdfReg.EDM_PLACE);
+			dplaRdfTypeMapping.put(RdfReg.EDM_PROVIDER, RdfReg.EDM_AGENT);
+			dplaRdfTypeMapping.put(RdfReg.EDM_HAS_VIEW, RdfReg.EDM_WEB_RESOURCE);
+			dplaRdfTypeMapping.put(edmModelDpla.createProperty("http://dp.la/terms/SourceResource"), RdfReg.EDM_PROVIDED_CHO);
+			
+			
+//			//debug
+//			{
+//				System.out.println("DPLA_EDM");
+//				StmtIterator propTypesStms = edmModelDpla.listStatements();
+//				while (propTypesStms.hasNext()) {
+//					Statement stm = propTypesStms.next();
+//					System.out.println(stm);
+//				}			
+//				System.out.println("PROVIDER_EDM");
+//				 propTypesStms = edmModelProvider.getModel().listStatements();
+//				while (propTypesStms.hasNext()) {
+//					Statement stm = propTypesStms.next();
+//					System.out.println(stm);
+//				}
+//			}
+			
+			
 			StmtIterator propTypesStms = edmModelDpla.listStatements();
 			while (propTypesStms.hasNext()) {
 				Statement stm = propTypesStms.next();
-				System.out.println(stm);
+				if(stm.getObject() instanceof Resource) {
+					Resource classOfObject=dplaRdfTypeMapping.get(stm.getPredicate());
+					if(classOfObject != null) {
+						Statement typeStm = edmModelDpla.createStatement((Resource) stm.getObject(), RdfReg.RDF_TYPE, classOfObject);
+						edmModelDpla.add(typeStm);
+						System.out.println("JSON-LD adding type: "+ classOfObject.getURI());
+					}
+				}
 			} 
 
 			
@@ -160,7 +197,7 @@ public class RunProfileRdfDataUsageFinalEdmLc4scNcsuDplaCombined {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		File ncsuFolder=new File("src/data/firstSample/edm_schemaorg_comparison_ncsu");
+		File ncsuFolder=new File("src/data/schemaorgCaseStudyNcsuLd4sc/edm_schemaorg_comparison_ncsu");
 		String dataProvider="NC State University Libraries";
 		RunProfileRdfDataUsageFinalEdmLc4scNcsuDplaCombined runner = new RunProfileRdfDataUsageFinalEdmLc4scNcsuDplaCombined();
 		runner.run(ncsuFolder, dataProvider);
@@ -168,12 +205,12 @@ public class RunProfileRdfDataUsageFinalEdmLc4scNcsuDplaCombined {
 		System.out.println(csvCombinedEdm);
 		FileUtils.write(new File("target/profile_edm_ncsu_dpla_combined.csv"), csvCombinedEdm, "UTF-8");
 		
-		File ld4scFolder=new File("src/data/firstSample/edm_schemaorg_comparison_ld4sc");
-		dataProvider="University of Illinois at Urbana–Champaign";
-		runner.run(ld4scFolder, dataProvider);
-		csvCombinedEdm = runner.getProviderEdmDataProfile().toCsvCombined(runner.getDplaEdmDataProfile());
-		System.out.println(csvCombinedEdm);
-		FileUtils.write(new File("target/profile_edm_ld4sc_dpla_combined.csv"), csvCombinedEdm, "UTF-8");
+//		File ld4scFolder=new File("src/data/schemaorgCaseStudyNcsuLd4sc/edm_schemaorg_comparison_ld4sc");
+//		dataProvider="University of Illinois at Urbana–Champaign";
+//		runner.run(ld4scFolder, dataProvider);
+//		csvCombinedEdm = runner.getProviderEdmDataProfile().toCsvCombined(runner.getDplaEdmDataProfile());
+//		System.out.println(csvCombinedEdm);
+//		FileUtils.write(new File("target/profile_edm_ld4sc_dpla_combined.csv"), csvCombinedEdm, "UTF-8");
 	}
 
 }

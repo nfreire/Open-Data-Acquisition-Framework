@@ -46,6 +46,7 @@ public class RdfConverter {
 	}
 	
 	public Resource convert(Model ldModelRdf) {
+		nodesMapped.clear();
 		Resource mainTargetResource=null;
 		Model targetModelRdf = ModelFactory.createDefaultModel();
 //		if(source.getContentType().equals("application/json") && source.getFormat().equals("application/ld+json")) {
@@ -71,23 +72,26 @@ public class RdfConverter {
 						if (mainTargetResource==null)
 							mainTargetResource=trgResource;
 					} 
+					return mainTargetResource;
 				}
+				
 //				StmtIterator choStms = targetModelRdf.listStatements();
 //				while (choStms.hasNext()) 
 //					System.out.println(choStms.next());
 			}
 			
-			return mainTargetResource;
+			return null;
 	}
 
 	public Resource convert(Model ldModelRdf, String rootResourceUri) {
-		Resource mainTargetResource=null;
-		Model targetModelRdf = ModelFactory.createDefaultModel();
+		nodesMapped.clear();
 //		if(source.getContentType().equals("application/json") && source.getFormat().equals("application/ld+json")) {
 //			Model ldModelRdf = ModelFactory.createDefaultModel();
 		boolean rootResourceUriExists=ldModelRdf.contains(ResourceFactory.createResource(rootResourceUri), null, (RDFNode) null);
 		if(! rootResourceUriExists)
 			return convert(ldModelRdf);
+		Resource mainTargetResource=null;
+		Model targetModelRdf = ModelFactory.createDefaultModel();
 		
 					Resource srcRoot = ldModelRdf.getResource(rootResourceUri);
 					boolean firstType=true;

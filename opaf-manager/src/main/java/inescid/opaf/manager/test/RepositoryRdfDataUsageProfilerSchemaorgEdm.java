@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.net.URLEncoder;
 import java.nio.charset.Charset;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -17,6 +18,7 @@ import java.util.regex.Pattern;
 import org.apache.commons.io.FileUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.Statement;
@@ -39,6 +41,7 @@ import inescid.opaf.data.convert.rdf.RdfConverter;
 import inescid.opaf.data.convert.rdf.SchemaOrgToEdmConversionSpecification;
 import inescid.opaf.data.profile.UsageProfiler;
 import inescid.opaf.data.profile.UsageStats;
+import inescid.opaf.data.profile.UsageStats.ClassUsageStats;
 import inescid.opaf.data.repository.api.AccessMode;
 import inescid.opaf.data.repository.api.Database;
 import inescid.opaf.data.repository.impl.IoUtil;
@@ -73,6 +76,11 @@ public class RepositoryRdfDataUsageProfilerSchemaorgEdm {
 			Entry<Object, byte[]> dbEntry=it.next();
 			byte[] mdBytes=dbEntry.getValue();
 			cnt++;
+			
+//			if (cnt<361 || cnt>361)
+//				continue;
+			
+			
 			if(maxProfiledRecords>0 && cnt>maxProfiledRecords)
 				break;
 			Object metadata = IoUtil.fromByteArray(mdBytes);
@@ -107,6 +115,12 @@ public class RepositoryRdfDataUsageProfilerSchemaorgEdm {
 				}
 				Resource edmModel = convertSchemaOrgToEdm(ldModelRdf, dbEntry.getKey().toString(), dataProvider);
 
+				//debug
+//					StmtIterator typeProperties = edmModel.getModel().listStatements();
+//					for(Statement st : typeProperties.toList()) {
+//						System.out.println(st);
+//					}
+					
 				profilerSchemaorg.collect(ldModelRdf);
 				profilerEdm.collect(edmModel.getModel());
 				

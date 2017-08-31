@@ -12,6 +12,7 @@ public final class RdfReg {
 	public static String NsRdfs="http://www.w3.org/2000/01/rdf-schema#";
 	public static String NsDc="http://purl.org/dc/elements/1.1/";
 	public static String NsDcterms="http://purl.org/dc/terms/";
+	public static String NsDcmiType="http://purl.org/dc/dcmitype/";
 	public static String NsOre="http://www.openarchives.org/ore/terms/";
 	public static String NsIiif="http://iiif.io/api/presentation/2#";
 	public static String NsSkos="http://www.w3.org/2004/02/skos/core#";
@@ -64,7 +65,10 @@ public final class RdfReg {
 	public static final Property DCTERMS_IS_REFERENCED_BY = ResourceFactory.createProperty(NsDcterms+"isReferencedBy");
 	public static final Property DCTERMS_IS_PART_OF = ResourceFactory.createProperty(NsDcterms+"isPartOf");
 	public static final Property DCTERMS_TEMPORAL_COVERAGE = ResourceFactory.createProperty(NsDcterms+"temporalCoverage");
+	public static final Property DCTERMS_TEMPORAL = ResourceFactory.createProperty(NsDcterms+"temporal");
+	public static final Property DCTERMS_SPATIAL = ResourceFactory.createProperty(NsDcterms+"spatial");
 	public static final Property EDM_HAS_TYPE = ResourceFactory.createProperty("http://www.europeana.eu/schemas/edm/hasType");
+	public static final Property EDM_HAS_VIEW = ResourceFactory.createProperty("http://www.europeana.eu/schemas/edm/hasView");
 	public static final Property EDM_IS_SHOWN_BY = ResourceFactory.createProperty("http://www.europeana.eu/schemas/edm/isShownBy");
 	public static final Property EDM_IS_SHOWN_AT = ResourceFactory.createProperty("http://www.europeana.eu/schemas/edm/isShownAt");
 	public static final Property EDM_OBJECT = ResourceFactory.createProperty("http://www.europeana.eu/schemas/edm/object");
@@ -78,6 +82,9 @@ public final class RdfReg {
 	public static final Resource SKOS_CONCEPT = ResourceFactory.createResource("http://www.w3.org/2004/02/skos/core#Concept");
 	public static final Resource SKOS_CONCEPT_SCHEME = ResourceFactory.createResource("http://www.w3.org/2004/02/skos/core#ConceptScheme");
 	public static final Resource CC_LICENSE  = ResourceFactory.createResource("http://creativecommons.org/ns#License");
+
+	public static final Resource DCMITYPE_COLLECTION  = ResourceFactory.createResource(NsDcmiType+"Collection");
+	
 	public static final Resource SVCS_SERVICE  = ResourceFactory.createResource("http://rdfs.org/sioc/services#Service");
 	public static final Property EDM_PROVIDER = ResourceFactory.createProperty("http://www.europeana.eu/schemas/edm/provider");
 	public static final Property EDM_DATA_PROVIDER = ResourceFactory.createProperty("http://www.europeana.eu/schemas/edm/dataProvider");
@@ -88,6 +95,8 @@ public final class RdfReg {
 	public static final Property VCARD_LOCALITY = ResourceFactory.createProperty(NsVcard+"locality");
 	public static final Property VCARD_POSTAL_CODE = ResourceFactory.createProperty(NsVcard+"postal-code");
 
+	
+	
 	public static final Property RDAGR2_PROFESSION_OR_OCCUPATION = ResourceFactory.createProperty(NsRdaGr2+"professionOrOccupation");
 	public static final Property RDAGR2_BIRTH_DATE = ResourceFactory.createProperty(NsRdaGr2+"birthDate");
 	public static final Property RDAGR2_DEATH_DATE = ResourceFactory.createProperty(NsRdaGr2+"deathDate");

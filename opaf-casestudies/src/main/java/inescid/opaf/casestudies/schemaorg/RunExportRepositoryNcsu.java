@@ -24,11 +24,11 @@ import inescid.util.XmlUtil;
 
 public class RunExportRepositoryNcsu {
 	public static void main(String[] args) throws Exception {
-		File repositoryFolder=new File("target/iiif-crawl-repository-ncsu");
-		File exportFolder=new File("target/iiif-crawl-repository-ncsu/export");
+		File repositoryFolder=new File("src/data/schemaorgCaseStudyNcsuLd4sc/iiif-crawl-repository-ncsu");
+		File exportFolder=new File("src/data/schemaorgCaseStudyNcsuLd4sc/schemaorgDataProfilingSamples/ncsu");
 		if(!exportFolder.exists())
 			exportFolder.mkdirs();
-		final int maxExportedRecords=100;		
+		final int maxExportedRecords=1000;		
 		new RepositoryExporter().run(repositoryFolder, exportFolder, "jsonld", maxExportedRecords);
 	}
 }

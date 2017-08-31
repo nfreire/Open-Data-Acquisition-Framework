@@ -27,12 +27,17 @@ import inescid.util.XmlUtil;
 public class RunProfileRdfDataUsageLc4scNcsuCombined {
 
 	public static void main(String[] args) throws Exception {
-		RepositoryRdfDataUsageProfilerSchemaorgEdm profileRunner = new RepositoryRdfDataUsageProfilerSchemaorgEdm();
-		//		final int maxProfiledRecords=-100;		
+		RepositoryRdfDataUsageProfilerSchemaorgEdm profileRunner = null;
 //		final int maxProfiledRecords=5;		
+//		final int maxProfiledRecords=-100;		
 		final int maxProfiledRecords=1000;		
+
+		
+		
+		
+		profileRunner = new RepositoryRdfDataUsageProfilerSchemaorgEdm();
 		{
-			File repositoryFolder=new File("src/data/firstSample/iiif-crawl-repository-ncsu");
+			File repositoryFolder=new File("work_in_progress/iiif-crawl-repository-ncsu");
 			profileRunner.run(repositoryFolder, maxProfiledRecords, "NC State University Libraries");
 		}
 		UsageProfiler schemaorgStatsNcsu = profileRunner.getSchemaorgProfile();
@@ -44,7 +49,7 @@ public class RunProfileRdfDataUsageLc4scNcsuCombined {
 
 		profileRunner = new RepositoryRdfDataUsageProfilerSchemaorgEdm();
 		{
-			File repositoryFolder=new File("src/data/firstSample/www-crawl-repository-ld4sc");
+			File repositoryFolder=new File("work_in_progress/www-crawl-repository-ld4sc");
 			profileRunner.run(repositoryFolder, maxProfiledRecords, "University of Illinois at Urbana–Champaign");
 		}
 		UsageProfiler schemaorgStatsLd4sc = profileRunner.getSchemaorgProfile();

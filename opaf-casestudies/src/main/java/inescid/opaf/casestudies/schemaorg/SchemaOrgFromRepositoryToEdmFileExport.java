@@ -89,10 +89,10 @@ public class SchemaOrgFromRepositoryToEdmFileExport {
 				metadataExporter.export(fromByteArray);
 				
 				String baseFilename=URLEncoder.encode(dbEntry.getKey().toString(), "UTF-8");
-				FileUtils.writeByteArrayToFile(new File(exportFolder, baseFilename+".xml"), edm);
+				FileUtils.writeByteArrayToFile(new File(exportFolder, baseFilename+".edm..xml"), edm);
 				
 				//this may not be correct. Test it
-				FileUtils.writeByteArrayToFile(new File(exportFolder, baseFilename+".jsonld"), mdBytes);
+				FileUtils.writeByteArrayToFile(new File(exportFolder, baseFilename+".schemaorg.jsonld"), getJsonldFromRepositoryEntry(mdBytes).getBytes("UTF8"));
 				 
 				if(maxExportRecords>0 && metadataExporter.getExportRecordsCount()>=maxExportRecords)
 					break;
@@ -134,8 +134,8 @@ public class SchemaOrgFromRepositoryToEdmFileExport {
 		return recAsString;
 	}
 	
-	
-	private byte[] getEdmRecord(String recordId, byte[] mdBytes) {
+
+	private String getJsonldFromRepositoryEntry(byte[] mdBytes) {
 		Object metadata = IoUtil.fromByteArray(mdBytes);
 		try {
 			String jsonldString=null;
@@ -144,14 +144,21 @@ public class SchemaOrgFromRepositoryToEdmFileExport {
 			} else if(metadata instanceof IiifManifest) {
 				IiifManifest manifest=(IiifManifest) metadata;
 				for(RawDataRecord seeAlso: manifest.getMetadata().getSeeAlso()) {
-					if(seeAlso.getProfile()!=null && seeAlso.getProfile().equalsIgnoreCase("http://www.europeana.eu/schemas/edm/")) {
-						return seeAlso.getContent();
-					} else {
-						jsonldString = new String(seeAlso.getContent(), "UTF8");
-						jsonldString = jsonldString.replaceFirst("@context\":\"http://schema.org\"", "@context\":\"http://schema.org/\"");
-					}
+					jsonldString = new String(seeAlso.getContent(), "UTF8");
+					jsonldString = jsonldString.replaceFirst("@context\":\"http://schema.org\"", "@context\":\"http://schema.org/\"");
 				} 
 			}
+			return jsonldString;
+		} catch (Exception e) {
+			System.err.println(metadata);
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	private byte[] getEdmRecord(String recordId, byte[] mdBytes) {
+		try {
+			String jsonldString=getJsonldFromRepositoryEntry(mdBytes);
 			System.out.println(jsonldString);
 			
 			RawDataRecord seeAlso=new RawDataRecord();
@@ -162,7 +169,7 @@ public class SchemaOrgFromRepositoryToEdmFileExport {
 			RawDataRecord convertedEdm = schemaOrgToEdmConverter.convert(seeAlso, null);
 			return convertedEdm.getContent();
 		} catch (Exception e) {
-			System.err.println(metadata);
+			System.err.println(recordId);
 			e.printStackTrace();
 			return null;
 		}

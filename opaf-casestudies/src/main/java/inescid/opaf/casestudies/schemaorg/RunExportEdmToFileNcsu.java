@@ -26,14 +26,18 @@ public class RunExportEdmToFileNcsu {
 	private static final Pattern STRIP_XML_TOP_ELEMENT=Pattern.compile("^.*<rdf:RDF[^>]+>", Pattern.DOTALL);
 	
 	public static void main(String[] args) throws Exception {
-		File repositoryFolder=new File("target/iiif-crawl-repository-ncsu_bck");
-//		File repositoryFolder=new File("C:\\Users\\nfrei\\Desktop\\iiif-crawl-repository-nlw-ingestion_1st");
-		File exportFolder=new File("target/iiif-crawl-repository-ncsu/export");
+		File repositoryFolder=new File("src/data/schemaorgCaseStudyNcsuLd4sc/iiif-crawl-repository-ncsu");
+		File exportFolder=new File("src/data/schemaorgCaseStudyNcsuLd4sc/schemaorgDataProfilingSamples/ncsu");
+		
+		
+//		File repositoryFolder=new File("target/iiif-crawl-repository-ncsu_bck");
+////		File repositoryFolder=new File("C:\\Users\\nfrei\\Desktop\\iiif-crawl-repository-nlw-ingestion_1st");
+//		File exportFolder=new File("target/iiif-crawl-repository-ncsu/export");
 		boolean transformToEdmInternal=false;
 //		File exportFolder=new File("C:\\Users\\nfrei\\Desktop\\UCDublin\\Poetry-2");
 //		File repositoryFolder=new File("target/sitemaps-crawl-repository-ucd-poetry");
 //		boolean transformToEdmInternal=true;
-		final int maxExportRecords=-100;
+		final int maxExportRecords=1000;
 		
 		new SchemaOrgFromRepositoryToEdmFileExport(repositoryFolder, transformToEdmInternal, "NC State University Libraries", "NC State University Libraries").export(exportFolder, maxExportRecords);
 	}

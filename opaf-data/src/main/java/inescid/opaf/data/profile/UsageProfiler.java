@@ -23,7 +23,10 @@ public class UsageProfiler {
 		ArrayList<ClassUsageStats> classesOfSubject=new ArrayList<>(3);
 		ArrayList<String> classesOfSubjectUris=new ArrayList<>(3);
 		for(Resource r: subjs.toList()) {
-//			System.out.println(r.getURI());
+			
+//			System.out.println("URI-"+RdfUtil.getUriOrId(r));
+			
+			
 			StmtIterator typeProperties = model.listStatements(r, RdfReg.RDF_TYPE, (RDFNode)null);
 			for(Statement st : typeProperties.toList()) {
 //				System.out.println(st);
