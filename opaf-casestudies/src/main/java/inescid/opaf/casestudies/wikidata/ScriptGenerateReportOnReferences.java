@@ -19,6 +19,8 @@ public class ScriptGenerateReportOnReferences {
 	public static void main(String[] args) throws Exception {
 		WikidataEntityCache wikidataClient=new WikidataEntityCache(WikidataEuropeanaConstants.CACHE_WIKIDATA_PROPERTIES);
 		
+		WikidataEdmMappings wdMappings=new WikidataEdmMappings(WikidataEuropeanaConstants.MAPPINGS_WD_EDM_CSV);
+		
 		Reader csvReader=new InputStreamReader(new FileInputStream(WikidataEuropeanaConstants.REFERENCES_CSV), "UTF-8");
 		BufferedReader csvBufferedReader = new BufferedReader(csvReader);
 		
@@ -47,7 +49,8 @@ public class ScriptGenerateReportOnReferences {
 					htmlWriter.write("\t<td><b>Property ID</b></td>\n");
 					htmlWriter.write("\t<td><b>Label (en)</b></td>\n");
 					htmlWriter.write("\t<td><b>Data type</b></td>\n");
-					htmlWriter.write("\t<td><b>Schema.org equivalence</b></td>\n");
+					htmlWriter.write("\t<td><b>Schema.org mapping</b></td>\n");
+					htmlWriter.write("\t<td><b>EDM mapping</b></td>\n");
 					htmlWriter.write("\t<td><b>count</b></td>\n");
 				}
 				htmlWriter.write("</tr>\n");
@@ -75,8 +78,10 @@ public class ScriptGenerateReportOnReferences {
 					else {
 						htmlWriter.write("\t<td><a href='https://www.wikidata.org/wiki/Property:"+summary.id+"'>"+summary.id+"</a></td>\n");
 						htmlWriter.write("\t<td>"+(summary.labelEn == null ? "" : summary.labelEn)+"</td>\n");
-						htmlWriter.write("\t<td>"+summary.dataType+"</td>\n");
-						htmlWriter.write("\t<td>"+(summary.schemaOrgEquivalent==null ? "" : summary.schemaOrgEquivalent)+"</td>\n");
+						htmlWriter.write("\t<td>"+summary.dataType.replaceFirst("http://www.wikidata.org/ontology#", "wdto:")+"</td>\n");
+						htmlWriter.write("\t<td>"+(summary.schemaOrgEquivalent==null ? "" : summary.schemaOrgEquivalent.replaceFirst("http://schema.org/", "schema:"))+"</td>\n");
+						String edmMapping=wdMappings.getFromWdId(summary.id);
+						htmlWriter.write("\t<td>"+(edmMapping!=null ? edmMapping : "")+"</td>\n");
 						htmlWriter.write("\t<td>"+prop.substring(prop.indexOf(',')+1)+"</td>\n");
 					}
 				}
