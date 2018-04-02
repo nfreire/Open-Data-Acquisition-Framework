@@ -71,6 +71,7 @@ public final class RdfReg {
 	public static final Property EDM_HAS_VIEW = ResourceFactory.createProperty("http://www.europeana.eu/schemas/edm/hasView");
 	public static final Property EDM_IS_SHOWN_BY = ResourceFactory.createProperty("http://www.europeana.eu/schemas/edm/isShownBy");
 	public static final Property EDM_IS_SHOWN_AT = ResourceFactory.createProperty("http://www.europeana.eu/schemas/edm/isShownAt");
+	public static final Property EDM_LANDING_PAGE = ResourceFactory.createProperty(NsEdm, "landingPage");
 	public static final Property EDM_OBJECT = ResourceFactory.createProperty("http://www.europeana.eu/schemas/edm/object");
 	public static final Property EDM_AGGREGATED_CHO  = ResourceFactory.createProperty("http://www.europeana.eu/schemas/edm/aggregatedCHO");
 	public static final Property EDM_REALIZES  = ResourceFactory.createProperty("http://www.europeana.eu/schemas/edm/realizes");

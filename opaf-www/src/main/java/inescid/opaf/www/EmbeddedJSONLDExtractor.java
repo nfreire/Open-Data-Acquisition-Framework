@@ -126,10 +126,14 @@ public class EmbeddedJSONLDExtractor implements Extractor.TagSoupDOMExtractor {
 		List<Node> linkNodes = DomUtils.findAll(in, "/HTML/HEAD/LINK");
 		for (Node linkNode : linkNodes) {
 			NamedNodeMap attributes = linkNode.getAttributes();
-			String rel = attributes.getNamedItem("rel").getTextContent();
-			String href = attributes.getNamedItem("href").getTextContent();
-			if (rel != null && href != null && RDFUtils.isAbsoluteIRI(href)) {
-				prefixes.put(rel, SimpleValueFactory.getInstance().createIRI(href));
+			Node relNode = attributes.getNamedItem("rel");
+			if(relNode!=null) {
+				String rel = relNode.getTextContent();
+				Node hrefNode = attributes.getNamedItem("href");
+				String href = hrefNode==null ? null : hrefNode.getTextContent();
+				if (rel != null && href != null && RDFUtils.isAbsoluteIRI(href)) {
+					prefixes.put(rel, SimpleValueFactory.getInstance().createIRI(href));
+				}
 			}
 		}
 	}

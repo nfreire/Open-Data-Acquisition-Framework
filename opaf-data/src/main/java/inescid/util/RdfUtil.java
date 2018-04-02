@@ -24,4 +24,8 @@ public class RdfUtil {
 	public static String getUriOrId(Resource srcResource) {
 		return srcResource.isURIResource() ? srcResource.getURI() : srcResource.getId().getBlankNodeId().toString();
 	}
+
+	public static String getUriOrLiteralValue(Resource resource) {
+		return resource.isURIResource() ? resource.getURI() : (resource.isLiteral() ? resource.asLiteral().getString() : null);
+	}
 }
