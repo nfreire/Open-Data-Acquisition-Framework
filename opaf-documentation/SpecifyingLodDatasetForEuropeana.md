@@ -1,4 +1,7 @@
--   Data providers will provide to Europeana, dataset descriptions using any of these vocabularies: VOID/DCAT/Schema.org.
+Data providers will provide to Europeana, the resolvable URI of an RDF resource that describes and specifies the members of the dataset.  
+
+
+ Data providers will provide to Europeana, dataset descriptions using any of these vocabularies: VOID/DCAT/Schema.org.
     
 -   The URIs of Ch objects in the dataset may either be specified in a LOD record (referenced from the dataset record with void:rootResource), or dump file(s) in RDF (any well know encoding of RDF).
     
@@ -6,5 +9,6 @@
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk3MTA1MTMzLDE2ODY3NjcwMl19
+eyJoaXN0b3J5IjpbLTE0OTAyMDc2MjEsNzk3MTA1MTMzLDE2OD
+Y3NjcwMl19
 -->
