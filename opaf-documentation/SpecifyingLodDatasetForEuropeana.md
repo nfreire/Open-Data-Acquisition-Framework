@@ -4,11 +4,11 @@ Cultural heritage institutions typically publish linked data that covers more re
 Several vocabularies are available nowadays to describe datasets. Europeana supports three vocabularies which are suitable to fulfill the requirements for aggregation of linked data: [VoID](https://www.w3.org/TR/void/), [DCAT](https://www.w3.org/TR/vocab-dcat/), and [Schema.org](http://schema.org/Dataset).
 
 Data providers may use classes and properties from any of the three vocabularies to describe each of their datasets. To enable Europeana to aggregate and ingest a dataset, the linked data resource of the dataset:
- - **Must** be accessible by its URI
- - **Must** be encoded in RDF
- - **Must** have a title property
+ - **Must** be accessible by its URI.
+ - **Must** be encoded in RDF.
+ - **Must** have a title property.
+ - **Must** specify a technical mechanism that allows the dataset to be automatically harvested by Europeana.
  - **May** specify a machine readable license that applies to all metadata  
- - **Must** specify a technical mechanism that allows dataset . The main aspects that distinguish them is their capability to support all the options for allowing data providers to specify how Europeana can obtain the dataset (requirement R4).
 
 Data providers will provide to Europeana, the resolvable URI of an RDF resource that describes and specifies the members of the dataset.  
 
@@ -21,7 +21,7 @@ Data providers will provide to Europeana, the resolvable URI of an RDF resource 
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NjI2MzgxLDE0Njg0MzA4NjYsOTk3NT
-g0NjU4LDg5Mzk4ODEwOCwtMTQ5MDIwNzYyMSw3OTcxMDUxMzMs
-MTY4Njc2NzAyXX0=
+eyJoaXN0b3J5IjpbLTEwODQxMzY3ODEsMTQ2ODQzMDg2Niw5OT
+c1ODQ2NTgsODkzOTg4MTA4LC0xNDkwMjA3NjIxLDc5NzEwNTEz
+MywxNjg2NzY3MDJdfQ==
 -->
