@@ -2,7 +2,9 @@
 
 Cultural heritage institutions typically publish linked data that covers more resources than the cultural heritage digital objects provided to Europeana. Therefore, it is necessary that data providers make available linked data descriptions of the datasets for aggregation by Europeana.
 There are several 
+Three of the analyzed vocabularies are suitable to fulfil the requirements for aggregation of linked data: VoID, DCAT. and Schema.org.
 
+All three vocabularies allow data providers to specify machine readable licenses and describe their datasets (requirements R1 and R3). The main aspects that distinguish them is their capability to support all the options for allowing data providers to specify how Europeana can obtain the dataset (requirement R4).
 
 Data providers will provide to Europeana, the resolvable URI of an RDF resource that describes and specifies the members of the dataset.  
 
@@ -15,6 +17,6 @@ Data providers will provide to Europeana, the resolvable URI of an RDF resource 
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2MTMwMzQ0NCwtMTQ5MDIwNzYyMSw3OT
-cxMDUxMzMsMTY4Njc2NzAyXX0=
+eyJoaXN0b3J5IjpbLTEyNzI4MDQ2ODEsLTE0OTAyMDc2MjEsNz
+k3MTA1MTMzLDE2ODY3NjcwMl19
 -->
