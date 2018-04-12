@@ -1,6 +1,6 @@
 ## Specifying a linked data dataset for aggregation  by Europeana
 
-
+Cultural heritage institutions typically publish linked data that covers more resources 
 Data providers will provide to Europeana, the resolvable URI of an RDF resource that describes and specifies the members of the dataset.  
 
 
@@ -12,6 +12,6 @@ Data providers will provide to Europeana, the resolvable URI of an RDF resource 
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0MzEyNTAxMiwtMTQ5MDIwNzYyMSw3OT
-cxMDUxMzMsMTY4Njc2NzAyXX0=
+eyJoaXN0b3J5IjpbOTY4ODczMTU0LC0xNDkwMjA3NjIxLDc5Nz
+EwNTEzMywxNjg2NzY3MDJdfQ==
 -->
