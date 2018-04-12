@@ -3,17 +3,15 @@
 Cultural heritage institutions typically publish linked data that covers more resources than the cultural heritage digital objects provided to Europeana. Therefore, it is necessary that data providers make available linked data descriptions of the datasets for aggregation by Europeana.
 Several vocabularies are available nowadays to describe datasets. Europeana supports three vocabularies which are suitable to fulfill the requirements for aggregation of linked data: [VoID](https://www.w3.org/TR/void/), [DCAT](https://www.w3.org/TR/vocab-dcat/), and [Schema.org](http://schema.org/Dataset).
 
-Data providers may use classes and properties from any of the three vocabularies to describe each of their datasets. To enable Europeana to aggregate and ingest a dataset, the linked data resource of the dataset:
+Data providers may use classes and properties from any of the three vocabularies to describe each of their datasets. To enable Europeana to aggregate and ingest a dataset, the linked data resource of the dataset...:
  - **Must** be accessible by its URI.
  - **Must** be encoded in RDF.
  - **Must** have a title property.
  - **Must** specify a technical mechanism that allows the dataset to be automatically harvested by Europeana.
  - **May** specify a machine readable license that applies to all metadata  
 
-Data providers will provide to Europeana, the resolvable URI of an RDF resource that describes and specifies the members of the dataset.  
 
 
- Data providers will provide to Europeana, dataset descriptions using any of these vocabularies: VOID/DCAT/Schema.org.
     
 -   The URIs of Ch objects in the dataset may either be specified in a LOD record (referenced from the dataset record with void:rootResource), or dump file(s) in RDF (any well know encoding of RDF).
     
@@ -21,7 +19,7 @@ Data providers will provide to Europeana, the resolvable URI of an RDF resource 
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODQxMzY3ODEsMTQ2ODQzMDg2Niw5OT
-c1ODQ2NTgsODkzOTg4MTA4LC0xNDkwMjA3NjIxLDc5NzEwNTEz
-MywxNjg2NzY3MDJdfQ==
+eyJoaXN0b3J5IjpbMjA2NDMyMzg0NCwxNDY4NDMwODY2LDk5Nz
+U4NDY1OCw4OTM5ODgxMDgsLTE0OTAyMDc2MjEsNzk3MTA1MTMz
+LDE2ODY3NjcwMl19
 -->
