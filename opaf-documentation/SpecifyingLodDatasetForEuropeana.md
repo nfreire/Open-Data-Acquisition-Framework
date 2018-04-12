@@ -6,8 +6,8 @@ Several vocabularies are available nowadays to describe datasets. Europeana supp
 Data providers may use classes and properties from any of the three vocabularies to describe each of their datasets. To enable Europeana to aggregate and ingest a dataset, the linked data resource of the dataset:
  - **Must** be accessible by its URI
  - **Must** be encoded in RDF
- - **Must** have a dc:describe
- - May specify machine readable licenses   
+ - **Must** have a title property
+ - May specify machine readable licenses  
  - their datasets . The main aspects that distinguish them is their capability to support all the options for allowing data providers to specify how Europeana can obtain the dataset (requirement R4).
 
 Data providers will provide to Europeana, the resolvable URI of an RDF resource that describes and specifies the members of the dataset.  
@@ -21,7 +21,7 @@ Data providers will provide to Europeana, the resolvable URI of an RDF resource 
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mzg2MDUwODMsOTk3NTg0NjU4LDg5Mz
-k4ODEwOCwtMTQ5MDIwNzYyMSw3OTcxMDUxMzMsMTY4Njc2NzAy
-XX0=
+eyJoaXN0b3J5IjpbLTEzNDMxMTAzNCw5OTc1ODQ2NTgsODkzOT
+g4MTA4LC0xNDkwMjA3NjIxLDc5NzEwNTEzMywxNjg2NzY3MDJd
+fQ==
 -->
