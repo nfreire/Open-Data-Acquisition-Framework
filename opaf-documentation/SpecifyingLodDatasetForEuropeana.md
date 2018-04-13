@@ -17,7 +17,7 @@ When ingesting the dataset in Europeana, the URI of the dataset must be provided
 The dataset description is used during the first ingestion of the dataset in to Europeana, and later, for incremental updates of the dataset.
 The data provider must maintain the dataset description updated over time, to allow incremental updates of the dataset in Europeana. 
 ## Dataset resource encoded in a supported RDF format
-
+The Europeana 
 | Format | Mime-type | Specification
 |--|--|--|
 | RDF/XML | application/rdf+xml | https://www.w3.org/TR/rdf-syntax-grammar/
@@ -30,10 +30,10 @@ The data provider must maintain the dataset description updated over time, to al
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTAxOTcyOTMsMTIxOTY2MjQ1MywyMD
-U4OTg4Mzk4LDE5NjE4NzQ1OCwtMTc2NTQ2NzQwOSwtODI5MzE4
-MzAxLDE4MzU1NjI5OCwtMTI2OTU4NzU5MywtMTQwNDY5MTE3MC
-wyMDY0MzIzODQ0LDE0Njg0MzA4NjYsOTk3NTg0NjU4LDg5Mzk4
-ODEwOCwtMTQ5MDIwNzYyMSw3OTcxMDUxMzMsMTY4Njc2NzAyXX
-0=
+eyJoaXN0b3J5IjpbLTE2NTI3OTg3MzAsLTE1OTAxOTcyOTMsMT
+IxOTY2MjQ1MywyMDU4OTg4Mzk4LDE5NjE4NzQ1OCwtMTc2NTQ2
+NzQwOSwtODI5MzE4MzAxLDE4MzU1NjI5OCwtMTI2OTU4NzU5My
+wtMTQwNDY5MTE3MCwyMDY0MzIzODQ0LDE0Njg0MzA4NjYsOTk3
+NTg0NjU4LDg5Mzk4ODEwOCwtMTQ5MDIwNzYyMSw3OTcxMDUxMz
+MsMTY4Njc2NzAyXX0=
 -->
