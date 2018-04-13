@@ -21,34 +21,18 @@ The data provider must maintain the dataset description updated over time, to al
 | Format | Mime-type |
 |--|--|
 | RDF/XML |  |
-| JSON-LD |  | <![endif]-->
-
-[https://www.w3.org/TR/json-ld/](https://www.w3.org/TR/json-ld/)
+| JSON-LD |  | [https://www.w3.org/TR/json-ld/](https://www.w3.org/TR/json-ld/) 
 | Turtle |  | https://www.w3.org/TR/turtle/ |
 | N-Triples  |  | [https://www.w3.org/TR/n-triples/](https://www.w3.org/TR/n-triples/) |
 
-
-<![if !supportFootnotes]>[1]<![endif]> [](https://www.w3.org/TR/turtle/)
-<
-|  |  |![endif]--> N-Triples[<![if !supportFootnotes]>[1]<![endif]>](#_ftn1), Turtle[<![if !supportFootnotes]>[2]<![endif]>](#_ftn2), JSON-LD
-
-<![if !supportFootnotes]>  
-
-----------
-
-<![endif]>
-
-[<![if !supportFootnotes]>[1]<![endif]>](#_ftnref1) [https://www.w3.org/TR/n-triples/](https://www.w3.org/TR/n-triples/)
-
-[<![if !supportFootnotes]>[2]<![endif]>](#_ftnref2) [https://www.w3.org/TR/turtle/](https://www.w3.org/TR/turtle/)
 -   The URIs of Ch objects in the dataset may either be specified in a LOD record (referenced from the dataset record with void:rootResource), or dump file(s) in RDF (any well know encoding of RDF).
     
 -   When using void:rootResource, the resource must contain dcterms:hasPart properties with the URI’s of the CH objects’s ore:Aggregations (EDM), or URI’s to linked data resources describing CH objects with Schema.org properties.
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDQwNjM0MywtODI5MzE4MzAxLDE4Mz
-U1NjI5OCwtMTI2OTU4NzU5MywtMTQwNDY5MTE3MCwyMDY0MzIz
-ODQ0LDE0Njg0MzA4NjYsOTk3NTg0NjU4LDg5Mzk4ODEwOCwtMT
-Q5MDIwNzYyMSw3OTcxMDUxMzMsMTY4Njc2NzAyXX0=
+eyJoaXN0b3J5IjpbLTE3NjU0Njc0MDksLTgyOTMxODMwMSwxOD
+M1NTYyOTgsLTEyNjk1ODc1OTMsLTE0MDQ2OTExNzAsMjA2NDMy
+Mzg0NCwxNDY4NDMwODY2LDk5NzU4NDY1OCw4OTM5ODgxMDgsLT
+E0OTAyMDc2MjEsNzk3MTA1MTMzLDE2ODY3NjcwMl19
 -->
