@@ -21,16 +21,29 @@ RDF/XML
 | Format | Mime-type |
 |--|--|
 |  |  |
+|  |  |N-Triples
 
     
+<
+|  |  |![endif]--> N-Triples[<![if !supportFootnotes]>[1]<![endif]>](#_ftn1), Turtle[<![if !supportFootnotes]>[2]<![endif]>](#_ftn2), JSON-LD
 
+<![if !supportFootnotes]>  
+
+----------
+
+<![endif]>
+
+[<![if !supportFootnotes]>[1]<![endif]>](#_ftnref1) [https://www.w3.org/TR/n-triples/](https://www.w3.org/TR/n-triples/)
+
+[<![if !supportFootnotes]>[2]<![endif]>](#_ftnref2) [https://www.w3.org/TR/turtle/](https://www.w3.org/TR/turtle/)
 -   The URIs of Ch objects in the dataset may either be specified in a LOD record (referenced from the dataset record with void:rootResource), or dump file(s) in RDF (any well know encoding of RDF).
     
 -   When using void:rootResource, the resource must contain dcterms:hasPart properties with the URI’s of the CH objects’s ore:Aggregations (EDM), or URI’s to linked data resources describing CH objects with Schema.org properties.
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjk1ODc1OTMsLTE0MDQ2OTExNzAsMj
-A2NDMyMzg0NCwxNDY4NDMwODY2LDk5NzU4NDY1OCw4OTM5ODgx
-MDgsLTE0OTAyMDc2MjEsNzk3MTA1MTMzLDE2ODY3NjcwMl19
+eyJoaXN0b3J5IjpbOTUyMjYyNjg5LC0xMjY5NTg3NTkzLC0xND
+A0NjkxMTcwLDIwNjQzMjM4NDQsMTQ2ODQzMDg2Niw5OTc1ODQ2
+NTgsODkzOTg4MTA4LC0xNDkwMjA3NjIxLDc5NzEwNTEzMywxNj
+g2NzY3MDJdfQ==
 -->
