@@ -20,8 +20,11 @@ The data provider must maintain the dataset description updated over time, to al
 RDF/XML
 | Format | Mime-type |
 |--|--|
+| RDF/XML |  |
+| JSON-LD |  |
+| Turtle |  |
+| N-Triples  |  |
 |  |  |
-|  |  |N-Triples
 
     
 <
@@ -42,7 +45,7 @@ RDF/XML
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUyMjYyNjg5LC0xMjY5NTg3NTkzLC0xND
+eyJoaXN0b3J5IjpbLTk1MTQ2NjM4LC0xMjY5NTg3NTkzLC0xND
 A0NjkxMTcwLDIwNjQzMjM4NDQsMTQ2ODQzMDg2Niw5OTc1ODQ2
 NTgsODkzOTg4MTA4LC0xNDkwMjA3NjIxLDc5NzEwNTEzMywxNj
 g2NzY3MDJdfQ==
