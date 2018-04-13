@@ -11,8 +11,8 @@ Data providers may use classes and properties from any of the three vocabularies
  - **May** specify a machine readable license that applies to all metadata  
 The following sections will provide further details on each of these points.
 
-
-
+## Dataset RDF resource accessible by its URI
+The 
 
     
 -   The URIs of Ch objects in the dataset may either be specified in a LOD record (referenced from the dataset record with void:rootResource), or dump file(s) in RDF (any well know encoding of RDF).
@@ -21,7 +21,7 @@ The following sections will provide further details on each of these points.
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDQ2OTExNzAsMjA2NDMyMzg0NCwxND
-Y4NDMwODY2LDk5NzU4NDY1OCw4OTM5ODgxMDgsLTE0OTAyMDc2
-MjEsNzk3MTA1MTMzLDE2ODY3NjcwMl19
+eyJoaXN0b3J5IjpbOTMwNTA0MDI4LC0xNDA0NjkxMTcwLDIwNj
+QzMjM4NDQsMTQ2ODQzMDg2Niw5OTc1ODQ2NTgsODkzOTg4MTA4
+LC0xNDkwMjA3NjIxLDc5NzEwNTEzMywxNjg2NzY3MDJdfQ==
 -->
