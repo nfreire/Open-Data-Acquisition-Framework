@@ -18,7 +18,7 @@ The dataset description is used during the first ingestion of the dataset in to 
 The data provider must maintain the dataset description updated over time, to allow incremental updates of the dataset in Europeana. 
 ## Dataset resource encoded in a supported RDF format
 RDF/XML
-| Format | Mime-type |  |
+| Format | Mime-type |
 |--|--|
 |  |  |
 
@@ -30,7 +30,7 @@ RDF/XML
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1NzIyMzIzOSwtMTQwNDY5MTE3MCwyMD
-Y0MzIzODQ0LDE0Njg0MzA4NjYsOTk3NTg0NjU4LDg5Mzk4ODEw
-OCwtMTQ5MDIwNzYyMSw3OTcxMDUxMzMsMTY4Njc2NzAyXX0=
+eyJoaXN0b3J5IjpbLTEyNjk1ODc1OTMsLTE0MDQ2OTExNzAsMj
+A2NDMyMzg0NCwxNDY4NDMwODY2LDk5NzU4NDY1OCw4OTM5ODgx
+MDgsLTE0OTAyMDc2MjEsNzk3MTA1MTMzLDE2ODY3NjcwMl19
 -->
