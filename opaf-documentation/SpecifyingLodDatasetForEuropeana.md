@@ -17,7 +17,12 @@ When ingesting the dataset in Europeana, the URI of the dataset must be provided
 The dataset description is used during the first ingestion of the dataset in to Europeana, and later, for incremental updates of the dataset.
 The data provider must maintain the dataset description updated over time, to allow incremental updates of the dataset in Europeana. 
 ## Dataset resource encoded in a supported RDF format
-RDF/    
+RDF/XML
+| Format | Mime-type |  |
+|--|--|
+|  |  |
+
+    
 
 -   The URIs of Ch objects in the dataset may either be specified in a LOD record (referenced from the dataset record with void:rootResource), or dump file(s) in RDF (any well know encoding of RDF).
     
@@ -25,7 +30,7 @@ RDF/
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMxMjQ1ODY0LC0xNDA0NjkxMTcwLDIwNj
-QzMjM4NDQsMTQ2ODQzMDg2Niw5OTc1ODQ2NTgsODkzOTg4MTA4
-LC0xNDkwMjA3NjIxLDc5NzEwNTEzMywxNjg2NzY3MDJdfQ==
+eyJoaXN0b3J5IjpbLTI1NzIyMzIzOSwtMTQwNDY5MTE3MCwyMD
+Y0MzIzODQ0LDE0Njg0MzA4NjYsOTk3NTg0NjU4LDg5Mzk4ODEw
+OCwtMTQ5MDIwNzYyMSw3OTcxMDUxMzMsMTY4Njc2NzAyXX0=
 -->
