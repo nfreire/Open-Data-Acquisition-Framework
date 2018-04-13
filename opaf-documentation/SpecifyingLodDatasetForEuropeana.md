@@ -20,9 +20,9 @@ The data provider must maintain the dataset description updated over time, to al
 
 | Format | Mime-type | Specification
 |--|--|--|
-| RDF/XML |  | https://www.w3.org/TR/rdf-syntax-grammar/
+| RDF/XML | application/rdf+xml | https://www.w3.org/TR/rdf-syntax-grammar/
 | JSON-LD |  | [https://www.w3.org/TR/json-ld/](https://www.w3.org/TR/json-ld/) 
-| Turtle |  | [https://www.w3.org/TR/turtle/](https://www.w3.org/TR/turtle/) |
+| Turtle | application/x-turtle | [https://www.w3.org/TR/turtle/](https://www.w3.org/TR/turtle/) |
 | N-Triples  |  | [https://www.w3.org/TR/n-triples/](https://www.w3.org/TR/n-triples/) |
 
 -   The URIs of Ch objects in the dataset may either be specified in a LOD record (referenced from the dataset record with void:rootResource), or dump file(s) in RDF (any well know encoding of RDF).
@@ -31,9 +31,9 @@ The data provider must maintain the dataset description updated over time, to al
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU1NTM5NzQ1LDE5NjE4NzQ1OCwtMTc2NT
-Q2NzQwOSwtODI5MzE4MzAxLDE4MzU1NjI5OCwtMTI2OTU4NzU5
-MywtMTQwNDY5MTE3MCwyMDY0MzIzODQ0LDE0Njg0MzA4NjYsOT
-k3NTg0NjU4LDg5Mzk4ODEwOCwtMTQ5MDIwNzYyMSw3OTcxMDUx
-MzMsMTY4Njc2NzAyXX0=
+eyJoaXN0b3J5IjpbMjA1ODk4ODM5OCwxOTYxODc0NTgsLTE3Nj
+U0Njc0MDksLTgyOTMxODMwMSwxODM1NTYyOTgsLTEyNjk1ODc1
+OTMsLTE0MDQ2OTExNzAsMjA2NDMyMzg0NCwxNDY4NDMwODY2LD
+k5NzU4NDY1OCw4OTM5ODgxMDgsLTE0OTAyMDc2MjEsNzk3MTA1
+MTMzLDE2ODY3NjcwMl19
 -->
