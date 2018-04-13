@@ -17,7 +17,7 @@ When ingesting the dataset in Europeana, the URI of the dataset must be provided
 The dataset description is used during the first ingestion of the dataset in to Europeana, and later, for incremental updates of the dataset.
 The data provider must maintain the dataset description updated over time, to allow incremental updates of the dataset in Europeana. 
 ## Dataset resource encoded in a supported RDF format
-The Europeana LOD Harvester accesses the RDF resource of the 
+The Europeana LOD Harvester accesses the RDF resource of the dataset by sending an HTTP request that includes
 | Format | Mime-type | Specification
 |--|--|--|
 | RDF/XML | application/rdf+xml | https://www.w3.org/TR/rdf-syntax-grammar/
@@ -30,10 +30,10 @@ The Europeana LOD Harvester accesses the RDF resource of the
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0Njg3NjEyMCwtMTU5MDE5NzI5MywxMj
-E5NjYyNDUzLDIwNTg5ODgzOTgsMTk2MTg3NDU4LC0xNzY1NDY3
-NDA5LC04MjkzMTgzMDEsMTgzNTU2Mjk4LC0xMjY5NTg3NTkzLC
-0xNDA0NjkxMTcwLDIwNjQzMjM4NDQsMTQ2ODQzMDg2Niw5OTc1
-ODQ2NTgsODkzOTg4MTA4LC0xNDkwMjA3NjIxLDc5NzEwNTEzMy
-wxNjg2NzY3MDJdfQ==
+eyJoaXN0b3J5IjpbMTU4MTE4OTU4NSwyMDQ2ODc2MTIwLC0xNT
+kwMTk3MjkzLDEyMTk2NjI0NTMsMjA1ODk4ODM5OCwxOTYxODc0
+NTgsLTE3NjU0Njc0MDksLTgyOTMxODMwMSwxODM1NTYyOTgsLT
+EyNjk1ODc1OTMsLTE0MDQ2OTExNzAsMjA2NDMyMzg0NCwxNDY4
+NDMwODY2LDk5NzU4NDY1OCw4OTM5ODgxMDgsLTE0OTAyMDc2Mj
+EsNzk3MTA1MTMzLDE2ODY3NjcwMl19
 -->
