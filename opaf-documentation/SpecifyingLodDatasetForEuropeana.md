@@ -22,14 +22,11 @@ The data provider must maintain the dataset description updated over time, to al
 |--|--|
 | RDF/XML |  |
 | JSON-LD |  |
-| Turtle |  |
-| N-Triples  |  |
-
-    <![endif]-->
+| Turtle |  | https://www.w3.org/TR/turtle/ |
+| N-Triples  |  | [https://www.w3.org/TR/n-triples/](https://www.w3.org/TR/n-triples/) |
 
 
-
-<![if !supportFootnotes]>[1]<![endif]> [https://www.w3.org/TR/turtle/](https://www.w3.org/TR/turtle/)
+<![if !supportFootnotes]>[1]<![endif]> [](https://www.w3.org/TR/turtle/)
 <
 |  |  |![endif]--> N-Triples[<![if !supportFootnotes]>[1]<![endif]>](#_ftn1), Turtle[<![if !supportFootnotes]>[2]<![endif]>](#_ftn2), JSON-LD
 
@@ -48,8 +45,8 @@ The data provider must maintain the dataset description updated over time, to al
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIxNzM1MjIxLDE4MzU1NjI5OCwtMTI2OT
-U4NzU5MywtMTQwNDY5MTE3MCwyMDY0MzIzODQ0LDE0Njg0MzA4
-NjYsOTk3NTg0NjU4LDg5Mzk4ODEwOCwtMTQ5MDIwNzYyMSw3OT
-cxMDUxMzMsMTY4Njc2NzAyXX0=
+eyJoaXN0b3J5IjpbLTgyOTMxODMwMSwxODM1NTYyOTgsLTEyNj
+k1ODc1OTMsLTE0MDQ2OTExNzAsMjA2NDMyMzg0NCwxNDY4NDMw
+ODY2LDk5NzU4NDY1OCw4OTM5ODgxMDgsLTE0OTAyMDc2MjEsNz
+k3MTA1MTMzLDE2ODY3NjcwMl19
 -->
