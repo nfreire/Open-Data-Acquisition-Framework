@@ -13,7 +13,9 @@ The following sections will provide further details on each of these points.
 
 ## Dataset RDF resource accessible by its URI
 The description of the dataset in RDF must itself be published as linked open data. 
-When ingesting the dataset in Europeana, the URI of the dataset must be provided to Europeana. It will function as the entry point for the Europeana LOD Harvester to reach all linked data descriptions of the the cultural heritage objects 
+When ingesting the dataset in Europeana, the URI of the dataset must be provided to Europeana. It will function as the entry point for the Europeana LOD Harvester to reach all linked data descriptions of the the cultural heritage objects that belong in the dataset. 
+The dataset description is used 
+The provider 
 
     
 -   The URIs of Ch objects in the dataset may either be specified in a LOD record (referenced from the dataset record with void:rootResource), or dump file(s) in RDF (any well know encoding of RDF).
@@ -22,7 +24,7 @@ When ingesting the dataset in Europeana, the URI of the dataset must be provided
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4MjEyNDE1MCwtMTQwNDY5MTE3MCwyMD
+eyJoaXN0b3J5IjpbMTgwMTgzNDYzMCwtMTQwNDY5MTE3MCwyMD
 Y0MzIzODQ0LDE0Njg0MzA4NjYsOTk3NTg0NjU4LDg5Mzk4ODEw
 OCwtMTQ5MDIwNzYyMSw3OTcxMDUxMzMsMTY4Njc2NzAyXX0=
 -->
