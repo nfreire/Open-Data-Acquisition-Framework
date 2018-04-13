@@ -9,7 +9,7 @@ Data providers may use classes and properties from any of the three vocabularies
  - **Must** have a title property.
  - **Must** specify a technical mechanism that allows the dataset to be automatically harvested by Europeana.
  - **May** specify a machine readable license that applies to all metadata  
-
+The following 
 
 
     
@@ -19,7 +19,7 @@ Data providers may use classes and properties from any of the three vocabularies
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2NDMyMzg0NCwxNDY4NDMwODY2LDk5Nz
-U4NDY1OCw4OTM5ODgxMDgsLTE0OTAyMDc2MjEsNzk3MTA1MTMz
-LDE2ODY3NjcwMl19
+eyJoaXN0b3J5IjpbMTQ3ODQxMzAyNiwyMDY0MzIzODQ0LDE0Nj
+g0MzA4NjYsOTk3NTg0NjU4LDg5Mzk4ODEwOCwtMTQ5MDIwNzYy
+MSw3OTcxMDUxMzMsMTY4Njc2NzAyXX0=
 -->
