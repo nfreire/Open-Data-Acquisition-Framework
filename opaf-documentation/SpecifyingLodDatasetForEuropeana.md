@@ -13,6 +13,7 @@ The following sections will provide further details on each of these points.
 
 ## Dataset RDF resource accessible by its URI
 The description of the dataset in RDF must itself be published as linked open data. 
+The description of the 
 
     
 -   The URIs of Ch objects in the dataset may either be specified in a LOD record (referenced from the dataset record with void:rootResource), or dump file(s) in RDF (any well know encoding of RDF).
@@ -21,7 +22,7 @@ The description of the dataset in RDF must itself be published as linked open da
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjYxNjI5LC0xNDA0NjkxMTcwLDIwNj
+eyJoaXN0b3J5IjpbNTc4NzE2NzM2LC0xNDA0NjkxMTcwLDIwNj
 QzMjM4NDQsMTQ2ODQzMDg2Niw5OTc1ODQ2NTgsODkzOTg4MTA4
 LC0xNDkwMjA3NjIxLDc5NzEwNTEzMywxNjg2NzY3MDJdfQ==
 -->
