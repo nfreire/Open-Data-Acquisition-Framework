@@ -18,8 +18,8 @@ The dataset description is used during the first ingestion of the dataset in to 
 The data provider must maintain the dataset description updated over time, to allow incremental updates of the dataset in Europeana. 
 ## Dataset resource encoded in a supported RDF format
 
-| Format | Mime-type |
-|--|--|
+| Format | Mime-type | Specification
+|--|--|--|
 | RDF/XML |  |
 | JSON-LD |  | [https://www.w3.org/TR/json-ld/](https://www.w3.org/TR/json-ld/) 
 | Turtle |  | [https://www.w3.org/TR/turtle/](https://www.w3.org/TR/turtle/) |
@@ -31,9 +31,9 @@ The data provider must maintain the dataset description updated over time, to al
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTk4ODQxMzUsLTE3NjU0Njc0MDksLT
-gyOTMxODMwMSwxODM1NTYyOTgsLTEyNjk1ODc1OTMsLTE0MDQ2
-OTExNzAsMjA2NDMyMzg0NCwxNDY4NDMwODY2LDk5NzU4NDY1OC
-w4OTM5ODgxMDgsLTE0OTAyMDc2MjEsNzk3MTA1MTMzLDE2ODY3
-NjcwMl19
+eyJoaXN0b3J5IjpbMTk2MTg3NDU4LC0xNzY1NDY3NDA5LC04Mj
+kzMTgzMDEsMTgzNTU2Mjk4LC0xMjY5NTg3NTkzLC0xNDA0Njkx
+MTcwLDIwNjQzMjM4NDQsMTQ2ODQzMDg2Niw5OTc1ODQ2NTgsOD
+kzOTg4MTA4LC0xNDkwMjA3NjIxLDc5NzEwNTEzMywxNjg2NzY3
+MDJdfQ==
 -->
