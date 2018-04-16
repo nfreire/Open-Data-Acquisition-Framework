@@ -52,7 +52,7 @@ The mechanism that should be applied to a LOD dataset is indicated by the data p
  
 
 # Dataset level license
-The RDF resource of the dataset may optionally indicate a license that applies to thw whole dataset. If the dataset provides the licensing information, 
+The RDF resource of the dataset may optionally indicate a license that applies to thw whole dataset. If the dataset provides the licensing information, individual metadata records may still override it, by  
 
 specifies it 
 
@@ -74,11 +74,11 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTcxODE5MDYsLTEwNDQxODg1OTgsMT
-U1NTE2NDI1MCwtMTk3MDM3ODM5NSwxMTUxMjI1MTQ2LC04ODk3
-NzYxMjIsLTM3NjkwMjI2OSwtNTk5MTg2ODEzLDE3MTQ2OTQ2ND
-IsLTE0MzU5NTQ4NTIsLTEzNzc4MDg4MCwtMjA4Mzk2ODkyNywx
-ODI3MjEwODEzLDIwNDY4NzYxMjAsLTE1OTAxOTcyOTMsMTIxOT
-Y2MjQ1MywyMDU4OTg4Mzk4LDE5NjE4NzQ1OCwtMTc2NTQ2NzQw
-OSwtODI5MzE4MzAxXX0=
+eyJoaXN0b3J5IjpbNTkxODc4MjQ5LC0yMDU3MTgxOTA2LC0xMD
+Q0MTg4NTk4LDE1NTUxNjQyNTAsLTE5NzAzNzgzOTUsMTE1MTIy
+NTE0NiwtODg5Nzc2MTIyLC0zNzY5MDIyNjksLTU5OTE4NjgxMy
+wxNzE0Njk0NjQyLC0xNDM1OTU0ODUyLC0xMzc3ODA4ODAsLTIw
+ODM5Njg5MjcsMTgyNzIxMDgxMywyMDQ2ODc2MTIwLC0xNTkwMT
+k3MjkzLDEyMTk2NjI0NTMsMjA1ODk4ODM5OCwxOTYxODc0NTgs
+LTE3NjU0Njc0MDldfQ==
 -->
