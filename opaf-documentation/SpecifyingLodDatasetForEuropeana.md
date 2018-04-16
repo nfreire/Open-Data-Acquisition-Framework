@@ -34,8 +34,10 @@ A LOD dataset for Europeana, is constituted, in its core, by RDF resources of th
 All these resources will be harvested by Europeana's LOD harvester. The harvester will use the RDF description of the dataset to know which RDF resources to harvest and the mechanism to harvest them. 
 Data providers may choose one of the mechanisms, typically used for LOD: 
  - Data dumps containing all data within the dataset.
- - Listing of the URIs of all ore:Aggregation resources within the dataset
+ - Listing of the URIs of all ore:Aggregation resources within the dataset.
 The mechanism that should be applied to a LOD dataset is indicated by the data provider in the properties of the RDF description of the dataset, using any of the supported vocabularies: [VoID](https://www.w3.org/TR/void/), [DCAT](https://www.w3.org/TR/vocab-dcat/), and [Schema.org](http://schema.org/Dataset).
+
+Specifying data dumps
 
   
 
@@ -59,11 +61,11 @@ The mechanism that should be applied to a LOD dataset is indicated by the data p
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzAzNzgzOTUsMTE1MTIyNTE0NiwtOD
-g5Nzc2MTIyLC0zNzY5MDIyNjksLTU5OTE4NjgxMywxNzE0Njk0
-NjQyLC0xNDM1OTU0ODUyLC0xMzc3ODA4ODAsLTIwODM5Njg5Mj
-csMTgyNzIxMDgxMywyMDQ2ODc2MTIwLC0xNTkwMTk3MjkzLDEy
-MTk2NjI0NTMsMjA1ODk4ODM5OCwxOTYxODc0NTgsLTE3NjU0Nj
-c0MDksLTgyOTMxODMwMSwxODM1NTYyOTgsLTEyNjk1ODc1OTMs
-LTE0MDQ2OTExNzBdfQ==
+eyJoaXN0b3J5IjpbLTEwMzE1NjY2NDcsLTE5NzAzNzgzOTUsMT
+E1MTIyNTE0NiwtODg5Nzc2MTIyLC0zNzY5MDIyNjksLTU5OTE4
+NjgxMywxNzE0Njk0NjQyLC0xNDM1OTU0ODUyLC0xMzc3ODA4OD
+AsLTIwODM5Njg5MjcsMTgyNzIxMDgxMywyMDQ2ODc2MTIwLC0x
+NTkwMTk3MjkzLDEyMTk2NjI0NTMsMjA1ODk4ODM5OCwxOTYxOD
+c0NTgsLTE3NjU0Njc0MDksLTgyOTMxODMwMSwxODM1NTYyOTgs
+LTEyNjk1ODc1OTNdfQ==
 -->
