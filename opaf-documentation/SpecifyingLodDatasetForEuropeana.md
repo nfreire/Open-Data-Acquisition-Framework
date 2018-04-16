@@ -52,7 +52,7 @@ The following table points to the most relevant parts of the vocabularies that s
 | DCAT | See section "[5.4 Class: Distribution](https://www.w3.org/TR/vocab-dcat/#class-distribution)", particularly the properties dcat:downloadURL and dcat:mediaType.
 | Schema.org | see the definition of the property [schema:distribution](http://schema.org/distribution) of the [schema:Dataset](http://schema.org/Dataset) class.<br> see also the class [schema:DataDownload](http://schema.org/DataDownload) and its properties [schema:contentUrl](http://schema.org/contentUrl) and [schema:encodingFormat](http://schema.org/encodingFormat) |
 
-In addition, for the requirements of Europeana, data providers must follow the following points:
+or the requirements of Europeana, data providers must follow the following points:
 The files that constitute the data dump of the dataset, must contain the RDF data encoded in one the RDF encodings suported by Europeana:  [RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/), [JSON-LD](https://www.w3.org/TR/json-ld/)  or [Turtle](https://www.w3.org/TR/turtle/) 
 The files may be compressed. Currently, Europeana supports only the GZip compression algorithm.
 When using DCAT or Schema.org, the 
@@ -87,11 +87,11 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjEwNTM4ODcsMTY0NTU2Mjg1MiwtMz
-cxODM1NDk0LDE2MjgyNjg5MTEsMTgwNTIyNjAwNCwtMTEzNzAw
-MDQ3MiwtMTc0Mjk1MjEzMCw4ODY2NjgyMjYsLTIwNTcxODE5MD
-YsLTEwNDQxODg1OTgsMTU1NTE2NDI1MCwtMTk3MDM3ODM5NSwx
-MTUxMjI1MTQ2LC04ODk3NzYxMjIsLTM3NjkwMjI2OSwtNTk5MT
-g2ODEzLDE3MTQ2OTQ2NDIsLTE0MzU5NTQ4NTIsLTEzNzc4MDg4
-MCwtMjA4Mzk2ODkyN119
+eyJoaXN0b3J5IjpbNTEwNjIwMjg0LC0yMDIxMDUzODg3LDE2ND
+U1NjI4NTIsLTM3MTgzNTQ5NCwxNjI4MjY4OTExLDE4MDUyMjYw
+MDQsLTExMzcwMDA0NzIsLTE3NDI5NTIxMzAsODg2NjY4MjI2LC
+0yMDU3MTgxOTA2LC0xMDQ0MTg4NTk4LDE1NTUxNjQyNTAsLTE5
+NzAzNzgzOTUsMTE1MTIyNTE0NiwtODg5Nzc2MTIyLC0zNzY5MD
+IyNjksLTU5OTE4NjgxMywxNzE0Njk0NjQyLC0xNDM1OTU0ODUy
+LC0xMzc3ODA4ODBdfQ==
 -->
