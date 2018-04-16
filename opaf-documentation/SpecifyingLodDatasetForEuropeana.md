@@ -33,9 +33,11 @@ The RDF resource of the dataset must have a title, and the title may be provided
 A LOD dataset for Europeana, is constituted, in its core, by RDF resources of the class edm:ProvidedCHO. In addition, a dataset contains all other resources used to describe the cultural object and aggregation metadata, as specified in the EDM (i.e. resources of types such as ore:Aggregation, edm:WebResource, edm:Agent, etc.).
 All these resources will be harvested by Europeana's LOD harvester. The harvester will use the RDF description of the dataset to know which RDF resources to harvest and the mechanism to harvest them. 
 Data providers may choose one of the mechanisms, typically used for LOD: 
-
  - Data dumps containing all data within the dataset.
- - Listing of the URIs of all ore:Aggreg
+ - Listing of the URIs of all ore:Aggregation resources within the dataset
+
+
+
 
  
 
@@ -55,11 +57,11 @@ Data providers may choose one of the mechanisms, typically used for LOD:
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTI2MDY0NzIsLTg4OTc3NjEyMiwtMz
-c2OTAyMjY5LC01OTkxODY4MTMsMTcxNDY5NDY0MiwtMTQzNTk1
-NDg1MiwtMTM3NzgwODgwLC0yMDgzOTY4OTI3LDE4MjcyMTA4MT
-MsMjA0Njg3NjEyMCwtMTU5MDE5NzI5MywxMjE5NjYyNDUzLDIw
-NTg5ODgzOTgsMTk2MTg3NDU4LC0xNzY1NDY3NDA5LC04MjkzMT
-gzMDEsMTgzNTU2Mjk4LC0xMjY5NTg3NTkzLC0xNDA0NjkxMTcw
-LDIwNjQzMjM4NDRdfQ==
+eyJoaXN0b3J5IjpbMTE1MTIyNTE0NiwtODg5Nzc2MTIyLC0zNz
+Y5MDIyNjksLTU5OTE4NjgxMywxNzE0Njk0NjQyLC0xNDM1OTU0
+ODUyLC0xMzc3ODA4ODAsLTIwODM5Njg5MjcsMTgyNzIxMDgxMy
+wyMDQ2ODc2MTIwLC0xNTkwMTk3MjkzLDEyMTk2NjI0NTMsMjA1
+ODk4ODM5OCwxOTYxODc0NTgsLTE3NjU0Njc0MDksLTgyOTMxOD
+MwMSwxODM1NTYyOTgsLTEyNjk1ODc1OTMsLTE0MDQ2OTExNzAs
+MjA2NDMyMzg0NF19
 -->
