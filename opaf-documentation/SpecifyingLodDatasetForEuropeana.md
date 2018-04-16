@@ -42,8 +42,8 @@ Data providers may choose one of the mechanisms, typically used for LOD:
  - Listing of the URIs of all ore:Aggregation resources within the dataset.
 The mechanism that should be applied to a LOD dataset is indicated by the data provider in the properties of the RDF description of the dataset, using any of the supported vocabularies: [VoID](https://www.w3.org/TR/void/), [DCAT](https://www.w3.org/TR/vocab-dcat/), and [Schema.org](http://schema.org/Dataset).
 
-## Specifying data dumps
-All three vocabularies allow
+## Specifying data downloads/dis
+All three vocabularies allow 
 
 
 | Vocabulary| Specification Sections |
@@ -86,11 +86,11 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTg3NDU0NTUsMTY0NTU2Mjg1MiwtMz
-cxODM1NDk0LDE2MjgyNjg5MTEsMTgwNTIyNjAwNCwtMTEzNzAw
-MDQ3MiwtMTc0Mjk1MjEzMCw4ODY2NjgyMjYsLTIwNTcxODE5MD
-YsLTEwNDQxODg1OTgsMTU1NTE2NDI1MCwtMTk3MDM3ODM5NSwx
-MTUxMjI1MTQ2LC04ODk3NzYxMjIsLTM3NjkwMjI2OSwtNTk5MT
-g2ODEzLDE3MTQ2OTQ2NDIsLTE0MzU5NTQ4NTIsLTEzNzc4MDg4
-MCwtMjA4Mzk2ODkyN119
+eyJoaXN0b3J5IjpbMTM1MzM0ODg0MCwxNjQ1NTYyODUyLC0zNz
+E4MzU0OTQsMTYyODI2ODkxMSwxODA1MjI2MDA0LC0xMTM3MDAw
+NDcyLC0xNzQyOTUyMTMwLDg4NjY2ODIyNiwtMjA1NzE4MTkwNi
+wtMTA0NDE4ODU5OCwxNTU1MTY0MjUwLC0xOTcwMzc4Mzk1LDEx
+NTEyMjUxNDYsLTg4OTc3NjEyMiwtMzc2OTAyMjY5LC01OTkxOD
+Y4MTMsMTcxNDY5NDY0MiwtMTQzNTk1NDg1MiwtMTM3NzgwODgw
+LC0yMDgzOTY4OTI3XX0=
 -->
