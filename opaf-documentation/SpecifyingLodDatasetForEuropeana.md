@@ -48,7 +48,9 @@ The mechanism that should be applied to a LOD dataset is indicated by the data p
 |--|--|
 | VoID | see section "[3.3 RDF data dumps](https://www.w3.org/TR/void/#dumps)" describing the void:dataDump property. |
 | DCAT | see section "[5.4 Class: Distribution](https://www.w3.org/TR/vocab-dcat/#class-distribution)", particularly the properties dcat:downloadURL and dcat:mediaType.
-| Schema.org | see the definition of the property [schema:distribution](http://schema.org/distribution) of the schema:Dataset , and the class [schema:DataDownload](http://schema.org/DataDownload) |
+| Schema.org | see the definition of the property [schema:distribution](http://schema.org/distribution) of the schema:Dataset class.
+|
+, and the class [schema:DataDownload](http://schema.org/DataDownload) |
 
 The files that constitute the data dump of the dataset, must contain the RDF data encoded in one the RDF encodings suported by Europeana:  [RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/), [JSON-LD](https://www.w3.org/TR/json-ld/)  or [Turtle](https://www.w3.org/TR/turtle/) 
 The files may possibly be compressed. Currently, Europeana supports only the GZip compression algorithm.
@@ -83,7 +85,7 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NjQ1OTg4MCwxNjI4MjY4OTExLDE4MD
+eyJoaXN0b3J5IjpbLTM3MTgzNTQ5NCwxNjI4MjY4OTExLDE4MD
 UyMjYwMDQsLTExMzcwMDA0NzIsLTE3NDI5NTIxMzAsODg2NjY4
 MjI2LC0yMDU3MTgxOTA2LC0xMDQ0MTg4NTk4LDE1NTUxNjQyNT
 AsLTE5NzAzNzgzOTUsMTE1MTIyNTE0NiwtODg5Nzc2MTIyLC0z
