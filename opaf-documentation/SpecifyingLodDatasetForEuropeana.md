@@ -31,7 +31,9 @@ The RDF resource of the dataset must have a title, and the title may be provided
 
 ## Specifying the available technical mechanism for harvesting
 
-
+-   The URIs of Ch objects in the dataset may either be specified in a LOD record (referenced from the dataset record with void:rootResource), or dump file(s) in RDF (any well know encoding of RDF).
+    
+-   When using void:rootResource, the resource must contain dcterms:hasPart properties with the URI’s of the CH objects’s ore:Aggregations (EDM), or URI’s to linked data resources describing CH objects with Schema.org properties.
 
 
 -   The URIs of Ch objects in the dataset may either be specified in a LOD record (referenced from the dataset record with void:rootResource), or dump file(s) in RDF (any well know encoding of RDF).
@@ -40,11 +42,11 @@ The RDF resource of the dataset must have a title, and the title may be provided
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzU5NTQ4NTIsLTEzNzc4MDg4MCwtMj
-A4Mzk2ODkyNywxODI3MjEwODEzLDIwNDY4NzYxMjAsLTE1OTAx
-OTcyOTMsMTIxOTY2MjQ1MywyMDU4OTg4Mzk4LDE5NjE4NzQ1OC
-wtMTc2NTQ2NzQwOSwtODI5MzE4MzAxLDE4MzU1NjI5OCwtMTI2
-OTU4NzU5MywtMTQwNDY5MTE3MCwyMDY0MzIzODQ0LDE0Njg0Mz
-A4NjYsOTk3NTg0NjU4LDg5Mzk4ODEwOCwtMTQ5MDIwNzYyMSw3
-OTcxMDUxMzNdfQ==
+eyJoaXN0b3J5IjpbMTcxNDY5NDY0MiwtMTQzNTk1NDg1MiwtMT
+M3NzgwODgwLC0yMDgzOTY4OTI3LDE4MjcyMTA4MTMsMjA0Njg3
+NjEyMCwtMTU5MDE5NzI5MywxMjE5NjYyNDUzLDIwNTg5ODgzOT
+gsMTk2MTg3NDU4LC0xNzY1NDY3NDA5LC04MjkzMTgzMDEsMTgz
+NTU2Mjk4LC0xMjY5NTg3NTkzLC0xNDA0NjkxMTcwLDIwNjQzMj
+M4NDQsMTQ2ODQzMDg2Niw5OTc1ODQ2NTgsODkzOTg4MTA4LC0x
+NDkwMjA3NjIxXX0=
 -->
