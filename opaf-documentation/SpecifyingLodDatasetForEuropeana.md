@@ -48,7 +48,7 @@ The mechanism that should be applied to a LOD dataset is indicated by the data p
 
 ## Specifying listings of URIs
 void:rootResource
-The URIs of Ch objects in the dataset may either be specified in a LOD record (referenced from the dataset record with void:rootResource), or dump file(s) in RDF (any well know encoding of RDF).**
+The URIs of Ch objects in the dataset may be specified in a LOD record (referenced from the dataset record with void:rootResource), 
 
  
 
@@ -76,11 +76,11 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3Njg3NjUxMSwtMjA1NzE4MTkwNiwtMT
-A0NDE4ODU5OCwxNTU1MTY0MjUwLC0xOTcwMzc4Mzk1LDExNTEy
-MjUxNDYsLTg4OTc3NjEyMiwtMzc2OTAyMjY5LC01OTkxODY4MT
-MsMTcxNDY5NDY0MiwtMTQzNTk1NDg1MiwtMTM3NzgwODgwLC0y
-MDgzOTY4OTI3LDE4MjcyMTA4MTMsMjA0Njg3NjEyMCwtMTU5MD
-E5NzI5MywxMjE5NjYyNDUzLDIwNTg5ODgzOTgsMTk2MTg3NDU4
-LC0xNzY1NDY3NDA5XX0=
+eyJoaXN0b3J5IjpbODg2NjY4MjI2LC0yMDU3MTgxOTA2LC0xMD
+Q0MTg4NTk4LDE1NTUxNjQyNTAsLTE5NzAzNzgzOTUsMTE1MTIy
+NTE0NiwtODg5Nzc2MTIyLC0zNzY5MDIyNjksLTU5OTE4NjgxMy
+wxNzE0Njk0NjQyLC0xNDM1OTU0ODUyLC0xMzc3ODA4ODAsLTIw
+ODM5Njg5MjcsMTgyNzIxMDgxMywyMDQ2ODc2MTIwLC0xNTkwMT
+k3MjkzLDEyMTk2NjI0NTMsMjA1ODk4ODM5OCwxOTYxODc0NTgs
+LTE3NjU0Njc0MDldfQ==
 -->
