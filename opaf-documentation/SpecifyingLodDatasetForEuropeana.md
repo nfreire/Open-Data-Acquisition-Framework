@@ -1,4 +1,4 @@
-## Specifying a LOD dataset for aggregation  by Europeana
+# Specifying a LOD dataset for aggregation by Europeana
 
 Cultural heritage institutions typically publish linked data that covers more resources than the cultural heritage digital objects provided to Europeana. Therefore, it is necessary that data providers make available linked data descriptions of the datasets for aggregation by Europeana.
 Several vocabularies are available nowadays to describe datasets. Europeana supports three vocabularies which are suitable to fulfill the requirements for aggregation of linked data: [VoID](https://www.w3.org/TR/void/), [DCAT](https://www.w3.org/TR/vocab-dcat/), and [Schema.org](http://schema.org/Dataset).
@@ -11,12 +11,15 @@ Data providers may use classes and properties from any of the three vocabularies
  - **May** specify a machine readable license that applies to all metadata  
 The following sections will provide further details on each of these points.
 
-## Dataset RDF resource accessible by its URI
+# Dataset RDF resource accessible by its URI
+
 The description of the dataset in RDF must itself be published as linked open data. 
 When ingesting the dataset in Europeana, the URI of the dataset must be provided to Europeana. It will function as the entry point for the Europeana LOD Harvester to reach all linked data descriptions of the the cultural heritage objects that belong in the dataset. 
 The dataset description is used during the first ingestion of the dataset in to Europeana, and later, for incremental updates of the dataset.
 The data provider must maintain the dataset description updated over time, to allow incremental updates of the dataset in Europeana. 
-## Dataset resource encoded in a supported RDF format
+
+# Dataset resource encoded in a supported RDF format
+
 The Europeana LOD Harvester accesses the RDF resource of the dataset by sending an HTTP request to the URI that includes the Accept header with the supported mime -types for RDF encoding. The response may use any of the supported encodings to send the RDF description of the dataset.
 The following are the supported mime-types:
 
@@ -26,10 +29,12 @@ The following are the supported mime-types:
 | JSON-LD | application/ld+son | [https://www.w3.org/TR/json-ld/](https://www.w3.org/TR/json-ld/) 
 | Turtle | application/x-turtle | [https://www.w3.org/TR/turtle/](https://www.w3.org/TR/turtle/) |
 
-## Title of the dataset
+# Title of the dataset
+
 The RDF resource of the dataset must have a title, and the title may be provided in several languages. The titles should be in dc:title properties, and the corresponding language in a xml:lang attribute of the title property.
 
-## Specifying the technical mechanism for LOD harvesting
+# Specifying the technical mechanism for LOD harvesting
+
 A LOD dataset for Europeana, is constituted, in its core, by RDF resources of the class edm:ProvidedCHO. In addition, a dataset contains all other resources used to describe the cultural object and aggregation metadata, as specified in the EDM (i.e. resources of types such as ore:Aggregation, edm:WebResource, edm:Agent, etc.).
 All these resources will be harvested by Europeana's LOD harvester. The harvester will use the RDF description of the dataset to know which RDF resources to harvest and the mechanism to harvest them. 
 Data providers may choose one of the mechanisms, typically used for LOD: 
@@ -37,7 +42,7 @@ Data providers may choose one of the mechanisms, typically used for LOD:
  - Listing of the URIs of all ore:Aggregation resources within the dataset.
 The mechanism that should be applied to a LOD dataset is indicated by the data provider in the properties of the RDF description of the dataset, using any of the supported vocabularies: [VoID](https://www.w3.org/TR/void/), [DCAT](https://www.w3.org/TR/vocab-dcat/), and [Schema.org](http://schema.org/Dataset).
 
-Specifying data dumps
+## Specifying data dumps
 
   
 
@@ -61,11 +66,11 @@ Specifying data dumps
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzE1NjY2NDcsLTE5NzAzNzgzOTUsMT
-E1MTIyNTE0NiwtODg5Nzc2MTIyLC0zNzY5MDIyNjksLTU5OTE4
-NjgxMywxNzE0Njk0NjQyLC0xNDM1OTU0ODUyLC0xMzc3ODA4OD
-AsLTIwODM5Njg5MjcsMTgyNzIxMDgxMywyMDQ2ODc2MTIwLC0x
-NTkwMTk3MjkzLDEyMTk2NjI0NTMsMjA1ODk4ODM5OCwxOTYxOD
-c0NTgsLTE3NjU0Njc0MDksLTgyOTMxODMwMSwxODM1NTYyOTgs
-LTEyNjk1ODc1OTNdfQ==
+eyJoaXN0b3J5IjpbMTU1NTE2NDI1MCwtMTk3MDM3ODM5NSwxMT
+UxMjI1MTQ2LC04ODk3NzYxMjIsLTM3NjkwMjI2OSwtNTk5MTg2
+ODEzLDE3MTQ2OTQ2NDIsLTE0MzU5NTQ4NTIsLTEzNzc4MDg4MC
+wtMjA4Mzk2ODkyNywxODI3MjEwODEzLDIwNDY4NzYxMjAsLTE1
+OTAxOTcyOTMsMTIxOTY2MjQ1MywyMDU4OTg4Mzk4LDE5NjE4Nz
+Q1OCwtMTc2NTQ2NzQwOSwtODI5MzE4MzAxLDE4MzU1NjI5OCwt
+MTI2OTU4NzU5M119
 -->
