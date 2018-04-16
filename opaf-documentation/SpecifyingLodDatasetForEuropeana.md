@@ -43,8 +43,8 @@ Data providers may choose one of the mechanisms, typically used for LOD:
 The mechanism that should be applied to a LOD dataset is indicated by the data provider in the properties of the RDF description of the dataset, using any of the supported vocabularies: [VoID](https://www.w3.org/TR/void/), [DCAT](https://www.w3.org/TR/vocab-dcat/), and [Schema.org](http://schema.org/Dataset).
 
 ## Specifying dataset distribution
-All three vocabularies are capable of representing the required information for allowing Europeana to automatically obtain a dataset  
-
+All three vocabularies are capable of representing the required information for allowing Europeana to automatically obtain a dataset by  downloading a distribution containing all data within the dataset.
+The following table 
 
 | Vocabulary| Specification Sections |
 |--|--|
@@ -86,7 +86,7 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzgyMDQ2MzE5LDE2NDU1NjI4NTIsLTM3MT
+eyJoaXN0b3J5IjpbNzUzMDg0NTA2LDE2NDU1NjI4NTIsLTM3MT
 gzNTQ5NCwxNjI4MjY4OTExLDE4MDUyMjYwMDQsLTExMzcwMDA0
 NzIsLTE3NDI5NTIxMzAsODg2NjY4MjI2LC0yMDU3MTgxOTA2LC
 0xMDQ0MTg4NTk4LDE1NTUxNjQyNTAsLTE5NzAzNzgzOTUsMTE1
