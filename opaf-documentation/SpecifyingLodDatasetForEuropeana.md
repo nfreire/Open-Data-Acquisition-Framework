@@ -30,7 +30,7 @@ The following are the supported mime-types:
 The RDF resource of the dataset must have a title, and the title may be provided in several languages. The titles should be in dc:title properties, and the corresponding language in a xml:lang attribute of the title property.
 
 ## Specifying the available technical mechanism for LOD harvesting
-A LOD dataset for Europeana, 
+A LOD dataset for Europeana, is constituted by RDF resource
 
 -   The URIs of Ch objects in the dataset may either be specified in a LOD record (referenced from the dataset record with void:rootResource), or dump file(s) in RDF (any well know encoding of RDF).
     
@@ -43,7 +43,7 @@ A LOD dataset for Europeana,
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxNTE1ODE1NCwtNTk5MTg2ODEzLDE3MT
+eyJoaXN0b3J5IjpbMTQzOTk4NTQ1NywtNTk5MTg2ODEzLDE3MT
 Q2OTQ2NDIsLTE0MzU5NTQ4NTIsLTEzNzc4MDg4MCwtMjA4Mzk2
 ODkyNywxODI3MjEwODEzLDIwNDY4NzYxMjAsLTE1OTAxOTcyOT
 MsMTIxOTY2MjQ1MywyMDU4OTg4Mzk4LDE5NjE4NzQ1OCwtMTc2
