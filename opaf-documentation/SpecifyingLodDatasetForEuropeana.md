@@ -45,8 +45,8 @@ The mechanism that should be applied to a LOD dataset is indicated by the data p
 ## Specifying data dumps
   
 
-The files that constitute the data dump of the dataset, must contain the RDF data encoded in one the RDF encodings suported by Europeana:  | application/rdf+xml | |RDF/XML|(https://www.w3.org/TR/rdf-syntax-grammar/)
-| JSON-LD | application/ld+son | [https://www.w3.org/TR/json-ld/](https://www.w3.org/TR/json-ld/) 
+The files that constitute the data dump of the dataset, must contain the RDF data encoded in one the RDF encodings suported by Europeana:  [RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/)
+JSON-LD 
 | Turtle | application/x-turtle | [https://www.w3.org/TR/turtle/](https://www.w3.org/TR/turtle/) |
 
 
@@ -80,7 +80,7 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyNDY3MTM2Nyw4ODY2NjgyMjYsLTIwNT
+eyJoaXN0b3J5IjpbMTQ3NzQ0Mzk0NSw4ODY2NjgyMjYsLTIwNT
 cxODE5MDYsLTEwNDQxODg1OTgsMTU1NTE2NDI1MCwtMTk3MDM3
 ODM5NSwxMTUxMjI1MTQ2LC04ODk3NzYxMjIsLTM3NjkwMjI2OS
 wtNTk5MTg2ODEzLDE3MTQ2OTQ2NDIsLTE0MzU5NTQ4NTIsLTEz
