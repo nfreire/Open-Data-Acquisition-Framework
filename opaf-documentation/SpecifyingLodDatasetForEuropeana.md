@@ -47,7 +47,7 @@ The mechanism that should be applied to a LOD dataset is indicated by the data p
 | Vocabulary| Specification Section |
 |--|--|
 | VoID | see section "[3.3 RDF data dumps](https://www.w3.org/TR/void/#dumps)" describing the void:dataDump property. |
-| DCAT | see section "[5.4 Class: Distribution](https://www.w3.org/TR/vocab-dcat/#class-distribution)", particularly the property dcat:downloadURL
+| DCAT | see section "[5.4 Class: Distribution](https://www.w3.org/TR/vocab-dcat/#class-distribution)", particularly the property dcat:downloadURL.
 | Schema.org | [https://www.w3.org/TR/turtle/](https://www.w3.org/TR/turtle/) |
 
 The files that constitute the data dump of the dataset, must contain the RDF data encoded in one the RDF encodings suported by Europeana:  [RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/), [JSON-LD](https://www.w3.org/TR/json-ld/)  or [Turtle](https://www.w3.org/TR/turtle/) 
@@ -83,11 +83,11 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA1ODI0MDUsMTgwNTIyNjAwNCwtMTEzNz
-AwMDQ3MiwtMTc0Mjk1MjEzMCw4ODY2NjgyMjYsLTIwNTcxODE5
-MDYsLTEwNDQxODg1OTgsMTU1NTE2NDI1MCwtMTk3MDM3ODM5NS
-wxMTUxMjI1MTQ2LC04ODk3NzYxMjIsLTM3NjkwMjI2OSwtNTk5
-MTg2ODEzLDE3MTQ2OTQ2NDIsLTE0MzU5NTQ4NTIsLTEzNzc4MD
-g4MCwtMjA4Mzk2ODkyNywxODI3MjEwODEzLDIwNDY4NzYxMjAs
-LTE1OTAxOTcyOTNdfQ==
+eyJoaXN0b3J5IjpbMTQ5MTcxMzc2OSwxODA1MjI2MDA0LC0xMT
+M3MDAwNDcyLC0xNzQyOTUyMTMwLDg4NjY2ODIyNiwtMjA1NzE4
+MTkwNiwtMTA0NDE4ODU5OCwxNTU1MTY0MjUwLC0xOTcwMzc4Mz
+k1LDExNTEyMjUxNDYsLTg4OTc3NjEyMiwtMzc2OTAyMjY5LC01
+OTkxODY4MTMsMTcxNDY5NDY0MiwtMTQzNTk1NDg1MiwtMTM3Nz
+gwODgwLC0yMDgzOTY4OTI3LDE4MjcyMTA4MTMsMjA0Njg3NjEy
+MCwtMTU5MDE5NzI5M119
 -->
