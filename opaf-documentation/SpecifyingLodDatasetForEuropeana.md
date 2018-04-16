@@ -45,7 +45,7 @@ The mechanism that should be applied to a LOD dataset is indicated by the data p
 ## Specifying data dumps
   
 
-The files that constitute the data dump of the dataset, 
+The files that constitute the data dump of the dataset, must contain the RDF data encoded in one the RDF encodings 
 
 
 ## Specifying listings of URIs
@@ -78,7 +78,7 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTAxMDA1NzAsODg2NjY4MjI2LC0yMD
+eyJoaXN0b3J5IjpbLTE0OTA1MzUxNDgsODg2NjY4MjI2LC0yMD
 U3MTgxOTA2LC0xMDQ0MTg4NTk4LDE1NTUxNjQyNTAsLTE5NzAz
 NzgzOTUsMTE1MTIyNTE0NiwtODg5Nzc2MTIyLC0zNzY5MDIyNj
 ksLTU5OTE4NjgxMywxNzE0Njk0NjQyLC0xNDM1OTU0ODUyLC0x
