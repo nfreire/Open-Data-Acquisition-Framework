@@ -44,9 +44,9 @@ The mechanism that should be applied to a LOD dataset is indicated by the data p
 
 ## Specifying dataset distribution
 All three vocabularies are capable of representing the required information for allowing Europeana to automatically obtain a dataset by  downloading a distribution containing all data within the dataset.
-The following table points to the most relevant parts of the vocabularies that specify how a dataset distribution should be 
+The following table points to the most relevant parts of the vocabularies that specify how a dataset distribution can be represented.
 
-| Vocabulary| Specification Sections |
+| Vocabulary| Specifications parts|
 |--|--|
 | VoID | See section "[3.3 RDF data dumps](https://www.w3.org/TR/void/#dumps)" describing the void:dataDump property. |
 | DCAT | See section "[5.4 Class: Distribution](https://www.w3.org/TR/vocab-dcat/#class-distribution)", particularly the properties dcat:downloadURL and dcat:mediaType.
@@ -54,6 +54,7 @@ The following table points to the most relevant parts of the vocabularies that s
 
 The files that constitute the data dump of the dataset, must contain the RDF data encoded in one the RDF encodings suported by Europeana:  [RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/), [JSON-LD](https://www.w3.org/TR/json-ld/)  or [Turtle](https://www.w3.org/TR/turtle/) 
 The files may be compressed. Currently, Europeana supports only the GZip compression algorithm.
+
 
 
 ## Specifying listings of URIs
@@ -86,7 +87,7 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyNTIyMTQ3NiwxNjQ1NTYyODUyLC0zNz
+eyJoaXN0b3J5IjpbLTQ4NDM5Mjk3NSwxNjQ1NTYyODUyLC0zNz
 E4MzU0OTQsMTYyODI2ODkxMSwxODA1MjI2MDA0LC0xMTM3MDAw
 NDcyLC0xNzQyOTUyMTMwLDg4NjY2ODIyNiwtMjA1NzE4MTkwNi
 wtMTA0NDE4ODU5OCwxNTU1MTY0MjUwLC0xOTcwMzc4Mzk1LDEx
