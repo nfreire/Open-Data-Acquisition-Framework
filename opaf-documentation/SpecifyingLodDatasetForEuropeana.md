@@ -43,12 +43,7 @@ Data providers may choose one of the mechanisms, typically used for LOD:
 The mechanism that should be applied to a LOD dataset is indicated by the data provider in the properties of the RDF description of the dataset, using any of the supported vocabularies: [VoID](https://www.w3.org/TR/void/), [DCAT](https://www.w3.org/TR/vocab-dcat/), and [Schema.org](http://schema.org/Dataset).
 
 ## Specifying data dumps
-  
-
-The files that constitute the data dump of the dataset, must contain the RDF data encoded in one the RDF encodings suported by Europeana:  [RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/)
-JSON-LD 
-| Turtle | application/x-turtle | [https://www.w3.org/TR/turtle/](https://www.w3.org/TR/turtle/) |
-
+The files that constitute the data dump of the dataset, must contain the RDF data encoded in one the RDF encodings suported by Europeana:  [RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/), [JSON-LD](https://www.w3.org/TR/json-ld/)  or [Turtle](https://www.w3.org/TR/turtle/) 
 
 ## Specifying listings of URIs
 void:rootResource
@@ -80,11 +75,11 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NzQ0Mzk0NSw4ODY2NjgyMjYsLTIwNT
-cxODE5MDYsLTEwNDQxODg1OTgsMTU1NTE2NDI1MCwtMTk3MDM3
-ODM5NSwxMTUxMjI1MTQ2LC04ODk3NzYxMjIsLTM3NjkwMjI2OS
-wtNTk5MTg2ODEzLDE3MTQ2OTQ2NDIsLTE0MzU5NTQ4NTIsLTEz
-Nzc4MDg4MCwtMjA4Mzk2ODkyNywxODI3MjEwODEzLDIwNDY4Nz
-YxMjAsLTE1OTAxOTcyOTMsMTIxOTY2MjQ1MywyMDU4OTg4Mzk4
-LDE5NjE4NzQ1OF19
+eyJoaXN0b3J5IjpbLTE3NDI5NTIxMzAsODg2NjY4MjI2LC0yMD
+U3MTgxOTA2LC0xMDQ0MTg4NTk4LDE1NTUxNjQyNTAsLTE5NzAz
+NzgzOTUsMTE1MTIyNTE0NiwtODg5Nzc2MTIyLC0zNzY5MDIyNj
+ksLTU5OTE4NjgxMywxNzE0Njk0NjQyLC0xNDM1OTU0ODUyLC0x
+Mzc3ODA4ODAsLTIwODM5Njg5MjcsMTgyNzIxMDgxMywyMDQ2OD
+c2MTIwLC0xNTkwMTk3MjkzLDEyMTk2NjI0NTMsMjA1ODk4ODM5
+OCwxOTYxODc0NThdfQ==
 -->
