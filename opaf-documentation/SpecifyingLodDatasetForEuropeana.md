@@ -44,7 +44,7 @@ The mechanism that should be applied to a LOD dataset is indicated by the data p
 
 ## Specifying data dumps
 The files that constitute the data dump of the dataset, must contain the RDF data encoded in one the RDF encodings suported by Europeana:  [RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/), [JSON-LD](https://www.w3.org/TR/json-ld/)  or [Turtle](https://www.w3.org/TR/turtle/) 
-The format of such dumps is not prescribed, but clients should expect dumps to be in one of the usual RDF serializations (RDF/XML, N-Triples, Turtle), and possibly compressed using GZip or other compression algorithms.
+The files may possibly be compressed. Europeana supports the GZip or other compression algorithms.
 
 ## Specifying listings of URIs
 void:rootResource
@@ -76,7 +76,7 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxMjc4MDMzNCwtMTc0Mjk1MjEzMCw4OD
+eyJoaXN0b3J5IjpbMTc3MzM3OTQ2MCwtMTc0Mjk1MjEzMCw4OD
 Y2NjgyMjYsLTIwNTcxODE5MDYsLTEwNDQxODg1OTgsMTU1NTE2
 NDI1MCwtMTk3MDM3ODM5NSwxMTUxMjI1MTQ2LC04ODk3NzYxMj
 IsLTM3NjkwMjI2OSwtNTk5MTg2ODEzLDE3MTQ2OTQ2NDIsLTE0
