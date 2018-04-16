@@ -44,7 +44,7 @@ The mechanism that should be applied to a LOD dataset is indicated by the data p
 
 ## Specifying dataset distribution
 All three vocabularies are capable of representing the required information for allowing Europeana to automatically obtain a dataset by  downloading a distribution containing all data within the dataset.
-The following table 
+The following table points to the most relevant parts of the vocabularies that specify how a dataset distribution should be 
 
 | Vocabulary| Specification Sections |
 |--|--|
@@ -86,11 +86,11 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUzMDg0NTA2LDE2NDU1NjI4NTIsLTM3MT
-gzNTQ5NCwxNjI4MjY4OTExLDE4MDUyMjYwMDQsLTExMzcwMDA0
-NzIsLTE3NDI5NTIxMzAsODg2NjY4MjI2LC0yMDU3MTgxOTA2LC
-0xMDQ0MTg4NTk4LDE1NTUxNjQyNTAsLTE5NzAzNzgzOTUsMTE1
-MTIyNTE0NiwtODg5Nzc2MTIyLC0zNzY5MDIyNjksLTU5OTE4Nj
-gxMywxNzE0Njk0NjQyLC0xNDM1OTU0ODUyLC0xMzc3ODA4ODAs
-LTIwODM5Njg5MjddfQ==
+eyJoaXN0b3J5IjpbLTMyNTIyMTQ3NiwxNjQ1NTYyODUyLC0zNz
+E4MzU0OTQsMTYyODI2ODkxMSwxODA1MjI2MDA0LC0xMTM3MDAw
+NDcyLC0xNzQyOTUyMTMwLDg4NjY2ODIyNiwtMjA1NzE4MTkwNi
+wtMTA0NDE4ODU5OCwxNTU1MTY0MjUwLC0xOTcwMzc4Mzk1LDEx
+NTEyMjUxNDYsLTg4OTc3NjEyMiwtMzc2OTAyMjY5LC01OTkxOD
+Y4MTMsMTcxNDY5NDY0MiwtMTQzNTk1NDg1MiwtMTM3NzgwODgw
+LC0yMDgzOTY4OTI3XX0=
 -->
