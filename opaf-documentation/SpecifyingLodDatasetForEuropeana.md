@@ -46,9 +46,9 @@ The mechanism that should be applied to a LOD dataset is indicated by the data p
 
 | Vocabulary| Specification Section |
 |--|--|
-|  | application/rdf+xml | https://www.w3.org/TR/rdf-syntax-grammar/
-| JSON-LD | application/ld+son | [https://www.w3.org/TR/json-ld/](https://www.w3.org/TR/json-ld/) 
-| Turtle | application/x-turtle | [https://www.w3.org/TR/turtle/](https://www.w3.org/TR/turtle/) |
+| VoID | https://www.w3.org/TR/rdf-syntax-grammar/
+| DCAT | [https://www.w3.org/TR/json-ld/](https://www.w3.org/TR/json-ld/) 
+| Schema.org | [https://www.w3.org/TR/turtle/](https://www.w3.org/TR/turtle/) |
 
 The files that constitute the data dump of the dataset, must contain the RDF data encoded in one the RDF encodings suported by Europeana:  [RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/), [JSON-LD](https://www.w3.org/TR/json-ld/)  or [Turtle](https://www.w3.org/TR/turtle/) 
 The files may possibly be compressed. Currently, Europeana supports only the GZip compression algorithm.
@@ -83,7 +83,7 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU0Njg0NDkzLC0xMTM3MDAwNDcyLC0xNz
+eyJoaXN0b3J5IjpbODM3MDI3NDY4LC0xMTM3MDAwNDcyLC0xNz
 QyOTUyMTMwLDg4NjY2ODIyNiwtMjA1NzE4MTkwNiwtMTA0NDE4
 ODU5OCwxNTU1MTY0MjUwLC0xOTcwMzc4Mzk1LDExNTEyMjUxND
 YsLTg4OTc3NjEyMiwtMzc2OTAyMjY5LC01OTkxODY4MTMsMTcx
