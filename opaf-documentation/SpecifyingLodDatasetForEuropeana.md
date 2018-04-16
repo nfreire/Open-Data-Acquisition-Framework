@@ -46,7 +46,7 @@ The mechanism that should be applied to a LOD dataset is indicated by the data p
 
 | Vocabulary| Specification Section |
 |--|--|
-| VoID | https://www.w3.org/TR/rdf-syntax-grammar/
+| VoID | ### 3.3 RDF data dumps/
 | DCAT | [https://www.w3.org/TR/json-ld/](https://www.w3.org/TR/json-ld/) 
 | Schema.org | [https://www.w3.org/TR/turtle/](https://www.w3.org/TR/turtle/) |
 
@@ -83,11 +83,11 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODM3MDI3NDY4LC0xMTM3MDAwNDcyLC0xNz
-QyOTUyMTMwLDg4NjY2ODIyNiwtMjA1NzE4MTkwNiwtMTA0NDE4
-ODU5OCwxNTU1MTY0MjUwLC0xOTcwMzc4Mzk1LDExNTEyMjUxND
-YsLTg4OTc3NjEyMiwtMzc2OTAyMjY5LC01OTkxODY4MTMsMTcx
-NDY5NDY0MiwtMTQzNTk1NDg1MiwtMTM3NzgwODgwLC0yMDgzOT
-Y4OTI3LDE4MjcyMTA4MTMsMjA0Njg3NjEyMCwtMTU5MDE5NzI5
-MywxMjE5NjYyNDUzXX0=
+eyJoaXN0b3J5IjpbLTMyMjI5MzUwMiwtMTEzNzAwMDQ3MiwtMT
+c0Mjk1MjEzMCw4ODY2NjgyMjYsLTIwNTcxODE5MDYsLTEwNDQx
+ODg1OTgsMTU1NTE2NDI1MCwtMTk3MDM3ODM5NSwxMTUxMjI1MT
+Q2LC04ODk3NzYxMjIsLTM3NjkwMjI2OSwtNTk5MTg2ODEzLDE3
+MTQ2OTQ2NDIsLTE0MzU5NTQ4NTIsLTEzNzc4MDg4MCwtMjA4Mz
+k2ODkyNywxODI3MjEwODEzLDIwNDY4NzYxMjAsLTE1OTAxOTcy
+OTMsMTIxOTY2MjQ1M119
 -->
