@@ -1,4 +1,4 @@
-## Specifying a linked data dataset for aggregation  by Europeana
+## Specifying a LOD dataset for aggregation  by Europeana
 
 Cultural heritage institutions typically publish linked data that covers more resources than the cultural heritage digital objects provided to Europeana. Therefore, it is necessary that data providers make available linked data descriptions of the datasets for aggregation by Europeana.
 Several vocabularies are available nowadays to describe datasets. Europeana supports three vocabularies which are suitable to fulfill the requirements for aggregation of linked data: [VoID](https://www.w3.org/TR/void/), [DCAT](https://www.w3.org/TR/vocab-dcat/), and [Schema.org](http://schema.org/Dataset).
@@ -29,7 +29,7 @@ The following are the supported mime-types:
 ## Title of the dataset
 The RDF resource of the dataset must have a title, and the title may be provided in several languages. The titles should be in dc:title properties, and the corresponding language in a xml:lang attribute of the title property.
 
-## Specifying the available technical mechanism for harvesting
+## Specifying the available technical mechanism for LOD harvesting
 
 -   The URIs of Ch objects in the dataset may either be specified in a LOD record (referenced from the dataset record with void:rootResource), or dump file(s) in RDF (any well know encoding of RDF).
     
@@ -42,11 +42,11 @@ The RDF resource of the dataset must have a title, and the title may be provided
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxNDY5NDY0MiwtMTQzNTk1NDg1MiwtMT
-M3NzgwODgwLC0yMDgzOTY4OTI3LDE4MjcyMTA4MTMsMjA0Njg3
-NjEyMCwtMTU5MDE5NzI5MywxMjE5NjYyNDUzLDIwNTg5ODgzOT
-gsMTk2MTg3NDU4LC0xNzY1NDY3NDA5LC04MjkzMTgzMDEsMTgz
-NTU2Mjk4LC0xMjY5NTg3NTkzLC0xNDA0NjkxMTcwLDIwNjQzMj
-M4NDQsMTQ2ODQzMDg2Niw5OTc1ODQ2NTgsODkzOTg4MTA4LC0x
-NDkwMjA3NjIxXX0=
+eyJoaXN0b3J5IjpbLTU5OTE4NjgxMywxNzE0Njk0NjQyLC0xND
+M1OTU0ODUyLC0xMzc3ODA4ODAsLTIwODM5Njg5MjcsMTgyNzIx
+MDgxMywyMDQ2ODc2MTIwLC0xNTkwMTk3MjkzLDEyMTk2NjI0NT
+MsMjA1ODk4ODM5OCwxOTYxODc0NTgsLTE3NjU0Njc0MDksLTgy
+OTMxODMwMSwxODM1NTYyOTgsLTEyNjk1ODc1OTMsLTE0MDQ2OT
+ExNzAsMjA2NDMyMzg0NCwxNDY4NDMwODY2LDk5NzU4NDY1OCw4
+OTM5ODgxMDhdfQ==
 -->
