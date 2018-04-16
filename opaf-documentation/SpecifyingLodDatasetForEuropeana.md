@@ -46,7 +46,7 @@ The mechanism that should be applied to a LOD dataset is indicated by the data p
 
 | Vocabulary| Specification Section |
 |--|--|
-| VoID | see section 3.3 RDF data dumps |
+| VoID | see section "[3.3 RDF data dumps](https://www.w3.org/TR/void/#dumps)". |
 | DCAT | [https://www.w3.org/TR/json-ld/](https://www.w3.org/TR/json-ld/) 
 | Schema.org | [https://www.w3.org/TR/turtle/](https://www.w3.org/TR/turtle/) |
 
@@ -83,7 +83,7 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5MDIyNzA5OCwtMTEzNzAwMDQ3MiwtMT
+eyJoaXN0b3J5IjpbMTE3Nzg2NDA3MiwtMTEzNzAwMDQ3MiwtMT
 c0Mjk1MjEzMCw4ODY2NjgyMjYsLTIwNTcxODE5MDYsLTEwNDQx
 ODg1OTgsMTU1NTE2NDI1MCwtMTk3MDM3ODM5NSwxMTUxMjI1MT
 Q2LC04ODk3NzYxMjIsLTM3NjkwMjI2OSwtNTk5MTg2ODEzLDE3
