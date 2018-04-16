@@ -27,7 +27,7 @@ The following are the supported mime-types:
 | Turtle | application/x-turtle | [https://www.w3.org/TR/turtle/](https://www.w3.org/TR/turtle/) |
 
 ## Title of the dataset
-The RDF resource of the dataset must have a dc:title property
+The RDF resource of the dataset must have a dc:title property. 
   
 -  **  
     Must**  have a title property.
@@ -38,11 +38,11 @@ The RDF resource of the dataset must have a dc:title property
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg2NTI2MjgsLTIwODM5Njg5MjcsMTgyNz
-IxMDgxMywyMDQ2ODc2MTIwLC0xNTkwMTk3MjkzLDEyMTk2NjI0
-NTMsMjA1ODk4ODM5OCwxOTYxODc0NTgsLTE3NjU0Njc0MDksLT
-gyOTMxODMwMSwxODM1NTYyOTgsLTEyNjk1ODc1OTMsLTE0MDQ2
-OTExNzAsMjA2NDMyMzg0NCwxNDY4NDMwODY2LDk5NzU4NDY1OC
-w4OTM5ODgxMDgsLTE0OTAyMDc2MjEsNzk3MTA1MTMzLDE2ODY3
-NjcwMl19
+eyJoaXN0b3J5IjpbMTc2Nzg3MTcxNCwtMjA4Mzk2ODkyNywxOD
+I3MjEwODEzLDIwNDY4NzYxMjAsLTE1OTAxOTcyOTMsMTIxOTY2
+MjQ1MywyMDU4OTg4Mzk4LDE5NjE4NzQ1OCwtMTc2NTQ2NzQwOS
+wtODI5MzE4MzAxLDE4MzU1NjI5OCwtMTI2OTU4NzU5MywtMTQw
+NDY5MTE3MCwyMDY0MzIzODQ0LDE0Njg0MzA4NjYsOTk3NTg0Nj
+U4LDg5Mzk4ODEwOCwtMTQ5MDIwNzYyMSw3OTcxMDUxMzMsMTY4
+Njc2NzAyXX0=
 -->
