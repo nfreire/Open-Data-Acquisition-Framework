@@ -26,7 +26,8 @@ The following are the supported mime-types:
 | JSON-LD | application/ld+son | [https://www.w3.org/TR/json-ld/](https://www.w3.org/TR/json-ld/) 
 | Turtle | application/x-turtle | [https://www.w3.org/TR/turtle/](https://www.w3.org/TR/turtle/) |
 
-
+-   **  
+    Must**  have a title property.
 
 -   The URIs of Ch objects in the dataset may either be specified in a LOD record (referenced from the dataset record with void:rootResource), or dump file(s) in RDF (any well know encoding of RDF).
     
@@ -34,10 +35,11 @@ The following are the supported mime-types:
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODM5Njg5MjcsMTgyNzIxMDgxMywyMD
-Q2ODc2MTIwLC0xNTkwMTk3MjkzLDEyMTk2NjI0NTMsMjA1ODk4
-ODM5OCwxOTYxODc0NTgsLTE3NjU0Njc0MDksLTgyOTMxODMwMS
-wxODM1NTYyOTgsLTEyNjk1ODc1OTMsLTE0MDQ2OTExNzAsMjA2
-NDMyMzg0NCwxNDY4NDMwODY2LDk5NzU4NDY1OCw4OTM5ODgxMD
-gsLTE0OTAyMDc2MjEsNzk3MTA1MTMzLDE2ODY3NjcwMl19
+eyJoaXN0b3J5IjpbNTE1MzE5MDE3LC0yMDgzOTY4OTI3LDE4Mj
+cyMTA4MTMsMjA0Njg3NjEyMCwtMTU5MDE5NzI5MywxMjE5NjYy
+NDUzLDIwNTg5ODgzOTgsMTk2MTg3NDU4LC0xNzY1NDY3NDA5LC
+04MjkzMTgzMDEsMTgzNTU2Mjk4LC0xMjY5NTg3NTkzLC0xNDA0
+NjkxMTcwLDIwNjQzMjM4NDQsMTQ2ODQzMDg2Niw5OTc1ODQ2NT
+gsODkzOTg4MTA4LC0xNDkwMjA3NjIxLDc5NzEwNTEzMywxNjg2
+NzY3MDJdfQ==
 -->
