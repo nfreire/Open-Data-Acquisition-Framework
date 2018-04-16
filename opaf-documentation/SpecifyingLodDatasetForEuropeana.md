@@ -46,9 +46,12 @@ The mechanism that should be applied to a LOD dataset is indicated by the data p
   
 
 
-## Specifying data dumps
+## Specifying listings of URIs
+
 
  
+
+# Dataset machine readable license
 
  
 
@@ -66,11 +69,11 @@ The mechanism that should be applied to a LOD dataset is indicated by the data p
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDY3NTg3NTAsMTU1NTE2NDI1MCwtMT
-k3MDM3ODM5NSwxMTUxMjI1MTQ2LC04ODk3NzYxMjIsLTM3Njkw
-MjI2OSwtNTk5MTg2ODEzLDE3MTQ2OTQ2NDIsLTE0MzU5NTQ4NT
-IsLTEzNzc4MDg4MCwtMjA4Mzk2ODkyNywxODI3MjEwODEzLDIw
-NDY4NzYxMjAsLTE1OTAxOTcyOTMsMTIxOTY2MjQ1MywyMDU4OT
-g4Mzk4LDE5NjE4NzQ1OCwtMTc2NTQ2NzQwOSwtODI5MzE4MzAx
-LDE4MzU1NjI5OF19
+eyJoaXN0b3J5IjpbLTgwOTMwNzQ5NywxNTU1MTY0MjUwLC0xOT
+cwMzc4Mzk1LDExNTEyMjUxNDYsLTg4OTc3NjEyMiwtMzc2OTAy
+MjY5LC01OTkxODY4MTMsMTcxNDY5NDY0MiwtMTQzNTk1NDg1Mi
+wtMTM3NzgwODgwLC0yMDgzOTY4OTI3LDE4MjcyMTA4MTMsMjA0
+Njg3NjEyMCwtMTU5MDE5NzI5MywxMjE5NjYyNDUzLDIwNTg5OD
+gzOTgsMTk2MTg3NDU4LC0xNzY1NDY3NDA5LC04MjkzMTgzMDEs
+MTgzNTU2Mjk4XX0=
 -->
