@@ -56,9 +56,7 @@ For the requirements of Europeana, when using dataset distributions, data provid
 
  - The files that constitute the data dump of the dataset, must contain the RDF data encoded in one the RDF encodings suported by Europeana:  [RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/), [JSON-LD](https://www.w3.org/TR/json-ld/)  or [Turtle](https://www.w3.org/TR/turtle/) 
 - The files may be compressed. Currently, Europeana supports only the GZip compression algorithm.
-- When using DCAT or Schema.org, the values of properties dcat:mediaType and schema:encodingFormat should only use mime-types supported by Europeana for RDF encoding: 'application/rdf+xml', application/ld+son | [https://www.w3.org/TR/json-ld/](https://www.w3.org/TR/json-ld/) 
-| Turtle | application/x-turtle
-
+- When using DCAT or Schema.org, the values of properties dcat:mediaType and schema:encodingFormat should only use mime-types supported by Europeana for RDF encoding: 'application/rdf+xml', application/ld+son, or application/x-turtle.
 ## Specifying listings of URIs
 void:rootResource
 The URIs of Ch objects in the dataset may be specified in a LOD record (referenced from the dataset record with void:rootResource), 
@@ -89,11 +87,11 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTMzMzI5MDEsLTIwMjEwNTM4ODcsMT
-Y0NTU2Mjg1MiwtMzcxODM1NDk0LDE2MjgyNjg5MTEsMTgwNTIy
-NjAwNCwtMTEzNzAwMDQ3MiwtMTc0Mjk1MjEzMCw4ODY2NjgyMj
-YsLTIwNTcxODE5MDYsLTEwNDQxODg1OTgsMTU1NTE2NDI1MCwt
-MTk3MDM3ODM5NSwxMTUxMjI1MTQ2LC04ODk3NzYxMjIsLTM3Nj
-kwMjI2OSwtNTk5MTg2ODEzLDE3MTQ2OTQ2NDIsLTE0MzU5NTQ4
-NTIsLTEzNzc4MDg4MF19
+eyJoaXN0b3J5IjpbLTU0MjYwNzkxLC0yMDIxMDUzODg3LDE2ND
+U1NjI4NTIsLTM3MTgzNTQ5NCwxNjI4MjY4OTExLDE4MDUyMjYw
+MDQsLTExMzcwMDA0NzIsLTE3NDI5NTIxMzAsODg2NjY4MjI2LC
+0yMDU3MTgxOTA2LC0xMDQ0MTg4NTk4LDE1NTUxNjQyNTAsLTE5
+NzAzNzgzOTUsMTE1MTIyNTE0NiwtODg5Nzc2MTIyLC0zNzY5MD
+IyNjksLTU5OTE4NjgxMywxNzE0Njk0NjQyLC0xNDM1OTU0ODUy
+LC0xMzc3ODA4ODBdfQ==
 -->
