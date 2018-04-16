@@ -54,8 +54,7 @@ The following table points to the most relevant parts of the vocabularies that s
 
 The files that constitute the data dump of the dataset, must contain the RDF data encoded in one the RDF encodings suported by Europeana:  [RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/), [JSON-LD](https://www.w3.org/TR/json-ld/)  or [Turtle](https://www.w3.org/TR/turtle/) 
 The files may be compressed. Currently, Europeana supports only the GZip compression algorithm.
-
-
+When using DCAT or Schema.org, the 
 
 ## Specifying listings of URIs
 void:rootResource
@@ -87,11 +86,11 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4NDM5Mjk3NSwxNjQ1NTYyODUyLC0zNz
-E4MzU0OTQsMTYyODI2ODkxMSwxODA1MjI2MDA0LC0xMTM3MDAw
-NDcyLC0xNzQyOTUyMTMwLDg4NjY2ODIyNiwtMjA1NzE4MTkwNi
-wtMTA0NDE4ODU5OCwxNTU1MTY0MjUwLC0xOTcwMzc4Mzk1LDEx
-NTEyMjUxNDYsLTg4OTc3NjEyMiwtMzc2OTAyMjY5LC01OTkxOD
-Y4MTMsMTcxNDY5NDY0MiwtMTQzNTk1NDg1MiwtMTM3NzgwODgw
-LC0yMDgzOTY4OTI3XX0=
+eyJoaXN0b3J5IjpbLTE0MzU0MTczNDgsMTY0NTU2Mjg1MiwtMz
+cxODM1NDk0LDE2MjgyNjg5MTEsMTgwNTIyNjAwNCwtMTEzNzAw
+MDQ3MiwtMTc0Mjk1MjEzMCw4ODY2NjgyMjYsLTIwNTcxODE5MD
+YsLTEwNDQxODg1OTgsMTU1NTE2NDI1MCwtMTk3MDM3ODM5NSwx
+MTUxMjI1MTQ2LC04ODk3NzYxMjIsLTM3NjkwMjI2OSwtNTk5MT
+g2ODEzLDE3MTQ2OTQ2NDIsLTE0MzU5NTQ4NTIsLTEzNzc4MDg4
+MCwtMjA4Mzk2ODkyN119
 -->
