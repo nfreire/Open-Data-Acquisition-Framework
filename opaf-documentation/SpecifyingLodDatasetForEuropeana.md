@@ -7,7 +7,7 @@ Data providers may use classes and properties from any of the three vocabularies
  - **Must** be accessible by its URI.
  - **Must** be encoded in RDF.
  - **Must** have a title property.
- - **Must** specify a technical mechanism that allows the dataset to be automatically harvested by Europeana.
+ - **Must** specify the technical mechanism that allows the dataset to be automatically harvested by Europeana.
  - **May** specify a machine readable license that applies to all metadata  
 The following sections will provide further details on each of these points.
 
@@ -33,8 +33,6 @@ The RDF resource of the dataset must have a title, and the title may be provided
 
 
 
--  **  
-    Must**  have a title property.
 
 -   The URIs of Ch objects in the dataset may either be specified in a LOD record (referenced from the dataset record with void:rootResource), or dump file(s) in RDF (any well know encoding of RDF).
     
@@ -42,11 +40,11 @@ The RDF resource of the dataset must have a title, and the title may be provided
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzc4MDg4MCwtMjA4Mzk2ODkyNywxOD
-I3MjEwODEzLDIwNDY4NzYxMjAsLTE1OTAxOTcyOTMsMTIxOTY2
-MjQ1MywyMDU4OTg4Mzk4LDE5NjE4NzQ1OCwtMTc2NTQ2NzQwOS
-wtODI5MzE4MzAxLDE4MzU1NjI5OCwtMTI2OTU4NzU5MywtMTQw
-NDY5MTE3MCwyMDY0MzIzODQ0LDE0Njg0MzA4NjYsOTk3NTg0Nj
-U4LDg5Mzk4ODEwOCwtMTQ5MDIwNzYyMSw3OTcxMDUxMzMsMTY4
-Njc2NzAyXX0=
+eyJoaXN0b3J5IjpbLTE0MzU5NTQ4NTIsLTEzNzc4MDg4MCwtMj
+A4Mzk2ODkyNywxODI3MjEwODEzLDIwNDY4NzYxMjAsLTE1OTAx
+OTcyOTMsMTIxOTY2MjQ1MywyMDU4OTg4Mzk4LDE5NjE4NzQ1OC
+wtMTc2NTQ2NzQwOSwtODI5MzE4MzAxLDE4MzU1NjI5OCwtMTI2
+OTU4NzU5MywtMTQwNDY5MTE3MCwyMDY0MzIzODQ0LDE0Njg0Mz
+A4NjYsOTk3NTg0NjU4LDg5Mzk4ODEwOCwtMTQ5MDIwNzYyMSw3
+OTcxMDUxMzNdfQ==
 -->
