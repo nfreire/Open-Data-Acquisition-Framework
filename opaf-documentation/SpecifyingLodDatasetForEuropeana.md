@@ -26,16 +26,18 @@ The following are the supported mime-types:
 | JSON-LD | application/ld+son | [https://www.w3.org/TR/json-ld/](https://www.w3.org/TR/json-ld/) 
 | Turtle | application/x-turtle | [https://www.w3.org/TR/turtle/](https://www.w3.org/TR/turtle/) |
 
+
+
 -   The URIs of Ch objects in the dataset may either be specified in a LOD record (referenced from the dataset record with void:rootResource), or dump file(s) in RDF (any well know encoding of RDF).
     
 -   When using void:rootResource, the resource must contain dcterms:hasPart properties with the URI’s of the CH objects’s ore:Aggregations (EDM), or URI’s to linked data resources describing CH objects with Schema.org properties.
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNzIxMDgxMywyMDQ2ODc2MTIwLC0xNT
-kwMTk3MjkzLDEyMTk2NjI0NTMsMjA1ODk4ODM5OCwxOTYxODc0
-NTgsLTE3NjU0Njc0MDksLTgyOTMxODMwMSwxODM1NTYyOTgsLT
-EyNjk1ODc1OTMsLTE0MDQ2OTExNzAsMjA2NDMyMzg0NCwxNDY4
-NDMwODY2LDk5NzU4NDY1OCw4OTM5ODgxMDgsLTE0OTAyMDc2Mj
-EsNzk3MTA1MTMzLDE2ODY3NjcwMl19
+eyJoaXN0b3J5IjpbLTIwODM5Njg5MjcsMTgyNzIxMDgxMywyMD
+Q2ODc2MTIwLC0xNTkwMTk3MjkzLDEyMTk2NjI0NTMsMjA1ODk4
+ODM5OCwxOTYxODc0NTgsLTE3NjU0Njc0MDksLTgyOTMxODMwMS
+wxODM1NTYyOTgsLTEyNjk1ODc1OTMsLTE0MDQ2OTExNzAsMjA2
+NDMyMzg0NCwxNDY4NDMwODY2LDk5NzU4NDY1OCw4OTM5ODgxMD
+gsLTE0OTAyMDc2MjEsNzk3MTA1MTMzLDE2ODY3NjcwMl19
 -->
