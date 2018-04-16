@@ -56,7 +56,7 @@ For the requirements of Europeana, when using dataset distributions, data provid
 
  - The files that constitute the data dump of the dataset, must contain the RDF data encoded in one the RDF encodings suported by Europeana:  [RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/), [JSON-LD](https://www.w3.org/TR/json-ld/)  or [Turtle](https://www.w3.org/TR/turtle/) 
 - The files may be compressed. Currently, Europeana supports only the GZip compression algorithm.
-- When using DCAT or Schema.org, the properties dcat:mediaType and schema:encodingFormat should 
+- When using DCAT or Schema.org, the properties dcat:mediaType and schema:encodingFormat should only use contain the mime-type 
 
 ## Specifying listings of URIs
 void:rootResource
@@ -88,11 +88,11 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzYzNDA1NDQsLTIwMjEwNTM4ODcsMT
-Y0NTU2Mjg1MiwtMzcxODM1NDk0LDE2MjgyNjg5MTEsMTgwNTIy
-NjAwNCwtMTEzNzAwMDQ3MiwtMTc0Mjk1MjEzMCw4ODY2NjgyMj
-YsLTIwNTcxODE5MDYsLTEwNDQxODg1OTgsMTU1NTE2NDI1MCwt
-MTk3MDM3ODM5NSwxMTUxMjI1MTQ2LC04ODk3NzYxMjIsLTM3Nj
-kwMjI2OSwtNTk5MTg2ODEzLDE3MTQ2OTQ2NDIsLTE0MzU5NTQ4
-NTIsLTEzNzc4MDg4MF19
+eyJoaXN0b3J5IjpbMjEyODgyNTQxMywtMjAyMTA1Mzg4NywxNj
+Q1NTYyODUyLC0zNzE4MzU0OTQsMTYyODI2ODkxMSwxODA1MjI2
+MDA0LC0xMTM3MDAwNDcyLC0xNzQyOTUyMTMwLDg4NjY2ODIyNi
+wtMjA1NzE4MTkwNiwtMTA0NDE4ODU5OCwxNTU1MTY0MjUwLC0x
+OTcwMzc4Mzk1LDExNTEyMjUxNDYsLTg4OTc3NjEyMiwtMzc2OT
+AyMjY5LC01OTkxODY4MTMsMTcxNDY5NDY0MiwtMTQzNTk1NDg1
+MiwtMTM3NzgwODgwXX0=
 -->
