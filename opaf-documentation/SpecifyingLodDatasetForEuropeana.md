@@ -43,6 +43,8 @@ Data providers may choose one of the mechanisms, typically used for LOD:
 The mechanism that should be applied to a LOD dataset is indicated by the data provider in the properties of the RDF description of the dataset, using any of the supported vocabularies: [VoID](https://www.w3.org/TR/void/), [DCAT](https://www.w3.org/TR/vocab-dcat/), and [Schema.org](http://schema.org/Dataset).
 
 ## Specifying data dumps
+All three vocabularies allow
+
 
 | Vocabulary| Specification Sections |
 |--|--|
@@ -51,7 +53,8 @@ The mechanism that should be applied to a LOD dataset is indicated by the data p
 | Schema.org | see the definition of the property [schema:distribution](http://schema.org/distribution) of the [schema:Dataset](http://schema.org/Dataset) class.<br> see also the class [schema:DataDownload](http://schema.org/DataDownload) and its properties [schema:contentUrl](http://schema.org/contentUrl) and [schema:encodingFormat](http://schema.org/encodingFormat) |
 
 The files that constitute the data dump of the dataset, must contain the RDF data encoded in one the RDF encodings suported by Europeana:  [RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/), [JSON-LD](https://www.w3.org/TR/json-ld/)  or [Turtle](https://www.w3.org/TR/turtle/) 
-The files may possibly be compressed. Currently, Europeana supports only the GZip compression algorithm.
+The files may be compressed. Currently, Europeana supports only the GZip compression algorithm.
+
 
 ## Specifying listings of URIs
 void:rootResource
@@ -83,11 +86,11 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0NTU2Mjg1MiwtMzcxODM1NDk0LDE2Mj
-gyNjg5MTEsMTgwNTIyNjAwNCwtMTEzNzAwMDQ3MiwtMTc0Mjk1
-MjEzMCw4ODY2NjgyMjYsLTIwNTcxODE5MDYsLTEwNDQxODg1OT
-gsMTU1NTE2NDI1MCwtMTk3MDM3ODM5NSwxMTUxMjI1MTQ2LC04
-ODk3NzYxMjIsLTM3NjkwMjI2OSwtNTk5MTg2ODEzLDE3MTQ2OT
-Q2NDIsLTE0MzU5NTQ4NTIsLTEzNzc4MDg4MCwtMjA4Mzk2ODky
-NywxODI3MjEwODEzXX0=
+eyJoaXN0b3J5IjpbLTE0OTg3NDU0NTUsMTY0NTU2Mjg1MiwtMz
+cxODM1NDk0LDE2MjgyNjg5MTEsMTgwNTIyNjAwNCwtMTEzNzAw
+MDQ3MiwtMTc0Mjk1MjEzMCw4ODY2NjgyMjYsLTIwNTcxODE5MD
+YsLTEwNDQxODg1OTgsMTU1NTE2NDI1MCwtMTk3MDM3ODM5NSwx
+MTUxMjI1MTQ2LC04ODk3NzYxMjIsLTM3NjkwMjI2OSwtNTk5MT
+g2ODEzLDE3MTQ2OTQ2NDIsLTE0MzU5NTQ4NTIsLTEzNzc4MDg4
+MCwtMjA4Mzk2ODkyN119
 -->
