@@ -43,10 +43,10 @@ Data providers may choose one of the mechanisms, typically used for LOD:
 The mechanism that should be applied to a LOD dataset is indicated by the data provider in the properties of the RDF description of the dataset, using any of the supported vocabularies: [VoID](https://www.w3.org/TR/void/), [DCAT](https://www.w3.org/TR/vocab-dcat/), and [Schema.org](http://schema.org/Dataset).
 
 ## Specifying data dumps
-
   
 
 
+## Specifying data dumps
 
  
 
@@ -66,11 +66,11 @@ The mechanism that should be applied to a LOD dataset is indicated by the data p
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1NTE2NDI1MCwtMTk3MDM3ODM5NSwxMT
-UxMjI1MTQ2LC04ODk3NzYxMjIsLTM3NjkwMjI2OSwtNTk5MTg2
-ODEzLDE3MTQ2OTQ2NDIsLTE0MzU5NTQ4NTIsLTEzNzc4MDg4MC
-wtMjA4Mzk2ODkyNywxODI3MjEwODEzLDIwNDY4NzYxMjAsLTE1
-OTAxOTcyOTMsMTIxOTY2MjQ1MywyMDU4OTg4Mzk4LDE5NjE4Nz
-Q1OCwtMTc2NTQ2NzQwOSwtODI5MzE4MzAxLDE4MzU1NjI5OCwt
-MTI2OTU4NzU5M119
+eyJoaXN0b3J5IjpbLTE4NDY3NTg3NTAsMTU1NTE2NDI1MCwtMT
+k3MDM3ODM5NSwxMTUxMjI1MTQ2LC04ODk3NzYxMjIsLTM3Njkw
+MjI2OSwtNTk5MTg2ODEzLDE3MTQ2OTQ2NDIsLTE0MzU5NTQ4NT
+IsLTEzNzc4MDg4MCwtMjA4Mzk2ODkyNywxODI3MjEwODEzLDIw
+NDY4NzYxMjAsLTE1OTAxOTcyOTMsMTIxOTY2MjQ1MywyMDU4OT
+g4Mzk4LDE5NjE4NzQ1OCwtMTc2NTQ2NzQwOSwtODI5MzE4MzAx
+LDE4MzU1NjI5OF19
 -->
