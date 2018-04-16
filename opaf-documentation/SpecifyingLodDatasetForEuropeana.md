@@ -45,6 +45,7 @@ The mechanism that should be applied to a LOD dataset is indicated by the data p
 ## Specifying data dumps
 The files that constitute the data dump of the dataset, must contain the RDF data encoded in one the RDF encodings suported by Europeana:  [RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/), [JSON-LD](https://www.w3.org/TR/json-ld/)  or [Turtle](https://www.w3.org/TR/turtle/) 
 
+
 ## Specifying listings of URIs
 void:rootResource
 The URIs of Ch objects in the dataset may be specified in a LOD record (referenced from the dataset record with void:rootResource), 
@@ -75,11 +76,11 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDI5NTIxMzAsODg2NjY4MjI2LC0yMD
-U3MTgxOTA2LC0xMDQ0MTg4NTk4LDE1NTUxNjQyNTAsLTE5NzAz
-NzgzOTUsMTE1MTIyNTE0NiwtODg5Nzc2MTIyLC0zNzY5MDIyNj
-ksLTU5OTE4NjgxMywxNzE0Njk0NjQyLC0xNDM1OTU0ODUyLC0x
-Mzc3ODA4ODAsLTIwODM5Njg5MjcsMTgyNzIxMDgxMywyMDQ2OD
-c2MTIwLC0xNTkwMTk3MjkzLDEyMTk2NjI0NTMsMjA1ODk4ODM5
-OCwxOTYxODc0NThdfQ==
+eyJoaXN0b3J5IjpbLTE3NzU5OTIwLC0xNzQyOTUyMTMwLDg4Nj
+Y2ODIyNiwtMjA1NzE4MTkwNiwtMTA0NDE4ODU5OCwxNTU1MTY0
+MjUwLC0xOTcwMzc4Mzk1LDExNTEyMjUxNDYsLTg4OTc3NjEyMi
+wtMzc2OTAyMjY5LC01OTkxODY4MTMsMTcxNDY5NDY0MiwtMTQz
+NTk1NDg1MiwtMTM3NzgwODgwLC0yMDgzOTY4OTI3LDE4MjcyMT
+A4MTMsMjA0Njg3NjEyMCwtMTU5MDE5NzI5MywxMjE5NjYyNDUz
+LDIwNTg5ODgzOThdfQ==
 -->
