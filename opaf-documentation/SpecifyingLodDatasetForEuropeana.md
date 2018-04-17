@@ -58,8 +58,10 @@ For the requirements of Europeana, when using dataset distributions, data provid
 - The files may be compressed. Currently, Europeana supports only the GZip compression algorithm.
 - When using DCAT or Schema.org, the values of properties dcat:mediaType and schema:encodingFormat should only use mime-types supported by Europeana for RDF encoding: '*application/rdf+xml*', '*application/ld+son*', or '*application/x-turtle*'.
 ## Option B - Specifying a listing of URIs
-Only the VoID](https://www.w3.org/TR/void/) vocabulary includes a property to indicate a RDF resource that lists all the resources within a dataset the required information for allowing Europeana to automatically obtain a dataset by  downloading a distribution containing all data within the dataset.
-The following table points to the most relevant parts of the vocabularies that specify how a dataset distribution can be represented.
+Only the VoID](https://www.w3.org/TR/void/) vocabulary includes a property to indicate a RDF resource that lists all the resources within a dataset.
+
+See section "[3.3 RDF data dumps](https://www.w3.org/TR/void/#dumps)" describing the void:dataDump property
+
 void:rootResource
 The URIs of Ch objects in the dataset may be specified in a LOD record (referenced from the dataset record with void:rootResource), 
 
@@ -89,11 +91,11 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNDE5NzU1OSwtOTUzMzI4MjIzLC01ND
-I2MDc5MSwtMjAyMTA1Mzg4NywxNjQ1NTYyODUyLC0zNzE4MzU0
-OTQsMTYyODI2ODkxMSwxODA1MjI2MDA0LC0xMTM3MDAwNDcyLC
-0xNzQyOTUyMTMwLDg4NjY2ODIyNiwtMjA1NzE4MTkwNiwtMTA0
-NDE4ODU5OCwxNTU1MTY0MjUwLC0xOTcwMzc4Mzk1LDExNTEyMj
-UxNDYsLTg4OTc3NjEyMiwtMzc2OTAyMjY5LC01OTkxODY4MTMs
-MTcxNDY5NDY0Ml19
+eyJoaXN0b3J5IjpbLTEyMjE1NTEyMDEsLTk1MzMyODIyMywtNT
+QyNjA3OTEsLTIwMjEwNTM4ODcsMTY0NTU2Mjg1MiwtMzcxODM1
+NDk0LDE2MjgyNjg5MTEsMTgwNTIyNjAwNCwtMTEzNzAwMDQ3Mi
+wtMTc0Mjk1MjEzMCw4ODY2NjgyMjYsLTIwNTcxODE5MDYsLTEw
+NDQxODg1OTgsMTU1NTE2NDI1MCwtMTk3MDM3ODM5NSwxMTUxMj
+I1MTQ2LC04ODk3NzYxMjIsLTM3NjkwMjI2OSwtNTk5MTg2ODEz
+LDE3MTQ2OTQ2NDJdfQ==
 -->
