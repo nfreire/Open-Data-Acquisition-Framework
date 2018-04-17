@@ -53,14 +53,13 @@ The following table points to the most relevant parts of the vocabularies that s
 | Schema.org | see the definition of the property [schema:distribution](http://schema.org/distribution) of the [schema:Dataset](http://schema.org/Dataset) class.<br> see also the class [schema:DataDownload](http://schema.org/DataDownload) and its properties [schema:contentUrl](http://schema.org/contentUrl) and [schema:encodingFormat](http://schema.org/encodingFormat) |
 
 For the requirements of Europeana, when using dataset distributions, data providers must follow the following points:
-
  - The files that constitute the data dump of the dataset, must contain the RDF data encoded in one the RDF encodings suported by Europeana:  [RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/), [JSON-LD](https://www.w3.org/TR/json-ld/)  or [Turtle](https://www.w3.org/TR/turtle/) 
 - The files may be compressed. Currently, Europeana supports only the GZip compression algorithm.
 - When using DCAT or Schema.org, the values of properties dcat:mediaType and schema:encodingFormat should only use mime-types supported by Europeana for RDF encoding: '*application/rdf+xml*', '*application/ld+son*', or '*application/x-turtle*'.
 ## Option B - Specifying a listing of URIs
 Only the VoID](https://www.w3.org/TR/void/) vocabulary includes a property to indicate a RDF resource that lists all the resources within a dataset.
 VoID defines the property void:rootResource, that may be used by Europeana data providers to provide this information. See section "[3.4 Root resources](https://www.w3.org/TR/void/#root-resource)" describing the  void:rootResource property, for the general use of the property.
-
+For the requirements of Europeana, when using a listing of URIs, data providers must follow the following points:
 
 void:rootResource
 The URIs of Ch objects in the dataset may be specified in a LOD record (referenced from the dataset record with void:rootResource), 
@@ -91,11 +90,11 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTQ4NjYzNDcsLTE0NjM3NTA5NTQsLT
-k1MzMyODIyMywtNTQyNjA3OTEsLTIwMjEwNTM4ODcsMTY0NTU2
-Mjg1MiwtMzcxODM1NDk0LDE2MjgyNjg5MTEsMTgwNTIyNjAwNC
-wtMTEzNzAwMDQ3MiwtMTc0Mjk1MjEzMCw4ODY2NjgyMjYsLTIw
-NTcxODE5MDYsLTEwNDQxODg1OTgsMTU1NTE2NDI1MCwtMTk3MD
-M3ODM5NSwxMTUxMjI1MTQ2LC04ODk3NzYxMjIsLTM3NjkwMjI2
-OSwtNTk5MTg2ODEzXX0=
+eyJoaXN0b3J5IjpbODcxODkyMDQwLC0xNDYzNzUwOTU0LC05NT
+MzMjgyMjMsLTU0MjYwNzkxLC0yMDIxMDUzODg3LDE2NDU1NjI4
+NTIsLTM3MTgzNTQ5NCwxNjI4MjY4OTExLDE4MDUyMjYwMDQsLT
+ExMzcwMDA0NzIsLTE3NDI5NTIxMzAsODg2NjY4MjI2LC0yMDU3
+MTgxOTA2LC0xMDQ0MTg4NTk4LDE1NTUxNjQyNTAsLTE5NzAzNz
+gzOTUsMTE1MTIyNTE0NiwtODg5Nzc2MTIyLC0zNzY5MDIyNjks
+LTU5OTE4NjgxM119
 -->
