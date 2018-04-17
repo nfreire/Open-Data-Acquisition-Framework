@@ -59,8 +59,8 @@ For the requirements of Europeana, when using dataset distributions, data provid
 - When using DCAT or Schema.org, the values of properties dcat:mediaType and schema:encodingFormat should only use mime-types supported by Europeana for RDF encoding: '*application/rdf+xml*', '*application/ld+son*', or '*application/x-turtle*'.
 ## Option B - Specifying a listing of URIs
 Only the VoID](https://www.w3.org/TR/void/) vocabulary includes a property to indicate a RDF resource that lists all the resources within a dataset.
-VoID defines the property void:rootResource
-See section "[3.4 Root resources](https://www.w3.org/TR/void/#root-resource)" describing the void:dataDump property
+VoID defines the property void:rootResource, that may be used 
+See section "[3.4 Root resources](https://www.w3.org/TR/void/#root-resource)" describing the  void:rootResource property
 
 void:rootResource
 The URIs of Ch objects in the dataset may be specified in a LOD record (referenced from the dataset record with void:rootResource), 
@@ -91,11 +91,11 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTIyMDk1ODAsLTE0NjM3NTA5NTQsLT
-k1MzMyODIyMywtNTQyNjA3OTEsLTIwMjEwNTM4ODcsMTY0NTU2
-Mjg1MiwtMzcxODM1NDk0LDE2MjgyNjg5MTEsMTgwNTIyNjAwNC
-wtMTEzNzAwMDQ3MiwtMTc0Mjk1MjEzMCw4ODY2NjgyMjYsLTIw
-NTcxODE5MDYsLTEwNDQxODg1OTgsMTU1NTE2NDI1MCwtMTk3MD
-M3ODM5NSwxMTUxMjI1MTQ2LC04ODk3NzYxMjIsLTM3NjkwMjI2
-OSwtNTk5MTg2ODEzXX0=
+eyJoaXN0b3J5IjpbOTkyODY0NjQyLC0xNDYzNzUwOTU0LC05NT
+MzMjgyMjMsLTU0MjYwNzkxLC0yMDIxMDUzODg3LDE2NDU1NjI4
+NTIsLTM3MTgzNTQ5NCwxNjI4MjY4OTExLDE4MDUyMjYwMDQsLT
+ExMzcwMDA0NzIsLTE3NDI5NTIxMzAsODg2NjY4MjI2LC0yMDU3
+MTgxOTA2LC0xMDQ0MTg4NTk4LDE1NTUxNjQyNTAsLTE5NzAzNz
+gzOTUsMTE1MTIyNTE0NiwtODg5Nzc2MTIyLC0zNzY5MDIyNjks
+LTU5OTE4NjgxM119
 -->
