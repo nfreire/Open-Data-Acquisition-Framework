@@ -59,7 +59,7 @@ For the requirements of Europeana, when using dataset distributions, data provid
 ## Option B - Specifying a listing of URIs
 Only the VoID](https://www.w3.org/TR/void/) vocabulary includes a property to indicate a RDF resource that lists all the resources within a dataset.
 VoID defines the property void:rootResource, that may be used by Europeana data providers to provide this information. See section "[3.4 Root resources](https://www.w3.org/TR/void/#root-resource)" describing the  void:rootResource property, for the general use of the property.
-For the requirements of Europeana, when using a listing of URIs, data providers must provide  a void:rootResource the following points:the resource must contain dcterms:hasPart properties with the URI’s of the CH objects’s ore:Aggregations (EDM)
+For the requirements of Europeana, when using a listing of URIs, data providers must provide a void:rootResource that contains dcterms:hasPart properties with the URI’s of the CH objects’s ore:Aggregations (EDM)
 
 void:rootResource
 The URIs of Ch objects in the dataset may be specified in a LOD record (referenced from the dataset record with void:rootResource), 
@@ -90,11 +90,11 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg1NzAwMSw4NzE4OTIwNDAsLTE0NjM3NT
-A5NTQsLTk1MzMyODIyMywtNTQyNjA3OTEsLTIwMjEwNTM4ODcs
-MTY0NTU2Mjg1MiwtMzcxODM1NDk0LDE2MjgyNjg5MTEsMTgwNT
-IyNjAwNCwtMTEzNzAwMDQ3MiwtMTc0Mjk1MjEzMCw4ODY2Njgy
-MjYsLTIwNTcxODE5MDYsLTEwNDQxODg1OTgsMTU1NTE2NDI1MC
-wtMTk3MDM3ODM5NSwxMTUxMjI1MTQ2LC04ODk3NzYxMjIsLTM3
-NjkwMjI2OV19
+eyJoaXN0b3J5IjpbODMxODY5ODAyLDg3MTg5MjA0MCwtMTQ2Mz
+c1MDk1NCwtOTUzMzI4MjIzLC01NDI2MDc5MSwtMjAyMTA1Mzg4
+NywxNjQ1NTYyODUyLC0zNzE4MzU0OTQsMTYyODI2ODkxMSwxOD
+A1MjI2MDA0LC0xMTM3MDAwNDcyLC0xNzQyOTUyMTMwLDg4NjY2
+ODIyNiwtMjA1NzE4MTkwNiwtMTA0NDE4ODU5OCwxNTU1MTY0Mj
+UwLC0xOTcwMzc4Mzk1LDExNTEyMjUxNDYsLTg4OTc3NjEyMiwt
+Mzc2OTAyMjY5XX0=
 -->
