@@ -58,8 +58,7 @@ For the requirements of Europeana, when using dataset distributions, data provid
 - The files may be compressed. Currently, Europeana supports only the GZip compression algorithm.
 - When using DCAT or Schema.org, the values of properties dcat:mediaType and schema:encodingFormat should only use mime-types supported by Europeana for RDF encoding: '*application/rdf+xml*', '*application/ld+son*', or '*application/x-turtle*'.
 ## Option B - Specifying a listing of URIs
-
-Only the three vocabularies are capable of representing the required information for allowing Europeana to automatically obtain a dataset by  downloading a distribution containing all data within the dataset.
+Only the VoID](https://www.w3.org/TR/void/) vocabulary includes a property to indicate  the required information for allowing Europeana to automatically obtain a dataset by  downloading a distribution containing all data within the dataset.
 The following table points to the most relevant parts of the vocabularies that specify how a dataset distribution can be represented.
 void:rootResource
 The URIs of Ch objects in the dataset may be specified in a LOD record (referenced from the dataset record with void:rootResource), 
@@ -90,7 +89,7 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4MDc2NzEyNiwtOTUzMzI4MjIzLC01ND
+eyJoaXN0b3J5IjpbMjA5MTYzNTI3NywtOTUzMzI4MjIzLC01ND
 I2MDc5MSwtMjAyMTA1Mzg4NywxNjQ1NTYyODUyLC0zNzE4MzU0
 OTQsMTYyODI2ODkxMSwxODA1MjI2MDA0LC0xMTM3MDAwNDcyLC
 0xNzQyOTUyMTMwLDg4NjY2ODIyNiwtMjA1NzE4MTkwNiwtMTA0
