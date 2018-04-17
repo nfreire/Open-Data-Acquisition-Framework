@@ -62,33 +62,13 @@ VoID defines the property void:rootResource, that may be used by Europeana data 
 For the requirements of Europeana, when using a listing of URIs, data providers must provide a void:rootResource that contains dcterms:hasPart properties with the URI’s of the cultural objects’s ore:Aggregations (EDM).
 # Dataset level license
 The RDF resource of the dataset may optionally indicate a license that applies to the whole dataset. If the dataset provides the licensing information, individual metadata records may still override it, by specifying a license as defined in EDM.
- 
-
-specifies it 
-
-pecify a machine readable license that applies to all metadata 
-
- 
-
-
- 
-
--   The URIs of Ch objects in the dataset may either be specified in a LOD record (referenced from the dataset record with void:rootResource), or dump file(s) in RDF (any well know encoding of RDF).
-    
--   When using void:rootResource, the resource must contain dcterms:hasPart properties with the URI’s of the CH objects’s ore:Aggregations (EDM), or URI’s to linked data resources describing CH objects with Schema.org properties.
-
-
--   The URIs of Ch objects in the dataset may either be specified in a LOD record (referenced from the dataset record with void:rootResource), or dump file(s) in RDF (any well know encoding of RDF).
-    
--   When using void:rootResource, the resource must contain dcterms:hasPart properties with the URI’s of the CH objects’s ore:Aggregations (EDM), or URI’s to linked data resources describing CH objects with Schema.org properties.
-    
--   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
+The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODg5MDI4MzksODcxODkyMDQwLC0xND
-YzNzUwOTU0LC05NTMzMjgyMjMsLTU0MjYwNzkxLC0yMDIxMDUz
-ODg3LDE2NDU1NjI4NTIsLTM3MTgzNTQ5NCwxNjI4MjY4OTExLD
-E4MDUyMjYwMDQsLTExMzcwMDA0NzIsLTE3NDI5NTIxMzAsODg2
-NjY4MjI2LC0yMDU3MTgxOTA2LC0xMDQ0MTg4NTk4LDE1NTUxNj
-QyNTAsLTE5NzAzNzgzOTUsMTE1MTIyNTE0NiwtODg5Nzc2MTIy
-LC0zNzY5MDIyNjldfQ==
+eyJoaXN0b3J5IjpbLTE1MjM5ODgyNzEsLTEwODg5MDI4MzksOD
+cxODkyMDQwLC0xNDYzNzUwOTU0LC05NTMzMjgyMjMsLTU0MjYw
+NzkxLC0yMDIxMDUzODg3LDE2NDU1NjI4NTIsLTM3MTgzNTQ5NC
+wxNjI4MjY4OTExLDE4MDUyMjYwMDQsLTExMzcwMDA0NzIsLTE3
+NDI5NTIxMzAsODg2NjY4MjI2LC0yMDU3MTgxOTA2LC0xMDQ0MT
+g4NTk4LDE1NTUxNjQyNTAsLTE5NzAzNzgzOTUsMTE1MTIyNTE0
+NiwtODg5Nzc2MTIyXX0=
 -->
