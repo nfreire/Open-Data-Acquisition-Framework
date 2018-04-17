@@ -42,7 +42,7 @@ Data providers may choose one of the mechanisms, typically used for LOD:
  - Listing of the URIs of all ore:Aggregation resources within the dataset.
 The mechanism that should be applied to a LOD dataset is indicated by the data provider in the properties of the RDF description of the dataset, using any of the supported vocabularies: [VoID](https://www.w3.org/TR/void/), [DCAT](https://www.w3.org/TR/vocab-dcat/), and [Schema.org](http://schema.org/Dataset).
 
-## Specifying dataset distribution
+## Option A - Specifying a dataset downloadable distribution 
 All three vocabularies are capable of representing the required information for allowing Europeana to automatically obtain a dataset by  downloading a distribution containing all data within the dataset.
 The following table points to the most relevant parts of the vocabularies that specify how a dataset distribution can be represented.
 
@@ -57,7 +57,7 @@ For the requirements of Europeana, when using dataset distributions, data provid
  - The files that constitute the data dump of the dataset, must contain the RDF data encoded in one the RDF encodings suported by Europeana:  [RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/), [JSON-LD](https://www.w3.org/TR/json-ld/)  or [Turtle](https://www.w3.org/TR/turtle/) 
 - The files may be compressed. Currently, Europeana supports only the GZip compression algorithm.
 - When using DCAT or Schema.org, the values of properties dcat:mediaType and schema:encodingFormat should only use mime-types supported by Europeana for RDF encoding: 'application/rdf+xml', application/ld+son, or application/x-turtle.
-## Specifying listings of URIs
+## Option B - Specifying listings of URIs
 void:rootResource
 The URIs of Ch objects in the dataset may be specified in a LOD record (referenced from the dataset record with void:rootResource), 
 
@@ -87,11 +87,11 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MjYwNzkxLC0yMDIxMDUzODg3LDE2ND
-U1NjI4NTIsLTM3MTgzNTQ5NCwxNjI4MjY4OTExLDE4MDUyMjYw
-MDQsLTExMzcwMDA0NzIsLTE3NDI5NTIxMzAsODg2NjY4MjI2LC
-0yMDU3MTgxOTA2LC0xMDQ0MTg4NTk4LDE1NTUxNjQyNTAsLTE5
-NzAzNzgzOTUsMTE1MTIyNTE0NiwtODg5Nzc2MTIyLC0zNzY5MD
-IyNjksLTU5OTE4NjgxMywxNzE0Njk0NjQyLC0xNDM1OTU0ODUy
-LC0xMzc3ODA4ODBdfQ==
+eyJoaXN0b3J5IjpbNzk5MjQ1NDA1LC01NDI2MDc5MSwtMjAyMT
+A1Mzg4NywxNjQ1NTYyODUyLC0zNzE4MzU0OTQsMTYyODI2ODkx
+MSwxODA1MjI2MDA0LC0xMTM3MDAwNDcyLC0xNzQyOTUyMTMwLD
+g4NjY2ODIyNiwtMjA1NzE4MTkwNiwtMTA0NDE4ODU5OCwxNTU1
+MTY0MjUwLC0xOTcwMzc4Mzk1LDExNTEyMjUxNDYsLTg4OTc3Nj
+EyMiwtMzc2OTAyMjY5LC01OTkxODY4MTMsMTcxNDY5NDY0Miwt
+MTQzNTk1NDg1Ml19
 -->
