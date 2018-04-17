@@ -60,7 +60,7 @@ For the requirements of Europeana, when using dataset distributions, data provid
 ## Option B - Specifying a listing of URIs
 Only the VoID](https://www.w3.org/TR/void/) vocabulary includes a property to indicate a RDF resource that lists all the resources within a dataset.
 
-See section "[3.3 RDF data dumps](https://www.w3.org/TR/void/#dumps)" describing the void:dataDump property
+See section "[3.4 Root resources](https://www.w3.org/TR/void/#root-resource)" describing the void:dataDump property
 
 void:rootResource
 The URIs of Ch objects in the dataset may be specified in a LOD record (referenced from the dataset record with void:rootResource), 
@@ -91,7 +91,7 @@ pecify a machine readable license that applies to all metadata
     
 -   The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjE1NTEyMDEsLTk1MzMyODIyMywtNT
+eyJoaXN0b3J5IjpbLTE0NjM3NTA5NTQsLTk1MzMyODIyMywtNT
 QyNjA3OTEsLTIwMjEwNTM4ODcsMTY0NTU2Mjg1MiwtMzcxODM1
 NDk0LDE2MjgyNjg5MTEsMTgwNTIyNjAwNCwtMTEzNzAwMDQ3Mi
 wtMTc0Mjk1MjEzMCw4ODY2NjgyMjYsLTIwNTcxODE5MDYsLTEw
