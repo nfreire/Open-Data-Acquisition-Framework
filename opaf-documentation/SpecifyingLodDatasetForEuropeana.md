@@ -134,14 +134,14 @@ The next example contains a RDF description of a dataset available via a  listin
           <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
         </rdf:Description>
 
-
-
+The root resource 
+The next example contains a RDF description of a dataset available via a  listing of URIs. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE4MTE0MTU4LC0xNjUxMzgzMDEwLDQyNj
-kyMDI0OCwtODM2NTc4MzYyLC0xNzkyOTQyMTg1LDEwNDA1MDU3
-NSwtNzM0OTc4MDk4LDE3NzUwNzQxMCw4OTM1NTk5NSwtMjY5Nz
-kxMzUxLC0xMDk1MTY5NzMzLDEyNDMwNjA5NTAsMTg3MDg2ODQ4
-MCwxOTc1MjE2MDk5LDc2ODA4MDgyMywtMTQzNzQ0MzYwNCwtMT
-E4Mzg0MjA5NCwtMTY1OTk4MTMwLDE1MzY0ODE0NywtMjQ4NjAw
-MDI5XX0=
+eyJoaXN0b3J5IjpbLTE1NzI3OTIzNzcsLTE2NTEzODMwMTAsND
+I2OTIwMjQ4LC04MzY1NzgzNjIsLTE3OTI5NDIxODUsMTA0MDUw
+NTc1LC03MzQ5NzgwOTgsMTc3NTA3NDEwLDg5MzU1OTk1LC0yNj
+k3OTEzNTEsLTEwOTUxNjk3MzMsMTI0MzA2MDk1MCwxODcwODY4
+NDgwLDE5NzUyMTYwOTksNzY4MDgwODIzLC0xNDM3NDQzNjA0LC
+0xMTgzODQyMDk0LC0xNjU5OTgxMzAsMTUzNjQ4MTQ3LC0yNDg2
+MDAwMjldfQ==
 -->
