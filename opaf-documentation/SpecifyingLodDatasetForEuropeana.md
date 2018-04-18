@@ -73,7 +73,7 @@ The license for a whole dataset should be specified in dcterms:license or schema
       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description rdf:about="https://data.bibliotheken.nl/examples/dataset/childrenbooks">
           <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset">
-          <ex:editor>
+          <dcat:distribution>
             <rdf:Description>
               <ex:homePage>
                 <rdf:Description rdf:about="http://purl.org/net/dajobe/">
@@ -81,7 +81,7 @@ The license for a whole dataset should be specified in dcterms:license or schema
               </ex:homePage>
               <ex:fullName>Dave Beckett</ex:fullName>
             </rdf:Description>
-          </ex:editor>
+          </dcat:distribution>
           <dcterms:title>Children books</dc:title>
           <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
         </rdf:Description>
@@ -91,11 +91,11 @@ kjlkjh
 çlkjlkj
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3MDg2ODQ4MCwxOTc1MjE2MDk5LDc2OD
-A4MDgyMywtMTQzNzQ0MzYwNCwtMTE4Mzg0MjA5NCwtMTY1OTk4
-MTMwLDE1MzY0ODE0NywtMjQ4NjAwMDI5LC0xNTIzOTg4MjcxLC
-0xMDg4OTAyODM5LDg3MTg5MjA0MCwtMTQ2Mzc1MDk1NCwtOTUz
-MzI4MjIzLC01NDI2MDc5MSwtMjAyMTA1Mzg4NywxNjQ1NTYyOD
-UyLC0zNzE4MzU0OTQsMTYyODI2ODkxMSwxODA1MjI2MDA0LC0x
-MTM3MDAwNDcyXX0=
+eyJoaXN0b3J5IjpbLTMzODIzNDY0MCwxODcwODY4NDgwLDE5Nz
+UyMTYwOTksNzY4MDgwODIzLC0xNDM3NDQzNjA0LC0xMTgzODQy
+MDk0LC0xNjU5OTgxMzAsMTUzNjQ4MTQ3LC0yNDg2MDAwMjksLT
+E1MjM5ODgyNzEsLTEwODg5MDI4MzksODcxODkyMDQwLC0xNDYz
+NzUwOTU0LC05NTMzMjgyMjMsLTU0MjYwNzkxLC0yMDIxMDUzOD
+g3LDE2NDU1NjI4NTIsLTM3MTgzNTQ5NCwxNjI4MjY4OTExLDE4
+MDUyMjYwMDRdfQ==
 -->
