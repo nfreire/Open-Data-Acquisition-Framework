@@ -77,7 +77,7 @@ The license for a whole dataset should be specified in dcterms:license or schema
           <dcat:distribution>
             <rdf:Description rdf:about="http://example.org/dataset_distribution/children_books/">
               <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution">
-              <dcat:downloadURL rdf:resource="http://example.org/downloads/our_dataset_2018-April.rdf.gz"/>
+              <dcat:downloadURL rdf:resource="http://example.org/downloads/our_dataset_2018-April.xml.gz"/>
               <dcat:mediaType>application/rdf+xml</dcat:mediaType> 
             </rdf:Description>
           </dcat:distribution>
@@ -87,11 +87,11 @@ The license for a whole dataset should be specified in dcterms:license or schema
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODkzNTU5OTUsLTI2OTc5MTM1MSwtMTA5NT
-E2OTczMywxMjQzMDYwOTUwLDE4NzA4Njg0ODAsMTk3NTIxNjA5
-OSw3NjgwODA4MjMsLTE0Mzc0NDM2MDQsLTExODM4NDIwOTQsLT
-E2NTk5ODEzMCwxNTM2NDgxNDcsLTI0ODYwMDAyOSwtMTUyMzk4
-ODI3MSwtMTA4ODkwMjgzOSw4NzE4OTIwNDAsLTE0NjM3NTA5NT
-QsLTk1MzMyODIyMywtNTQyNjA3OTEsLTIwMjEwNTM4ODcsMTY0
-NTU2Mjg1Ml19
+eyJoaXN0b3J5IjpbMTUxMjM5NzA1NCw4OTM1NTk5NSwtMjY5Nz
+kxMzUxLC0xMDk1MTY5NzMzLDEyNDMwNjA5NTAsMTg3MDg2ODQ4
+MCwxOTc1MjE2MDk5LDc2ODA4MDgyMywtMTQzNzQ0MzYwNCwtMT
+E4Mzg0MjA5NCwtMTY1OTk4MTMwLDE1MzY0ODE0NywtMjQ4NjAw
+MDI5LC0xNTIzOTg4MjcxLC0xMDg4OTAyODM5LDg3MTg5MjA0MC
+wtMTQ2Mzc1MDk1NCwtOTUzMzI4MjIzLC01NDI2MDc5MSwtMjAy
+MTA1Mzg4N119
 -->
