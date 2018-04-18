@@ -111,13 +111,33 @@ The next example contains the description the same dataset available via a downl
 
  [VoID](https://www.w3.org/TR/void/),, and 
 
+The next example contains a RDF description of a dataset available via a downloadable distribution. In this example, the  [DCAT](https://www.w3.org/TR/vocab-dcat/) vocabulary is used.
+
+    <?xml version="1.0"?>
+    <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/"
+      xmlns:dcat="http://www.w3.org/ns/dcat#"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about="http://example.org/dataset/children_books">
+          <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset">
+          <dcterms:title>Children books</dc:title>
+          <dcat:distribution>
+            <rdf:Description rdf:about="http://example.org/dataset_distribution/children_books/">
+              <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution">
+              <dcat:downloadURL rdf:resource="http://example.org/downloads/our_dataset_2018-April.xml.gz"/>
+              <dcat:mediaType>application/rdf+xml</dcat:mediaType> 
+            </rdf:Description>
+          </dcat:distribution>
+          <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+        </rdf:Description>
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTI5NDIxODUsMTA0MDUwNTc1LC03Mz
-Q5NzgwOTgsMTc3NTA3NDEwLDg5MzU1OTk1LC0yNjk3OTEzNTEs
-LTEwOTUxNjk3MzMsMTI0MzA2MDk1MCwxODcwODY4NDgwLDE5Nz
-UyMTYwOTksNzY4MDgwODIzLC0xNDM3NDQzNjA0LC0xMTgzODQy
-MDk0LC0xNjU5OTgxMzAsMTUzNjQ4MTQ3LC0yNDg2MDAwMjksLT
-E1MjM5ODgyNzEsLTEwODg5MDI4MzksODcxODkyMDQwLC0xNDYz
-NzUwOTU0XX0=
+eyJoaXN0b3J5IjpbLTg1OTI0ODQ3MiwtMTc5Mjk0MjE4NSwxMD
+QwNTA1NzUsLTczNDk3ODA5OCwxNzc1MDc0MTAsODkzNTU5OTUs
+LTI2OTc5MTM1MSwtMTA5NTE2OTczMywxMjQzMDYwOTUwLDE4Nz
+A4Njg0ODAsMTk3NTIxNjA5OSw3NjgwODA4MjMsLTE0Mzc0NDM2
+MDQsLTExODM4NDIwOTQsLTE2NTk5ODEzMCwxNTM2NDgxNDcsLT
+I0ODYwMDAyOSwtMTUyMzk4ODI3MSwtMTA4ODkwMjgzOSw4NzE4
+OTIwNDBdfQ==
 -->
