@@ -109,9 +109,7 @@ The next example contains the description the same dataset available via a downl
 
 ## Example of a dataset available via a listing of URIs
 
- [VoID](https://www.w3.org/TR/void/),, and 
-
-The next example contains a RDF description of a dataset available via a downloadable distribution. In this example, the  [DCAT](https://www.w3.org/TR/vocab-dcat/) vocabulary is used.
+The next example contains a RDF description of a dataset available via a  listing of URIs. In this example, the   [VoID](https://www.w3.org/TR/void/) vocabulary is used.
 
     <?xml version="1.0"?>
     <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/"
@@ -133,11 +131,11 @@ The next example contains a RDF description of a dataset available via a downloa
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1OTI0ODQ3MiwtMTc5Mjk0MjE4NSwxMD
-QwNTA1NzUsLTczNDk3ODA5OCwxNzc1MDc0MTAsODkzNTU5OTUs
-LTI2OTc5MTM1MSwtMTA5NTE2OTczMywxMjQzMDYwOTUwLDE4Nz
-A4Njg0ODAsMTk3NTIxNjA5OSw3NjgwODA4MjMsLTE0Mzc0NDM2
-MDQsLTExODM4NDIwOTQsLTE2NTk5ODEzMCwxNTM2NDgxNDcsLT
-I0ODYwMDAyOSwtMTUyMzk4ODI3MSwtMTA4ODkwMjgzOSw4NzE4
-OTIwNDBdfQ==
+eyJoaXN0b3J5IjpbLTIwNTQ5NjY1MDksLTE3OTI5NDIxODUsMT
+A0MDUwNTc1LC03MzQ5NzgwOTgsMTc3NTA3NDEwLDg5MzU1OTk1
+LC0yNjk3OTEzNTEsLTEwOTUxNjk3MzMsMTI0MzA2MDk1MCwxOD
+cwODY4NDgwLDE5NzUyMTYwOTksNzY4MDgwODIzLC0xNDM3NDQz
+NjA0LC0xMTgzODQyMDk0LC0xNjU5OTgxMzAsMTUzNjQ4MTQ3LC
+0yNDg2MDAwMjksLTE1MjM5ODgyNzEsLTEwODg5MDI4MzksODcx
+ODkyMDQwXX0=
 -->
