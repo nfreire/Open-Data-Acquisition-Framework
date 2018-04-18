@@ -66,7 +66,6 @@ The RDF resource of the dataset may optionally indicate a license that applies t
 The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 
 # Examples
-
 The next example contains a RDF description of a dataset available via a downloadable distribution. In this example, the DCAT vocabulary is used.
 
     <?xml version="1.0"?>
@@ -87,6 +86,7 @@ The next example contains a RDF description of a dataset available via a downloa
         </rdf:Description>
 
 
+The next example contains the same descritpion of the da RDF description of a dataset available via a downloadable distribution. In this example, the DCAT vocabulary is used.
 
     <?xml version="1.0"?>
     <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/"
@@ -108,7 +108,7 @@ The next example contains a RDF description of a dataset available via a downloa
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY2NjUzNDE4LDEwNDA1MDU3NSwtNzM0OT
+eyJoaXN0b3J5IjpbMzgzNTQ3MzY2LDEwNDA1MDU3NSwtNzM0OT
 c4MDk4LDE3NzUwNzQxMCw4OTM1NTk5NSwtMjY5NzkxMzUxLC0x
 MDk1MTY5NzMzLDEyNDMwNjA5NTAsMTg3MDg2ODQ4MCwxOTc1Mj
 E2MDk5LDc2ODA4MDgyMywtMTQzNzQ0MzYwNCwtMTE4Mzg0MjA5
