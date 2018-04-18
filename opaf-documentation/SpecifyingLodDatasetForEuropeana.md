@@ -106,6 +106,8 @@ The next example contains the description the same dataset available via a downl
           <schema:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
         </rdf:Description>
 
+The next example contains the description the same dataset available via a downloadable distribution. In this example, the [VoID](https://www.w3.org/TR/void/) vocabulary is used.
+
     <?xml version="1.0"?>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
              xmlns:void="http://rdfs.org/ns/void#"
@@ -135,11 +137,11 @@ The next example contains a RDF description of a dataset available via a  listin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTIyNTc5MiwtMTY1MTM4MzAxMCw0Mj
-Y5MjAyNDgsLTgzNjU3ODM2MiwtMTc5Mjk0MjE4NSwxMDQwNTA1
-NzUsLTczNDk3ODA5OCwxNzc1MDc0MTAsODkzNTU5OTUsLTI2OT
-c5MTM1MSwtMTA5NTE2OTczMywxMjQzMDYwOTUwLDE4NzA4Njg0
-ODAsMTk3NTIxNjA5OSw3NjgwODA4MjMsLTE0Mzc0NDM2MDQsLT
-ExODM4NDIwOTQsLTE2NTk5ODEzMCwxNTM2NDgxNDcsLTI0ODYw
-MDAyOV19
+eyJoaXN0b3J5IjpbODE4MTE0MTU4LC0xNjUxMzgzMDEwLDQyNj
+kyMDI0OCwtODM2NTc4MzYyLC0xNzkyOTQyMTg1LDEwNDA1MDU3
+NSwtNzM0OTc4MDk4LDE3NzUwNzQxMCw4OTM1NTk5NSwtMjY5Nz
+kxMzUxLC0xMDk1MTY5NzMzLDEyNDMwNjA5NTAsMTg3MDg2ODQ4
+MCwxOTc1MjE2MDk5LDc2ODA4MDgyMywtMTQzNzQ0MzYwNCwtMT
+E4Mzg0MjA5NCwtMTY1OTk4MTMwLDE1MzY0ODE0NywtMjQ4NjAw
+MDI5XX0=
 -->
