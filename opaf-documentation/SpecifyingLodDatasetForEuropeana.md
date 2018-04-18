@@ -67,17 +67,29 @@ The license for a whole dataset should be specified in dcterms:license or schema
 
 # Examples
 
-    khkkjbhhbl
+    <rdf:Description rdf:about="http://www.w3.org/TR/rdf-syntax-grammar">
+      <ex:editor>
+        <rdf:Description>
+          <ex:homePage>
+            <rdf:Description rdf:about="http://purl.org/net/dajobe/">
+            </rdf:Description>
+          </ex:homePage>
+          <ex:fullName>Dave Beckett</ex:fullName>
+        </rdf:Description>
+      </ex:editor>
+      <dc:title>RDF 1.1 XML Syntax</dc:title>
+    </rdf:Description>
+
 kjlkjh
 
 çlkjlkj
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mzc0NDM2MDQsLTExODM4NDIwOTQsLT
-E2NTk5ODEzMCwxNTM2NDgxNDcsLTI0ODYwMDAyOSwtMTUyMzk4
-ODI3MSwtMTA4ODkwMjgzOSw4NzE4OTIwNDAsLTE0NjM3NTA5NT
-QsLTk1MzMyODIyMywtNTQyNjA3OTEsLTIwMjEwNTM4ODcsMTY0
-NTU2Mjg1MiwtMzcxODM1NDk0LDE2MjgyNjg5MTEsMTgwNTIyNj
-AwNCwtMTEzNzAwMDQ3MiwtMTc0Mjk1MjEzMCw4ODY2NjgyMjYs
-LTIwNTcxODE5MDZdfQ==
+eyJoaXN0b3J5IjpbNzY4MDgwODIzLC0xNDM3NDQzNjA0LC0xMT
+gzODQyMDk0LC0xNjU5OTgxMzAsMTUzNjQ4MTQ3LC0yNDg2MDAw
+MjksLTE1MjM5ODgyNzEsLTEwODg5MDI4MzksODcxODkyMDQwLC
+0xNDYzNzUwOTU0LC05NTMzMjgyMjMsLTU0MjYwNzkxLC0yMDIx
+MDUzODg3LDE2NDU1NjI4NTIsLTM3MTgzNTQ5NCwxNjI4MjY4OT
+ExLDE4MDUyMjYwMDQsLTExMzcwMDA0NzIsLTE3NDI5NTIxMzAs
+ODg2NjY4MjI2XX0=
 -->
