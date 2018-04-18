@@ -107,13 +107,13 @@ The next example contains the description the same dataset available via a downl
           <schema:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
         </rdf:Description>
 
-## Example of a dataset available via a root resourc
+## Example of a dataset available via a listing of URIs
 
  [VoID](https://www.w3.org/TR/void/),, and 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzU5MzIxOTYsMTA0MDUwNTc1LC03Mz
+eyJoaXN0b3J5IjpbLTE3OTI5NDIxODUsMTA0MDUwNTc1LC03Mz
 Q5NzgwOTgsMTc3NTA3NDEwLDg5MzU1OTk1LC0yNjk3OTEzNTEs
 LTEwOTUxNjk3MzMsMTI0MzA2MDk1MCwxODcwODY4NDgwLDE5Nz
 UyMTYwOTksNzY4MDgwODIzLC0xNDM3NDQzNjA0LC0xMTgzODQy
