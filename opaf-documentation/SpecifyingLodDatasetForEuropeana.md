@@ -85,7 +85,8 @@ The next example contains a RDF description of a dataset available via a downloa
             </rdf:Description>
           </dcat:distribution>
           <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
-        </rdf:Description>
+      </rdf:Description>
+    </rdf:RDF>
 
 
 The next example contains the description the same dataset available via a downloadable distribution. In this example, the [Schema.org](http://schema.org/Dataset) vocabulary is used.
@@ -104,7 +105,8 @@ The next example contains the description the same dataset available via a downl
             </rdf:Description>
           </schema:distribution>
           <schema:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
-        </rdf:Description>
+      </rdf:Description>
+    </rdf:RDF>
 
 The next example contains the description the same dataset available via a downloadable distribution. In this example, the [VoID](https://www.w3.org/TR/void/) vocabulary is used.
 
@@ -117,7 +119,7 @@ The next example contains the description the same dataset available via a downl
           <dcterms:title>Children books</dc:title>
           <void:void:dataDump rdf:about="http://example.org/downloads/our_dataset_2018-April.xml.gz"/>
           <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
-        </rdf:Description>
+      </rdf:Description>
     </rdf:RDF>
 
 ## Example of a dataset available via a listing of URIs
@@ -149,11 +151,11 @@ The root resource example above that lists the URIs in the dataset can be as fol
       </rdf:Description>
     </rdf:RDF>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDc5MzQ2ODMyLDE2ODA2NzI5ODUsLTE1Nz
-I3OTIzNzcsLTE2NTEzODMwMTAsNDI2OTIwMjQ4LC04MzY1Nzgz
-NjIsLTE3OTI5NDIxODUsMTA0MDUwNTc1LC03MzQ5NzgwOTgsMT
-c3NTA3NDEwLDg5MzU1OTk1LC0yNjk3OTEzNTEsLTEwOTUxNjk3
-MzMsMTI0MzA2MDk1MCwxODcwODY4NDgwLDE5NzUyMTYwOTksNz
-Y4MDgwODIzLC0xNDM3NDQzNjA0LC0xMTgzODQyMDk0LC0xNjU5
-OTgxMzBdfQ==
+eyJoaXN0b3J5IjpbLTEyODA4Mzk4ODgsMTY4MDY3Mjk4NSwtMT
+U3Mjc5MjM3NywtMTY1MTM4MzAxMCw0MjY5MjAyNDgsLTgzNjU3
+ODM2MiwtMTc5Mjk0MjE4NSwxMDQwNTA1NzUsLTczNDk3ODA5OC
+wxNzc1MDc0MTAsODkzNTU5OTUsLTI2OTc5MTM1MSwtMTA5NTE2
+OTczMywxMjQzMDYwOTUwLDE4NzA4Njg0ODAsMTk3NTIxNjA5OS
+w3NjgwODA4MjMsLTE0Mzc0NDM2MDQsLTExODM4NDIwOTQsLTE2
+NTk5ODEzMF19
 -->
