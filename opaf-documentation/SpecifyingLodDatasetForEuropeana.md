@@ -79,12 +79,8 @@ The license for a whole dataset should be specified in dcterms:license or schema
               <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution">
               
               <dcat:downloadURL rdf:resource=""/>  
-                           <dcat:mediaType>_application/rdf+xml_’</dcat:mediaType> rdf:resource="http://www.w3.org/ns/dcat#Distribution">
-              <ex:homePage>
-                <rdf:Description rdf:about="http://purl.org/net/dajobe/">
-                </rdf:Description>
-              </ex:homePage>
-              <ex:fullName>Dave Beckett</ex:fullName>
+                           <dcat:mediaType>_application/rdf+xml_’</dcat:mediaType> 
+              
             </rdf:Description>
           </dcat:distribution>
           <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
@@ -95,7 +91,7 @@ kjlkjh
 çlkjlkj
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjI0MDQxOTgsMTI0MzA2MDk1MCwxOD
+eyJoaXN0b3J5IjpbLTEwOTUxNjk3MzMsMTI0MzA2MDk1MCwxOD
 cwODY4NDgwLDE5NzUyMTYwOTksNzY4MDgwODIzLC0xNDM3NDQz
 NjA0LC0xMTgzODQyMDk0LC0xNjU5OTgxMzAsMTUzNjQ4MTQ3LC
 0yNDg2MDAwMjksLTE1MjM5ODgyNzEsLTEwODg5MDI4MzksODcx
