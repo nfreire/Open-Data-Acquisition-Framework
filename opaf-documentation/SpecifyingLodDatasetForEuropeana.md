@@ -76,6 +76,8 @@ The license for a whole dataset should be specified in dcterms:license or schema
           <dcterms:title>Children books</dc:title>
           <dcat:distribution>
             <rdf:Description rdf:about="https://data.bibliotheken.nl/examples/dataset_distribution/example">
+              <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution">
+              <dcat:downloadURL rdf:resource="http://www.w3.org/ns/dcat#Distribution">
               <ex:homePage>
                 <rdf:Description rdf:about="http://purl.org/net/dajobe/">
                 </rdf:Description>
@@ -91,11 +93,11 @@ kjlkjh
 çlkjlkj
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNTMxNDAyLDEyNDMwNjA5NTAsMTg3MD
-g2ODQ4MCwxOTc1MjE2MDk5LDc2ODA4MDgyMywtMTQzNzQ0MzYw
-NCwtMTE4Mzg0MjA5NCwtMTY1OTk4MTMwLDE1MzY0ODE0NywtMj
-Q4NjAwMDI5LC0xNTIzOTg4MjcxLC0xMDg4OTAyODM5LDg3MTg5
-MjA0MCwtMTQ2Mzc1MDk1NCwtOTUzMzI4MjIzLC01NDI2MDc5MS
-wtMjAyMTA1Mzg4NywxNjQ1NTYyODUyLC0zNzE4MzU0OTQsMTYy
-ODI2ODkxMV19
+eyJoaXN0b3J5IjpbLTEzNjE2NDM0NzcsMTI0MzA2MDk1MCwxOD
+cwODY4NDgwLDE5NzUyMTYwOTksNzY4MDgwODIzLC0xNDM3NDQz
+NjA0LC0xMTgzODQyMDk0LC0xNjU5OTgxMzAsMTUzNjQ4MTQ3LC
+0yNDg2MDAwMjksLTE1MjM5ODgyNzEsLTEwODg5MDI4MzksODcx
+ODkyMDQwLC0xNDYzNzUwOTU0LC05NTMzMjgyMjMsLTU0MjYwNz
+kxLC0yMDIxMDUzODg3LDE2NDU1NjI4NTIsLTM3MTgzNTQ5NCwx
+NjI4MjY4OTExXX0=
 -->
