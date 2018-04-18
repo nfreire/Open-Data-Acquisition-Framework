@@ -64,12 +64,15 @@ For the requirements of Europeana, when using a listing of URIs, data providers 
 # Dataset level license
 The RDF resource of the dataset may optionally indicate a license that applies to the whole dataset. If the dataset provides the licensing information, individual metadata records may still override it, by specifying a license as defined in EDM.
 The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
+
+# Examples
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTk5ODEzMCwxNTM2NDgxNDcsLTI0OD
-YwMDAyOSwtMTUyMzk4ODI3MSwtMTA4ODkwMjgzOSw4NzE4OTIw
-NDAsLTE0NjM3NTA5NTQsLTk1MzMyODIyMywtNTQyNjA3OTEsLT
-IwMjEwNTM4ODcsMTY0NTU2Mjg1MiwtMzcxODM1NDk0LDE2Mjgy
-Njg5MTEsMTgwNTIyNjAwNCwtMTEzNzAwMDQ3MiwtMTc0Mjk1Mj
-EzMCw4ODY2NjgyMjYsLTIwNTcxODE5MDYsLTEwNDQxODg1OTgs
-MTU1NTE2NDI1MF19
+eyJoaXN0b3J5IjpbLTExODM4NDIwOTQsLTE2NTk5ODEzMCwxNT
+M2NDgxNDcsLTI0ODYwMDAyOSwtMTUyMzk4ODI3MSwtMTA4ODkw
+MjgzOSw4NzE4OTIwNDAsLTE0NjM3NTA5NTQsLTk1MzMyODIyMy
+wtNTQyNjA3OTEsLTIwMjEwNTM4ODcsMTY0NTU2Mjg1MiwtMzcx
+ODM1NDk0LDE2MjgyNjg5MTEsMTgwNTIyNjAwNCwtMTEzNzAwMD
+Q3MiwtMTc0Mjk1MjEzMCw4ODY2NjgyMjYsLTIwNTcxODE5MDYs
+LTEwNDQxODg1OThdfQ==
 -->
