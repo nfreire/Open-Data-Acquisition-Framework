@@ -88,7 +88,7 @@ The license for a whole dataset should be specified in dcterms:license or schema
 
     <?xml version="1.0"?>
     <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/"
-      xmlns:dcat="http://www.w3.org/ns/dcat#"
+      xmlns:schema="http://schema.org/"
       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description rdf:about="http://example.org/dataset/children_books">
           <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset">
@@ -106,11 +106,11 @@ The license for a whole dataset should be specified in dcterms:license or schema
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NTA3NDEwLDg5MzU1OTk1LC0yNjk3OT
-EzNTEsLTEwOTUxNjk3MzMsMTI0MzA2MDk1MCwxODcwODY4NDgw
-LDE5NzUyMTYwOTksNzY4MDgwODIzLC0xNDM3NDQzNjA0LC0xMT
-gzODQyMDk0LC0xNjU5OTgxMzAsMTUzNjQ4MTQ3LC0yNDg2MDAw
-MjksLTE1MjM5ODgyNzEsLTEwODg5MDI4MzksODcxODkyMDQwLC
-0xNDYzNzUwOTU0LC05NTMzMjgyMjMsLTU0MjYwNzkxLC0yMDIx
-MDUzODg3XX0=
+eyJoaXN0b3J5IjpbLTczNDk3ODA5OCwxNzc1MDc0MTAsODkzNT
+U5OTUsLTI2OTc5MTM1MSwtMTA5NTE2OTczMywxMjQzMDYwOTUw
+LDE4NzA4Njg0ODAsMTk3NTIxNjA5OSw3NjgwODA4MjMsLTE0Mz
+c0NDM2MDQsLTExODM4NDIwOTQsLTE2NTk5ODEzMCwxNTM2NDgx
+NDcsLTI0ODYwMDAyOSwtMTUyMzk4ODI3MSwtMTA4ODkwMjgzOS
+w4NzE4OTIwNDAsLTE0NjM3NTA5NTQsLTk1MzMyODIyMywtNTQy
+NjA3OTFdfQ==
 -->
