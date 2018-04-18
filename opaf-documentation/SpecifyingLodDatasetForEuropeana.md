@@ -3,14 +3,14 @@
 Cultural heritage institutions typically publish linked data that covers more resources than the cultural heritage digital objects provided to Europeana. Therefore, it is necessary that data providers make available linked data descriptions of the datasets for aggregation by Europeana.
 Several vocabularies are available nowadays to describe datasets. Europeana supports three vocabularies which are suitable to fulfill the requirements for aggregation of linked data: [VoID](https://www.w3.org/TR/void/), [DCAT](https://www.w3.org/TR/vocab-dcat/), and [Schema.org](http://schema.org/Dataset).
 
-Data providers may use classes and properties from any of the three vocabularies to describe each of their datasets. To enable Europeana to aggregate and ingest a dataset, the linked data resource of the dataset...:
+Data providers may use classes and properties from any of the three vocabularies to describe each of their datasets. To enable Europeana to aggregate and ingest a dataset, the linked data resource of the dataset should follow the following points:
  - **Must** be accessible by its URI.
  - **Must** be encoded in RDF.
  - **Must** have a title property.
  - **Must** specify the technical mechanism that allows the dataset to be automatically harvested by Europeana.
  - **May** specify a machine readable license that applies to all metadata  
 
-The following sections will provide further details on each of these points.
+The sections will provide further details on each of these points.
 
 # Dataset RDF resource accessible by its URI
 
@@ -65,11 +65,11 @@ For the requirements of Europeana, when using a listing of URIs, data providers 
 The RDF resource of the dataset may optionally indicate a license that applies to the whole dataset. If the dataset provides the licensing information, individual metadata records may still override it, by specifying a license as defined in EDM.
 The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0ODYwMDAyOSwtMTUyMzk4ODI3MSwtMT
-A4ODkwMjgzOSw4NzE4OTIwNDAsLTE0NjM3NTA5NTQsLTk1MzMy
-ODIyMywtNTQyNjA3OTEsLTIwMjEwNTM4ODcsMTY0NTU2Mjg1Mi
-wtMzcxODM1NDk0LDE2MjgyNjg5MTEsMTgwNTIyNjAwNCwtMTEz
-NzAwMDQ3MiwtMTc0Mjk1MjEzMCw4ODY2NjgyMjYsLTIwNTcxOD
-E5MDYsLTEwNDQxODg1OTgsMTU1NTE2NDI1MCwtMTk3MDM3ODM5
-NSwxMTUxMjI1MTQ2XX0=
+eyJoaXN0b3J5IjpbLTI5NDI5NzM3NywtMjQ4NjAwMDI5LC0xNT
+IzOTg4MjcxLC0xMDg4OTAyODM5LDg3MTg5MjA0MCwtMTQ2Mzc1
+MDk1NCwtOTUzMzI4MjIzLC01NDI2MDc5MSwtMjAyMTA1Mzg4Ny
+wxNjQ1NTYyODUyLC0zNzE4MzU0OTQsMTYyODI2ODkxMSwxODA1
+MjI2MDA0LC0xMTM3MDAwNDcyLC0xNzQyOTUyMTMwLDg4NjY2OD
+IyNiwtMjA1NzE4MTkwNiwtMTA0NDE4ODU5OCwxNTU1MTY0MjUw
+LC0xOTcwMzc4Mzk1XX0=
 -->
