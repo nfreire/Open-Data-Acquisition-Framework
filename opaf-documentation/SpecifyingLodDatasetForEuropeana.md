@@ -117,21 +117,18 @@ The next example contains a RDF description of a dataset available via a  listin
       <rdf:Description rdf:about="http://example.org/dataset/children_books">
           <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset">
           <dcterms:title>Children books</dc:title>
-          <rdf:Description rdf:about="http://example.org/dataset_uris/children_books.xml"/>
-              <dcat:mediaType>application/rdf+xml</dcat:mediaType> 
-            </rdf:Description>
-          </dcat:distribution>
-          <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+          <rdf:rootResource rdf:about="http://example.org/dataset_uris/children_books.xml"/>
+                   <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
         </rdf:Description>
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTEzODMwMTAsNDI2OTIwMjQ4LC04Mz
-Y1NzgzNjIsLTE3OTI5NDIxODUsMTA0MDUwNTc1LC03MzQ5Nzgw
-OTgsMTc3NTA3NDEwLDg5MzU1OTk1LC0yNjk3OTEzNTEsLTEwOT
-UxNjk3MzMsMTI0MzA2MDk1MCwxODcwODY4NDgwLDE5NzUyMTYw
-OTksNzY4MDgwODIzLC0xNDM3NDQzNjA0LC0xMTgzODQyMDk0LC
-0xNjU5OTgxMzAsMTUzNjQ4MTQ3LC0yNDg2MDAwMjksLTE1MjM5
-ODgyNzFdfQ==
+eyJoaXN0b3J5IjpbMTUzMjE2MjgyMCwtMTY1MTM4MzAxMCw0Mj
+Y5MjAyNDgsLTgzNjU3ODM2MiwtMTc5Mjk0MjE4NSwxMDQwNTA1
+NzUsLTczNDk3ODA5OCwxNzc1MDc0MTAsODkzNTU5OTUsLTI2OT
+c5MTM1MSwtMTA5NTE2OTczMywxMjQzMDYwOTUwLDE4NzA4Njg0
+ODAsMTk3NTIxNjA5OSw3NjgwODA4MjMsLTE0Mzc0NDM2MDQsLT
+ExODM4NDIwOTQsLTE2NTk5ODEzMCwxNTM2NDgxNDcsLTI0ODYw
+MDAyOV19
 -->
