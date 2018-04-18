@@ -79,8 +79,7 @@ The license for a whole dataset should be specified in dcterms:license or schema
               <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution">
               
               <dcat:downloadURL rdf:resource=""/>  
-                           <dcat:mediaType>_application/rdf+xml_’</dcat:mediaType> 
-              
+              <dcat:mediaType>application/rdf+xml</dcat:mediaType> 
             </rdf:Description>
           </dcat:distribution>
           <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
@@ -91,11 +90,11 @@ kjlkjh
 çlkjlkj
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTUxNjk3MzMsMTI0MzA2MDk1MCwxOD
-cwODY4NDgwLDE5NzUyMTYwOTksNzY4MDgwODIzLC0xNDM3NDQz
-NjA0LC0xMTgzODQyMDk0LC0xNjU5OTgxMzAsMTUzNjQ4MTQ3LC
-0yNDg2MDAwMjksLTE1MjM5ODgyNzEsLTEwODg5MDI4MzksODcx
-ODkyMDQwLC0xNDYzNzUwOTU0LC05NTMzMjgyMjMsLTU0MjYwNz
-kxLC0yMDIxMDUzODg3LDE2NDU1NjI4NTIsLTM3MTgzNTQ5NCwx
-NjI4MjY4OTExXX0=
+eyJoaXN0b3J5IjpbLTExOTAwMDMyMCwtMTA5NTE2OTczMywxMj
+QzMDYwOTUwLDE4NzA4Njg0ODAsMTk3NTIxNjA5OSw3NjgwODA4
+MjMsLTE0Mzc0NDM2MDQsLTExODM4NDIwOTQsLTE2NTk5ODEzMC
+wxNTM2NDgxNDcsLTI0ODYwMDAyOSwtMTUyMzk4ODI3MSwtMTA4
+ODkwMjgzOSw4NzE4OTIwNDAsLTE0NjM3NTA5NTQsLTk1MzMyOD
+IyMywtNTQyNjA3OTEsLTIwMjEwNTM4ODcsMTY0NTU2Mjg1Miwt
+MzcxODM1NDk0XX0=
 -->
