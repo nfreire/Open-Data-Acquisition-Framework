@@ -76,7 +76,7 @@ The next example contains a RDF description of a dataset available via a downloa
       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description rdf:about="http://example.org/dataset/children_books">
           <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset">
-          <dcterms:title>Children books</dc:title>
+          <dcterms:title>Children books</dcterms:title>
           <dcat:distribution>
             <rdf:Description rdf:about="http://example.org/dataset_distribution/children_books/">
               <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution">
@@ -91,12 +91,10 @@ The next example contains a RDF description of a dataset available via a downloa
 The next example contains the description the same dataset available via a downloadable distribution. In this example, the [Schema.org](http://schema.org/Dataset) vocabulary is used.
 
     <?xml version="1.0"?>
-    <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/"
-      xmlns:schema="http://schema.org/"
-      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:schema="http://schema.org/">
       <rdf:Description rdf:about="http://example.org/dataset/children_books">
           <rdf:type rdf:resource="http://schema.org/Dataset">
-          <schema:title>Children books</:title>
+          <schema:title>Children books</schema:title>
           <schema:distribution>
             <rdf:Description rdf:about="http://example.org/dataset_distribution/children_books/">
               <rdf:type rdf:resource="http://schema.org/DataDownload">
@@ -131,7 +129,7 @@ The next example contains a RDF description of a dataset available via a  listin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyMTk0ODIyMywtMTc5Mjk0MjE4NSwxMD
+eyJoaXN0b3J5IjpbMTI1MDYxMjk0NCwtMTc5Mjk0MjE4NSwxMD
 QwNTA1NzUsLTczNDk3ODA5OCwxNzc1MDc0MTAsODkzNTU5OTUs
 LTI2OTc5MTM1MSwtMTA5NTE2OTczMywxMjQzMDYwOTUwLDE4Nz
 A4Njg0ODAsMTk3NTIxNjA5OSw3NjgwODA4MjMsLTE0Mzc0NDM2
