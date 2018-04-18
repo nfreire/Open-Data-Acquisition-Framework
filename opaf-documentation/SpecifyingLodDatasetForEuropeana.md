@@ -130,7 +130,7 @@ The next example contains a RDF description of a dataset available via a  listin
       <rdf:Description rdf:about="http://example.org/dataset/children_books">
           <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset">
           <dcterms:title>Children books</dc:title>
-          <void:rootResource rdf:about="http://example.org/dataset_uris/children_books"/>
+          <void:rootResource rdf:about="http://example.org/dataset_uri_membership/children_books"/>
           <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
     </rdf:Description>
 
@@ -143,11 +143,11 @@ The root resource example above that lists the URIs in the dataset can be as fol
       <rdf:Description rdf:about="http://example.org/dataset/children_books">
           <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset">
           <dcterms:title>Children books</dc:title>
-          <void:rootResource rdf:about="http://example.org/dataset_uris/children_books.xml"/>
+          <void:rootResource rdf:about="http://example.org/dataset_uri_membership/children_books"/>
           <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
     </rdf:Description>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzM2NDU2MiwxNjgwNjcyOTg1LC0xNT
+eyJoaXN0b3J5IjpbLTEwODA0NzQ4MywxNjgwNjcyOTg1LC0xNT
 cyNzkyMzc3LC0xNjUxMzgzMDEwLDQyNjkyMDI0OCwtODM2NTc4
 MzYyLC0xNzkyOTQyMTg1LDEwNDA1MDU3NSwtNzM0OTc4MDk4LD
 E3NzUwNzQxMCw4OTM1NTk5NSwtMjY5NzkxMzUxLC0xMDk1MTY5
