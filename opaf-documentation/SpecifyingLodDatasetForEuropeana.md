@@ -73,6 +73,7 @@ The license for a whole dataset should be specified in dcterms:license or schema
       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description rdf:about="https://data.bibliotheken.nl/examples/dataset/childrenbooks">
           <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset">
+          <dcterms:title>Children books</dc:title>
           <dcat:distribution>
             <rdf:Description>
               <ex:homePage>
@@ -82,7 +83,6 @@ The license for a whole dataset should be specified in dcterms:license or schema
               <ex:fullName>Dave Beckett</ex:fullName>
             </rdf:Description>
           </dcat:distribution>
-          <dcterms:title>Children books</dc:title>
           <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
         </rdf:Description>
 
@@ -91,7 +91,7 @@ kjlkjh
 çlkjlkj
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzODIzNDY0MCwxODcwODY4NDgwLDE5Nz
+eyJoaXN0b3J5IjpbMTI0MzA2MDk1MCwxODcwODY4NDgwLDE5Nz
 UyMTYwOTksNzY4MDgwODIzLC0xNDM3NDQzNjA0LC0xMTgzODQy
 MDk0LC0xNjU5OTgxMzAsMTUzNjQ4MTQ3LC0yNDg2MDAwMjksLT
 E1MjM5ODgyNzEsLTEwODg5MDI4MzksODcxODkyMDQwLC0xNDYz
