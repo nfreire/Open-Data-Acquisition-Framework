@@ -88,7 +88,7 @@ The next example contains a RDF description of a dataset available via a downloa
         </rdf:Description>
 
 
-The next example contains the same descritpion of the da RDF description of a dataset available via a downloadable distribution. In this example, the DCAT vocabulary is used.
+The next example contains the description the same dataset available via a downloadable distribution. In this example, the Schema.org vocabulary is used.
 
     <?xml version="1.0"?>
     <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/"
@@ -110,7 +110,7 @@ The next example contains the same descritpion of the da RDF description of a da
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjMwMjMyNTYsMTA0MDUwNTc1LC03Mz
+eyJoaXN0b3J5IjpbLTE2NjIyNDIyNDksMTA0MDUwNTc1LC03Mz
 Q5NzgwOTgsMTc3NTA3NDEwLDg5MzU1OTk1LC0yNjk3OTEzNTEs
 LTEwOTUxNjk3MzMsMTI0MzA2MDk1MCwxODcwODY4NDgwLDE5Nz
 UyMTYwOTksNzY4MDgwODIzLC0xNDM3NDQzNjA0LC0xMTgzODQy
