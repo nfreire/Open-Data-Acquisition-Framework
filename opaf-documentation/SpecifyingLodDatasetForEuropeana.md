@@ -68,6 +68,7 @@ The license for a whole dataset should be specified in dcterms:license or schema
 # Examples
 
     <rdf:Description rdf:about="https://data.bibliotheken.nl/examples/dataset/childrenbooks">
+      <rdf:type
       <ex:editor>
         <rdf:Description>
           <ex:homePage>
@@ -86,11 +87,11 @@ kjlkjh
 çlkjlkj
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3NTIxNjA5OSw3NjgwODA4MjMsLTE0Mz
-c0NDM2MDQsLTExODM4NDIwOTQsLTE2NTk5ODEzMCwxNTM2NDgx
-NDcsLTI0ODYwMDAyOSwtMTUyMzk4ODI3MSwtMTA4ODkwMjgzOS
-w4NzE4OTIwNDAsLTE0NjM3NTA5NTQsLTk1MzMyODIyMywtNTQy
-NjA3OTEsLTIwMjEwNTM4ODcsMTY0NTU2Mjg1MiwtMzcxODM1ND
-k0LDE2MjgyNjg5MTEsMTgwNTIyNjAwNCwtMTEzNzAwMDQ3Miwt
-MTc0Mjk1MjEzMF19
+eyJoaXN0b3J5IjpbLTE1NDk0MjAzNzEsMTk3NTIxNjA5OSw3Nj
+gwODA4MjMsLTE0Mzc0NDM2MDQsLTExODM4NDIwOTQsLTE2NTk5
+ODEzMCwxNTM2NDgxNDcsLTI0ODYwMDAyOSwtMTUyMzk4ODI3MS
+wtMTA4ODkwMjgzOSw4NzE4OTIwNDAsLTE0NjM3NTA5NTQsLTk1
+MzMyODIyMywtNTQyNjA3OTEsLTIwMjEwNTM4ODcsMTY0NTU2Mj
+g1MiwtMzcxODM1NDk0LDE2MjgyNjg5MTEsMTgwNTIyNjAwNCwt
+MTEzNzAwMDQ3Ml19
 -->
