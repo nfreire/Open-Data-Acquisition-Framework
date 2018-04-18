@@ -67,7 +67,7 @@ The license for a whole dataset should be specified in dcterms:license or schema
 
 # Examples
 
-The next example contains a RDF description of a dataset available via a downloadable distribution  
+The next example contains a RDF description of a dataset available via a downloadable distribution. In this example, the DCAT vocabulary is used.
 
     <?xml version="1.0"?>
     <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/"
@@ -108,11 +108,11 @@ The next example contains a RDF description of a dataset available via a downloa
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzQ5MzEwNjcsMTA0MDUwNTc1LC03Mz
-Q5NzgwOTgsMTc3NTA3NDEwLDg5MzU1OTk1LC0yNjk3OTEzNTEs
-LTEwOTUxNjk3MzMsMTI0MzA2MDk1MCwxODcwODY4NDgwLDE5Nz
-UyMTYwOTksNzY4MDgwODIzLC0xNDM3NDQzNjA0LC0xMTgzODQy
-MDk0LC0xNjU5OTgxMzAsMTUzNjQ4MTQ3LC0yNDg2MDAwMjksLT
-E1MjM5ODgyNzEsLTEwODg5MDI4MzksODcxODkyMDQwLC0xNDYz
-NzUwOTU0XX0=
+eyJoaXN0b3J5IjpbNTY2NjUzNDE4LDEwNDA1MDU3NSwtNzM0OT
+c4MDk4LDE3NzUwNzQxMCw4OTM1NTk5NSwtMjY5NzkxMzUxLC0x
+MDk1MTY5NzMzLDEyNDMwNjA5NTAsMTg3MDg2ODQ4MCwxOTc1Mj
+E2MDk5LDc2ODA4MDgyMywtMTQzNzQ0MzYwNCwtMTE4Mzg0MjA5
+NCwtMTY1OTk4MTMwLDE1MzY0ODE0NywtMjQ4NjAwMDI5LC0xNT
+IzOTg4MjcxLC0xMDg4OTAyODM5LDg3MTg5MjA0MCwtMTQ2Mzc1
+MDk1NF19
 -->
