@@ -67,31 +67,43 @@ The license for a whole dataset should be specified in dcterms:license or schema
 
 # Examples
 
-    <rdf:Description rdf:about="https://data.bibliotheken.nl/examples/dataset/childrenbooks">
-      <rdf:type rdf:resource="Dataset">
-      <ex:editor>
-        <rdf:Description>
-          <ex:homePage>
-            <rdf:Description rdf:about="http://purl.org/net/dajobe/">
+    <?xml version="1.0"?>
+      <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/"
+      xmlns:dcat="http://www.w3.org/ns/dcat#"
+      xmlns:schema="http://schema.org/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+      xmlns:dctype="http://purl.org/dc/dcmitype/"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+      xmlns:owl="http://www.w3.org/2002/07/owl#"
+      xmlns:v="http://www.w3.org/2006/vcard/ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:vann="http://purl.org/vocab/vann/"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:voaf="http://purl.org/vocommons/voaf#"><rdf:Description rdf:about="https://data.bibliotheken.nl/examples/dataset/childrenbooks">
+          <rdf:type rdf:resource="Dataset">
+          <ex:editor>
+            <rdf:Description>
+              <ex:homePage>
+                <rdf:Description rdf:about="http://purl.org/net/dajobe/">
+                </rdf:Description>
+              </ex:homePage>
+              <ex:fullName>Dave Beckett</ex:fullName>
             </rdf:Description>
-          </ex:homePage>
-          <ex:fullName>Dave Beckett</ex:fullName>
+          </ex:editor>
+          <dcterms:title>Children books</dc:title>
+          <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
         </rdf:Description>
-      </ex:editor>
-      <dcterms:title>Children books</dc:title>
-      <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
-    </rdf:Description>
 
 kjlkjh
 
 çlkjlkj
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5ODE4NzU1NiwxOTc1MjE2MDk5LDc2OD
-A4MDgyMywtMTQzNzQ0MzYwNCwtMTE4Mzg0MjA5NCwtMTY1OTk4
-MTMwLDE1MzY0ODE0NywtMjQ4NjAwMDI5LC0xNTIzOTg4MjcxLC
-0xMDg4OTAyODM5LDg3MTg5MjA0MCwtMTQ2Mzc1MDk1NCwtOTUz
-MzI4MjIzLC01NDI2MDc5MSwtMjAyMTA1Mzg4NywxNjQ1NTYyOD
-UyLC0zNzE4MzU0OTQsMTYyODI2ODkxMSwxODA1MjI2MDA0LC0x
-MTM3MDAwNDcyXX0=
+eyJoaXN0b3J5IjpbLTE5NzYyMDcxMjAsMTk3NTIxNjA5OSw3Nj
+gwODA4MjMsLTE0Mzc0NDM2MDQsLTExODM4NDIwOTQsLTE2NTk5
+ODEzMCwxNTM2NDgxNDcsLTI0ODYwMDAyOSwtMTUyMzk4ODI3MS
+wtMTA4ODkwMjgzOSw4NzE4OTIwNDAsLTE0NjM3NTA5NTQsLTk1
+MzMyODIyMywtNTQyNjA3OTEsLTIwMjEwNTM4ODcsMTY0NTU2Mj
+g1MiwtMzcxODM1NDk0LDE2MjgyNjg5MTEsMTgwNTIyNjAwNCwt
+MTEzNzAwMDQ3Ml19
 -->
