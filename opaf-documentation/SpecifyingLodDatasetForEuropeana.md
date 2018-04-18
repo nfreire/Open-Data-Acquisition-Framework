@@ -91,12 +91,12 @@ The license for a whole dataset should be specified in dcterms:license or schema
       xmlns:schema="http://schema.org/"
       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description rdf:about="http://example.org/dataset/children_books">
-          <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset">
+          <rdf:type rdf:resource="http://schema.org/Dataset">
           <dcterms:title>Children books</dc:title>
-          <dcat:distribution>
+          <schema:distribution>
             <rdf:Description rdf:about="http://example.org/dataset_distribution/children_books/">
-              <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution">
-              <dcat:downloadURL rdf:resource="http://example.org/downloads/our_dataset_2018-April.xml.gz"/>
+              <rdf:type rdf:resource="http://schema.org/DataDownload">
+              <schema:downloadURL rdf:resource="http://example.org/downloads/our_dataset_2018-April.xml.gz"/>
               <dcat:mediaType>application/rdf+xml</dcat:mediaType> 
             </rdf:Description>
           </dcat:distribution>
@@ -106,11 +106,11 @@ The license for a whole dataset should be specified in dcterms:license or schema
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczNDk3ODA5OCwxNzc1MDc0MTAsODkzNT
-U5OTUsLTI2OTc5MTM1MSwtMTA5NTE2OTczMywxMjQzMDYwOTUw
-LDE4NzA4Njg0ODAsMTk3NTIxNjA5OSw3NjgwODA4MjMsLTE0Mz
-c0NDM2MDQsLTExODM4NDIwOTQsLTE2NTk5ODEzMCwxNTM2NDgx
-NDcsLTI0ODYwMDAyOSwtMTUyMzk4ODI3MSwtMTA4ODkwMjgzOS
-w4NzE4OTIwNDAsLTE0NjM3NTA5NTQsLTk1MzMyODIyMywtNTQy
-NjA3OTFdfQ==
+eyJoaXN0b3J5IjpbLTE1NDg4MDY2NTQsLTczNDk3ODA5OCwxNz
+c1MDc0MTAsODkzNTU5OTUsLTI2OTc5MTM1MSwtMTA5NTE2OTcz
+MywxMjQzMDYwOTUwLDE4NzA4Njg0ODAsMTk3NTIxNjA5OSw3Nj
+gwODA4MjMsLTE0Mzc0NDM2MDQsLTExODM4NDIwOTQsLTE2NTk5
+ODEzMCwxNTM2NDgxNDcsLTI0ODYwMDAyOSwtMTUyMzk4ODI3MS
+wtMTA4ODkwMjgzOSw4NzE4OTIwNDAsLTE0NjM3NTA5NTQsLTk1
+MzMyODIyM119
 -->
