@@ -141,16 +141,15 @@ The root resource example above that lists the URIs in the dataset can be as fol
              xmlns:void="http://rdfs.org/ns/void#"
              xmlns:dcterms="http://purl.org/dc/terms/">
       <rdf:Description rdf:about="http://example.org/dataset_uri_membership/children_books">
-          <dcterms:title>Children books</dc:title>
-          <void:rootResource rdf:about="http://example.org/dataset_uri_membership/children_books"/>
-          <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+          <dcterms:hasPart rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+          
     </rdf:Description>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzE4NzQ1ODcsMTY4MDY3Mjk4NSwtMT
-U3Mjc5MjM3NywtMTY1MTM4MzAxMCw0MjY5MjAyNDgsLTgzNjU3
-ODM2MiwtMTc5Mjk0MjE4NSwxMDQwNTA1NzUsLTczNDk3ODA5OC
-wxNzc1MDc0MTAsODkzNTU5OTUsLTI2OTc5MTM1MSwtMTA5NTE2
-OTczMywxMjQzMDYwOTUwLDE4NzA4Njg0ODAsMTk3NTIxNjA5OS
-w3NjgwODA4MjMsLTE0Mzc0NDM2MDQsLTExODM4NDIwOTQsLTE2
-NTk5ODEzMF19
+eyJoaXN0b3J5IjpbMTAwMTkxOTc3MSwxNjgwNjcyOTg1LC0xNT
+cyNzkyMzc3LC0xNjUxMzgzMDEwLDQyNjkyMDI0OCwtODM2NTc4
+MzYyLC0xNzkyOTQyMTg1LDEwNDA1MDU3NSwtNzM0OTc4MDk4LD
+E3NzUwNzQxMCw4OTM1NTk5NSwtMjY5NzkxMzUxLC0xMDk1MTY5
+NzMzLDEyNDMwNjA5NTAsMTg3MDg2ODQ4MCwxOTc1MjE2MDk5LD
+c2ODA4MDgyMywtMTQzNzQ0MzYwNCwtMTE4Mzg0MjA5NCwtMTY1
+OTk4MTMwXX0=
 -->
