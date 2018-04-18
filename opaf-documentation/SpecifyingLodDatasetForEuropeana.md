@@ -118,8 +118,6 @@ The next example contains a RDF description of a dataset available via a  listin
           <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset">
           <dcterms:title>Children books</dc:title>
           <rdf:Description rdf:about="http://example.org/dataset_uris/children_books.xml"/>
-              <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution">
-              <void:rootResource` rdf:resource="http://example.org/downloads/our_dataset_2018-April.xml.gz"/>
               <dcat:mediaType>application/rdf+xml</dcat:mediaType> 
             </rdf:Description>
           </dcat:distribution>
@@ -129,7 +127,7 @@ The next example contains a RDF description of a dataset available via a  listin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjI0Mjc5NjUsNDI2OTIwMjQ4LC04Mz
+eyJoaXN0b3J5IjpbLTE2NTEzODMwMTAsNDI2OTIwMjQ4LC04Mz
 Y1NzgzNjIsLTE3OTI5NDIxODUsMTA0MDUwNTc1LC03MzQ5Nzgw
 OTgsMTc3NTA3NDEwLDg5MzU1OTk1LC0yNjk3OTEzNTEsLTEwOT
 UxNjk3MzMsMTI0MzA2MDk1MCwxODcwODY4NDgwLDE5NzUyMTYw
