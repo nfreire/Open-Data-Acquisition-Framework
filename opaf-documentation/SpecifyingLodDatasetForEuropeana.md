@@ -78,7 +78,7 @@ The license for a whole dataset should be specified in dcterms:license or schema
         </rdf:Description>
       </ex:editor>
       <dcterms:title>Children books</dc:title>
-      <dcterms:license />
+      <dcterms:license resource=""/>
     </rdf:Description>
 
 kjlkjh
@@ -86,11 +86,11 @@ kjlkjh
 çlkjlkj
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDE2NzA3NCw3NjgwODA4MjMsLTE0Mz
-c0NDM2MDQsLTExODM4NDIwOTQsLTE2NTk5ODEzMCwxNTM2NDgx
-NDcsLTI0ODYwMDAyOSwtMTUyMzk4ODI3MSwtMTA4ODkwMjgzOS
-w4NzE4OTIwNDAsLTE0NjM3NTA5NTQsLTk1MzMyODIyMywtNTQy
-NjA3OTEsLTIwMjEwNTM4ODcsMTY0NTU2Mjg1MiwtMzcxODM1ND
-k0LDE2MjgyNjg5MTEsMTgwNTIyNjAwNCwtMTEzNzAwMDQ3Miwt
-MTc0Mjk1MjEzMF19
+eyJoaXN0b3J5IjpbLTg1OTczNzI5LDc2ODA4MDgyMywtMTQzNz
+Q0MzYwNCwtMTE4Mzg0MjA5NCwtMTY1OTk4MTMwLDE1MzY0ODE0
+NywtMjQ4NjAwMDI5LC0xNTIzOTg4MjcxLC0xMDg4OTAyODM5LD
+g3MTg5MjA0MCwtMTQ2Mzc1MDk1NCwtOTUzMzI4MjIzLC01NDI2
+MDc5MSwtMjAyMTA1Mzg4NywxNjQ1NTYyODUyLC0zNzE4MzU0OT
+QsMTYyODI2ODkxMSwxODA1MjI2MDA0LC0xMTM3MDAwNDcyLC0x
+NzQyOTUyMTMwXX0=
 -->
