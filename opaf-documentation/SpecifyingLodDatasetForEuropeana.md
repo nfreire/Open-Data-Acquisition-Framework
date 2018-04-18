@@ -134,10 +134,10 @@ The next example contains a RDF description of a dataset available via a  listin
           <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
         </rdf:Description>
 
-The root resource example above, can be as follows:
-The next example contains a RDF description of a dataset available via a  listing of URIs. 
+The root resource example above that lists the URIs in the dataset can be as follows:
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3NTg0NzcxMSwtMTU3Mjc5MjM3NywtMT
+eyJoaXN0b3J5IjpbMTY4MDY3Mjk4NSwtMTU3Mjc5MjM3NywtMT
 Y1MTM4MzAxMCw0MjY5MjAyNDgsLTgzNjU3ODM2MiwtMTc5Mjk0
 MjE4NSwxMDQwNTA1NzUsLTczNDk3ODA5OCwxNzc1MDc0MTAsOD
 kzNTU5OTUsLTI2OTc5MTM1MSwtMTA5NTE2OTczMywxMjQzMDYw
