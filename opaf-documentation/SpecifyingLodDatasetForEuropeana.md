@@ -130,18 +130,28 @@ The next example contains a RDF description of a dataset available via a  listin
       <rdf:Description rdf:about="http://example.org/dataset/children_books">
           <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset">
           <dcterms:title>Children books</dc:title>
-          <void:rootResource rdf:about="http://example.org/dataset_uris/children_books.xml"/>
+          <void:rootResource rdf:about="http://example.org/dataset_uris/children_books"/>
           <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
-        </rdf:Description>
+    </rdf:Description>
 
 The root resource example above that lists the URIs in the dataset can be as follows:
 
+    <?xml version="1.0"?>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:void="http://rdfs.org/ns/void#"
+             xmlns:dcterms="http://purl.org/dc/terms/">
+      <rdf:Description rdf:about="http://example.org/dataset/children_books">
+          <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset">
+          <dcterms:title>Children books</dc:title>
+          <void:rootResource rdf:about="http://example.org/dataset_uris/children_books.xml"/>
+          <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+    </rdf:Description>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4MDY3Mjk4NSwtMTU3Mjc5MjM3NywtMT
-Y1MTM4MzAxMCw0MjY5MjAyNDgsLTgzNjU3ODM2MiwtMTc5Mjk0
-MjE4NSwxMDQwNTA1NzUsLTczNDk3ODA5OCwxNzc1MDc0MTAsOD
-kzNTU5OTUsLTI2OTc5MTM1MSwtMTA5NTE2OTczMywxMjQzMDYw
-OTUwLDE4NzA4Njg0ODAsMTk3NTIxNjA5OSw3NjgwODA4MjMsLT
-E0Mzc0NDM2MDQsLTExODM4NDIwOTQsLTE2NTk5ODEzMCwxNTM2
-NDgxNDddfQ==
+eyJoaXN0b3J5IjpbLTIwMzM2NDU2MiwxNjgwNjcyOTg1LC0xNT
+cyNzkyMzc3LC0xNjUxMzgzMDEwLDQyNjkyMDI0OCwtODM2NTc4
+MzYyLC0xNzkyOTQyMTg1LDEwNDA1MDU3NSwtNzM0OTc4MDk4LD
+E3NzUwNzQxMCw4OTM1NTk5NSwtMjY5NzkxMzUxLC0xMDk1MTY5
+NzMzLDEyNDMwNjA5NTAsMTg3MDg2ODQ4MCwxOTc1MjE2MDk5LD
+c2ODA4MDgyMywtMTQzNzQ0MzYwNCwtMTE4Mzg0MjA5NCwtMTY1
+OTk4MTMwXX0=
 -->
