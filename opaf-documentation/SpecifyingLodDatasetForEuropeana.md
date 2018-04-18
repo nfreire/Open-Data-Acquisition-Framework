@@ -60,7 +60,7 @@ For the requirements of Europeana, when using dataset distributions, data provid
 ## Option B - Specifying a listing of URIs
 Only the VoID](https://www.w3.org/TR/void/) vocabulary includes a property to indicate a RDF resource that lists all the resources within a dataset.
 VoID defines the property void:rootResource, that may be used by Europeana data providers to provide this information. See section "[3.4 Root resources](https://www.w3.org/TR/void/#root-resource)" describing the  void:rootResource property, for the general use of the property.
-For the requirements of Europeana, when using a listing of URIs, data providers must provide a void:rootResource that contains dcterms:hasPart properties with the URI’s of the cultural objects’s ore:Aggregations (EDM).
+For the requirements of Europeana, when using a listing of URIs, data providers must provide a void:rootResource that contains [dcterms:hasPart](http://dublincore.org/documents/dcmi-terms/#terms-hasPart) properties with the URI’s of the cultural objects’s ore:Aggregations (EDM).
 # Dataset level license
 The RDF resource of the dataset may optionally indicate a license that applies to the whole dataset. If the dataset provides the licensing information, individual metadata records may still override it, by specifying a license as defined in EDM.
 The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
@@ -151,7 +151,7 @@ The root resource example above that lists the URIs in the dataset can be as fol
       </rdf:Description>
     </rdf:RDF>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk3MTUwMDg5LDE2ODA2NzI5ODUsLTE1Nz
+eyJoaXN0b3J5IjpbNzkyMDI0MzkzLDE2ODA2NzI5ODUsLTE1Nz
 I3OTIzNzcsLTE2NTEzODMwMTAsNDI2OTIwMjQ4LC04MzY1Nzgz
 NjIsLTE3OTI5NDIxODUsMTA0MDUwNTc1LC03MzQ5NzgwOTgsMT
 c3NTA3NDEwLDg5MzU1OTk1LC0yNjk3OTEzNTEsLTEwOTUxNjk3
