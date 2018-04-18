@@ -106,6 +106,17 @@ The next example contains the description the same dataset available via a downl
           <schema:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
         </rdf:Description>
 
+    <?xml version="1.0"?>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:void="http://rdfs.org/ns/void#"
+             xmlns:dcterms="http://purl.org/dc/terms/">
+      <rdf:Description rdf:about="http://example.org/dataset/children_books">
+          <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset">
+          <dcterms:title>Children books</dc:title>
+          <void:rootResource rdf:about="http://example.org/dataset_uris/children_books.xml"/>
+          <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+        </rdf:Description>
+
 ## Example of a dataset available via a listing of URIs
 
 The next example contains a RDF description of a dataset available via a  listing of URIs. In this example, the   [VoID](https://www.w3.org/TR/void/) vocabulary is used.
@@ -117,18 +128,18 @@ The next example contains a RDF description of a dataset available via a  listin
       <rdf:Description rdf:about="http://example.org/dataset/children_books">
           <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset">
           <dcterms:title>Children books</dc:title>
-          <rdf:rootResource rdf:about="http://example.org/dataset_uris/children_books.xml"/>
-                   <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+          <void:rootResource rdf:about="http://example.org/dataset_uris/children_books.xml"/>
+          <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
         </rdf:Description>
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzMjE2MjgyMCwtMTY1MTM4MzAxMCw0Mj
-Y5MjAyNDgsLTgzNjU3ODM2MiwtMTc5Mjk0MjE4NSwxMDQwNTA1
-NzUsLTczNDk3ODA5OCwxNzc1MDc0MTAsODkzNTU5OTUsLTI2OT
-c5MTM1MSwtMTA5NTE2OTczMywxMjQzMDYwOTUwLDE4NzA4Njg0
-ODAsMTk3NTIxNjA5OSw3NjgwODA4MjMsLTE0Mzc0NDM2MDQsLT
-ExODM4NDIwOTQsLTE2NTk5ODEzMCwxNTM2NDgxNDcsLTI0ODYw
-MDAyOV19
+eyJoaXN0b3J5IjpbODQxNTczMzEwLC0xNjUxMzgzMDEwLDQyNj
+kyMDI0OCwtODM2NTc4MzYyLC0xNzkyOTQyMTg1LDEwNDA1MDU3
+NSwtNzM0OTc4MDk4LDE3NzUwNzQxMCw4OTM1NTk5NSwtMjY5Nz
+kxMzUxLC0xMDk1MTY5NzMzLDEyNDMwNjA5NTAsMTg3MDg2ODQ4
+MCwxOTc1MjE2MDk5LDc2ODA4MDgyMywtMTQzNzQ0MzYwNCwtMT
+E4Mzg0MjA5NCwtMTY1OTk4MTMwLDE1MzY0ODE0NywtMjQ4NjAw
+MDI5XX0=
 -->
