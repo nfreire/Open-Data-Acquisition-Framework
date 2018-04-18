@@ -96,8 +96,8 @@ The license for a whole dataset should be specified in dcterms:license or schema
           <schema:distribution>
             <rdf:Description rdf:about="http://example.org/dataset_distribution/children_books/">
               <rdf:type rdf:resource="http://schema.org/DataDownload">
-              <schema:downloadURL rdf:resource="http://example.org/downloads/our_dataset_2018-April.xml.gz"/>
-              <dcat:mediaType>application/rdf+xml</dcat:mediaType> 
+              <schema:contentUrl rdf:resource="http://example.org/downloads/our_dataset_2018-April.xml.gz"/>
+              <schema:mediaType>application/rdf+xml</dcat:mediaType> 
             </rdf:Description>
           </dcat:distribution>
           <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
@@ -106,7 +106,7 @@ The license for a whole dataset should be specified in dcterms:license or schema
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDg4MDY2NTQsLTczNDk3ODA5OCwxNz
+eyJoaXN0b3J5IjpbLTE3NDg2MTAyMDIsLTczNDk3ODA5OCwxNz
 c1MDc0MTAsODkzNTU5OTUsLTI2OTc5MTM1MSwtMTA5NTE2OTcz
 MywxMjQzMDYwOTUwLDE4NzA4Njg0ODAsMTk3NTIxNjA5OSw3Nj
 gwODA4MjMsLTE0Mzc0NDM2MDQsLTExODM4NDIwOTQsLTE2NTk5
