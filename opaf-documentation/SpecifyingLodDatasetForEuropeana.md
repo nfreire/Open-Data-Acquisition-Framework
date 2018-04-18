@@ -71,9 +71,10 @@ This section contains illustrative examples of RDF descriptions of datasets, pre
 The next example contains a RDF description of a dataset available via a downloadable distribution. In this example, the  [DCAT](https://www.w3.org/TR/vocab-dcat/) vocabulary is used.
 
     <?xml version="1.0"?>
-    <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/"
-      xmlns:dcat="http://www.w3.org/ns/dcat#"
-      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:dcat="http://www.w3.org/ns/dcat#"
+      >
       <rdf:Description rdf:about="http://example.org/dataset/children_books">
           <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset">
           <dcterms:title>Children books</dcterms:title>
@@ -91,7 +92,8 @@ The next example contains a RDF description of a dataset available via a downloa
 The next example contains the description the same dataset available via a downloadable distribution. In this example, the [Schema.org](http://schema.org/Dataset) vocabulary is used.
 
     <?xml version="1.0"?>
-    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:schema="http://schema.org/">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+             xmlns:schema="http://schema.org/">
       <rdf:Description rdf:about="http://example.org/dataset/children_books">
           <rdf:type rdf:resource="http://schema.org/Dataset">
           <schema:title>Children books</schema:title>
@@ -129,7 +131,7 @@ The next example contains a RDF description of a dataset available via a  listin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1MDYxMjk0NCwtMTc5Mjk0MjE4NSwxMD
+eyJoaXN0b3J5IjpbMTk0NjAyNzI2NCwtMTc5Mjk0MjE4NSwxMD
 QwNTA1NzUsLTczNDk3ODA5OCwxNzc1MDc0MTAsODkzNTU5OTUs
 LTI2OTc5MTM1MSwtMTA5NTE2OTczMywxMjQzMDYwOTUwLDE4Nz
 A4Njg0ODAsMTk3NTIxNjA5OSw3NjgwODA4MjMsLTE0Mzc0NDM2
