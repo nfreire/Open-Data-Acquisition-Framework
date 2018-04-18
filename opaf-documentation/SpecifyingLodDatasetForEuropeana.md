@@ -146,16 +146,16 @@ The root resource example above that lists the URIs in the dataset can be as fol
              xmlns:dcterms="http://purl.org/dc/terms/">
       <rdf:Description rdf:about="http://example.org/dataset_uri_membership/children_books">
           <dcterms:hasPart rdf:resource="http://example.org/Aggregation/cho_abc"/>
-          <dcterms:hasPart rdf:resource=""/>
-          <dcterms:hasPart rdf:resource=""/>     
+          <dcterms:hasPart rdf:resource="http://example.org/Aggregation/cho_def"/>
+          <dcterms:hasPart rdf:resource="http://example.org/Aggregation/cho_zyz"/>     
       </rdf:Description>
     </rdf:RDF>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4ODA0MDIwOSwxNjgwNjcyOTg1LC0xNT
-cyNzkyMzc3LC0xNjUxMzgzMDEwLDQyNjkyMDI0OCwtODM2NTc4
-MzYyLC0xNzkyOTQyMTg1LDEwNDA1MDU3NSwtNzM0OTc4MDk4LD
-E3NzUwNzQxMCw4OTM1NTk5NSwtMjY5NzkxMzUxLC0xMDk1MTY5
-NzMzLDEyNDMwNjA5NTAsMTg3MDg2ODQ4MCwxOTc1MjE2MDk5LD
-c2ODA4MDgyMywtMTQzNzQ0MzYwNCwtMTE4Mzg0MjA5NCwtMTY1
-OTk4MTMwXX0=
+eyJoaXN0b3J5IjpbNDk3MTUwMDg5LDE2ODA2NzI5ODUsLTE1Nz
+I3OTIzNzcsLTE2NTEzODMwMTAsNDI2OTIwMjQ4LC04MzY1Nzgz
+NjIsLTE3OTI5NDIxODUsMTA0MDUwNTc1LC03MzQ5NzgwOTgsMT
+c3NTA3NDEwLDg5MzU1OTk1LC0yNjk3OTEzNTEsLTEwOTUxNjk3
+MzMsMTI0MzA2MDk1MCwxODcwODY4NDgwLDE5NzUyMTYwOTksNz
+Y4MDgwODIzLC0xNDM3NDQzNjA0LC0xMTgzODQyMDk0LC0xNjU5
+OTgxMzBdfQ==
 -->
