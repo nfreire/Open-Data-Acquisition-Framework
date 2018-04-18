@@ -120,7 +120,7 @@ The next example contains a RDF description of a dataset available via a  listin
           <dcat:distribution>
             <rdf:Description rdf:about="http://example.org/dataset_distribution/children_books/">
               <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution">
-              <dcat:downloadURL rdf:resource="http://example.org/downloads/our_dataset_2018-April.xml.gz"/>
+              <void:rootResource` rdf:resource="http://example.org/downloads/our_dataset_2018-April.xml.gz"/>
               <dcat:mediaType>application/rdf+xml</dcat:mediaType> 
             </rdf:Description>
           </dcat:distribution>
@@ -130,11 +130,11 @@ The next example contains a RDF description of a dataset available via a  listin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI2OTIwMjQ4LC04MzY1NzgzNjIsLTE3OT
-I5NDIxODUsMTA0MDUwNTc1LC03MzQ5NzgwOTgsMTc3NTA3NDEw
-LDg5MzU1OTk1LC0yNjk3OTEzNTEsLTEwOTUxNjk3MzMsMTI0Mz
-A2MDk1MCwxODcwODY4NDgwLDE5NzUyMTYwOTksNzY4MDgwODIz
-LC0xNDM3NDQzNjA0LC0xMTgzODQyMDk0LC0xNjU5OTgxMzAsMT
-UzNjQ4MTQ3LC0yNDg2MDAwMjksLTE1MjM5ODgyNzEsLTEwODg5
-MDI4MzldfQ==
+eyJoaXN0b3J5IjpbMTA4MzE2MzMzLDQyNjkyMDI0OCwtODM2NT
+c4MzYyLC0xNzkyOTQyMTg1LDEwNDA1MDU3NSwtNzM0OTc4MDk4
+LDE3NzUwNzQxMCw4OTM1NTk5NSwtMjY5NzkxMzUxLC0xMDk1MT
+Y5NzMzLDEyNDMwNjA5NTAsMTg3MDg2ODQ4MCwxOTc1MjE2MDk5
+LDc2ODA4MDgyMywtMTQzNzQ0MzYwNCwtMTE4Mzg0MjA5NCwtMT
+Y1OTk4MTMwLDE1MzY0ODE0NywtMjQ4NjAwMDI5LC0xNTIzOTg4
+MjcxXX0=
 -->
