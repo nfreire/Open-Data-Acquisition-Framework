@@ -141,11 +141,12 @@ The root resource example above that lists the URIs in the dataset can be as fol
              xmlns:void="http://rdfs.org/ns/void#"
              xmlns:dcterms="http://purl.org/dc/terms/">
       <rdf:Description rdf:about="http://example.org/dataset_uri_membership/children_books">
-          <dcterms:hasPart rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
-          
+          <dcterms:hasPart rdf:resource=""/>
+          <dcterms:hasPart rdf:resource=""/>
+          <dcterms:hasPart rdf:resource=""/>     
     </rdf:Description>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMTkxOTc3MSwxNjgwNjcyOTg1LC0xNT
+eyJoaXN0b3J5IjpbMTMyOTg0ODIwNywxNjgwNjcyOTg1LC0xNT
 cyNzkyMzc3LC0xNjUxMzgzMDEwLDQyNjkyMDI0OCwtODM2NTc4
 MzYyLC0xNzkyOTQyMTg1LDEwNDA1MDU3NSwtNzM0OTc4MDk4LD
 E3NzUwNzQxMCw4OTM1NTk5NSwtMjY5NzkxMzUxLC0xMDk1MTY5
