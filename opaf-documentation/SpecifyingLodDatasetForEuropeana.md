@@ -96,7 +96,7 @@ The next example contains the description the same dataset available via a downl
       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description rdf:about="http://example.org/dataset/children_books">
           <rdf:type rdf:resource="http://schema.org/Dataset">
-          <dcterms:title>Children books</dc:title>
+          <schema:title>Children books</:title>
           <schema:distribution>
             <rdf:Description rdf:about="http://example.org/dataset_distribution/children_books/">
               <rdf:type rdf:resource="http://schema.org/DataDownload">
@@ -113,7 +113,7 @@ The next example contains a RDF description of a dataset available via a  listin
 
     <?xml version="1.0"?>
     <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/"
-      xmlns:dcat="http://www.w3.org/ns/dcat#"
+      xmlns:void="http://rdfs.org/ns/void#"
       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description rdf:about="http://example.org/dataset/children_books">
           <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset">
@@ -131,11 +131,11 @@ The next example contains a RDF description of a dataset available via a  listin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTQ5NjY1MDksLTE3OTI5NDIxODUsMT
-A0MDUwNTc1LC03MzQ5NzgwOTgsMTc3NTA3NDEwLDg5MzU1OTk1
-LC0yNjk3OTEzNTEsLTEwOTUxNjk3MzMsMTI0MzA2MDk1MCwxOD
-cwODY4NDgwLDE5NzUyMTYwOTksNzY4MDgwODIzLC0xNDM3NDQz
-NjA0LC0xMTgzODQyMDk0LC0xNjU5OTgxMzAsMTUzNjQ4MTQ3LC
-0yNDg2MDAwMjksLTE1MjM5ODgyNzEsLTEwODg5MDI4MzksODcx
-ODkyMDQwXX0=
+eyJoaXN0b3J5IjpbLTkyMTk0ODIyMywtMTc5Mjk0MjE4NSwxMD
+QwNTA1NzUsLTczNDk3ODA5OCwxNzc1MDc0MTAsODkzNTU5OTUs
+LTI2OTc5MTM1MSwtMTA5NTE2OTczMywxMjQzMDYwOTUwLDE4Nz
+A4Njg0ODAsMTk3NTIxNjA5OSw3NjgwODA4MjMsLTE0Mzc0NDM2
+MDQsLTExODM4NDIwOTQsLTE2NTk5ODEzMCwxNTM2NDgxNDcsLT
+I0ODYwMDAyOSwtMTUyMzk4ODI3MSwtMTA4ODkwMjgzOSw4NzE4
+OTIwNDBdfQ==
 -->
