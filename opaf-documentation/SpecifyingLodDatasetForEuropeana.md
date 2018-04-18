@@ -32,7 +32,7 @@ The following are the supported mime-types:
 
 # Title of the dataset
 
-The RDF resource of the dataset must have a title, and the title may be provided in several languages. The titles should be in dc:title properties, schema:title , dcat? and the corresponding language in a xml:lang attribute of the title property.
+The RDF resource of the dataset must have a title, and the title may be provided in several languages. The titles should be in dc:title properties, schema:title , or dcterdcat? and the corresponding language in a xml:lang attribute of the title property.
 
 # Specifying the technical mechanism for LOD harvesting
 
@@ -65,11 +65,11 @@ For the requirements of Europeana, when using a listing of URIs, data providers 
 The RDF resource of the dataset may optionally indicate a license that applies to the whole dataset. If the dataset provides the licensing information, individual metadata records may still override it, by specifying a license as defined in EDM.
 The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNjQ4MTQ3LC0yNDg2MDAwMjksLTE1Mj
-M5ODgyNzEsLTEwODg5MDI4MzksODcxODkyMDQwLC0xNDYzNzUw
-OTU0LC05NTMzMjgyMjMsLTU0MjYwNzkxLC0yMDIxMDUzODg3LD
-E2NDU1NjI4NTIsLTM3MTgzNTQ5NCwxNjI4MjY4OTExLDE4MDUy
-MjYwMDQsLTExMzcwMDA0NzIsLTE3NDI5NTIxMzAsODg2NjY4Mj
-I2LC0yMDU3MTgxOTA2LC0xMDQ0MTg4NTk4LDE1NTUxNjQyNTAs
-LTE5NzAzNzgzOTVdfQ==
+eyJoaXN0b3J5IjpbLTEwNTkyODgyMzIsMTUzNjQ4MTQ3LC0yND
+g2MDAwMjksLTE1MjM5ODgyNzEsLTEwODg5MDI4MzksODcxODky
+MDQwLC0xNDYzNzUwOTU0LC05NTMzMjgyMjMsLTU0MjYwNzkxLC
+0yMDIxMDUzODg3LDE2NDU1NjI4NTIsLTM3MTgzNTQ5NCwxNjI4
+MjY4OTExLDE4MDUyMjYwMDQsLTExMzcwMDA0NzIsLTE3NDI5NT
+IxMzAsODg2NjY4MjI2LC0yMDU3MTgxOTA2LC0xMDQ0MTg4NTk4
+LDE1NTUxNjQyNTBdfQ==
 -->
