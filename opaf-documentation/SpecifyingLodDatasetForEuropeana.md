@@ -67,6 +67,7 @@ The license for a whole dataset should be specified in dcterms:license or schema
 
 # Examples
 
+A dataset available via a downloadable distribution ( 
 
     <?xml version="1.0"?>
     <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/"
@@ -107,7 +108,7 @@ The license for a whole dataset should be specified in dcterms:license or schema
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxOTk2OTcyNSwxMDQwNTA1NzUsLTczND
+eyJoaXN0b3J5IjpbMjAxMjczOTIzOCwxMDQwNTA1NzUsLTczND
 k3ODA5OCwxNzc1MDc0MTAsODkzNTU5OTUsLTI2OTc5MTM1MSwt
 MTA5NTE2OTczMywxMjQzMDYwOTUwLDE4NzA4Njg0ODAsMTk3NT
 IxNjA5OSw3NjgwODA4MjMsLTE0Mzc0NDM2MDQsLTExODM4NDIw
