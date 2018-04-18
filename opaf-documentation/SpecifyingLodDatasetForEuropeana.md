@@ -97,20 +97,20 @@ The license for a whole dataset should be specified in dcterms:license or schema
             <rdf:Description rdf:about="http://example.org/dataset_distribution/children_books/">
               <rdf:type rdf:resource="http://schema.org/DataDownload">
               <schema:contentUrl rdf:resource="http://example.org/downloads/our_dataset_2018-April.xml.gz"/>
-              <schema:mediaType>application/rdf+xml</dcat:mediaType> 
+              <schema:encodingFormat>application/rdf+xml</schema:encodingFormat> 
             </rdf:Description>
-          </dcat:distribution>
-          <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+          </schema:distribution>
+          <schema:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
         </rdf:Description>
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDg2MTAyMDIsLTczNDk3ODA5OCwxNz
-c1MDc0MTAsODkzNTU5OTUsLTI2OTc5MTM1MSwtMTA5NTE2OTcz
-MywxMjQzMDYwOTUwLDE4NzA4Njg0ODAsMTk3NTIxNjA5OSw3Nj
-gwODA4MjMsLTE0Mzc0NDM2MDQsLTExODM4NDIwOTQsLTE2NTk5
-ODEzMCwxNTM2NDgxNDcsLTI0ODYwMDAyOSwtMTUyMzk4ODI3MS
-wtMTA4ODkwMjgzOSw4NzE4OTIwNDAsLTE0NjM3NTA5NTQsLTk1
-MzMyODIyM119
+eyJoaXN0b3J5IjpbMTA0MDUwNTc1LC03MzQ5NzgwOTgsMTc3NT
+A3NDEwLDg5MzU1OTk1LC0yNjk3OTEzNTEsLTEwOTUxNjk3MzMs
+MTI0MzA2MDk1MCwxODcwODY4NDgwLDE5NzUyMTYwOTksNzY4MD
+gwODIzLC0xNDM3NDQzNjA0LC0xMTgzODQyMDk0LC0xNjU5OTgx
+MzAsMTUzNjQ4MTQ3LC0yNDg2MDAwMjksLTE1MjM5ODgyNzEsLT
+EwODg5MDI4MzksODcxODkyMDQwLC0xNDYzNzUwOTU0LC05NTMz
+MjgyMjNdfQ==
 -->
