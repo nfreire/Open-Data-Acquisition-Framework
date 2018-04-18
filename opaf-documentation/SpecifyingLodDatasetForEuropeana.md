@@ -9,6 +9,7 @@ Data providers may use classes and properties from any of the three vocabularies
  - **Must** have a title property.
  - **Must** specify the technical mechanism that allows the dataset to be automatically harvested by Europeana.
  - **May** specify a machine readable license that applies to all metadata  
+
 The following sections will provide further details on each of these points.
 
 # Dataset RDF resource accessible by its URI
@@ -64,11 +65,11 @@ For the requirements of Europeana, when using a listing of URIs, data providers 
 The RDF resource of the dataset may optionally indicate a license that applies to the whole dataset. If the dataset provides the licensing information, individual metadata records may still override it, by specifying a license as defined in EDM.
 The license for a whole dataset should be specified in dcterms:license or schema:license (with Europeana supported licenses' URIs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjM5ODgyNzEsLTEwODg5MDI4MzksOD
-cxODkyMDQwLC0xNDYzNzUwOTU0LC05NTMzMjgyMjMsLTU0MjYw
-NzkxLC0yMDIxMDUzODg3LDE2NDU1NjI4NTIsLTM3MTgzNTQ5NC
-wxNjI4MjY4OTExLDE4MDUyMjYwMDQsLTExMzcwMDA0NzIsLTE3
-NDI5NTIxMzAsODg2NjY4MjI2LC0yMDU3MTgxOTA2LC0xMDQ0MT
-g4NTk4LDE1NTUxNjQyNTAsLTE5NzAzNzgzOTUsMTE1MTIyNTE0
-NiwtODg5Nzc2MTIyXX0=
+eyJoaXN0b3J5IjpbLTI0ODYwMDAyOSwtMTUyMzk4ODI3MSwtMT
+A4ODkwMjgzOSw4NzE4OTIwNDAsLTE0NjM3NTA5NTQsLTk1MzMy
+ODIyMywtNTQyNjA3OTEsLTIwMjEwNTM4ODcsMTY0NTU2Mjg1Mi
+wtMzcxODM1NDk0LDE2MjgyNjg5MTEsMTgwNTIyNjAwNCwtMTEz
+NzAwMDQ3MiwtMTc0Mjk1MjEzMCw4ODY2NjgyMjYsLTIwNTcxOD
+E5MDYsLTEwNDQxODg1OTgsMTU1NTE2NDI1MCwtMTk3MDM3ODM5
+NSwxMTUxMjI1MTQ2XX0=
 -->
