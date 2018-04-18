@@ -67,7 +67,7 @@ The license for a whole dataset should be specified in dcterms:license or schema
 
 # Examples
 
-    <rdf:Description rdf:about="https://data.bibliotheken.nl/dataset/">
+    <rdf:Description rdf:about="https://data.bibliotheken.nl/sample/dataset/childrenbooks">
       <ex:editor>
         <rdf:Description>
           <ex:homePage>
@@ -77,7 +77,7 @@ The license for a whole dataset should be specified in dcterms:license or schema
           <ex:fullName>Dave Beckett</ex:fullName>
         </rdf:Description>
       </ex:editor>
-      <dc:title>RDF 1.1 XML Syntax</dc:title>
+      <dc:title>Children books</dc:title>
     </rdf:Description>
 
 kjlkjh
@@ -85,7 +85,7 @@ kjlkjh
 çlkjlkj
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI3MjY1MTg1LDc2ODA4MDgyMywtMTQzNz
+eyJoaXN0b3J5IjpbMjg5MDc2MDM2LDc2ODA4MDgyMywtMTQzNz
 Q0MzYwNCwtMTE4Mzg0MjA5NCwtMTY1OTk4MTMwLDE1MzY0ODE0
 NywtMjQ4NjAwMDI5LC0xNTIzOTg4MjcxLC0xMDg4OTAyODM5LD
 g3MTg5MjA0MCwtMTQ2Mzc1MDk1NCwtOTUzMzI4MjIzLC01NDI2
