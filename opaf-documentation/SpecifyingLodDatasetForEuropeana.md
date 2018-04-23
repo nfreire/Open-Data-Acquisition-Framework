@@ -27,8 +27,8 @@ The following are the supported mime-types:
 | Format | Mime-type | Specification
 |--|--|--|
 | RDF/XML | application/rdf+xml | https://www.w3.org/TR/rdf-syntax-grammar/
-| JSON-LD | application/ld+son | [https://www.w3.org/TR/json-ld/](https://www.w3.org/TR/json-ld/) 
-| Turtle | application/x-turtle | [https://www.w3.org/TR/turtle/](https://www.w3.org/TR/turtle/) |
+| JSON-LD | application/ld+json | [https://www.w3.org/TR/json-ld/](https://www.w3.org/TR/json-ld/) 
+| Turtle | application/x-turtle or  | [https://www.w3.org/TR/turtle/](https://www.w3.org/TR/turtle/) |
 
 # Title of the dataset
 
@@ -151,11 +151,11 @@ The root resource example above that lists the URIs in the dataset can be as fol
       </rdf:Description>
     </rdf:RDF>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwNDA0MTUwLDExMjYxMzY2NzEsMTY4MD
-Y3Mjk4NSwtMTU3Mjc5MjM3NywtMTY1MTM4MzAxMCw0MjY5MjAy
-NDgsLTgzNjU3ODM2MiwtMTc5Mjk0MjE4NSwxMDQwNTA1NzUsLT
-czNDk3ODA5OCwxNzc1MDc0MTAsODkzNTU5OTUsLTI2OTc5MTM1
-MSwtMTA5NTE2OTczMywxMjQzMDYwOTUwLDE4NzA4Njg0ODAsMT
-k3NTIxNjA5OSw3NjgwODA4MjMsLTE0Mzc0NDM2MDQsLTExODM4
-NDIwOTRdfQ==
+eyJoaXN0b3J5IjpbLTIwNTM0OTA4MTksMTIwNDA0MTUwLDExMj
+YxMzY2NzEsMTY4MDY3Mjk4NSwtMTU3Mjc5MjM3NywtMTY1MTM4
+MzAxMCw0MjY5MjAyNDgsLTgzNjU3ODM2MiwtMTc5Mjk0MjE4NS
+wxMDQwNTA1NzUsLTczNDk3ODA5OCwxNzc1MDc0MTAsODkzNTU5
+OTUsLTI2OTc5MTM1MSwtMTA5NTE2OTczMywxMjQzMDYwOTUwLD
+E4NzA4Njg0ODAsMTk3NTIxNjA5OSw3NjgwODA4MjMsLTE0Mzc0
+NDM2MDRdfQ==
 -->
