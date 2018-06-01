@@ -134,6 +134,7 @@ The next example contains a RDF description of a dataset available via a  listin
              xmlns:dcterms="http://purl.org/dc/terms/">
       <rdf:Description rdf:about="http://example.org/dataset/children_books">
           <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset">
+          <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
           <dcterms:title>Children books</dc:title>
           <void:rootResource rdf:about="http://example.org/Aggregation/cho_abc"/>
           <void:rootResource rdf:about="http://example.org/Aggregation/cho_def"/>
@@ -142,7 +143,7 @@ The next example contains a RDF description of a dataset available via a  listin
     </rdf:RDF>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzA4MTY3NjksLTExNzU5NjQyMjYsNj
+eyJoaXN0b3J5IjpbLTE0NzExMDE3MTQsLTExNzU5NjQyMjYsNj
 YxOTE0NjUzLDE1ODAwODE3MiwtMTQzNDkzNzc4MCw1ODc2NzI1
 ODMsMjEzMDQxMDU0MywxMjA0MDQxNTAsMTEyNjEzNjY3MSwxNj
 gwNjcyOTg1LC0xNTcyNzkyMzc3LC0xNjUxMzgzMDEwLDQyNjky
