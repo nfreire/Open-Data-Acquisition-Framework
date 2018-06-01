@@ -61,7 +61,7 @@ For the requirements of Europeana, when using dataset distributions, data provid
 ## Option B - Specifying a listing of URIs
 Only the VoID](https://www.w3.org/TR/void/) vocabulary includes a property to indicate a RDF resource that lists all the resources within a dataset.
 VoID defines the property void:rootResource, that may be used by Europeana data providers to provide this information. See section "[3.4 Root resources](https://www.w3.org/TR/void/#root-resource)" describing the  void:rootResource property, for the general use of the property.
-For the requirements of Europeana, when using a listing of URIs, data providers must provide void:rootResource properties that contains the URI’s of the cultural objects’s. In EDM, these URI's should point to RDF resources of  ore:Aggregations (EDM).
+For the requirements of Europeana, when using a listing of URIs, data providers must provide void:rootResource properties that contains the URI’s of the cultural objects’s. In EDM, these URI's should point to RDF resources of types ore:Aggregations or edm:ProvidedCHO (EDM).
 # Dataset level license
 The RDF resource of the dataset may optionally indicate a license that applies to the whole dataset. If the dataset provides the licensing information, individual metadata records may still override it, by specifying a license as defined in EDM.
 The license for a whole dataset should be specified in [dcterms:license](http://dublincore.org/documents/dcmi-terms/#terms-license) or [schema:license](http://schema.org/license) (with Europeana supported licenses' URIs)
@@ -152,11 +152,11 @@ The root resource example above that lists the URIs in the dataset can be as fol
       </rdf:Description>
     </rdf:RDF>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4MjA3Mzk2OSw1ODc2NzI1ODMsMjEzMD
-QxMDU0MywxMjA0MDQxNTAsMTEyNjEzNjY3MSwxNjgwNjcyOTg1
-LC0xNTcyNzkyMzc3LC0xNjUxMzgzMDEwLDQyNjkyMDI0OCwtOD
-M2NTc4MzYyLC0xNzkyOTQyMTg1LDEwNDA1MDU3NSwtNzM0OTc4
-MDk4LDE3NzUwNzQxMCw4OTM1NTk5NSwtMjY5NzkxMzUxLC0xMD
-k1MTY5NzMzLDEyNDMwNjA5NTAsMTg3MDg2ODQ4MCwxOTc1MjE2
-MDk5XX0=
+eyJoaXN0b3J5IjpbLTE0MzQ5Mzc3ODAsNTg3NjcyNTgzLDIxMz
+A0MTA1NDMsMTIwNDA0MTUwLDExMjYxMzY2NzEsMTY4MDY3Mjk4
+NSwtMTU3Mjc5MjM3NywtMTY1MTM4MzAxMCw0MjY5MjAyNDgsLT
+gzNjU3ODM2MiwtMTc5Mjk0MjE4NSwxMDQwNTA1NzUsLTczNDk3
+ODA5OCwxNzc1MDc0MTAsODkzNTU5OTUsLTI2OTc5MTM1MSwtMT
+A5NTE2OTczMywxMjQzMDYwOTUwLDE4NzA4Njg0ODAsMTk3NTIx
+NjA5OV19
 -->
