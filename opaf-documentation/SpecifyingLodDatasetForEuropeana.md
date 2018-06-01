@@ -134,8 +134,8 @@ The next example contains a RDF description of a dataset available via a  listin
              xmlns:dcterms="http://purl.org/dc/terms/">
       <rdf:Description rdf:about="http://example.org/dataset/children_books">
           <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset">
-          <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
           <dcterms:title>Children books</dc:title>
+          <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
           <void:rootResource rdf:about="http://example.org/Aggregation/cho_abc"/>
           <void:rootResource rdf:about="http://example.org/Aggregation/cho_def"/>
           <void:rootResource rdf:about="http://example.org/Aggregation/cho_zyz"/>
@@ -143,11 +143,11 @@ The next example contains a RDF description of a dataset available via a  listin
     </rdf:RDF>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzExMDE3MTQsLTExNzU5NjQyMjYsNj
-YxOTE0NjUzLDE1ODAwODE3MiwtMTQzNDkzNzc4MCw1ODc2NzI1
-ODMsMjEzMDQxMDU0MywxMjA0MDQxNTAsMTEyNjEzNjY3MSwxNj
-gwNjcyOTg1LC0xNTcyNzkyMzc3LC0xNjUxMzgzMDEwLDQyNjky
-MDI0OCwtODM2NTc4MzYyLC0xNzkyOTQyMTg1LDEwNDA1MDU3NS
-wtNzM0OTc4MDk4LDE3NzUwNzQxMCw4OTM1NTk5NSwtMjY5Nzkx
-MzUxXX0=
+eyJoaXN0b3J5IjpbMjcyMTA2NTY4LC0xMTc1OTY0MjI2LDY2MT
+kxNDY1MywxNTgwMDgxNzIsLTE0MzQ5Mzc3ODAsNTg3NjcyNTgz
+LDIxMzA0MTA1NDMsMTIwNDA0MTUwLDExMjYxMzY2NzEsMTY4MD
+Y3Mjk4NSwtMTU3Mjc5MjM3NywtMTY1MTM4MzAxMCw0MjY5MjAy
+NDgsLTgzNjU3ODM2MiwtMTc5Mjk0MjE4NSwxMDQwNTA1NzUsLT
+czNDk3ODA5OCwxNzc1MDc0MTAsODkzNTU5OTUsLTI2OTc5MTM1
+MV19
 -->
