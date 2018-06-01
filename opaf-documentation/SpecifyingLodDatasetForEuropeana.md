@@ -61,8 +61,7 @@ For the requirements of Europeana, when using dataset distributions, data provid
 ## Option B - Specifying a listing of URIs
 Only the VoID](https://www.w3.org/TR/void/) vocabulary includes a property to indicate a RDF resource that lists all the resources within a dataset.
 VoID defines the property void:rootResource, that may be used by Europeana data providers to provide this information. See section "[3.4 Root resources](https://www.w3.org/TR/void/#root-resource)" describing the  void:rootResource property, for the general use of the property.
-For the requirements of Europeana, when using a listing of URIs, data providers must provide void:rootResource properties that contains the URI’s of the cultural objects’s. In EDM, these URI's should point to RDF resources of one of the types [ore:Aggregation](http://www.openarchives.org/ore/1.0/datamodel#Aggregation) or [edm:ProvidedCHO](http://www.europeana.eu/schemas/edm/ProvidedCHO). In Schema.org, these URI's should point to instances of [schema:CreativeWork](http://schema.org/CreativeWork) or ones of its subclasses (e.g., [schema:Paiting](http://schema.org/Painting), [
-](http://schema.org/Book), [schema:Sculpture](http://schema.org/Sculpture), etc.). 
+For the requirements of Europeana, when using a listing of URIs, data providers must provide void:rootResource properties that contains the URI’s of the cultural objects’s. In EDM, these URI's should point to RDF resources of one of the types [ore:Aggregation](http://www.openarchives.org/ore/1.0/datamodel#Aggregation) or [edm:ProvidedCHO](http://www.europeana.eu/schemas/edm/ProvidedCHO). In Schema.org, these URI's should point to instances of [schema:CreativeWork](http://schema.org/CreativeWork) or ones of its subclasses (e.g., [schema:Paiting](http://schema.org/Painting), [schema.Book](http://schema.org/Book), [schema:Sculpture](http://schema.org/Sculpture), etc.). 
 # Dataset level license
 The RDF resource of the dataset may optionally indicate a license that applies to the whole dataset. If the dataset provides the licensing information, individual metadata records may still override it, by specifying a license as defined in EDM.
 The license for a whole dataset should be specified in [dcterms:license](http://dublincore.org/documents/dcmi-terms/#terms-license) or [schema:license](http://schema.org/license) (with Europeana supported licenses' URIs)
@@ -143,11 +142,11 @@ The next example contains a RDF description of a dataset available via a  listin
     </rdf:RDF>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjcyMTA2NTY4LC0xMTc1OTY0MjI2LDY2MT
-kxNDY1MywxNTgwMDgxNzIsLTE0MzQ5Mzc3ODAsNTg3NjcyNTgz
-LDIxMzA0MTA1NDMsMTIwNDA0MTUwLDExMjYxMzY2NzEsMTY4MD
-Y3Mjk4NSwtMTU3Mjc5MjM3NywtMTY1MTM4MzAxMCw0MjY5MjAy
-NDgsLTgzNjU3ODM2MiwtMTc5Mjk0MjE4NSwxMDQwNTA1NzUsLT
-czNDk3ODA5OCwxNzc1MDc0MTAsODkzNTU5OTUsLTI2OTc5MTM1
-MV19
+eyJoaXN0b3J5IjpbLTEwNTU1Mzk0MzYsMjcyMTA2NTY4LC0xMT
+c1OTY0MjI2LDY2MTkxNDY1MywxNTgwMDgxNzIsLTE0MzQ5Mzc3
+ODAsNTg3NjcyNTgzLDIxMzA0MTA1NDMsMTIwNDA0MTUwLDExMj
+YxMzY2NzEsMTY4MDY3Mjk4NSwtMTU3Mjc5MjM3NywtMTY1MTM4
+MzAxMCw0MjY5MjAyNDgsLTgzNjU3ODM2MiwtMTc5Mjk0MjE4NS
+wxMDQwNTA1NzUsLTczNDk3ODA5OCwxNzc1MDc0MTAsODkzNTU5
+OTVdfQ==
 -->
