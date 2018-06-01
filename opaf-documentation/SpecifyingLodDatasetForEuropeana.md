@@ -41,6 +41,7 @@ All these resources will be harvested by Europeana's LOD harvester. The harveste
 Data providers may choose one of the mechanisms, typically used for LOD: 
  - Dataset distribution containing all data within the dataset.
  - Listing of the URIs of all the cultural objects’s RDF resources in the dataset.
+ 
 The mechanism that should be applied to a LOD dataset is indicated by the data provider in the properties of the RDF description of the dataset, using any of the supported vocabularies: [VoID](https://www.w3.org/TR/void/), [DCAT](https://www.w3.org/TR/vocab-dcat/), and [Schema.org](http://schema.org/Dataset).
 
 ## Option A - Specifying a downloadable dataset distribution 
@@ -151,11 +152,11 @@ The root resource example above that lists the URIs in the dataset can be as fol
       </rdf:Description>
     </rdf:RDF>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTI3NDUzMTksNTg3NjcyNTgzLDIxMz
-A0MTA1NDMsMTIwNDA0MTUwLDExMjYxMzY2NzEsMTY4MDY3Mjk4
-NSwtMTU3Mjc5MjM3NywtMTY1MTM4MzAxMCw0MjY5MjAyNDgsLT
-gzNjU3ODM2MiwtMTc5Mjk0MjE4NSwxMDQwNTA1NzUsLTczNDk3
-ODA5OCwxNzc1MDc0MTAsODkzNTU5OTUsLTI2OTc5MTM1MSwtMT
-A5NTE2OTczMywxMjQzMDYwOTUwLDE4NzA4Njg0ODAsMTk3NTIx
-NjA5OV19
+eyJoaXN0b3J5IjpbMTA3ODEyNzQ4MSw1ODc2NzI1ODMsMjEzMD
+QxMDU0MywxMjA0MDQxNTAsMTEyNjEzNjY3MSwxNjgwNjcyOTg1
+LC0xNTcyNzkyMzc3LC0xNjUxMzgzMDEwLDQyNjkyMDI0OCwtOD
+M2NTc4MzYyLC0xNzkyOTQyMTg1LDEwNDA1MDU3NSwtNzM0OTc4
+MDk4LDE3NzUwNzQxMCw4OTM1NTk5NSwtMjY5NzkxMzUxLC0xMD
+k1MTY5NzMzLDEyNDMwNjA5NTAsMTg3MDg2ODQ4MCwxOTc1MjE2
+MDk5XX0=
 -->
