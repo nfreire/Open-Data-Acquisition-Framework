@@ -135,27 +135,15 @@ The next example contains a RDF description of a dataset available via a  listin
       <rdf:Description rdf:about="http://example.org/dataset/children_books">
           <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset">
           <dcterms:title>Children books</dc:title>
-          <void:rootResource rdf:about="http://example.org/dataset_uri_membership/children_books"/>
-          <void:rootResource rdf:about="http://example.org/dataset_uri_membership/children_books"/>
-          <void:rootResource rdf:about="http://example.org/dataset_uri_membership/children_books"/>
+          <void:rootResource rdf:about="http://example.org/Aggregation/cho_abc"/>
+          <void:rootResource rdf:about="http://example.org/Aggregation/cho_def"/>
+          <void:rootResource rdf:about="http://example.org/Aggregation/cho_zyz"/>
           <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
       </rdf:Description>
     </rdf:RDF>
 
-The root resource example above that lists the URIs in the dataset can be as follows:
-
-    <?xml version="1.0"?>
-    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-             xmlns:void="http://rdfs.org/ns/void#"
-             xmlns:dcterms="http://purl.org/dc/terms/">
-      <rdf:Description rdf:about="http://example.org/dataset_uri_membership/children_books">
-          <dcterms:hasPart rdf:resource="http://example.org/Aggregation/cho_abc"/>
-          <dcterms:hasPart rdf:resource="http://example.org/Aggregation/cho_def"/>
-          <dcterms:hasPart rdf:resource="http://example.org/Aggregation/cho_zyz"/>     
-      </rdf:Description>
-    </rdf:RDF>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTQ4MjcyNjcsNjYxOTE0NjUzLDE1OD
+eyJoaXN0b3J5IjpbLTExNzU5NjQyMjYsNjYxOTE0NjUzLDE1OD
 AwODE3MiwtMTQzNDkzNzc4MCw1ODc2NzI1ODMsMjEzMDQxMDU0
 MywxMjA0MDQxNTAsMTEyNjEzNjY3MSwxNjgwNjcyOTg1LC0xNT
 cyNzkyMzc3LC0xNjUxMzgzMDEwLDQyNjkyMDI0OCwtODM2NTc4
