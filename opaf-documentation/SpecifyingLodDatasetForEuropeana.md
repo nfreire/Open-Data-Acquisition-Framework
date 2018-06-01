@@ -138,16 +138,15 @@ The next example contains a RDF description of a dataset available via a  listin
           <void:rootResource rdf:about="http://example.org/Aggregation/cho_abc"/>
           <void:rootResource rdf:about="http://example.org/Aggregation/cho_def"/>
           <void:rootResource rdf:about="http://example.org/Aggregation/cho_zyz"/>
-          <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
       </rdf:Description>
     </rdf:RDF>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzU5NjQyMjYsNjYxOTE0NjUzLDE1OD
-AwODE3MiwtMTQzNDkzNzc4MCw1ODc2NzI1ODMsMjEzMDQxMDU0
-MywxMjA0MDQxNTAsMTEyNjEzNjY3MSwxNjgwNjcyOTg1LC0xNT
-cyNzkyMzc3LC0xNjUxMzgzMDEwLDQyNjkyMDI0OCwtODM2NTc4
-MzYyLC0xNzkyOTQyMTg1LDEwNDA1MDU3NSwtNzM0OTc4MDk4LD
-E3NzUwNzQxMCw4OTM1NTk5NSwtMjY5NzkxMzUxLC0xMDk1MTY5
-NzMzXX0=
+eyJoaXN0b3J5IjpbLTE3NzA4MTY3NjksLTExNzU5NjQyMjYsNj
+YxOTE0NjUzLDE1ODAwODE3MiwtMTQzNDkzNzc4MCw1ODc2NzI1
+ODMsMjEzMDQxMDU0MywxMjA0MDQxNTAsMTEyNjEzNjY3MSwxNj
+gwNjcyOTg1LC0xNTcyNzkyMzc3LC0xNjUxMzgzMDEwLDQyNjky
+MDI0OCwtODM2NTc4MzYyLC0xNzkyOTQyMTg1LDEwNDA1MDU3NS
+wtNzM0OTc4MDk4LDE3NzUwNzQxMCw4OTM1NTk5NSwtMjY5Nzkx
+MzUxXX0=
 -->
