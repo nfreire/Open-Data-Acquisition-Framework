@@ -64,7 +64,7 @@ VoID defines the property void:rootResource, that may be used by Europeana data 
 For the requirements of Europeana, when using a listing of URIs, data providers must provide void:rootResource properties that contains the URI’s of the cultural objects’s. In EDM, these URI's should point to RDF resources of one of the types [ore:Aggregation](http://www.openarchives.org/ore/1.0/datamodel#Aggregation) or [edm:ProvidedCHO](http://www.europeana.eu/schemas/edm/ProvidedCHO). In Schema.org, these URI's should point to instances of [schema:CreativeWork](http://schema.org/CreativeWork) or ones of its subclasses (e.g., [schema:Paiting](http://schema.org/Painting), [schema.Book](http://schema.org/Book), [schema:Sculpture](http://schema.org/Sculpture), etc.). 
 # Dataset level license
 The RDF resource of the dataset may optionally indicate a license that applies to the whole dataset. If the dataset provides the licensing information, individual metadata records may still override it, by specifying a license as defined in EDM.
-The license for a whole dataset should be specified in [dcterms:license](http://dublincore.org/documents/dcmi-terms/#terms-license) or [schema:license](http://schema.org/license) (with Europeana supported licenses' URIs). Following the recommendations of DCAT, the property should be applied to the Distribution of the dataset. The property may also be applied in the Dataset resource, particularly this option may be required when specifying the dataset using void:rootResource, since no Distribution resource exists in such cases (we consider this case this issue an area of specific attention for us, and we have the issue under discussion at the [DCAT mailing list](https://lists.w3.org/Archives/Public/public-dxwg-comments/2018Apr/0001.html))
+The license for a whole dataset should be specified in [dcterms:license](http://dublincore.org/documents/dcmi-terms/#terms-license) or [schema:license](http://schema.org/license) (with Europeana supported licenses' URIs). Following the recommendations of DCAT, the property should be applied to the Distribution of the dataset. The property may also be applied in the Dataset resource, particularly this option may be required when specifying the dataset using VoID, since no Distribution resource exists in such cases (we consider this case this issue an area of specific attention for us, and we have the issue under discussion at the [DCAT mailing list](https://lists.w3.org/Archives/Public/public-dxwg-comments/2018Apr/0001.html))
 
 # Examples
 This section contains illustrative examples of RDF descriptions of datasets, prepared accordingly to the requirements of Europeana.
@@ -142,11 +142,11 @@ The next example contains a RDF description of a dataset available via a  listin
     </rdf:RDF>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY4NTg4MDY4LDU0MDA5NDI1NiwtMTA1NT
-UzOTQzNiwyNzIxMDY1NjgsLTExNzU5NjQyMjYsNjYxOTE0NjUz
-LDE1ODAwODE3MiwtMTQzNDkzNzc4MCw1ODc2NzI1ODMsMjEzMD
-QxMDU0MywxMjA0MDQxNTAsMTEyNjEzNjY3MSwxNjgwNjcyOTg1
-LC0xNTcyNzkyMzc3LC0xNjUxMzgzMDEwLDQyNjkyMDI0OCwtOD
-M2NTc4MzYyLC0xNzkyOTQyMTg1LDEwNDA1MDU3NSwtNzM0OTc4
-MDk4XX0=
+eyJoaXN0b3J5IjpbLTE5ODA4NTQ5MDYsNTQwMDk0MjU2LC0xMD
+U1NTM5NDM2LDI3MjEwNjU2OCwtMTE3NTk2NDIyNiw2NjE5MTQ2
+NTMsMTU4MDA4MTcyLC0xNDM0OTM3NzgwLDU4NzY3MjU4MywyMT
+MwNDEwNTQzLDEyMDQwNDE1MCwxMTI2MTM2NjcxLDE2ODA2NzI5
+ODUsLTE1NzI3OTIzNzcsLTE2NTEzODMwMTAsNDI2OTIwMjQ4LC
+04MzY1NzgzNjIsLTE3OTI5NDIxODUsMTA0MDUwNTc1LC03MzQ5
+NzgwOThdfQ==
 -->
