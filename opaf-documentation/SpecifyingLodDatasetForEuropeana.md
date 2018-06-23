@@ -85,7 +85,7 @@ The next example contains a RDF description of a dataset available via a downloa
               <dcat:mediaType>application/rdf+xml</dcat:mediaType> 
             </rdf:Description>
           </dcat:distribution>
-          <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+          
       </rdf:Description>
     </rdf:RDF>
 
@@ -142,11 +142,11 @@ The next example contains a RDF description of a dataset available via a  listin
     </rdf:RDF>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODc1MjAyMCw1NDAwOTQyNTYsLTEwNT
-U1Mzk0MzYsMjcyMTA2NTY4LC0xMTc1OTY0MjI2LDY2MTkxNDY1
-MywxNTgwMDgxNzIsLTE0MzQ5Mzc3ODAsNTg3NjcyNTgzLDIxMz
-A0MTA1NDMsMTIwNDA0MTUwLDExMjYxMzY2NzEsMTY4MDY3Mjk4
-NSwtMTU3Mjc5MjM3NywtMTY1MTM4MzAxMCw0MjY5MjAyNDgsLT
-gzNjU3ODM2MiwtMTc5Mjk0MjE4NSwxMDQwNTA1NzUsLTczNDk3
-ODA5OF19
+eyJoaXN0b3J5IjpbNTM2ODQxMjY1LDU0MDA5NDI1NiwtMTA1NT
+UzOTQzNiwyNzIxMDY1NjgsLTExNzU5NjQyMjYsNjYxOTE0NjUz
+LDE1ODAwODE3MiwtMTQzNDkzNzc4MCw1ODc2NzI1ODMsMjEzMD
+QxMDU0MywxMjA0MDQxNTAsMTEyNjEzNjY3MSwxNjgwNjcyOTg1
+LC0xNTcyNzkyMzc3LC0xNjUxMzgzMDEwLDQyNjkyMDI0OCwtOD
+M2NTc4MzYyLC0xNzkyOTQyMTg1LDEwNDA1MDU3NSwtNzM0OTc4
+MDk4XX0=
 -->
