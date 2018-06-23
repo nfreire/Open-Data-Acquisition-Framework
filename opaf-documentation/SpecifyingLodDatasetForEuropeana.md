@@ -83,9 +83,9 @@ The next example contains a RDF description of a dataset available via a downloa
               <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution">
               <dcat:downloadURL rdf:resource="http://example.org/downloads/our_dataset_2018-April.xml.gz"/>
               <dcat:mediaType>application/rdf+xml</dcat:mediaType> 
+              <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
             </rdf:Description>
           </dcat:distribution>
-          
       </rdf:Description>
     </rdf:RDF>
 
@@ -103,9 +103,10 @@ The next example contains the description the same dataset available via a downl
               <rdf:type rdf:resource="http://schema.org/DataDownload">
               <schema:contentUrl rdf:resource="http://example.org/downloads/our_dataset_2018-April.xml.gz"/>
               <schema:encodingFormat>application/rdf+xml</schema:encodingFormat> 
+              <schema:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
             </rdf:Description>
           </schema:distribution>
-          <schema:license rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+          
       </rdf:Description>
     </rdf:RDF>
 
@@ -142,11 +143,11 @@ The next example contains a RDF description of a dataset available via a  listin
     </rdf:RDF>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM2ODQxMjY1LDU0MDA5NDI1NiwtMTA1NT
-UzOTQzNiwyNzIxMDY1NjgsLTExNzU5NjQyMjYsNjYxOTE0NjUz
-LDE1ODAwODE3MiwtMTQzNDkzNzc4MCw1ODc2NzI1ODMsMjEzMD
-QxMDU0MywxMjA0MDQxNTAsMTEyNjEzNjY3MSwxNjgwNjcyOTg1
-LC0xNTcyNzkyMzc3LC0xNjUxMzgzMDEwLDQyNjkyMDI0OCwtOD
-M2NTc4MzYyLC0xNzkyOTQyMTg1LDEwNDA1MDU3NSwtNzM0OTc4
-MDk4XX0=
+eyJoaXN0b3J5IjpbLTExNTIxNTYxMDYsNTQwMDk0MjU2LC0xMD
+U1NTM5NDM2LDI3MjEwNjU2OCwtMTE3NTk2NDIyNiw2NjE5MTQ2
+NTMsMTU4MDA4MTcyLC0xNDM0OTM3NzgwLDU4NzY3MjU4MywyMT
+MwNDEwNTQzLDEyMDQwNDE1MCwxMTI2MTM2NjcxLDE2ODA2NzI5
+ODUsLTE1NzI3OTIzNzcsLTE2NTEzODMwMTAsNDI2OTIwMjQ4LC
+04MzY1NzgzNjIsLTE3OTI5NDIxODUsMTA0MDUwNTc1LC03MzQ5
+NzgwOThdfQ==
 -->
