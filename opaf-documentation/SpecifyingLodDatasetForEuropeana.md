@@ -32,7 +32,7 @@ The following are the supported mime-types:
 
 # Title of the dataset
 
-The RDF resource of the dataset must have a title, and the title may be provided in several languages. The titles should be provided by one of these properties: dc:title, dcterms:title,  schema:title. The language of the title should be represented in a xml:lang attribute of the title property.
+The RDF resource of the dataset must have a title, and the title may be provided in several languages. The titles should be provided by one of these properties: dc:title, dcterms:title,  schema:name. The language of the title should be represented in a xml:lang attribute of the title property.
 
 # Specifying the technical mechanism for LOD harvesting
 
@@ -97,7 +97,7 @@ The next example contains the description the same dataset available via a downl
              xmlns:schema="http://schema.org/">
       <rdf:Description rdf:about="http://example.org/dataset/children_books">
           <rdf:type rdf:resource="http://schema.org/Dataset">
-          <schema:title>Children books</schema:title>
+          <schema>Children books</schema:title>
           <schema:distribution>
             <rdf:Description rdf:about="http://example.org/dataset_distribution/children_books/">
               <rdf:type rdf:resource="http://schema.org/DataDownload">
@@ -142,11 +142,11 @@ The next example contains a RDF description of a dataset available via a  listin
     </rdf:RDF>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTc0MjIxMDIsLTE5ODA4NTQ5MDYsNT
-QwMDk0MjU2LC0xMDU1NTM5NDM2LDI3MjEwNjU2OCwtMTE3NTk2
-NDIyNiw2NjE5MTQ2NTMsMTU4MDA4MTcyLC0xNDM0OTM3NzgwLD
-U4NzY3MjU4MywyMTMwNDEwNTQzLDEyMDQwNDE1MCwxMTI2MTM2
-NjcxLDE2ODA2NzI5ODUsLTE1NzI3OTIzNzcsLTE2NTEzODMwMT
-AsNDI2OTIwMjQ4LC04MzY1NzgzNjIsLTE3OTI5NDIxODUsMTA0
-MDUwNTc1XX0=
+eyJoaXN0b3J5IjpbLTIwNzI2NTk4OTMsLTIxMTc0MjIxMDIsLT
+E5ODA4NTQ5MDYsNTQwMDk0MjU2LC0xMDU1NTM5NDM2LDI3MjEw
+NjU2OCwtMTE3NTk2NDIyNiw2NjE5MTQ2NTMsMTU4MDA4MTcyLC
+0xNDM0OTM3NzgwLDU4NzY3MjU4MywyMTMwNDEwNTQzLDEyMDQw
+NDE1MCwxMTI2MTM2NjcxLDE2ODA2NzI5ODUsLTE1NzI3OTIzNz
+csLTE2NTEzODMwMTAsNDI2OTIwMjQ4LC04MzY1NzgzNjIsLTE3
+OTI5NDIxODVdfQ==
 -->
