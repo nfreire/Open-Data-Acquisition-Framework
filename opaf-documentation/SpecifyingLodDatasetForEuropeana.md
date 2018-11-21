@@ -97,7 +97,7 @@ The next example contains the description the same dataset available via a downl
              xmlns:schema="http://schema.org/">
       <rdf:Description rdf:about="http://example.org/dataset/children_books">
           <rdf:type rdf:resource="http://schema.org/Dataset">
-          <schema>Children books</schema:title>
+          <schema:name>Children books</schema:name>
           <schema:distribution>
             <rdf:Description rdf:about="http://example.org/dataset_distribution/children_books/">
               <rdf:type rdf:resource="http://schema.org/DataDownload">
@@ -142,7 +142,7 @@ The next example contains a RDF description of a dataset available via a  listin
     </rdf:RDF>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzI2NTk4OTMsLTIxMTc0MjIxMDIsLT
+eyJoaXN0b3J5IjpbLTE5NDA2NzY1NzUsLTIxMTc0MjIxMDIsLT
 E5ODA4NTQ5MDYsNTQwMDk0MjU2LC0xMDU1NTM5NDM2LDI3MjEw
 NjU2OCwtMTE3NTk2NDIyNiw2NjE5MTQ2NTMsMTU4MDA4MTcyLC
 0xNDM0OTM3NzgwLDU4NzY3MjU4MywyMTMwNDEwNTQzLDEyMDQw
