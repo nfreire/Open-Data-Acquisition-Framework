@@ -12,7 +12,7 @@ import inescid.opaf.timestamp.Status;
 public class InMemoryTimestampStore {
 	Map<String, Map<String, Long>> db=new HashMap<>();
 	Map<String, Long> dbCollection=new HashMap<>();
-	Set<String> dbDeletedCollection=new HashSet<>();
+//	Set<String> dbDeletedCollection=new HashSet<>();
 	Map<String, Set<String>> dbDeleted=new HashMap<>();
 	
 	public void setCollectionTimestamp(String collection, Calendar timestamp) {
@@ -27,7 +27,7 @@ public class InMemoryTimestampStore {
 		Long ret = dbCollection.get(collection);
 		if(ret==null)
 			return null;
-		Status s=new Status(ret, dbDeletedCollection.contains(collection));
+		Status s=new Status(ret, false);
 		return s;
 	}
 

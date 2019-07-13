@@ -11,9 +11,9 @@ import org.apache.commons.lang3.tuple.Pair;
 
 import inescid.opaf.data.DataSpec;
 import inescid.opaf.data.RawDataRecord;
-import inescid.opaf.data.convert.DataConversionManager;
-import inescid.opaf.data.convert.DataConverter;
-import inescid.opaf.data.convert.SchemaOrgToEdmDataConverter;
+import inescid.opaf.data.convert.rdf.converter.deprecated.DataConversionManager;
+import inescid.opaf.data.convert.rdf.converter.deprecated.DataConverter;
+import inescid.opaf.data.convert.rdf.converter.deprecated.SchemaOrgToEdmDataConverter;
 
 public class SchemaOrgNcsuWebServiceToEdmFileExport {
 

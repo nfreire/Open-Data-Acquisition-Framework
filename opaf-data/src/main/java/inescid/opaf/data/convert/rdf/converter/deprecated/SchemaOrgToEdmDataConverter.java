@@ -1,4 +1,4 @@
-package inescid.opaf.data.convert;
+package inescid.opaf.data.convert.rdf.converter.deprecated;
 
 import java.io.StringReader;
 import java.nio.charset.Charset;
@@ -19,10 +19,11 @@ import org.w3c.dom.Document;
 
 import inescid.opaf.data.RawDataRecord;
 import inescid.opaf.data.RdfReg;
-import inescid.opaf.data.convert.rdf.RdfConversionSpecification;
-import inescid.opaf.data.convert.rdf.RdfConverter;
-import inescid.opaf.data.convert.rdf.ResourceTypeConversionSpecification;
-import inescid.opaf.data.convert.rdf.SchemaOrgToEdmConversionSpecification;
+import inescid.opaf.data.convert.EdmRdfToXmlSerializer;
+import inescid.opaf.data.convert.rdf.converter.RdfConversionSpecification;
+import inescid.opaf.data.convert.rdf.converter.RdfConverter;
+import inescid.opaf.data.convert.rdf.converter.ResourceTypeConversionSpecification;
+import inescid.opaf.data.convert.rdf.converter.SchemaOrgToEdmConversionSpecification;
 import inescid.util.XmlUtil;
 
 /**
@@ -31,6 +32,7 @@ import inescid.util.XmlUtil;
  *	This class is not thread-safe
  *
  */
+@Deprecated
 public class SchemaOrgToEdmDataConverter extends DataConverter {
 	
 	private static final Charset UTF8=Charset.forName("UTF8");
@@ -40,15 +42,18 @@ public class SchemaOrgToEdmDataConverter extends DataConverter {
 	RdfConverter conv=new RdfConverter(SchemaOrgToEdmConversionSpecification.spec);
 	
 	String dataProvider;
+	String provider;
 	
 	public SchemaOrgToEdmDataConverter() {
 	}
 	public SchemaOrgToEdmDataConverter(String dataProvider) {
 		this.dataProvider=dataProvider;
 	}
-	
-	
-	
+	public SchemaOrgToEdmDataConverter(String dataProvider, String provider) {
+		super();
+		this.dataProvider = dataProvider;
+		this.provider = provider;
+	}
 	@Override
 	public RawDataRecord convert(RawDataRecord source, Model additionalStatements) {
 		
@@ -71,9 +76,17 @@ public class SchemaOrgToEdmDataConverter extends DataConverter {
 				StmtIterator provs = mainTargetResource.getModel().listStatements(ag, RdfReg.EDM_DATA_PROVIDER, (String) null);
 				if(!provs.hasNext())
 					mainTargetResource.getModel().add(ag, RdfReg.EDM_DATA_PROVIDER, dataProvider);
-				provs = mainTargetResource.getModel().listStatements(ag, RdfReg.EDM_PROVIDER, (String) null);
+				if(provider==null) {
+					provs = mainTargetResource.getModel().listStatements(ag, RdfReg.EDM_PROVIDER, (String) null);
+					if(!provs.hasNext())
+						mainTargetResource.getModel().add(ag, RdfReg.EDM_PROVIDER, dataProvider);
+				}
+			}
+			
+			if(provider!=null) {
+				StmtIterator provs = mainTargetResource.getModel().listStatements(ag, RdfReg.EDM_PROVIDER, (String) null);
 				if(!provs.hasNext())
-					mainTargetResource.getModel().add(ag, RdfReg.EDM_PROVIDER, dataProvider);
+					mainTargetResource.getModel().add(ag, RdfReg.EDM_PROVIDER, provider);
 			}
 			
 //			System.out.println(additionalStatements);
@@ -98,6 +111,12 @@ public class SchemaOrgToEdmDataConverter extends DataConverter {
 	}
 	public void setDataProvider(String dataProvider) {
 		this.dataProvider = dataProvider;
+	}
+	public String getProvider() {
+		return provider;
+	}
+	public void setProvider(String provider) {
+		this.provider = provider;
 	}
 
 

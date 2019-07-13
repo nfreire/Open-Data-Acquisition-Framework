@@ -1,4 +1,4 @@
-package inescid.opaf.data.convert;
+package inescid.opaf.data.convert.rdf.converter.deprecated;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -27,8 +27,10 @@ import com.github.andrewoma.dexx.collection.ArrayList;
 
 import inescid.opaf.data.RawDataRecord;
 import inescid.opaf.data.RdfReg;
+import inescid.opaf.data.convert.EdmRdfToXmlSerializer;
 import inescid.util.XmlUtil;
 
+@Deprecated
 public class DublinCoreToEdmDataConverter extends DataConverter {
 
 	class JsonLdGraphListener extends GraphListenerBase {

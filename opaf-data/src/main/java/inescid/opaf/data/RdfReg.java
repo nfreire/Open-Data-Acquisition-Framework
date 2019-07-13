@@ -25,6 +25,7 @@ public final class RdfReg {
 	public static String NsFoaf="http://xmlns.com/foaf/0.1/";
 	public static String NsVcard="http://www.w3.org/2006/vcard/ns#";
 	public static String NsSchemaOrg="http://schema.org/";
+	public static String NsVoid="http://rdfs.org/ns/void#";
 	
 	public static final Property RDF_TYPE=ResourceFactory.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
 	public static final Property RDFS_SEE_ALSO=ResourceFactory.createProperty("http://www.w3.org/2000/01/rdf-schema#seeAlso");
@@ -91,6 +92,7 @@ public final class RdfReg {
 	public static final Property EDM_DATA_PROVIDER = ResourceFactory.createProperty("http://www.europeana.eu/schemas/edm/dataProvider");
 	public static final Property DCTERMS_CONFORMS_TO = ResourceFactory.createProperty(NsDcterms+"conformsTo");
 	public static final Property DCTERMS_TABLE_OF_CONTENTS = ResourceFactory.createProperty(NsDcterms+"tableOfContents");
+	public static final Property DCTERMS_HAS_PART = ResourceFactory.createProperty(NsDcterms+"hasPart");
 	public static final Resource VCARD_ADDRESS = ResourceFactory.createResource(NsVcard+"Address");
 	public static final Property VCARD_REGION = ResourceFactory.createProperty(NsVcard+"region");
 	public static final Property VCARD_LOCALITY = ResourceFactory.createProperty(NsVcard+"locality");
@@ -177,5 +179,6 @@ public final class RdfReg {
 	public static final Property SCHEMAORG_TEMPORAL_COVERAGE = ResourceFactory.createProperty(NsSchemaOrg+"temporalCoverage");
 //	public static final Property SCHEMAORG_ = ResourceFactory.createProperty(NsSchemaOrg+"");
 //	public static final Property SCHEMAORG_ = ResourceFactory.createProperty(NsSchemaOrg+"");
+	public static final Property VOID_ROOT_RESOURCE = ResourceFactory.createProperty(NsVoid+"rootResource");
 	
 }

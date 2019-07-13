@@ -1,9 +1,10 @@
-package inescid.opaf.data.convert;
+package inescid.opaf.data.convert.rdf.converter.deprecated;
 
 import org.apache.log4j.Logger;
 
 import inescid.opaf.data.DataSpec;
 
+@Deprecated
 public class DataConversionManager {
 	private static org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(DataConversionManager.class);
 	

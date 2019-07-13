@@ -1,4 +1,4 @@
-package inescid.opaf.data.convert.rdf;
+package inescid.opaf.data.convert.rdf.converter;
 
 import java.io.StringReader;
 import java.nio.charset.Charset;
@@ -20,10 +20,10 @@ import org.w3c.dom.Document;
 
 import inescid.opaf.data.RawDataRecord;
 import inescid.opaf.data.RdfReg;
-import inescid.opaf.data.convert.DataConverter;
-import inescid.opaf.data.convert.rdf.RdfConversionSpecification;
-import inescid.opaf.data.convert.rdf.ResourceTypeConversionSpecification;
-import inescid.opaf.data.convert.rdf.SchemaOrgToEdmConversionSpecification;
+import inescid.opaf.data.convert.rdf.converter.RdfConversionSpecification;
+import inescid.opaf.data.convert.rdf.converter.ResourceTypeConversionSpecification;
+import inescid.opaf.data.convert.rdf.converter.SchemaOrgToEdmConversionSpecification;
+import inescid.opaf.data.convert.rdf.converter.deprecated.DataConverter;
 import inescid.util.RdfUtil;
 import inescid.util.XmlUtil;
 
@@ -40,14 +40,77 @@ public class RdfConverter {
 	Map<String, Map<ResourceTypeConversionSpecification, Resource>> nodesMapped=new HashMap<String, Map<ResourceTypeConversionSpecification, Resource>>();
 	
 	RdfConversionSpecification spec;
+
+	Resource mainTargetResource=null;
 	
 	public RdfConverter(RdfConversionSpecification spec) {
 		this.spec=spec;
 	}
 	
+	public Resource convert(Resource srcRoot) {
+		Model source=srcRoot.getModel();
+		nodesMapped.clear();
+		mainTargetResource=null;
+		Model targetModelRdf = ModelFactory.createDefaultModel();		
+		
+		
+		
+		boolean firstType=true;
+		Resource resType=null;
+
+		StmtIterator stms = source.listStatements();
+		Statement typeStmPrev = null;
+		while (stms.hasNext()) {
+			Statement typeStm = stms.next();
+			System.out.println(typeStm);
+			System.out.println(typeStm.getSubject() == srcRoot);
+			System.out.println(typeStm.getSubject().equals(srcRoot));
+			if(typeStmPrev!=null) {
+				System.out.println(typeStmPrev.getSubject() == typeStm.getSubject());
+				System.out.println(typeStmPrev.getSubject().equals(typeStm.getSubject()));
+			}
+			typeStmPrev=typeStm;
+			
+//			resType=typeStm.getObject().asResource();
+//			Resource[] rootResourceTypeMapping = spec.getRootResourceTypeMapping(resType);
+//			if (rootResourceTypeMapping!=null)
+//				break;
+		} 
+		
+		
+//		StmtIterator propTypesStms = source.listStatements(srcRoot.getProperty(), RdfReg.RDF_TYPE, (RDFNode) null);
+		StmtIterator propTypesStms = srcRoot.listProperties(RdfReg.RDF_TYPE);
+		while (propTypesStms.hasNext()) {
+			Statement typeStm = propTypesStms.next();
+			resType=typeStm.getObject().asResource();
+			Resource[] rootResourceTypeMapping = spec.getRootResourceTypeMapping(resType);
+			if (rootResourceTypeMapping!=null)
+				break;
+		} 
+		
+		for (Resource trgType: spec.getRootResourceTypeMapping(resType)) {
+			String uri=srcRoot.getURI();
+			if(firstType)
+				firstType=false;
+			else
+				uri+="#"+getElementName(trgType.getURI());
+				
+			ResourceTypeConversionSpecification trgResourceMap = spec.getTypePropertiesMapping(trgType);
+			
+			Resource trgResource=convert(srcRoot, source, targetModelRdf, uri, trgResourceMap, spec);
+			if (mainTargetResource==null)
+				mainTargetResource=trgResource;
+		} 
+//	StmtIterator choStms = targetModelRdf.listStatements();
+//	while (choStms.hasNext()) 
+//		System.out.println(choStms.next());
+
+return mainTargetResource;
+
+	}
 	public Resource convert(Model ldModelRdf) {
 		nodesMapped.clear();
-		Resource mainTargetResource=null;
+		mainTargetResource=null;
 		Model targetModelRdf = ModelFactory.createDefaultModel();
 //		if(source.getContentType().equals("application/json") && source.getFormat().equals("application/ld+json")) {
 //			Model ldModelRdf = ModelFactory.createDefaultModel();
@@ -83,48 +146,18 @@ public class RdfConverter {
 			return null;
 	}
 
-	public Resource convert(Model ldModelRdf, String rootResourceUri) {
-		nodesMapped.clear();
+	public Resource convert(Model source, String rootResourceUri) {
+		if(rootResourceUri==null)
+			return convert(source);
 //		if(source.getContentType().equals("application/json") && source.getFormat().equals("application/ld+json")) {
 //			Model ldModelRdf = ModelFactory.createDefaultModel();
-		boolean rootResourceUriExists=ldModelRdf.contains(ResourceFactory.createResource(rootResourceUri), null, (RDFNode) null);
+		boolean rootResourceUriExists=source.contains(ResourceFactory.createResource(rootResourceUri), null, (RDFNode) null);
 		if(! rootResourceUriExists)
-			return convert(ldModelRdf);
-		Resource mainTargetResource=null;
-		Model targetModelRdf = ModelFactory.createDefaultModel();
-		
-					Resource srcRoot = ldModelRdf.getResource(rootResourceUri);
-					boolean firstType=true;
-					
-					Resource resType=null;
+			return convert(source);
 
-					StmtIterator propTypesStms = ldModelRdf.listStatements(srcRoot, RdfReg.RDF_TYPE, (RDFNode) null);
-					while (propTypesStms.hasNext()) {
-						Statement typeStm = propTypesStms.next();
-						resType=typeStm.getObject().asResource();
-						Resource[] rootResourceTypeMapping = spec.getRootResourceTypeMapping(resType);
-						if (rootResourceTypeMapping!=null)
-							break;
-					} 
-					
-					for (Resource trgType: spec.getRootResourceTypeMapping(resType)) {
-						String uri=srcRoot.getURI();
-						if(firstType)
-							firstType=false;
-						else
-							uri+="#"+getElementName(trgType.getURI());
-							
-						ResourceTypeConversionSpecification trgResourceMap = spec.getTypePropertiesMapping(trgType);
-						
-						Resource trgResource=convert(srcRoot, ldModelRdf, targetModelRdf, uri, trgResourceMap, spec);
-						if (mainTargetResource==null)
-							mainTargetResource=trgResource;
-					} 
-//				StmtIterator choStms = targetModelRdf.listStatements();
-//				while (choStms.hasNext()) 
-//					System.out.println(choStms.next());
-			
-			return mainTargetResource;
+		Resource srcRoot = source.getResource(rootResourceUri);
+		return convert(srcRoot);
+		
 	}
 	
 	

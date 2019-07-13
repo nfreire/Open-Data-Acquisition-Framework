@@ -97,6 +97,8 @@
     <module>opaf-timestamp</module>
     <module>opaf-www</module>
     <module>opaf-casestudies</module>
+    <module>opaf-dataset-registry</module>
+    <module>opaf-linkeddata</module>
   </modules>
     
   <dependencyManagement>

@@ -17,8 +17,8 @@ import org.apache.log4j.xml.XMLLayout;
 
 import inescid.opaf.data.RawDataRecord;
 import inescid.opaf.data.RdfReg;
-import inescid.opaf.data.convert.DataConversionManager;
-import inescid.opaf.data.convert.DataConverter;
+import inescid.opaf.data.convert.rdf.converter.deprecated.DataConversionManager;
+import inescid.opaf.data.convert.rdf.converter.deprecated.DataConverter;
 import inescid.opaf.data.repository.api.AccessMode;
 import inescid.opaf.data.repository.api.Database;
 import inescid.opaf.data.repository.impl.IoUtil;

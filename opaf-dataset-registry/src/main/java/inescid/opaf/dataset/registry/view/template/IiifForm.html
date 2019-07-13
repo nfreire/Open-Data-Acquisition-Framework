@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head><style>
+table,th,td
+'{'border:1px solid black; border-collapse: collapse; padding:3px;'}'
+</style>
+</head>
+<meta charset="UTF-8">
+<title>Dataset Registration - IIIF</title>
+</head>
+<body>
+<form action="dataset-register" method="post">
+<input type="hidden" name="type" value="iiif" />
+<table style="width:1000px;" ">
+	<tr><td colspan="2" >
+		<h3 align="center">Registration of a IIIF dataset for harvesting by Europeana R&D</h3>
+		<p align="left" style='font-size: 90%'>(Note: this registration of the datasets serves only for research purposes on alternative aggregation mechanisms for Europeana. The datasets are not used for ingestion in the official Europeana dataset.)</p>
+	</td></tr>
+	<#if $message??>
+		<tr><td>${message}</td></tr>
+	</#if>
+	<tr><td width="35%">URI of IIIF Collection or Sitemaps XML</td>
+	<td width="65%">
+	<input type="text" name="uri" value="${uri}" style="width:450px"/><font color="red">*</font></td></tr>
+	<tr><td width="35%">Harvesting method</td>
+	<td width="65%">
+		<label><input type="radio" name=crawlMethod value="COLLECTION" <#if $crawlMethod=="COLLECTION">checked = "checked"</#if>/>IIIF Collection</label><br>
+  		<label><input type="radio" name="crawlMethod" value="SITEMAP" <#if $crawlMethod=="COLLECTION">checked = "checked"</#if>/>sitemaps.xml</label><br>
+  		<label><input type="radio" name="crawlMethod" value="AUTO" <#if $crawlMethod=="COLLECTION">checked = "checked"</#if>/>automatically detected</label> 
+  <font color="red">*</font></td></tr>
+	<tr><td>Organization<br />(data provider or aggregator submitting the dataset)</td>
+	<td><input type="text" name="organization" value="${organization}" style="width:450px"/><font color="red">*</font></td></tr>
+	<tr><td>Title of the dataset</td>
+	<td><input type="text" name="title" value="${title}" style="width:450px"/><font color="red">*</font></td></tr>
+	<tr><td colspan="2"><font color="red">`*</font> - indicates a required field.</td></tr>
+	<tr><td colspan="2" align="center"><input type="submit" name="registration" value="Send registration of dataset"/>	</td></tr>
+</table>
+</form>
+</body>
+</html>

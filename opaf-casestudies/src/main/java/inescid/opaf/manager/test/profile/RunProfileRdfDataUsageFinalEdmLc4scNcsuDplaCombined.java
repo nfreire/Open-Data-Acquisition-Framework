@@ -28,8 +28,8 @@ import org.w3c.dom.Document;
 
 import inescid.opaf.data.RawDataRecord;
 import inescid.opaf.data.RdfReg;
-import inescid.opaf.data.convert.rdf.RdfConverter;
-import inescid.opaf.data.convert.rdf.SchemaOrgToEdmConversionSpecification;
+import inescid.opaf.data.convert.rdf.converter.RdfConverter;
+import inescid.opaf.data.convert.rdf.converter.SchemaOrgToEdmConversionSpecification;
 import inescid.opaf.data.profile.UsageProfiler;
 import inescid.opaf.data.profile.UsageStats;
 import inescid.opaf.data.repository.api.AccessMode;

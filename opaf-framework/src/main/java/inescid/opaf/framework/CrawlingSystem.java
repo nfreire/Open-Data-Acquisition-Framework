@@ -6,7 +6,6 @@ import java.io.IOException;
 import org.mapdb.DB;
 
 public class CrawlingSystem {
-	DB mapDb;
 	HttpFetcher fetcher=new HttpFetcher();
 	File workingFolder;
 	

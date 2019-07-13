@@ -1,4 +1,4 @@
-package inescid.opaf.data.convert.rdf;
+package inescid.opaf.data.convert.rdf.converter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
