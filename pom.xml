@@ -46,7 +46,7 @@
     <version.slf4j>1.7.13</version.slf4j>
     <version.spring-framework>4.2.5.RELEASE</version.spring-framework>
     <version.versions-maven-plugin>2.2</version.versions-maven-plugin>
-    <version.jena>3.4.0</version.jena>
+    <version.jena>4.2.0</version.jena>
   </properties>
     
   <build>
